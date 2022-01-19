@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_CsRdEHlIEeymA7ReFGNmPQ" name="BirthData_Column_Analysis_Pattern" creationDate="2022-01-19T14:51:26.658-0100">
-  <taggedValue xmi:id="_CsRdEXlIEeymA7ReFGNmPQ" tag="Status" value="development"/>
-  <taggedValue xmi:id="_CsRdEnlIEeymA7ReFGNmPQ" tag="Author" value="sergio.lima@sysvision.com.br"/>
-  <taggedValue xmi:id="_CsRdE3lIEeymA7ReFGNmPQ" tag="Purpose" value="Analise do campo data de nascimento"/>
-  <taggedValue xmi:id="_CsRdFHlIEeymA7ReFGNmPQ" tag="Description" value="Analisar a frequência de campos nulos e datas inválidas"/>
-  <taggedValue xmi:id="_CsRdFXlIEeymA7ReFGNmPQ" tag="Version" value="0.1"/>
-  <context xmi:id="_CsRdFnlIEeymA7ReFGNmPQ"/>
-  <results xmi:id="_CsRdF3lIEeymA7ReFGNmPQ">
-    <resultMetadata xmi:id="_CsRdGHlIEeymA7ReFGNmPQ"/>
-  </results>
-  <parameters xmi:id="_CsRdGXlIEeymA7ReFGNmPQ" analysisType="Multiple Column Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_CsRdEHlIEeymA7ReFGNmPQ" name="BirthData_Column_Analysis_Pattern" creationDate="2022-01-19T14:51:26.658-0100" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <taggedValue xmi:id="_CsRdEXlIEeymA7ReFGNmPQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_CsRdEnlIEeymA7ReFGNmPQ" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_CsRdE3lIEeymA7ReFGNmPQ" tag="Purpose" value="Analise do campo data de nascimento"/>
+    <taggedValue xmi:id="_CsRdFHlIEeymA7ReFGNmPQ" tag="Description" value="Analisar a frequência de campos nulos e datas inválidas"/>
+    <taggedValue xmi:id="_CsRdFXlIEeymA7ReFGNmPQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_DNWw4XlIEeymA7ReFGNmPQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_DNWw4nlIEeymA7ReFGNmPQ" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_DNWw43lIEeymA7ReFGNmPQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_DNf60nlIEeymA7ReFGNmPQ" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_CsRdFnlIEeymA7ReFGNmPQ">
+      <connection href="../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/Cadastro_0.1.item#_BQL50HlIEeymA7ReFGNmPQ"/>
+    </context>
+    <results xmi:id="_CsRdF3lIEeymA7ReFGNmPQ">
+      <resultMetadata xmi:id="_CsRdGHlIEeymA7ReFGNmPQ"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_DNWw5HlIEeymA7ReFGNmPQ">
+        <parameters xmi:id="_DNWw5XlIEeymA7ReFGNmPQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Cadastro_0.1.item#_BQL50HlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_DNWw5nlIEeymA7ReFGNmPQ">
+        <parameters xmi:id="_DNWw53lIEeymA7ReFGNmPQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Cadastro_0.1.item#_BQL50HlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_DNWw6HlIEeymA7ReFGNmPQ">
+        <parameters xmi:id="_DNWw6XlIEeymA7ReFGNmPQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Cadastro_0.1.item#_BQL50HlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:PatternLowFreqIndicator" xmi:id="_DNWw6nlIEeymA7ReFGNmPQ">
+        <parameters xmi:id="_DNWw63lIEeymA7ReFGNmPQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Cadastro_0.1.item#_BQL50HlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Low_Frequency_Table_0.1.definition#_OCTbwJR_Ed2XO-JvLwVAwg"/>
+      </indicators>
+    </results>
+    <parameters xmi:id="_CsRdGXlIEeymA7ReFGNmPQ" dataFilter="_DNf603lIEeymA7ReFGNmPQ" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_DNWw4HlIEeymA7ReFGNmPQ" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_DNf603lIEeymA7ReFGNmPQ" name="BirthData_Column_Analysis_Pattern">
+    <ranges xmi:id="_DNf61HlIEeymA7ReFGNmPQ">
+      <expressions xmi:id="_DNf61XlIEeymA7ReFGNmPQ">
+        <expression xsi:type="relational:TdExpression" xmi:id="_DNf61nlIEeymA7ReFGNmPQ" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
