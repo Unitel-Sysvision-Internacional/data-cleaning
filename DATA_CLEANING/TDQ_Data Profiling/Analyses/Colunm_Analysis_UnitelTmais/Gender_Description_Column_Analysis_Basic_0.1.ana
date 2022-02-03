@@ -1,13 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_4ePQgIU0Eey_8Z7FFdyZ1w" name="Gender_Description_Column_Analysis_Basic" creationDate="2022-02-03T19:04:31.611-0100">
-  <taggedValue xmi:id="_4eP3kIU0Eey_8Z7FFdyZ1w" tag="Status" value="development"/>
-  <taggedValue xmi:id="_4eP3kYU0Eey_8Z7FFdyZ1w" tag="Author" value="sergio.lima@sysvision.com.br"/>
-  <taggedValue xmi:id="_4eP3koU0Eey_8Z7FFdyZ1w" tag="Purpose" value="Identificar padrao e campos nulos"/>
-  <taggedValue xmi:id="_4eP3k4U0Eey_8Z7FFdyZ1w" tag="Description"/>
-  <taggedValue xmi:id="_4eP3lIU0Eey_8Z7FFdyZ1w" tag="Version" value="0.1"/>
-  <context xmi:id="_4eP3lYU0Eey_8Z7FFdyZ1w"/>
-  <results xmi:id="_4eP3loU0Eey_8Z7FFdyZ1w">
-    <resultMetadata xmi:id="_4eP3l4U0Eey_8Z7FFdyZ1w"/>
-  </results>
-  <parameters xmi:id="_4eP3mIU0Eey_8Z7FFdyZ1w" analysisType="Multiple Column Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_4ePQgIU0Eey_8Z7FFdyZ1w" name="Gender_Description_Column_Analysis_Basic" creationDate="2022-02-03T19:04:31.611-0100" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <taggedValue xmi:id="_4eP3kIU0Eey_8Z7FFdyZ1w" tag="Status" value="development"/>
+    <taggedValue xmi:id="_4eP3kYU0Eey_8Z7FFdyZ1w" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_4eP3koU0Eey_8Z7FFdyZ1w" tag="Purpose" value="Identificar padrao e campos nulos"/>
+    <taggedValue xmi:id="_4eP3k4U0Eey_8Z7FFdyZ1w" tag="Description" value=""/>
+    <taggedValue xmi:id="_4eP3lIU0Eey_8Z7FFdyZ1w" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_GjIHkYU1Eey_8Z7FFdyZ1w" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_GjIHkoU1Eey_8Z7FFdyZ1w" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_GjIHk4U1Eey_8Z7FFdyZ1w" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_GjJVsIU1Eey_8Z7FFdyZ1w" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_4eP3lYU0Eey_8Z7FFdyZ1w">
+      <connection href="../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6lHlIEeymA7ReFGNmPQ"/>
+    </context>
+    <results xmi:id="_4eP3loU0Eey_8Z7FFdyZ1w">
+      <resultMetadata xmi:id="_4eP3l4U0Eey_8Z7FFdyZ1w" executionDate="2022-02-03T19:06:07.491-0100" executionDuration="939" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_GjIuoIU1Eey_8Z7FFdyZ1w" count="521401" computed="true">
+        <parameters xmi:id="_GjIuoYU1Eey_8Z7FFdyZ1w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6lHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GwgcQIU1Eey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_GwCiMIU1Eey_8Z7FFdyZ1w" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_GwCiMYU1Eey_8Z7FFdyZ1w" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_GwCiMoU1Eey_8Z7FFdyZ1w" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_GwCiM4U1Eey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_GjIuooU1Eey_8Z7FFdyZ1w" count="521401" nullCount="264422" computed="true">
+        <parameters xmi:id="_GjIuo4U1Eey_8Z7FFdyZ1w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6lHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GwgcQYU1Eey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE &quot;GenderDesciption&quot; IS NULL " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_GwIBwIU1Eey_8Z7FFdyZ1w" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_GwIBwYU1Eey_8Z7FFdyZ1w" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_GwIBwoU1Eey_8Z7FFdyZ1w" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_GwIBw4U1Eey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_GjIupIU1Eey_8Z7FFdyZ1w" count="521401" nullCount="264422" computed="true" distinctValueCount="3">
+        <parameters xmi:id="_GjIupYU1Eey_8Z7FFdyZ1w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6lHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GwgcQoU1Eey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;GenderDesciption&quot; FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) A" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_GwRLsIU1Eey_8Z7FFdyZ1w" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_GwRLsYU1Eey_8Z7FFdyZ1w" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_GwRLsoU1Eey_8Z7FFdyZ1w" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_GwRLs4U1Eey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_GjIupoU1Eey_8Z7FFdyZ1w" count="521401" nullCount="264422" computed="true">
+        <parameters xmi:id="_GjIup4U1Eey_8Z7FFdyZ1w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6lHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GwgcQ4U1Eey_8Z7FFdyZ1w" body="SELECT COUNT(&quot;GenderDesciption&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;GenderDesciption&quot;)) = '' " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_GwYgcIU1Eey_8Z7FFdyZ1w" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_GwYgcYU1Eey_8Z7FFdyZ1w" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_GwYgcoU1Eey_8Z7FFdyZ1w" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_GwYgc4U1Eey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_GwYgdIU1Eey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_GwYgdYU1Eey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_GwYgdoU1Eey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_GwYgd4U1Eey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_4eP3mIU0Eey_8Z7FFdyZ1w" dataFilter="_GjJVsYU1Eey_8Z7FFdyZ1w" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_GjIHkIU1Eey_8Z7FFdyZ1w" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_GjJVsYU1Eey_8Z7FFdyZ1w" name="Gender_Description_Column_Analysis_Basic">
+    <ranges xmi:id="_GjJVsoU1Eey_8Z7FFdyZ1w">
+      <expressions xmi:id="_GjJVs4U1Eey_8Z7FFdyZ1w">
+        <expression xsi:type="relational:TdExpression" xmi:id="_GjJVtIU1Eey_8Z7FFdyZ1w" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
