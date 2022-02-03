@@ -16,21 +16,43 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6iHlIEeymA7ReFGNmPQ"/>
     </context>
     <results xmi:id="_6l52t4UrEeymA7ReFGNmPQ">
-      <resultMetadata xmi:id="_6l52uIUrEeymA7ReFGNmPQ"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_qZbucYUzEey_8Z7FFdyZ1w">
+      <resultMetadata xmi:id="_6l52uIUrEeymA7ReFGNmPQ" executionDate="2022-02-03T18:56:09.504-0100" executionDuration="611" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_qZbucYUzEey_8Z7FFdyZ1w" count="521401" computed="true">
         <parameters xmi:id="_qZbucoUzEey_8Z7FFdyZ1w"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6iHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tpvooIUzEey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_toNXkIUzEey_8Z7FFdyZ1w" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_toNXkYUzEey_8Z7FFdyZ1w" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_toNXkoUzEey_8Z7FFdyZ1w" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_toNXk4UzEey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_qZbuc4UzEey_8Z7FFdyZ1w">
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_qZbuc4UzEey_8Z7FFdyZ1w" count="521401" nullCount="239019" computed="true">
         <parameters xmi:id="_qZbudIUzEey_8Z7FFdyZ1w"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6iHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tpvooYUzEey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE &quot;AdressID&quot; IS NULL " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_toj84IUzEey_8Z7FFdyZ1w" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_toj84YUzEey_8Z7FFdyZ1w" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_toj84oUzEey_8Z7FFdyZ1w" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_toj844UzEey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_qZbudYUzEey_8Z7FFdyZ1w">
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_qZbudYUzEey_8Z7FFdyZ1w" count="521401" nullCount="239019" computed="true" blankCount="6866">
         <parameters xmi:id="_qZbudoUzEey_8Z7FFdyZ1w"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6iHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tpvoooUzEey_8Z7FFdyZ1w" body="SELECT COUNT(&quot;AdressID&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;AdressID&quot;)) = '' " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_tpkpgIUzEey_8Z7FFdyZ1w" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_tpkpgYUzEey_8Z7FFdyZ1w" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_tpkpgoUzEey_8Z7FFdyZ1w" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_tpkpg4UzEey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_tpkphIUzEey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_tpkphYUzEey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_tpkphoUzEey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_tpkph4UzEey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
       </indicators>
     </results>
     <parameters xmi:id="_6l52uYUrEeymA7ReFGNmPQ" dataFilter="_qZk4YIUzEey_8Z7FFdyZ1w" analysisType="Multiple Column Analysis"/>
