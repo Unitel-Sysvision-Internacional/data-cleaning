@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_auGcEHrBEeymA7ReFGNmPQ" name="Tipo_Docs" supplierDependency="_BeBWopWqEeyrDaC6mFuu4g" creationDate="2022-01-21T11:52:48.206-0100" defaultContext="Default">
-    <clientDependency href="../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <clientDependency href="../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
     <taggedValue xmi:id="_auGcEXrBEeymA7ReFGNmPQ" tag="Status" value="development"/>
     <taggedValue xmi:id="_auGcEnrBEeymA7ReFGNmPQ" tag="Author" value="sergio.lima@sysvision.com.br"/>
     <taggedValue xmi:id="_auGcE3rBEeymA7ReFGNmPQ" tag="Purpose" value=" Análise das colunas e de dependência entre os campos de Documentos"/>
@@ -12,15 +12,15 @@
     <taggedValue xmi:id="_0BHYcnrBEeymA7ReFGNmPQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <taggedValue xmi:id="_0BJNoXrBEeymA7ReFGNmPQ" tag="Is Use Sample Data" value="false"/>
     <context xmi:id="_auGcFnrBEeymA7ReFGNmPQ">
-      <connection href="../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+      <connection href="../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
     </context>
     <results xmi:id="_auGcF3rBEeymA7ReFGNmPQ">
       <resultMetadata xmi:id="_auGcGHrBEeymA7ReFGNmPQ" executionDate="2022-02-24T17:44:44.892-0100" executionDuration="1844" message="" executionNumber="3" lastRunOk="true" lastExecutionNumberOk="3"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_0BH_gHrBEeymA7ReFGNmPQ" count="548602" computed="true">
         <parameters xmi:id="_0BH_gXrBEeymA7ReFGNmPQ"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WRJEHrBEeymA7ReFGNmPQ" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; " language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_0TI8kHrBEeymA7ReFGNmPQ" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_0TI8kXrBEeymA7ReFGNmPQ" tag="Description" value="counts the number of rows"/>
@@ -30,8 +30,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_0BH_gnrBEeymA7ReFGNmPQ" count="548602" nullCount="187439" computed="true">
         <parameters xmi:id="_0BH_g3rBEeymA7ReFGNmPQ"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WRJEXrBEeymA7ReFGNmPQ" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE &quot;Tipo_Docs&quot; IS NULL " language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_0TOcIHrBEeymA7ReFGNmPQ" name="Null Count" label="Null Count">
           <taggedValue xmi:id="_0TOcIXrBEeymA7ReFGNmPQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
@@ -41,8 +41,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_0BH_hHrBEeymA7ReFGNmPQ" count="548602" nullCount="187439" computed="true" distinctValueCount="7">
         <parameters xmi:id="_0BH_hXrBEeymA7ReFGNmPQ"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WRJEnrBEeymA7ReFGNmPQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Tipo_Docs&quot; FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) A" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_0TY0MHrBEeymA7ReFGNmPQ" name="Distinct Count" label="Distinct Count">
           <taggedValue xmi:id="_0TY0MXrBEeymA7ReFGNmPQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
@@ -52,8 +52,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_0BH_hnrBEeymA7ReFGNmPQ" count="548602" nullCount="187439" computed="true" uniqueValueCount="0">
         <parameters xmi:id="_0BH_h3rBEeymA7ReFGNmPQ"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WRJE3rBEeymA7ReFGNmPQ" body="SELECT COUNT(*) FROM (SELECT &quot;Tipo_Docs&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  GROUP BY &quot;Tipo_Docs&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_0TjzUHrBEeymA7ReFGNmPQ" name="Unique Count" label="Unique Count">
           <taggedValue xmi:id="_0TjzUXrBEeymA7ReFGNmPQ" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
@@ -69,8 +69,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_0BH_iHrBEeymA7ReFGNmPQ" count="548602" nullCount="187439" computed="true" duplicateValueCount="7">
         <parameters xmi:id="_0BH_iXrBEeymA7ReFGNmPQ"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WSXMHrBEeymA7ReFGNmPQ" body="SELECT COUNT(*) FROM (SELECT &quot;Tipo_Docs&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  m  GROUP BY &quot;Tipo_Docs&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_0Ts9QHrBEeymA7ReFGNmPQ" name="Duplicate Count" label="Duplicate Count">
           <taggedValue xmi:id="_0Ts9QXrBEeymA7ReFGNmPQ" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
@@ -86,8 +86,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_0BH_inrBEeymA7ReFGNmPQ" count="548602" nullCount="187439" computed="true">
         <parameters xmi:id="_0BH_i3rBEeymA7ReFGNmPQ"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WSXMXrBEeymA7ReFGNmPQ" body="SELECT COUNT(&quot;Tipo_Docs&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;Tipo_Docs&quot;)) = '' " language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_0T2HMHrBEeymA7ReFGNmPQ" name="Blank Count" label="Blank Count">
           <taggedValue xmi:id="_0T2HMXrBEeymA7ReFGNmPQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
@@ -101,14 +101,14 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_0BH_jHrBEeymA7ReFGNmPQ">
         <parameters xmi:id="_0BH_jXrBEeymA7ReFGNmPQ"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
         <averageLengthIndicator xmi:id="_0BImkHrBEeymA7ReFGNmPQ" count="361163" nullCount="187439" computed="true" sumLength="804295.0">
           <parameters xmi:id="_0BImkXrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImknrBEeymA7ReFGNmPQ" useBlank="false"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WSXMnrBEeymA7ReFGNmPQ" body="SELECT SUM(LEN(&quot;Tipo_Docs&quot;)), COUNT(&quot;Tipo_Docs&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE (&quot;Tipo_Docs&quot; IS NOT NULL ) AND (LTRIM(RTRIM(CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN 'NULL TALEND' ELSE &quot;Tipo_Docs&quot; END)) &lt;> '' ) " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0T_4MHrBEeymA7ReFGNmPQ" name="Average Length" label="Average Length">
             <taggedValue xmi:id="_0T_4MXrBEeymA7ReFGNmPQ" tag="Description" value="computes the average length of the field. Does not take into account the null and blank values when computing the average length."/>
@@ -132,8 +132,8 @@
           <parameters xmi:id="_0BImlHrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImlXrBEeymA7ReFGNmPQ" useBlank="false"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WSXM3rBEeymA7ReFGNmPQ" body="SELECT MAX(LEN(&quot;Tipo_Docs&quot;)) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE (&quot;Tipo_Docs&quot; IS NOT NULL ) AND (LTRIM(RTRIM(CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN 'NULL TALEND' ELSE &quot;Tipo_Docs&quot; END)) &lt;> '' ) " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0UKQQHrBEeymA7ReFGNmPQ" name="Maximal Length" label="Maximal Length">
             <taggedValue xmi:id="_0UKQQXrBEeymA7ReFGNmPQ" tag="Description" value="computes the maximal length of a text field. Does not take into account the null and blank values when computing the maximal length."/>
@@ -157,8 +157,8 @@
           <parameters xmi:id="_0BIml3rBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImmHrBEeymA7ReFGNmPQ" useBlank="false"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WSXNHrBEeymA7ReFGNmPQ" body="SELECT MIN(LEN(&quot;Tipo_Docs&quot;)) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE (&quot;Tipo_Docs&quot; IS NOT NULL ) AND (LTRIM(RTRIM(CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN 'NULL TALEND' ELSE &quot;Tipo_Docs&quot; END)) &lt;> '' ) " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0USMEHrBEeymA7ReFGNmPQ" name="Minimal Length" label="Minimal Length">
             <taggedValue xmi:id="_0USMEXrBEeymA7ReFGNmPQ" tag="Description" value="computes the minimal length of a text field. Does not take into account the null and blank values when computing the minimal length."/>
@@ -182,8 +182,8 @@
           <parameters xmi:id="_0BImmnrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImm3rBEeymA7ReFGNmPQ"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WS-QHrBEeymA7ReFGNmPQ" body="SELECT MIN(LEN(&quot;Tipo_Docs&quot;)) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE (&quot;Tipo_Docs&quot; IS NOT NULL ) " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0Vu9kHrBEeymA7ReFGNmPQ" name="Minimal Length With Blank" label="Minimal Length With Blank">
             <taggedValue xmi:id="_0Vu9kXrBEeymA7ReFGNmPQ" tag="Description" value="computes the minimal length of a text field. Does not take into account the null values when computing the minimal length."/>
@@ -206,8 +206,8 @@
           <parameters xmi:id="_0BImnXrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImnnrBEeymA7ReFGNmPQ" useBlank="false" useNulls="true"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WS-QXrBEeymA7ReFGNmPQ" body="SELECT MIN(LEN(CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN '' ELSE &quot;Tipo_Docs&quot; END)) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE (LTRIM(RTRIM(CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN 'NULL TALEND' ELSE &quot;Tipo_Docs&quot; END)) &lt;> '' ) " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0V0dIHrBEeymA7ReFGNmPQ" name="Minimal Length With Null" label="Minimal Length With Null">
             <taggedValue xmi:id="_0V0dIXrBEeymA7ReFGNmPQ" tag="Description" value="computes the minimal length of a text field. Does not take into account the blank values when computing the minimal length."/>
@@ -231,8 +231,8 @@
           <parameters xmi:id="_0BImoHrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImoXrBEeymA7ReFGNmPQ" useNulls="true"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WS-QnrBEeymA7ReFGNmPQ" body="SELECT MIN(LEN(CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN '' ELSE &quot;Tipo_Docs&quot; END)) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0WBRcHrBEeymA7ReFGNmPQ" name="Minimal Length With Blank and Null" label="Minimal Length With Blank and Null">
             <taggedValue xmi:id="_0WBRcXrBEeymA7ReFGNmPQ" tag="Description" value="computes the minimal length of a text field."/>
@@ -256,8 +256,8 @@
           <parameters xmi:id="_0BImo3rBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImpHrBEeymA7ReFGNmPQ"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WSXOHrBEeymA7ReFGNmPQ" body="SELECT MAX(LEN(&quot;Tipo_Docs&quot;)) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE (&quot;Tipo_Docs&quot; IS NOT NULL ) " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0U53IHrBEeymA7ReFGNmPQ" name="Maximal Length With Blank" label="Maximal Length With Blank">
             <taggedValue xmi:id="_0U53IXrBEeymA7ReFGNmPQ" tag="Description" value="computes the maximal length of a text field. Does not take into account the null values when computing the maximal length."/>
@@ -280,8 +280,8 @@
           <parameters xmi:id="_0BImpnrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImp3rBEeymA7ReFGNmPQ" useBlank="false" useNulls="true"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WSXOXrBEeymA7ReFGNmPQ" body="SELECT MAX(LEN(CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN '' ELSE &quot;Tipo_Docs&quot; END)) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE (LTRIM(RTRIM(CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN 'NULL TALEND' ELSE &quot;Tipo_Docs&quot; END)) &lt;> '' ) " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0VRqkHrBEeymA7ReFGNmPQ" name="Maximal Length With Null" label="Maximal Length With Null">
             <taggedValue xmi:id="_0VRqkXrBEeymA7ReFGNmPQ" tag="Description" value="computes the maximal length of a text field. Does not take into account the blank values when computing the maximal length."/>
@@ -305,8 +305,8 @@
           <parameters xmi:id="_0BImqXrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImqnrBEeymA7ReFGNmPQ" useNulls="true"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WSXOnrBEeymA7ReFGNmPQ" body="SELECT MAX(LEN(CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN '' ELSE &quot;Tipo_Docs&quot; END)) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0VYYQHrBEeymA7ReFGNmPQ" name="Maximal Length With Blank and Null" label="Maximal Length With Blank and Null">
             <taggedValue xmi:id="_0VYYQXrBEeymA7ReFGNmPQ" tag="Description" value="computes the maximal length of a text field."/>
@@ -330,8 +330,8 @@
           <parameters xmi:id="_0BImrHrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImrXrBEeymA7ReFGNmPQ"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WSXNXrBEeymA7ReFGNmPQ" body="SELECT SUM(LEN(CASE WHEN  LEN( LTRIM(RTRIM(&quot;Tipo_Docs&quot;)) )=0  THEN '' ELSE  &quot;Tipo_Docs&quot; END)), COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE (&quot;Tipo_Docs&quot; IS NOT NULL ) " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0Uau8HrBEeymA7ReFGNmPQ" name="Average Length With Blank" label="Average Length With Blank">
             <taggedValue xmi:id="_0Uau8XrBEeymA7ReFGNmPQ" tag="Description" value="computes the average length of the field. Does not take into account the null values when computing the average length."/>
@@ -354,8 +354,8 @@
           <parameters xmi:id="_0BImr3rBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImsHrBEeymA7ReFGNmPQ" useBlank="false" useNulls="true"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WSXNnrBEeymA7ReFGNmPQ" body="SELECT SUM(LEN(CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN '' ELSE &quot;Tipo_Docs&quot; END)), COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE (LTRIM(RTRIM(CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN 'NULL TALEND' ELSE &quot;Tipo_Docs&quot; END)) &lt;> '' ) " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0Um8MHrBEeymA7ReFGNmPQ" name="Average Length With Null" label="Average Length With Null">
             <taggedValue xmi:id="_0Um8MXrBEeymA7ReFGNmPQ" tag="Description" value="computes the average length of the field. Does not take into account the blank values when computing the average length."/>
@@ -379,8 +379,8 @@
           <parameters xmi:id="_0BImsnrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BIms3rBEeymA7ReFGNmPQ" useNulls="true"/>
           </parameters>
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+          <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WSXN3rBEeymA7ReFGNmPQ" body="SELECT SUM(LEN(CASE WHEN  LEN( LTRIM(RTRIM( CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN '' ELSE &quot;Tipo_Docs&quot; END )) )=0  THEN '' ELSE   CASE WHEN &quot;Tipo_Docs&quot; IS NULL  THEN '' ELSE &quot;Tipo_Docs&quot; END  END)), COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; " language="Microsoft SQL Server"/>
           <builtInIndicatorDefinition xmi:id="_0UwtMHrBEeymA7ReFGNmPQ" name="Average Length With Blank and Null" label="Average Length With Blank and Null">
             <taggedValue xmi:id="_0UwtMXrBEeymA7ReFGNmPQ" tag="Description" value="computes the average length of the field."/>
@@ -403,8 +403,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:FrequencyIndicator" xmi:id="_0BImtHrBEeymA7ReFGNmPQ" count="548602" nullCount="187439" computed="true" distinctValueCount="7" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C77080000001000000007707372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000002DC2F74001243617274C3A36F205265736964656E6369617371007E0002000000000000015B74000242497371007E0002000000000004F6597400034E49467371007E00020000000000006ABA74000A5061737361706F7274657371007E000200000000000014AF740003434E497371007E00020000000000000A3A740010436172746120436F6E6475C3A7C3A36F7371007E0002000000000000017478">
         <parameters xmi:id="_0BImtXrBEeymA7ReFGNmPQ"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Advanced Statistics/Frequency_Table_0.1.definition#_ccIR4hF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Advanced Statistics/Frequency_Table_0.1.definition#_ccIR4hF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0WS-Q3rBEeymA7ReFGNmPQ" body="SELECT TOP 10  &quot;Tipo_Docs&quot;, COUNT(*) c FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; t  GROUP BY &quot;Tipo_Docs&quot; ORDER BY c DESC" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_0WGJ8HrBEeymA7ReFGNmPQ" name="Frequency Table" label="Frequency Table">
           <taggedValue xmi:id="_0WGJ8XrBEeymA7ReFGNmPQ" tag="Description" value="counts the number of records for each distinct record"/>
@@ -423,7 +423,7 @@
     <contextType xmi:id="_0BGxYHrBEeymA7ReFGNmPQ" confirmationNeeded="false" name="Default"/>
   </dataquality.analysis:Analysis>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_BeBWopWqEeyrDaC6mFuu4g" kind="Usage" supplier="_auGcEHrBEeymA7ReFGNmPQ">
-    <client xsi:type="dataquality.reports:TdReport" href="../../Reports/Tipo_Docs_0.1.rep#_BeBWkJWqEeyrDaC6mFuu4g"/>
+    <client xsi:type="dataquality.reports:TdReport" href="../../../Reports/Tipo_Docs_0.1.rep#_BeBWkJWqEeyrDaC6mFuu4g"/>
   </orgomg.cwm.objectmodel.core:Dependency>
   <dataquality.domain:Domain xmi:id="_0BJNonrBEeymA7ReFGNmPQ" name="Tipo_Docs">
     <ranges xmi:id="_0BJNo3rBEeymA7ReFGNmPQ">
