@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:y1JBe2VyyQBFVMSRk32QH6A1s1tfV/9ay08g1BxP"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:aorzuv2Dme3DQ0/aNyR8hwUg6udOWw5cRglWt358"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:9ABIlePMol55hXRoJNq/+Gsc455iuY1SvW5U5FhQ"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:3mocCtyarVWRXRnWrwJgXQIJAB2jzEfgK8OGlUf0"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -117,7 +117,6 @@
   </parameters>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -129,7 +128,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:G1U4NUlNlkRMdCpw7sWnymSLNE0IRqGAIOzQ8tA+YtBZGJFp3OJ/GQez"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:LtTsqfilTfWrVVdoeu7feD5j0lIWZX7qIVW+d4X4t18fBVVV+MoiE1Ov"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_YS2-cHldEeymA7ReFGNmPQ - metadata"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;metadata&quot;"/>
@@ -137,7 +136,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; SELECT &#13;&#10;&#9;[NUMBER],&#13;&#10;&#9;NAME,&#13;&#10;&#9;NOMINHO,&#13;&#10;&#9;CONTEXT_SEARCH,&#13;&#10;&#9; REPLACE(REPLACE(OBS ,CHAR(13) + Char(10) ,' '), CHAR(10), '')  OBS,&#13;&#10;&#9;STATUS,&#13;&#10;&#9;CREATEBY,&#13;&#10;&#9;CREATEDATE,&#13;&#10;&#9;TIPO,&#13;&#10;&#9;ESTADO,&#13;&#10;&#9;ID_OBJ,&#13;&#10;&#9;NUMBER_UCC,&#13;&#10;&#9;--ID,&#13;&#10;&#9;--Expr10,&#13;&#10;&#9;--OriginTeam,&#13;&#10;&#9;--CustomerValue,&#13;&#10;&#9;BirthData,&#13;&#10;&#9;Industry,&#13;&#10;&#9;NumberOfEmployees,&#13;&#10;&#9;CustomerCategory,&#13;&#10;&#9;MainContactInformation,&#13;&#10;&#9;PaymentTerms,&#13;&#10;&#9;--MainAddressInformation,&#13;&#10;&#9;--CustomerID,&#13;&#10;&#9;ReasonStatusChange,&#13;&#10;&#9;--OBJECT_ID,&#13;&#10;&#9;TP_DETAIL_ID,&#13;&#10;&#9;--DomainValue,&#13;&#10;&#9;--Value,&#13;&#10;&#9;CodCertComercial,&#13;&#10;&#9;ValueDocs,&#13;&#10;&#9;DomaianValueDocs,&#13;&#10;&#9;NameDocs,&#13;&#10;&#9;CustomerManagerID,&#13;&#10;&#9;TYPE_ID,&#13;&#10;&#9;DomainValueTelefone,&#13;&#10;&#9;ValueTelefone,&#13;&#10;&#9;DomainValueEmail,&#13;&#10;&#9;ValueEmail,&#13;&#10;&#9;DomainValueSite,&#13;&#10;&#9;ValueSite,&#13;&#10;&#9;ImageUploadLink,&#13;&#10;&#9;ponctiation,&#13;&#10;&#9;NIB,&#13;&#10;&#9;Entidade,&#13;&#10;&#9;NameGestor,&#13;&#10;&#9;ILHA,&#13;&#10;&#9;Remarks,&#13;&#10;&#9;CUSTUMER_CATEGORY,&#13;&#10;&#9;IntegrationOrigin,&#13;&#10;&#9;NameUserUpdate,&#13;&#10;&#9;DATE_UPDATE,&#13;&#10;&#9;classification,&#13;&#10;&#9;USER_UPDATE_ID,&#13;&#10;&#9;--ObjectIDSource,&#13;&#10;&#9;--FLAG_TAB,&#13;&#10;&#9;Gender,&#13;&#10;&#9;Nationality,&#13;&#10;&#9;MaritalStatus,&#13;&#10;&#9;Job_title,&#13;&#10;&#9;Academic_degree,&#13;&#10;&#9;Tipo_Docs,&#13;&#10;&#9;AdressID,&#13;&#10;&#9;Legal_form,&#13;&#10;&#9;JobDesciption,&#13;&#10;&#9;GenderDesciption,&#13;&#10;&#9;EstadoCivil,&#13;&#10;&#9;Segmentation,&#13;&#10;&#9;LocalNascimento ,&#13;&#10;&#9;DataDoc_Emissao ,&#13;&#10;&#9;LocalEmissao,&#13;&#10;&#9;Assinatura ,&#13;&#10;&#9;NomeRepresentanteFamilia,&#13;&#10;&#9;Relacao_Agregado ,&#13;&#10;&#9;DataFile &#13;&#10;FROM&#13;&#10;&#9;Cadastro.dbo.UCC_T_DETALHE_CLIENTES &#13;&#10;    &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; SELECT &#13;&#10;&#9;[NUMBER],&#13;&#10;&#9; REPLACE(REPLACE(NAME ,CHAR(13) + Char(10) ,' '), CHAR(10), '') NAME,&#13;&#10;&#9; REPLACE(REPLACE(NOMINHO ,CHAR(13) + Char(10) ,' '), CHAR(10), '') NOMINHO,&#13;&#10;&#9;REPLACE(REPLACE(CONTEXT_SEARCH ,CHAR(13) + Char(10) ,' '), CHAR(10), '') CONTEXT_SEARCH,&#13;&#10;&#9; REPLACE(REPLACE(OBS ,CHAR(13) + Char(10) ,' '), CHAR(10), '')  OBS,&#13;&#10;&#9; REPLACE(REPLACE(STATUS ,CHAR(13) + Char(10) ,' '), CHAR(10), '')  STATUS,&#13;&#10;&#9;REPLACE(REPLACE(CREATEBY ,CHAR(13) + Char(10) ,' '), CHAR(10), '')  CREATEBY,&#13;&#10;&#9;CREATEDATE,&#13;&#10;&#9;TIPO,&#13;&#10;&#9;ESTADO,&#13;&#10;&#9;ID_OBJ,&#13;&#10;&#9;NUMBER_UCC,&#13;&#10;&#9;--ID,&#13;&#10;&#9;--Expr10,&#13;&#10;&#9;--OriginTeam,&#13;&#10;&#9;--CustomerValue,&#13;&#10;&#9;BirthData,&#13;&#10;&#9;Industry,&#13;&#10;&#9;NumberOfEmployees,&#13;&#10;&#9;CustomerCategory,&#13;&#10;&#9;MainContactInformation,&#13;&#10;&#9;PaymentTerms,&#13;&#10;&#9;--MainAddressInformation,&#13;&#10;&#9;--CustomerID,&#13;&#10;&#9;REPLACE(REPLACE(ReasonStatusChange ,CHAR(13) + Char(10) ,' '), CHAR(10), '') ReasonStatusChange,&#13;&#10;&#9;--OBJECT_ID,&#13;&#10;&#9;TP_DETAIL_ID,&#13;&#10;&#9;--DomainValue,&#13;&#10;&#9;--Value,&#13;&#10;&#9;CodCertComercial,&#13;&#10;&#9;ValueDocs,&#13;&#10;&#9;DomaianValueDocs,&#13;&#10;&#9;NameDocs,&#13;&#10;&#9;CustomerManagerID,&#13;&#10;&#9;TYPE_ID,&#13;&#10;&#9;DomainValueTelefone,&#13;&#10;&#9;ValueTelefone,&#13;&#10;&#9;DomainValueEmail,&#13;&#10;&#9;ValueEmail,&#13;&#10;&#9;DomainValueSite,&#13;&#10;&#9;ValueSite,&#13;&#10;&#9;ImageUploadLink,&#13;&#10;&#9;ponctiation,&#13;&#10;&#9;NIB,&#13;&#10;&#9;Entidade,&#13;&#10;&#9;NameGestor,&#13;&#10;&#9;ILHA,&#13;&#10;&#9;Remarks,&#13;&#10;&#9;CUSTUMER_CATEGORY,&#13;&#10;&#9;IntegrationOrigin,&#13;&#10;&#9;NameUserUpdate,&#13;&#10;&#9;DATE_UPDATE,&#13;&#10;&#9;classification,&#13;&#10;&#9;USER_UPDATE_ID,&#13;&#10;&#9;--ObjectIDSource,&#13;&#10;&#9;--FLAG_TAB,&#13;&#10;&#9;Gender,&#13;&#10;&#9;Nationality,&#13;&#10;&#9;MaritalStatus,&#13;&#10;&#9;Job_title,&#13;&#10;&#9;Academic_degree,&#13;&#10;&#9;Tipo_Docs,&#13;&#10;&#9;AdressID,&#13;&#10;&#9;Legal_form,&#13;&#10;&#9;JobDesciption,&#13;&#10;&#9;GenderDesciption,&#13;&#10;&#9;EstadoCivil,&#13;&#10;&#9;Segmentation,&#13;&#10;&#9;LocalNascimento ,&#13;&#10;&#9;DataDoc_Emissao ,&#13;&#10;&#9;LocalEmissao,&#13;&#10;&#9;Assinatura ,&#13;&#10;&#9;NomeRepresentanteFamilia,&#13;&#10;&#9;Relacao_Agregado ,&#13;&#10;&#9;DataFile &#13;&#10;FROM&#13;&#10;&#9;Cadastro.dbo.UCC_T_DETALHE_CLIENTES &#13;&#10;    &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -352,10 +351,9 @@
   </node>
   <node componentName="tDataprepRun" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataprepRun_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;https://tdp.us-west.cloud.talend.com/&quot;"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;sergio.lima@sysvision.com.br&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:+dZbZvUgq2Y+G6dHKNJuFZ4xO4KgGUcPIIZVWWEjGlMCS+LQbPwIuSlTmurs3rlQNQ=="/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:P+4bWTavKyZixmoty1cGgEdBm1Lc/tQ7iHIg2wZj3E46qiWiu4mksYk4tgvkTrjXOQ=="/>
     <elementParameter field="CHECK" name="USE_PREP_PATH" value="false"/>
     <elementParameter field="DATA_PREP_ID" name="PREPARATION_ID" value="&quot;f73e4f95-3ea7-4b1e-b126-d4bb26d47e82&quot;"/>
     <elementParameter field="TEXT" name="PREPARATION_NAME" show="false" value="PROD_UCC_T_DETALHE_CLIENTES_Dataset_Unitel Preparation"/>
@@ -436,7 +434,6 @@
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/sergi/WORKSPACE_UNITEL_8.0/arquivos/&quot;+&quot;clientes&quot;+context.data+&quot;.csv&quot;"/>
@@ -551,7 +548,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:lBBKzxgZGIrml5qU8ISVdb5XjaJZD/N8QlSeiG1SK/sVI3mZcCORmN8G"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:4gX4bbeLWLqA5bC/7EFnbR2lf/aobLGkIT+VXH6sab2PLLHIDCDF1tSb"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -1052,7 +1049,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:RQLTrNPA7v3ou35PZdFkUKRF+u+DomqZdxyypHbfSYz3bfn+TaFI1asA"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:yIyR+LoKSTv2/QDp0el0txj63Q6W6QOevzsWDI22Oe4/HrqkwCXd+wZ/"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;SYS_DET_CLIENTES&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -1588,13 +1585,14 @@
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDataprepRun_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDataprepRun_1" offsetLabelX="0" offsetLabelY="0" source="tDataprepRun_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputDelimited_1" target="tFileList_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDBConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
@@ -1667,13 +1665,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5535abfd-4046-4366-97fb-afc713de3cae"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rpfaKDVvJCjqO0Rmf9DPecCR1KnF2zXsTEPhTlcc5mKop76oAskCcsiuiG0B6mAIM755twSZnpcX&#13;
-LWqpYn30sg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_36e3cd08-cf54-45f0-a3f5-76bfb13d8d34"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>47VDH5YZYh9MVXCkyRymtcitiwtycRBu5pinG2FKveqlJYLaQ7qrpZSuSn5a4P+5ahMiadzvW/4h&#13;
-5vrKX/ICdw==</DigestValue></Reference></SignedInfo><SignatureValue>cjlf2XhR0HcpW98yObueKzyldyZ4t9G+oF8X3eW674bOEYYBzabnUljldOF50X4/QJQQ9KcFzbl7&#13;
-kyz/TSQxEm0DzirpphSyi46E683b2rAxe+JLXMRUDu+GRKxNCisqGzt57d+5xEmbBNFEizMiNsnB&#13;
-0QNzvY1tA7u22rLMqSjudmVL6wIEYvklrAeFfuqy2Yo/5Gtq+Si02tVcFW8X4JnFG7K3iaFpmWqL&#13;
-+nJOxWNvsjUW9VTEhzjJ9+Ifpzg5AbbaMQfz27RzrGu2xmLTbwBDDyiPf6DIARxmUMUWPbGLKm05&#13;
-fvdPw6AskRDHwt6R4UyG+ttlKOPdmMPUhRtRcw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6546dd17-9368-445d-9e97-56331a9f408c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sK+4ESjD4KOveLJ8UanCsGvz8kz7ho3SClXnllFI687tevHlc0PLQd7YQAfFFfFyBwQzsMBE+sKG&#13;
+lgdiXOGk9Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5a46b4ae-de7e-474e-aa0c-3f9c29a43172"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Be9dc6KpbA1A56EiQiD1NStL4AAq9A/29s33falY5gLAYZrQ/Qni9iJi9i+GZagKAq9BBVUFXWZX&#13;
+I0rWC6IcaA==</DigestValue></Reference></SignedInfo><SignatureValue>INH36TTd2CfL1nxdIpkz9ZnzA0/3KUgGnJfG5IzekrQrmELWdWHHAfz6xYGehMQpj1KfcRHUz5ik&#13;
+34YeT0wOEL+v6FrTdpFfepb4t/I6BBPaBTkBBkS/GhhT7M+7/xhM/vZZIMj/bvJXOXYidVRQjZj1&#13;
+D3HC5rb8bHqhquZ7CnaNWO8U+9b0Vey1jyISOCvqosqyQWpS9L1zdhx1uXNHnCsJcNe9fcNtVLb6&#13;
+4+neyLjxxtGwNm8fi2/nk4AMLfAmll406gPlBZLTmJagSrtrW1QBeqAImWRi1zgePXorDnP0/exB&#13;
+TN9DGOfPs6zxYmyzK02PUGq3xsoAiPb1LsKWEw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1695,4 +1693,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_36e3cd08-cf54-45f0-a3f5-76bfb13d8d34" Target="#_5535abfd-4046-4366-97fb-afc713de3cae"><Timestamp>2022-03-09 18:06:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5a46b4ae-de7e-474e-aa0c-3f9c29a43172" Target="#_6546dd17-9368-445d-9e97-56331a9f408c"><Timestamp>2022-03-09 19:31:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
