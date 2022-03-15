@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_6l52sIUrEeymA7ReFGNmPQ" name="AdressID_Column_Analysis_Basic" creationDate="2022-02-03T16:00:20.376-0300" defaultContext="Default">
+    <clientDependency href="../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <taggedValue xmi:id="_6l52sYUrEeymA7ReFGNmPQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_6l52soUrEeymA7ReFGNmPQ" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_6l52s4UrEeymA7ReFGNmPQ" tag="Purpose" value="Analise da coluna de referencia de endereco"/>
+    <taggedValue xmi:id="_6l52tIUrEeymA7ReFGNmPQ" tag="Description" value="Verificar registros em branco"/>
+    <taggedValue xmi:id="_6l52tYUrEeymA7ReFGNmPQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_qZbHYYUzEey_8Z7FFdyZ1w" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_qZbHYoUzEey_8Z7FFdyZ1w" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_qZbucIUzEey_8Z7FFdyZ1w" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_qZjqQIUzEey_8Z7FFdyZ1w" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_6l52toUrEeymA7ReFGNmPQ">
+      <connection href="../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6iHlIEeymA7ReFGNmPQ"/>
+    </context>
+    <results xmi:id="_6l52t4UrEeymA7ReFGNmPQ">
+      <resultMetadata xmi:id="_6l52uIUrEeymA7ReFGNmPQ" executionDate="2022-02-03T16:58:51.722-0300" executionDuration="620" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_qZbucYUzEey_8Z7FFdyZ1w" count="505821" computed="true">
+        <parameters xmi:id="_qZbucoUzEey_8Z7FFdyZ1w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6iHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tpvooIUzEey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (tipo = 'Particular')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_toNXkIUzEey_8Z7FFdyZ1w" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_toNXkYUzEey_8Z7FFdyZ1w" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_toNXkoUzEey_8Z7FFdyZ1w" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_toNXk4UzEey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_qZbuc4UzEey_8Z7FFdyZ1w" count="505821" nullCount="232099" computed="true">
+        <parameters xmi:id="_qZbudIUzEey_8Z7FFdyZ1w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6iHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tpvooYUzEey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE &quot;AdressID&quot; IS NULL  AND (tipo = 'Particular')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_toj84IUzEey_8Z7FFdyZ1w" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_toj84YUzEey_8Z7FFdyZ1w" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_toj84oUzEey_8Z7FFdyZ1w" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_toj844UzEey_8Z7FFdyZ1w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_qZbudYUzEey_8Z7FFdyZ1w" count="505821" nullCount="232099" computed="true" blankCount="6389">
+        <parameters xmi:id="_qZbudoUzEey_8Z7FFdyZ1w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6iHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tpvoooUzEey_8Z7FFdyZ1w" body="SELECT COUNT(&quot;AdressID&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;AdressID&quot;)) = ''  AND (tipo = 'Particular')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_tpkpgIUzEey_8Z7FFdyZ1w" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_tpkpgYUzEey_8Z7FFdyZ1w" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_tpkpgoUzEey_8Z7FFdyZ1w" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_tpkpg4UzEey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_tpkphIUzEey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_tpkphYUzEey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_tpkphoUzEey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_tpkph4UzEey_8Z7FFdyZ1w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_6l52uYUrEeymA7ReFGNmPQ" dataFilter="_qZk4YIUzEey_8Z7FFdyZ1w" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_qZbHYIUzEey_8Z7FFdyZ1w" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_qZk4YIUzEey_8Z7FFdyZ1w" name="AdressID_Column_Analysis_Basic">
+    <ranges xmi:id="_qZk4YYUzEey_8Z7FFdyZ1w">
+      <expressions xmi:id="_qZk4YoUzEey_8Z7FFdyZ1w">
+        <expression xsi:type="relational:TdExpression" xmi:id="_qZk4Y4UzEey_8Z7FFdyZ1w" body="tipo = 'Particular'" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
