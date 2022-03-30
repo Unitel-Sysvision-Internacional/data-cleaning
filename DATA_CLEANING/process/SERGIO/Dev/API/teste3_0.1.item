@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:WV2XTX4oiTcDbhPozHrcez7E5C2QoGRxRQYv3czC"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:niwjwTQL/Ds/KKOsSIC9bNHg81IpTuqdQ4ECDcAU"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:AlVrfADaIthnhzexsFPj4D/aLyunrHAEtyA0gQzz"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:1ZDwjvLFnEzJfPubFPOu9iY24p/zXSeUZHxlySxd"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -162,7 +162,7 @@
           <children loop="true" main="true" name="soapenv:Envelope" type="id_String" xpath="request.payload:/soapenv:Envelope" xsi:type="TalendXMLMap:OutputTreeNode">
             <children defaultValue="http://ucc2.com/xsd" name="xsd" nodeType="NAME_SPACE" type="id_String" xpath="request.payload:/soapenv:Envelope/xmlns:xsd" xsi:type="TalendXMLMap:OutputTreeNode"/>
             <children defaultValue="http://ucc2.com" name="ucc2" nodeType="NAME_SPACE" type="id_String" xpath="request.payload:/soapenv:Envelope/xmlns:ucc2" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children defaultValue="http://ucc2.com" name="soapenv" nodeType="NAME_SPACE" type="id_String" xpath="request.payload:/soapenv:Envelope/xmlns:soapenv" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children defaultValue="http://schemas.xmlsoap.org/soap/envelope/" name="soapenv" nodeType="NAME_SPACE" type="id_String" xpath="request.payload:/soapenv:Envelope/xmlns:soapenv" xsi:type="TalendXMLMap:OutputTreeNode"/>
             <children name="soapenv:Header" type="id_String" xpath="request.payload:/soapenv:Envelope/soapenv:Header" xsi:type="TalendXMLMap:OutputTreeNode"/>
             <children name="soapenv:Body" type="id_String" xpath="request.payload:/soapenv:Envelope/soapenv:Body" xsi:type="TalendXMLMap:OutputTreeNode">
               <children name="ucc2:ConsultaDocIdSniac" type="id_String" xpath="request.payload:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac" xsi:type="TalendXMLMap:OutputTreeNode">
@@ -184,75 +184,34 @@
       <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.3" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
-  <node componentName="tESBConsumer" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tESBConsumer_1"/>
-    <elementParameter field="EXTERNAL" name="SERVICE_CONFIGURATION" value=""/>
-    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="SERVICE_LOCATOR_STRATEGY" show="false" value="Default"/>
-    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
-    <elementParameter field="CHECK" name="USE_SR" value="false"/>
-    <elementParameter field="LABEL" name="AUTHENTICATION_LABEL" show="false" value=""/>
-    <elementParameter field="CHECK" name="AUTH_PROPAGATE" show="false" value="false"/>
+  <node componentName="tSOAP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSOAP_1"/>
+    <elementParameter field="CHECK" name="USE_NTLM" value="false"/>
+    <elementParameter field="TEXT" name="NTLM_DOMAIN" show="false" value="&quot;192.168.0.100&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" show="false" value="SAML"/>
-    <elementParameter field="CLOSED_LIST" name="PROPAGATE_TYPE" show="false" value="NONE"/>
-    <elementParameter field="LABEL" name="PROPAGATE_U_P_LABEL" show="false" value=""/>
-    <elementParameter field="LABEL" name="PROPAGATE_CERT_LABEL" show="false" value=""/>
-    <elementParameter field="TEXT" name="AUTH_ALIAS" show="false" value="&quot;alias&quot;"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:Nu/YWLuVVnBKTW1wa7i3FnOZHDBEWy+zznEfZ7pOzl0ppPX4L7Q="/>
-    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
-    <elementParameter field="LABEL" name="AUTHORIZATION_LABEL" show="false" value=""/>
-    <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="NEED_ENCRYPTION" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
-    <elementParameter field="TEXT" name="CORRELATION_VALUE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="ENABLE_CXF_MESSAGE_GZIP" value="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="TEXT" name="ESB_ENDPOINT" value="&quot;http://172.18.5.18:9765/services/IntegrationCadastroImp.IntegrationCadastroImpHttpSoap12Endpoint/&quot;"/>
-    <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;http://172.18.5.18:9765/services/IntegrationCadastroImp?wsdl&quot;"/>
-    <elementParameter field="TEXT" name="SERVICE_NS" show="false" value="http://ucc2.com"/>
-    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="IntegrationCadastroImp"/>
-    <elementParameter field="TEXT" name="PORT_NS" show="false" value="http://ucc2.com"/>
-    <elementParameter field="TEXT" name="PORT_NAME" show="false" value="IntegrationCadastroImpHttpSoap12Endpoint"/>
-    <elementParameter field="TEXT" name="METHOD_NS" show="false" value="http://ucc2.com"/>
-    <elementParameter field="TEXT" name="METHOD" show="false" value="ConsultaDocIdSniac(ConsultaDocIdSniac):ConsultaDocIdSniacResponse"/>
-    <elementParameter field="TEXT" name="SOAP_ACTION" show="false" value="urn:ConsultaDocIdSniac"/>
-    <elementParameter field="TEXT" name="COMMUNICATION_STYLE" show="false" value="request-response"/>
-    <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
-    <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
-    <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" show="false" value="false"/>
-    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
-    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_CUSTOM_PROPERTIES" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="300"/>
-    <elementParameter field="LABEL" name="CONNECTION_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
-    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="300"/>
-    <elementParameter field="LABEL" name="RECEIVE_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
-    <elementParameter field="CHECK" name="DISABLE_CHUNKING" value="false"/>
-    <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
-    <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:1Y+23HckykqqDgOFepi02j/dFBpbuXKuavKa8Ah3C0ZgglmZ9nI="/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:IOWvIOodZiPtLenO/WxMI/8P4aVL+lI3epti4gJ3xXCpP9shiqw="/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:jvypzVOccoNWGj6OJnn86BmYYFt23ouPgyP7OL/n"/>
-    <elementParameter field="TEXT" name="WSDL_CONTENT" show="false" value="eJwB3wQg+1BLAwQUAAgICADBW35UAAAAAAAAAAAAAAAACQAAAG1haW4ud3NkbM1Z227bOBB9L9B/&#13;&#10;EPReMfbGvRhxi9bZYg1s06BJgX2lJdohViJVkoqVv++Q1C2KZcmypd08JLE41zOHwxF99SmNQueR&#13;&#10;CEk5W7gT78J1CPN5QNl24f68//rmvfvp4+tXVzsZhPOAbCijCkSlo7DYEnWDIyJj7JOF+6BUPEco&#13;&#10;8f2p5/PIdcAyk3OtWCxK/4FEWHqwJDmOPS62SAugXJrJA4bwrljc7Xbe7g+jP724eIsuZggHgSBS&#13;&#10;QuDGZK4W0Yi0+9dSRRBauF1FrxcqemkybVeycoVaKhsymqB/vv19Z6zksjidzj5cvoAHpTIo0ZsU&#13;&#10;62DIw1CZB+LhlMppVU5H0S1W5JbF534SEaawrv/HFVNkK8z/SxxgqQRfRfEV2iP6+pXjWBPqKSbS&#13;&#10;fIYnKcRhXDtYKUHXiSJfuYiuyQYnoVq4vxIc0g0lEDUJiTbXtNxGRZN65jb/0e5hKQ5Jeg9ROQxr&#13;&#10;mtwxiv0VixNVly9CJr8S2CBkz3IukkXrRJR99/1EQI1hV1kH8TVW+AZLHx7QMMTrEB4qkRDIAsJY&#13;&#10;uNoFoMG2Lurr4ma1HNI6j8jSAKf4cG4U/5ewfuavUHOZzFql7J1I8VkI/GSYoYs3EDGgdQGtzwQo&#13;&#10;TnP7CVvzhAV6l+zzKousGhzbpjMvsx8F8aHBDgbfhBtBtgmRFK+C4ZzQYEkfaTikg/v4mg8IU8h9&#13;&#10;6OIBDsiQODG6GdD4KP1Qe/mGR3J0i+kIjpLoOhsTBvQSYyqHpJYkac/oezZNq2bmpvEHqWej6Kzz&#13;&#10;nEWjmAtlEDswoNVBqkJvwV7CeweEjIE3q8CcEU3nQ/OBU5VqOUU61b8cGDucoFawkWsHGNHCimI5&#13;&#10;i7UHlD+gNvCQ/OeQCqIS0Tj7ZXDWZrJxIa3vweytp3y7sW87wHaJt6Qz4lYrxkIVzUvAXwUv58XO&#13;&#10;hb4p5x1MocJWNcIsoqNiBOykOkOIR4eme0ZlJtz/wnmbCT0PkMfESnZoHFaD6p3pZEE0gmyxcPRN&#13;&#10;xPyzr8yVCXC1PVtjvuaSJ6qLz6ywXZw2sMA6qj3LEarWIEe8UoQ1Zfoq6GAN7vSdxuSLlcz3KWTT&#13;&#10;sWL6mqHwI9WT3vH5BQJYE5hJHdjB+wpzVaHXi07QgwgmkFJDf2wp8otw0T5aVTuHTZYHT04i9fxL&#13;&#10;YevgsKrXRpg+1jozICtDHwJMTyLAZPq/oQCEMgIJdMLnpEE3ewMT4S+AvzcNTG1zL49ErBfu7fe7&#13;&#10;+1PKaUyWGvpt05Zyj1Zr1fQVMcwKkAwMLvr4en762XQVSRUCWvYt5YlOTqivJOKR+odP29oYwIsx&#13;&#10;oJkOtjf8yYKYU72ZM8cHiPG8m7zYm9k1f6WYWVOYvJt6k/feDH7NP7x7O0NZRhLt9+N1DRqVFCzP&#13;&#10;yeORkPacPBqKyX4oGoCQdSQuL09Bohb0maAYBYkBKHFuHOQxEFSba63FjUOFMyc/aO7nLf4gnWD4&#13;&#10;pjhIL+jQFrPPmSf9BSKqf30MD38DUEsHCAgM7TFbBAAAex4AAFBLAQIUABQACAgIAMFbflQIDO0x&#13;&#10;WwQAAHseAAAJAAAAAAAAAAAAAAAAAAAAAABtYWluLndzZGxQSwUGAAAAAAEAAQA3AAAAkgQAAAAA&#13;&#10;agM25A==&#13;&#10;"/>
-    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:tB/+PvgNt6SZIWOCipqzt3//fYu3zamrZMjvIuQM"/>
+    <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
+    <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:rDmefimWj3t1pkwDa/ptRkCD7X/K2Ux3ysEL/itvmBpH8anjtZ8="/>
+    <elementParameter field="TEXT" name="ENDPOINT" value="&quot;http://172.18.5.18:9765/services/IntegrationCadastroImp?wsdl&quot;"/>
+    <elementParameter field="TEXT" name="ACTION" value="&quot;ConsultaDocIdSniac&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="SOAP_VERSION" value="Soap11"/>
+    <elementParameter field="CHECK" name="USE_MESSAGE_FROM_SCHEMA" value="true"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="SOAPMESSAGE_FROM_SCHEMA" value="payload"/>
+    <elementParameter field="MEMO" name="SOAPMESSAGE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OUTPUT_DOCUMENT" value="true"/>
+    <elementParameter field="CHECK" name="USE_KERBEROS" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="KERBEROS_CONFIGURATION" show="false" value=""/>
+    <elementParameter field="CHECK" name="ENFORCE_NTLM" show="false" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tESBConsumer_1">
-      <column comment="" key="false" length="-1" name="payload" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="RESPONSE" name="RESPONSE">
-      <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FAULT" name="FAULT">
-      <column defaultValue="" key="false" length="1024" name="faultCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="faultString" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="faultActor" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="faultNode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="faultRole" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="faultDetail" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tSOAP_1">
+      <column defaultValue="" key="false" length="0" name="Soap" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="224">
@@ -269,14 +228,14 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="payload"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Soap"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_2">
-      <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="Soap" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tWebService" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="96">
@@ -290,15 +249,15 @@
     <elementParameter field="TEXT" name="NTLM_DOMAIN" show="false" value="&quot;192.168.0.100&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:elGuo5IqO+Fi6jnfb+9+EIllvulCDuv3GzIdZeg0AhUFBoVT9pU="/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:tWmMw8LSd2WjDyhPmUDY071x+cqQHoUllCkTJZ1lL9fx43g0UJ4="/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:Jsnv1CTAtg36ARt/Aiul1nyzSrDqanFyt17qD/5L"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:tOYv1o+2E11OiIa9F41NmRtxNCp4Gz0eF2sT1sbo"/>
     <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
     <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:borIfXduaSPytIgi2UaWM0WLDg/VuX0Tt1k1kfp7Dg/dTlWGlpc="/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:781O3ke3PALSbY9aCT+gJcaMG5hU1CtNZEmKAFPkGryr9BlAW4Q="/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;http://172.18.5.18:9765/services/IntegrationCadastroImp?wsdl&quot;"/>
     <elementParameter field="TEXT" name="SERVICE_NS" show="false" value="http://ucc2.com"/>
@@ -952,11 +911,11 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="request" lineStyle="0" metaname="request" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tESBConsumer_1">
+  <connection connectorName="FLOW" label="request" lineStyle="0" metaname="request" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tSOAP_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="request"/>
   </connection>
-  <connection connectorName="RESPONSE" label="row3" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tESBConsumer_1" target="tLogRow_2">
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tSOAP_1" offsetLabelX="0" offsetLabelY="0" source="tSOAP_1" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
@@ -1013,13 +972,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0401b944-0c21-4e35-aadc-db547187dd7c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rdsf0J2am71zrAyh2FJdIbIOe4wzv7Do22mWYe/dlmUKD0YAOJ2J24U2OhhjoxV6aPrx0wLllcL1&#13;
-fI3ekfVNXQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_65493a75-08bc-49d0-a45f-6905ea193b09"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dgwS8pd/SC/lbOANmqasl5qm47vOMtplQoRTEBTas05J7bjAn0ZtjNKpuSZFlX0wZtknf63cnfjT&#13;
-U069CtuOdw==</DigestValue></Reference></SignedInfo><SignatureValue>pptNrLi0H14P4mac5myLaq6WRm4ENxHsJY++kXit8ck+kAtV9AzKS96IWYoYKLe84MXpR6u0XQca&#13;
-GVRH82I9l+dVS5KqIqx5lIbyimBjIDZIwyz4k+O1IPPAIlQT7pZpCc7WahnWUiAv6KgTIPGVOCjG&#13;
-xUuoFjvj0MGetytkOvp9cNlpJNZbKtZgF3APGF3jxWiyofwb5toipaipbh5hmyUT39OBHI59V2Pv&#13;
-QpWs5gzW5xMot/d1kNiODcuEZb68M990fSUDE8HuXLYI3gpmRUYiZZdc4RSbFj3Qcv1WFUfFZRKf&#13;
-ZD5pD1MftYFMlyT6w/uiy3XpoQbuSVifJotzzg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_805d1fce-5447-4d10-8951-8e39ab8ef63c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8+jsDIuwMA5vI05LF/8gOowqdc3eg3CgDhIZO7etKsVRc+ir90/UTlilpdsmt9tyvsbGQUK1/Nu4&#13;
+1U1OYwRIXw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_73e7260e-d7fa-4daf-9744-d0ea38a059c3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TuBjDGhRXSplZ09FYHL7KlDd4K/Um+KL+iizkCwTIVqIrfqgTZCa5FWw4QXZTI0FLJB26wObLz9p&#13;
+O44wQ7PxeQ==</DigestValue></Reference></SignedInfo><SignatureValue>TKZNBFokitj8OZDpVBbWOTplLj4smNC1CqLPuwxJFp3ycC1exPJkBUDZmreq9imydy5SmdHjmwpw&#13;
+8fzhippYNVoeFUrgp4oYKJ2l+1ViYsjioYVR1LPPGBX6C4TBCrXAcAuoW/WYj3oWeXp8qWe+ADQb&#13;
+/i8UqEIyoOqSEF9jk4Fr8RGjIZ2YLWjctBwaLgUz/j6EHWqoJH1/OxspoW0GyXEjcbCKxo44lETm&#13;
+5OS5LCCmqdw9jcEJFaCkrOgot7mK/HqMlXPQCyTZne+nWY+3wncNW8+K6UTzCGUf7B87RUqApLrW&#13;
+qLKFlRf4+5obZsp0f3FIX3Y1Tn4ZmVMFaruU4g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1041,4 +1000,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_65493a75-08bc-49d0-a45f-6905ea193b09" Target="#_0401b944-0c21-4e35-aadc-db547187dd7c"><Timestamp>2022-03-30 14:36:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_73e7260e-d7fa-4daf-9744-d0ea38a059c3" Target="#_805d1fce-5447-4d10-8951-8e39ab8ef63c"><Timestamp>2022-03-30 14:38:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
