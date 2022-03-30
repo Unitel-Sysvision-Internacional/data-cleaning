@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendXMLMap="http://www.talend.org/xmlmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:hiV9gQ6SIe4au54li3yp7DIQwvbfghFZOc163q+N"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:YenwcPH1JSOMYllvfsY3RUXqdZFUccwGJMtJH9+V"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:a/eQHj5SJ2a/ck6t6Q9Npnsl7gehuO2UhQ0eP5JD"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:eeHY1b1Z5QcZ8XAUGigU0O8/ARFQZyaQXBqbm+PS"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -113,7 +113,7 @@
     <routinesParameter id="_MNgz0J7ZEeyc0O6Mky8oCg" name="TalendStringUtil"/>
     <routinesParameter id="_MNCSsJ7ZEeyc0O6Mky8oCg" name="TalendString"/>
   </parameters>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="224">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
@@ -141,6 +141,49 @@
       <column comment="" key="false" length="-1" name="token" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="request">
+      <column comment="" key="false" length="-1" name="payload" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row1">
+        <nodes name="pDataNasc" outgoingConnections="//@node.1/@nodeData/@connections.0" type="id_String" xpath="row1/pDataNasc"/>
+        <nodes name="pNIC" outgoingConnections="//@node.1/@nodeData/@connections.1" type="id_String" xpath="row1/pNIC"/>
+        <nodes name="pNomeCompleto" outgoingConnections="//@node.1/@nodeData/@connections.2" type="id_String" xpath="row1/pNomeCompleto"/>
+        <nodes name="token" outgoingConnections="//@node.1/@nodeData/@connections.3" type="id_String" xpath="row1/token"/>
+      </inputTrees>
+      <outputTrees activateCondensedTool="true" allInOne="true" name="request">
+        <nodes expression="" name="payload" pattern="" type="id_Document" xpath="request/payload">
+          <children loop="true" main="true" name="soapenv:Envelope" type="id_String" xpath="request.payload:/soapenv:Envelope" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children defaultValue="http://ucc2.com/xsd" name="xsd" nodeType="NAME_SPACE" type="id_String" xpath="request.payload:/soapenv:Envelope/xmlns:xsd" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children defaultValue="http://ucc2.com" name="ucc2" nodeType="NAME_SPACE" type="id_String" xpath="request.payload:/soapenv:Envelope/xmlns:ucc2" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children defaultValue="http://schemas.xmlsoap.org/soap/envelope/" name="soapenv" nodeType="NAME_SPACE" type="id_String" xpath="request.payload:/soapenv:Envelope/xmlns:soapenv" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children name="soapenv:Header" type="id_String" xpath="request.payload:/soapenv:Envelope/soapenv:Header" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children name="soapenv:Body" type="id_String" xpath="request.payload:/soapenv:Envelope/soapenv:Body" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children name="ucc2:ConsultaDocIdSniac" type="id_String" xpath="request.payload:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children name="ucc2:sniacInput" type="id_String" xpath="request.payload:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children expression="row1.pDataNasc" incomingConnections="//@node.1/@nodeData/@connections.0" name="xsd:pDataNasc" type="id_String" xpath="request.payload:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pDataNasc" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="row1.pNIC" incomingConnections="//@node.1/@nodeData/@connections.1" name="xsd:pNIC" type="id_String" xpath="request.payload:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pNIC" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="row1.pNomeCompleto" incomingConnections="//@node.1/@nodeData/@connections.2" name="xsd:pNomeCompleto" type="id_String" xpath="request.payload:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pNomeCompleto" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="row1.token" incomingConnections="//@node.1/@nodeData/@connections.3" name="xsd:token" type="id_String" xpath="request.payload:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:token" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                </children>
+              </children>
+            </children>
+          </children>
+        </nodes>
+      </outputTrees>
+      <varTables minimized="true" name="Var"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.2" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.3" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+    </nodeData>
+  </node>
   <node componentName="tESBConsumer" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tESBConsumer_1"/>
     <elementParameter field="EXTERNAL" name="SERVICE_CONFIGURATION" value=""/>
@@ -157,7 +200,7 @@
     <elementParameter field="LABEL" name="PROPAGATE_CERT_LABEL" show="false" value=""/>
     <elementParameter field="TEXT" name="AUTH_ALIAS" show="false" value="&quot;alias&quot;"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:FGghZmHNQd5OihzAoMMVEuQ8a6Yrsnn28k/vlgwy+4Tzr5GRwY4="/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:JFXAZg8jfKo+XEhVLjLoUmM/iB4qi2+pJCGI/wxYBGfleOrLVyU="/>
     <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
     <elementParameter field="LABEL" name="AUTHORIZATION_LABEL" show="false" value=""/>
     <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
@@ -188,20 +231,17 @@
     <elementParameter field="CHECK" name="DISABLE_CHUNKING" value="false"/>
     <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
     <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:toiQtw8WTPZ1YJPCBD4jy/DX3O58Fo41XW+ag+Sa+YdB7oFPlSk="/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:XnNrRQWmpi5OjJkNhpvzeqo5xpgwIj/arObSO0s/oyMfrAP/MYw="/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:R/eNz0IfuXiSVROFMlEqA2KAHto0L1MbjLwQgsWD"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:JB5CQ0LV9aahi0I+7YkFVO3vSWMI0Z3NJOaJ0pSd"/>
     <elementParameter field="TEXT" name="WSDL_CONTENT" show="false" value="eJwB3wQg+1BLAwQUAAgICADBW35UAAAAAAAAAAAAAAAACQAAAG1haW4ud3NkbM1Z227bOBB9L9B/&#13;&#10;EPReMfbGvRhxi9bZYg1s06BJgX2lJdohViJVkoqVv++Q1C2KZcmypd08JLE41zOHwxF99SmNQueR&#13;&#10;CEk5W7gT78J1CPN5QNl24f68//rmvfvp4+tXVzsZhPOAbCijCkSlo7DYEnWDIyJj7JOF+6BUPEco&#13;&#10;8f2p5/PIdcAyk3OtWCxK/4FEWHqwJDmOPS62SAugXJrJA4bwrljc7Xbe7g+jP724eIsuZggHgSBS&#13;&#10;QuDGZK4W0Yi0+9dSRRBauF1FrxcqemkybVeycoVaKhsymqB/vv19Z6zksjidzj5cvoAHpTIo0ZsU&#13;&#10;62DIw1CZB+LhlMppVU5H0S1W5JbF534SEaawrv/HFVNkK8z/SxxgqQRfRfEV2iP6+pXjWBPqKSbS&#13;&#10;fIYnKcRhXDtYKUHXiSJfuYiuyQYnoVq4vxIc0g0lEDUJiTbXtNxGRZN65jb/0e5hKQ5Jeg9ROQxr&#13;&#10;mtwxiv0VixNVly9CJr8S2CBkz3IukkXrRJR99/1EQI1hV1kH8TVW+AZLHx7QMMTrEB4qkRDIAsJY&#13;&#10;uNoFoMG2Lurr4ma1HNI6j8jSAKf4cG4U/5ewfuavUHOZzFql7J1I8VkI/GSYoYs3EDGgdQGtzwQo&#13;&#10;TnP7CVvzhAV6l+zzKousGhzbpjMvsx8F8aHBDgbfhBtBtgmRFK+C4ZzQYEkfaTikg/v4mg8IU8h9&#13;&#10;6OIBDsiQODG6GdD4KP1Qe/mGR3J0i+kIjpLoOhsTBvQSYyqHpJYkac/oezZNq2bmpvEHqWej6Kzz&#13;&#10;nEWjmAtlEDswoNVBqkJvwV7CeweEjIE3q8CcEU3nQ/OBU5VqOUU61b8cGDucoFawkWsHGNHCimI5&#13;&#10;i7UHlD+gNvCQ/OeQCqIS0Tj7ZXDWZrJxIa3vweytp3y7sW87wHaJt6Qz4lYrxkIVzUvAXwUv58XO&#13;&#10;hb4p5x1MocJWNcIsoqNiBOykOkOIR4eme0ZlJtz/wnmbCT0PkMfESnZoHFaD6p3pZEE0gmyxcPRN&#13;&#10;xPyzr8yVCXC1PVtjvuaSJ6qLz6ywXZw2sMA6qj3LEarWIEe8UoQ1Zfoq6GAN7vSdxuSLlcz3KWTT&#13;&#10;sWL6mqHwI9WT3vH5BQJYE5hJHdjB+wpzVaHXi07QgwgmkFJDf2wp8otw0T5aVTuHTZYHT04i9fxL&#13;&#10;YevgsKrXRpg+1jozICtDHwJMTyLAZPq/oQCEMgIJdMLnpEE3ewMT4S+AvzcNTG1zL49ErBfu7fe7&#13;&#10;+1PKaUyWGvpt05Zyj1Zr1fQVMcwKkAwMLvr4en762XQVSRUCWvYt5YlOTqivJOKR+odP29oYwIsx&#13;&#10;oJkOtjf8yYKYU72ZM8cHiPG8m7zYm9k1f6WYWVOYvJt6k/feDH7NP7x7O0NZRhLt9+N1DRqVFCzP&#13;&#10;yeORkPacPBqKyX4oGoCQdSQuL09Bohb0maAYBYkBKHFuHOQxEFSba63FjUOFMyc/aO7nLf4gnWD4&#13;&#10;pjhIL+jQFrPPmSf9BSKqf30MD38DUEsHCAgM7TFbBAAAex4AAFBLAQIUABQACAgIAMFbflQIDO0x&#13;&#10;WwQAAHseAAAJAAAAAAAAAAAAAAAAAAAAAABtYWluLndzZGxQSwUGAAAAAAEAAQA3AAAAkgQAAAAA&#13;&#10;agM25A==&#13;&#10;"/>
     <elementParameter field="TABLE" name="HEADERS"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tESBConsumer_1">
-      <column comment="" key="false" length="-1" name="pDataNasc" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pNIC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pNomeCompleto" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="token" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="payload" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
     <metadata connector="RESPONSE" name="RESPONSE">
       <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
@@ -250,15 +290,15 @@
     <elementParameter field="TEXT" name="NTLM_DOMAIN" show="false" value="&quot;192.168.0.100&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:Iq03yh2evGHiBiP2JTauf6WDJwG1zT6KXOhxKScg0BoXLuIRLVY="/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:I2wpW43bZVfceLXPCmS8ZZytVM25pch5SFoCxr/6RuoJah+sq2E="/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:u0GiCiipLDK/y4sqKlxue1GfJr3CgDSUW6fFRX2c"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:QhUcU3f4v9gEbsp13NoWL8zzV+2P7ImXCmZKc8n4"/>
     <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
     <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:4w7mOwsV0OMcH6wqvyn2rsFKSlD+NEg3bhgOcGgltRip2LG5B8s="/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:U6SpdPK4tgZesLI16i0FKW2y4vfEFVBX+QxXv+8MMVrO5REMjpo="/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;http://172.18.5.18:9765/services/IntegrationCadastroImp?wsdl&quot;"/>
     <elementParameter field="TEXT" name="SERVICE_NS" show="false" value="http://ucc2.com"/>
@@ -908,9 +948,13 @@
       <column comment="" key="false" length="-1" name="sexo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tESBConsumer_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tXMLMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="request" lineStyle="0" metaname="request" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tESBConsumer_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="request"/>
   </connection>
   <connection connectorName="RESPONSE" label="row3" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tESBConsumer_1" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -969,13 +1013,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_650ab044-5bba-4d79-a796-43e8eaca03e3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cu788GapyE0WA0/6P2gHyDh4XRvq3UouAkjqKSYZOBTQ6GkAJesu9PrWe7L3X9UWzky87f7DfY1J&#13;
-eaQdoTHMrw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_df00ab04-52a5-4302-8a0b-bfa3cc589765"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YslFV7zRQt/jrYoVKA1nAx8kj1jtfcvvPqqeXYKxbqLJwnOpQ1AaGZ44AdCJgD716Fm12FbHa3wp&#13;
-vkHzYuCAaQ==</DigestValue></Reference></SignedInfo><SignatureValue>CFXN5IosvK4OYVzw+ExNthZMoqEZqSzk9LHHST8fUJiB92O+etT2cKXl7Eun944plvS258NrPcGJ&#13;
-hOf55Acf8uK8KwsV1BJ9roUUBsq3+7aPD++RfWzmQLZuA0jApzt9oATiZsFr/7wBGgFwYK3pFvJf&#13;
-VyPN79og/ciTHOoApOpvEwLpSYnemiKwr0OiGEGDT+N7NvIxUBBt45LLRZMXYrLQj0PATw0OUkBD&#13;
-ztGZ03u1a4vxx/7YbEA+bAgiNm1sukSZYeifrfPF5wY03UShFA/XqWax7NkotS0BPPA2MwyIy7hP&#13;
-sNiM9Lx67DyIhx1907nMTWNOB4xQ6Pi74MuTZg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9dedc5d8-964a-4d7c-a491-b6ce8c0ca057"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>e3L1I7DwQcjd5DAVHUMqFJrG9qEKgpGJp+HW1z8GPQvGktUJSEQe29RcjFgH9fK2g/pR506i60yy&#13;
+uAysSEtREg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a6134af9-2a22-4108-a882-bb7939331bef"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/ixzC1TGzjxmEV2sqNSf6o9s1oSsRzUEbnaTbwznOvFoWYBtPOsq2ACgTOlsFvgU6tHdQFEUlVh4&#13;
+H+nmkuTEOw==</DigestValue></Reference></SignedInfo><SignatureValue>OX/6sNcV0BvXg5e/NSMjFYf9NdCxNiB4DTepAKRqkIGW5F5c+/9+5AuzvhA8jRDPAhNB1rqcRrQs&#13;
+/2a+nECZLIEzC89sx8HBd8XApR/ot6AYt1DC2xJ2dRugur1KKPteJCeNNvJvAMBG8GdxssT1fMSs&#13;
+sw4mHByNGEkuY6ntQjiwfl/Rv4194VssZ0gudYcLvOH4iC2v1MNDpXnEwKA6D6/H/afebe5aHzun&#13;
+mlVqjtvUSOqo8aP4tJ2GLsyFXlfNYXY1e9xYaPdDjGgLa5MA7JcocGQgliRCFCr0zZgvA2JbTjGL&#13;
+m6KcE+hunfAIBcEZRnHw3cnJcOQPYtsjBs1kjA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -997,4 +1041,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_df00ab04-52a5-4302-8a0b-bfa3cc589765" Target="#_650ab044-5bba-4d79-a796-43e8eaca03e3"><Timestamp>2022-03-30 14:32:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a6134af9-2a22-4108-a882-bb7939331bef" Target="#_9dedc5d8-964a-4d7c-a491-b6ce8c0ca057"><Timestamp>2022-03-30 14:34:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
