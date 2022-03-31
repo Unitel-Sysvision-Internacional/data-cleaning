@@ -3,7 +3,7 @@
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="96"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:zBIR4LFbBNUNxMxZGFFaTWnWbxMJGWdFR9YLZy4x"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:GpzMZZPvi+qilOvf6KxByXlFlcWzgJch3+TdoYLr"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:mqt2kyWAR+sgLK2KwL2hf1SyIpwfRLHVka6XSuGb"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:spyBDWqFinlbzp8NgAQWDGBjZGGP21QtBugKroop"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -113,865 +113,7 @@
     <routinesParameter id="_MNgz0J7ZEeyc0O6Mky8oCg" name="TalendStringUtil"/>
     <routinesParameter id="_MNCSsJ7ZEeyc0O6Mky8oCg" name="TalendString"/>
   </parameters>
-  <node componentName="tWebService" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWebService_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="EXTERNAL" name="SERVICE_CONFIGURATION" value=""/>
-    <elementParameter field="CLOSED_LIST" name="MAPPING_DISPLAY" value="AUTO"/>
-    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="300"/>
-    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="300"/>
-    <elementParameter field="CHECK" name="USE_NTLM" value="false"/>
-    <elementParameter field="TEXT" name="NTLM_DOMAIN" show="false" value="&quot;192.168.0.100&quot;"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:p3PHKRA/3iIyVwfk5wHGRW30up5FmoIql11oJUD0qU5FBFbNXU4="/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
-    <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:jwP3RuRF55zT3utW3+Jme1wfZl8ZEUss2+nQXZ80"/>
-    <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
-    <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:qTujOsQBCauj79Q1iQFSyxlXPTrRXPdJMvvHW1QyAOxbRo4IgAY="/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;http://172.18.5.18:9765/services/IntegrationCadastroImp?wsdl&quot;"/>
-    <elementParameter field="TEXT" name="SERVICE_NS" show="false" value="http://ucc2.com"/>
-    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="IntegrationCadastroImp"/>
-    <elementParameter field="TEXT" name="PORT_NS" show="false" value="http://ucc2.com"/>
-    <elementParameter field="TEXT" name="PORT_NAME" show="false" value="IntegrationCadastroImpHttpSoap12Endpoint"/>
-    <elementParameter field="TEXT" name="METHOD" show="false" value="ConsultaDocIdSniac(parameters):ArraySniacData"/>
-    <elementParameter field="TABLE" name="INPUT_PARAMS" show="false">
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="row1.pDataNasc"/>
-      <elementValue elementRef="ELEMENT" value="parameters.sniacInput.pDataNasc"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="row1.pNIC"/>
-      <elementValue elementRef="ELEMENT" value="parameters.sniacInput.pNIC"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="row1.pNomeCompleto"/>
-      <elementValue elementRef="ELEMENT" value="parameters.sniacInput.pNomeCompleto"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="row1.token"/>
-      <elementValue elementRef="ELEMENT" value="parameters.sniacInput.token"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value="pDataNasc"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value="pNIC"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value="pNomeCompleto"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value="token"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="parameters"/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="sniacInput"/>
-      <elementValue elementRef="PARAPARENT" value="parameters"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="pDataNasc"/>
-      <elementValue elementRef="PARAPARENT" value="sniacInput"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="pNIC"/>
-      <elementValue elementRef="PARAPARENT" value="sniacInput"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="pNomeCompleto"/>
-      <elementValue elementRef="PARAPARENT" value="sniacInput"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="token"/>
-      <elementValue elementRef="PARAPARENT" value="sniacInput"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="OUTPUT_PARAMS" show="false">
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].dataNasc"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].freguesiaId"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].idCivil"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].idTpDoc"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].localidadeId"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].nif"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].nomeCompleto"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].nomeMaeCompleto"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].nomePaiCompleto"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].numDocumento"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].paisId"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value="parameters.return.sniacData[*].sexo"/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="denormalize(parameters.return.sniacData[*].dataNasc,&quot;:&quot;)"/>
-      <elementValue elementRef="COLUMN" value="dataNasc"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="parameters.return.sniacData[*].freguesiaId"/>
-      <elementValue elementRef="COLUMN" value="freguesiaId"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="parameters.return.sniacData[*].idCivil"/>
-      <elementValue elementRef="COLUMN" value="idCivil"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="parameters.return.sniacData[*].idTpDoc"/>
-      <elementValue elementRef="COLUMN" value="idTpDoc"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="parameters.return.sniacData[*].localidadeId"/>
-      <elementValue elementRef="COLUMN" value="localidadeId"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="parameters.return.sniacData[*].nif"/>
-      <elementValue elementRef="COLUMN" value="nif"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="parameters.return.sniacData[*].nomeCompleto"/>
-      <elementValue elementRef="COLUMN" value="nomeCompleto"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="parameters.return.sniacData[*].nomeMaeCompleto"/>
-      <elementValue elementRef="COLUMN" value="nomeMaeCompleto"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="parameters.return.sniacData[*].nomePaiCompleto"/>
-      <elementValue elementRef="COLUMN" value="nomePaiCompleto"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="parameters.return.sniacData[*].numDocumento"/>
-      <elementValue elementRef="COLUMN" value="numDocumento"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="parameters.return.sniacData[*].paisId"/>
-      <elementValue elementRef="COLUMN" value="paisId"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value="parameters.return.sniacData[*].sexo"/>
-      <elementValue elementRef="COLUMN" value="sexo"/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].freguesiaId"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].idTpDoc"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].nomeMaeCompleto"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].numDocumento"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].dataNasc"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].idCivil"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].nomePaiCompleto"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].paisId"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].sexo"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].localidadeId"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].nif"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value="parameters.return.sniacData[*].nomeCompleto"/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value=""/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="parameters"/>
-      <elementValue elementRef="PARAPARENT" value=""/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value=""/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="return"/>
-      <elementValue elementRef="PARAPARENT" value="parameters"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="result"/>
-      <elementValue elementRef="PARAPARENT" value="return"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="sniacData"/>
-      <elementValue elementRef="PARAPARENT" value="return"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="-1"/>
-      <elementValue elementRef="PARAMETERINDEX" value="*"/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="dataNasc"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="freguesiaId"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="idCivil"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="idTpDoc"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="localidadeId"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="nif"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="nomeCompleto"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="nomeMaeCompleto"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="nomePaiCompleto"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="numDocumento"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="paisId"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-      <elementValue elementRef="EXPRESSION" value=""/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="SOURCE" value=""/>
-      <elementValue elementRef="ELEMENT" value=""/>
-      <elementValue elementRef="PARAMETERINFO" value="sexo"/>
-      <elementValue elementRef="PARAPARENT" value="sniacData"/>
-      <elementValue elementRef="PARAMETERARRAYSIZE" value="0"/>
-      <elementValue elementRef="PARAMETERINDEX" value=""/>
-    </elementParameter>
-    <elementParameter field="DIRECTORY" name="TMPPATH" value=""/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tWebService_2">
-      <column comment="" key="false" length="-1" name="pDataNasc" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pNIC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pNomeCompleto" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="token" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="OUTPUT" name="OUTPUT">
-      <column comment="" key="false" length="-1" name="dataNasc" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="freguesiaId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="idCivil" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="idTpDoc" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="localidadeId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="nif" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="nomeCompleto" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="nomeMaeCompleto" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="nomePaiCompleto" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="numDocumento" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="paisId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="sexo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="dataNasc"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="freguesiaId"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="idCivil"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="idTpDoc"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="localidadeId"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="nif"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="nomeCompleto"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="nomeMaeCompleto"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="nomePaiCompleto"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="numDocumento"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="paisId"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sexo"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_1">
-      <column comment="" key="false" length="-1" name="dataNasc" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="freguesiaId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="idCivil" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="idTpDoc" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="localidadeId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="nif" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="nomeCompleto" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="nomeMaeCompleto" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="nomePaiCompleto" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="numDocumento" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="paisId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="sexo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tWebService" componentVersion="0.102" offsetLabelX="32" offsetLabelY="32" posX="1472" posY="-32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWebService_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="EXTERNAL" name="SERVICE_CONFIGURATION" value=""/>
-    <elementParameter field="CLOSED_LIST" name="MAPPING_DISPLAY" value="AUTO"/>
-    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="20"/>
-    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="20"/>
-    <elementParameter field="CHECK" name="USE_NTLM" value="false"/>
-    <elementParameter field="TEXT" name="NTLM_DOMAIN" show="false" value="&quot;192.168.0.100&quot;"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:A4f/8APaK0dsUvC7kqQrSIjvRi37lK2MRzsJT4V2KYxN2RoEO3Q="/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
-    <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:IhGFPUVPcQTIQPMbU4gOhaOPtf4SSxz9U11uheZI"/>
-    <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
-    <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:16C5j5lxO2qyCTo35UvReYCCyG6vge+YMzNJ3OOTIiMlstdcGNk="/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SERVICE_NS" show="false" value=""/>
-    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value=""/>
-    <elementParameter field="TEXT" name="PORT_NS" show="false" value=""/>
-    <elementParameter field="TEXT" name="PORT_NAME" show="false" value=""/>
-    <elementParameter field="TEXT" name="METHOD" show="false" value=""/>
-    <elementParameter field="TABLE" name="INPUT_PARAMS" show="false"/>
-    <elementParameter field="TABLE" name="OUTPUT_PARAMS" show="false"/>
-    <elementParameter field="DIRECTORY" name="TMPPATH" value=""/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tWebService_1"/>
-    <metadata connector="OUTPUT" name="OUTPUT"/>
-  </node>
-  <node componentName="tESBConsumer" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tESBConsumer_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="EXTERNAL" name="SERVICE_CONFIGURATION" value=""/>
-    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="SERVICE_LOCATOR_STRATEGY" show="false" value="Default"/>
-    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
-    <elementParameter field="CHECK" name="USE_SR" value="false"/>
-    <elementParameter field="LABEL" name="AUTHENTICATION_LABEL" show="false" value=""/>
-    <elementParameter field="CHECK" name="AUTH_PROPAGATE" show="false" value="false"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" show="false" value="SAML"/>
-    <elementParameter field="CLOSED_LIST" name="PROPAGATE_TYPE" show="false" value="NONE"/>
-    <elementParameter field="LABEL" name="PROPAGATE_U_P_LABEL" show="false" value=""/>
-    <elementParameter field="LABEL" name="PROPAGATE_CERT_LABEL" show="false" value=""/>
-    <elementParameter field="TEXT" name="AUTH_ALIAS" show="false" value="&quot;alias&quot;"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:i98yxY/bFC6HeL0ieBgt3oSC9Q2dRO8BD0qKErP7sOB55+DDaR0="/>
-    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
-    <elementParameter field="LABEL" name="AUTHORIZATION_LABEL" show="false" value=""/>
-    <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="NEED_ENCRYPTION" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
-    <elementParameter field="TEXT" name="CORRELATION_VALUE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="ENABLE_CXF_MESSAGE_GZIP" value="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="TEXT" name="ESB_ENDPOINT" value="&quot;http://www.webservicex.net/globalweather.asmx&quot;"/>
-    <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;http://www.webservicex.net/globalweather.asmx?WSDL&quot;"/>
-    <elementParameter field="TEXT" name="SERVICE_NS" show="false" value="http://www.webserviceX.NET"/>
-    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="GlobalWeather"/>
-    <elementParameter field="TEXT" name="PORT_NS" show="false" value="http://www.webserviceX.NET"/>
-    <elementParameter field="TEXT" name="PORT_NAME" show="false" value="GlobalWeatherSoap"/>
-    <elementParameter field="TEXT" name="METHOD_NS" show="false" value=""/>
-    <elementParameter field="TEXT" name="METHOD" show="false" value="GetWeather(GetWeather):GetWeatherResponse"/>
-    <elementParameter field="TEXT" name="SOAP_ACTION" show="false" value="http://www.webserviceX.NET/GetWeather"/>
-    <elementParameter field="TEXT" name="COMMUNICATION_STYLE" show="false" value="request-response"/>
-    <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
-    <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
-    <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" show="false" value="false"/>
-    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
-    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_CUSTOM_PROPERTIES" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
-    <elementParameter field="LABEL" name="CONNECTION_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
-    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
-    <elementParameter field="LABEL" name="RECEIVE_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
-    <elementParameter field="CHECK" name="DISABLE_CHUNKING" value="false"/>
-    <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
-    <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:9Ret/cCyuCmjGs+6EwKAewiCknA15iDa8yIot6W/WDK3WX3chHM="/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
-    <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:FK6ISGW6bwmCUDUgz7MyaeV9uwIRH3u6zfktjMkX"/>
-    <elementParameter field="TEXT" name="WSDL_CONTENT" show="false" value=""/>
-    <elementParameter field="TABLE" name="HEADERS"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tESBConsumer_2">
-      <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="RESPONSE" name="RESPONSE">
-      <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FAULT" name="FAULT">
-      <column defaultValue="" key="false" length="1024" name="faultCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="faultString" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="faultActor" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="faultNode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="faultRole" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="faultDetail" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1504" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
-    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="saida3" name="saida3">
-      <column comment="" defaultValue="" key="false" length="-1" name="dataNasc" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="id_Date" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="nomeCompleto" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendXMLMap:XmlMapData">
-      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row4">
-        <nodes expression="" name="payload" type="id_Document" xpath="row4/payload">
-          <children loop="true" main="true" name="soapenv:Envelope" type="id_String" xpath="row4.payload:/soapenv:Envelope">
-            <children defaultValue="http://ucc2.com/xsd" name="ax2594" nodeType="NAME_SPACE" type="id_String" xpath="row4.payload:/soapenv:Envelope/xmlns:ax2594"/>
-            <children defaultValue="http://ucc2.com" name="ns" nodeType="NAME_SPACE" type="id_String" xpath="row4.payload:/soapenv:Envelope/xmlns:ns"/>
-            <children defaultValue="http://schemas.xmlsoap.org/soap/envelope/" name="soapenv" nodeType="NAME_SPACE" type="id_String" xpath="row4.payload:/soapenv:Envelope/xmlns:soapenv"/>
-            <children name="soapenv:Body" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body">
-              <children name="ns:ConsultaDocIdSniacResponse" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse">
-                <children name="ns:return" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return">
-                  <children name="xsi:type" nodeType="ATTRIBUT" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/@xsi:type"/>
-                  <children name="ax2594:result" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:result">
-                    <children name="xsi:nil" nodeType="ATTRIBUT" type="id_Boolean" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:result/@xsi:nil"/>
-                  </children>
-                  <children name="ax2594:sniacData" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData">
-                    <children name="xsi:type" nodeType="ATTRIBUT" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/@xsi:type"/>
-                    <children name="ax2594:dataNasc" outgoingConnections="//@node.4/@nodeData/@connections.0" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc"/>
-                    <children name="ax2594:freguesiaId" type="id_Integer" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId"/>
-                    <children name="ax2594:idCivil" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil"/>
-                    <children name="ax2594:idTpDoc" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc"/>
-                    <children name="ax2594:localidadeId" type="id_Integer" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId"/>
-                    <children name="ax2594:nif" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif"/>
-                    <children name="ax2594:nomeCompleto" outgoingConnections="//@node.4/@nodeData/@connections.1" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto"/>
-                    <children name="ax2594:nomeMaeCompleto" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto"/>
-                    <children name="ax2594:nomePaiCompleto" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto"/>
-                    <children name="ax2594:numDocumento" type="id_String" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento"/>
-                    <children name="ax2594:paisId" type="id_Integer" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId"/>
-                    <children name="ax2594:sexo" type="id_Character" xpath="row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo"/>
-                  </children>
-                </children>
-              </children>
-            </children>
-          </children>
-        </nodes>
-      </inputTrees>
-      <outputTrees name="saida3">
-        <nodes expression=" [row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc]" incomingConnections="//@node.4/@nodeData/@connections.0" name="dataNasc" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="saida3/dataNasc"/>
-        <nodes expression="[row4.payload:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto]" incomingConnections="//@node.4/@nodeData/@connections.1" name="nomeCompleto" type="id_String" xpath="saida3/nomeCompleto"/>
-      </outputTrees>
-      <varTables minimized="true" name="Var"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.1" target="//@node.4/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.7" target="//@node.4/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
-    </nodeData>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1696" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="dataNasc"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="nomeCompleto"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="saida3" name="tLogRow_3">
-      <column comment="" defaultValue="" key="false" length="-1" name="dataNasc" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="id_Date" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="nomeCompleto" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="96">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
@@ -999,7 +141,7 @@
       <column comment="" key="false" length="-1" name="token" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="288">
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
@@ -1010,10 +152,10 @@
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row1">
-        <nodes name="pDataNasc" outgoingConnections="//@node.7/@nodeData/@connections.0" type="id_String" xpath="row1/pDataNasc"/>
-        <nodes name="pNIC" outgoingConnections="//@node.7/@nodeData/@connections.2" type="id_String" xpath="row1/pNIC"/>
-        <nodes name="pNomeCompleto" outgoingConnections="//@node.7/@nodeData/@connections.1" type="id_String" xpath="row1/pNomeCompleto"/>
-        <nodes name="token" outgoingConnections="//@node.7/@nodeData/@connections.3" type="id_String" xpath="row1/token"/>
+        <nodes name="pDataNasc" outgoingConnections="//@node.1/@nodeData/@connections.0" type="id_String" xpath="row1/pDataNasc"/>
+        <nodes name="pNIC" outgoingConnections="//@node.1/@nodeData/@connections.2" type="id_String" xpath="row1/pNIC"/>
+        <nodes name="pNomeCompleto" outgoingConnections="//@node.1/@nodeData/@connections.1" type="id_String" xpath="row1/pNomeCompleto"/>
+        <nodes name="token" outgoingConnections="//@node.1/@nodeData/@connections.3" type="id_String" xpath="row1/token"/>
       </inputTrees>
       <outputTrees allInOne="true" name="copyOfrequest">
         <nodes expression="" name="Soap" type="id_Document" xpath="copyOfrequest/Soap">
@@ -1025,10 +167,10 @@
             <children name="soapenv:Body" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body" xsi:type="TalendXMLMap:OutputTreeNode">
               <children name="ucc2:ConsultaDocIdSniac" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac" xsi:type="TalendXMLMap:OutputTreeNode">
                 <children name="ucc2:sniacInput" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput" xsi:type="TalendXMLMap:OutputTreeNode">
-                  <children expression="row1.pDataNasc" incomingConnections="//@node.7/@nodeData/@connections.0" name="xsd:pDataNasc" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pDataNasc" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                  <children expression=" row1.pNIC" incomingConnections="//@node.7/@nodeData/@connections.2" name="xsd:pNIC" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pNIC" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                  <children expression="row1.pNomeCompleto" incomingConnections="//@node.7/@nodeData/@connections.1" name="xsd:pNomeCompleto" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pNomeCompleto" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                  <children expression=" row1.token" incomingConnections="//@node.7/@nodeData/@connections.3" name="xsd:token" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:token" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="row1.pDataNasc" incomingConnections="//@node.1/@nodeData/@connections.0" name="xsd:pDataNasc" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pDataNasc" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression=" row1.pNIC" incomingConnections="//@node.1/@nodeData/@connections.2" name="xsd:pNIC" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pNIC" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="row1.pNomeCompleto" incomingConnections="//@node.1/@nodeData/@connections.1" name="xsd:pNomeCompleto" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pNomeCompleto" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression=" row1.token" incomingConnections="//@node.1/@nodeData/@connections.3" name="xsd:token" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:token" xsi:type="TalendXMLMap:OutputTreeNode"/>
                 </children>
               </children>
             </children>
@@ -1036,27 +178,27 @@
         </nodes>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.2" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.1" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.3" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.2" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.3" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
-  <node componentName="tSOAP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="288">
+  <node componentName="tSOAP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSOAP_1"/>
     <elementParameter field="CHECK" name="USE_NTLM" value="false"/>
     <elementParameter field="TEXT" name="NTLM_DOMAIN" show="false" value="&quot;192.168.0.100&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:OqLadZ4JQ468J8UI6R8r3CWg4jBJJOJAPyNr3CRjofcdZhzq2Dg="/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:u4DelTE28fdTJtV5BIdHBQtrdcLW2MjSzSS8vJ8zaNin6+h2Nqg="/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:sKt3BgJq1yTN4b4Ln49bvLL40i5nDM/j/TGVC02n"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:a8KLCvELVZ4UsLbWjhMcLcPLZR8W/+U/AkHdxt6N"/>
     <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
     <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:niBIzBHtc8rKvhKGlRkM6CmFaSb9+TdLL7FGchtoANRqZ2Npac8="/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:s7XEiSG0u2jVrMERvJpyCrYy3imYqqwGBYGnmEaeScD1mdiLlis="/>
     <elementParameter field="TEXT" name="ENDPOINT" value="&quot;http://172.18.5.18:9765/services/IntegrationCadastroImp?wsdl&quot;"/>
     <elementParameter field="TEXT" name="ACTION" value="&quot;ConsultaDocIdSniac&quot;"/>
     <elementParameter field="CLOSED_LIST" name="SOAP_VERSION" value="Soap11"/>
@@ -1072,7 +214,7 @@
       <column defaultValue="" key="false" length="0" name="Soap" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="-50" offsetLabelY="0" posX="928" posY="288">
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="-50" offsetLabelY="0" posX="1024" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_2"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
@@ -1108,18 +250,18 @@
                   </children>
                   <children loop="true" main="true" name="ax2594:sniacData" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData">
                     <children name="xsi:type" nodeType="ATTRIBUT" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/@xsi:type"/>
-                    <children name="ax2594:dataNasc" outgoingConnections="//@node.9/@nodeData/@connections.1" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc"/>
-                    <children name="ax2594:freguesiaId" outgoingConnections="//@node.9/@nodeData/@connections.3" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId"/>
-                    <children name="ax2594:idCivil" outgoingConnections="//@node.9/@nodeData/@connections.4" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil"/>
-                    <children name="ax2594:idTpDoc" outgoingConnections="//@node.9/@nodeData/@connections.5" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc"/>
-                    <children name="ax2594:localidadeId" outgoingConnections="//@node.9/@nodeData/@connections.6" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId"/>
-                    <children name="ax2594:nif" outgoingConnections="//@node.9/@nodeData/@connections.7" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif"/>
-                    <children name="ax2594:nomeCompleto" outgoingConnections="//@node.9/@nodeData/@connections.0" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto"/>
-                    <children name="ax2594:nomeMaeCompleto" outgoingConnections="//@node.9/@nodeData/@connections.8" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto"/>
-                    <children name="ax2594:nomePaiCompleto" outgoingConnections="//@node.9/@nodeData/@connections.2" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto"/>
-                    <children name="ax2594:numDocumento" outgoingConnections="//@node.9/@nodeData/@connections.9" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento"/>
-                    <children name="ax2594:paisId" outgoingConnections="//@node.9/@nodeData/@connections.10" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId"/>
-                    <children name="ax2594:sexo" outgoingConnections="//@node.9/@nodeData/@connections.11" type="id_Character" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo"/>
+                    <children name="ax2594:dataNasc" outgoingConnections="//@node.3/@nodeData/@connections.1" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc"/>
+                    <children name="ax2594:freguesiaId" outgoingConnections="//@node.3/@nodeData/@connections.3" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId"/>
+                    <children name="ax2594:idCivil" outgoingConnections="//@node.3/@nodeData/@connections.4" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil"/>
+                    <children name="ax2594:idTpDoc" outgoingConnections="//@node.3/@nodeData/@connections.5" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc"/>
+                    <children name="ax2594:localidadeId" outgoingConnections="//@node.3/@nodeData/@connections.6" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId"/>
+                    <children name="ax2594:nif" outgoingConnections="//@node.3/@nodeData/@connections.7" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif"/>
+                    <children name="ax2594:nomeCompleto" outgoingConnections="//@node.3/@nodeData/@connections.0" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto"/>
+                    <children name="ax2594:nomeMaeCompleto" outgoingConnections="//@node.3/@nodeData/@connections.8" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto"/>
+                    <children name="ax2594:nomePaiCompleto" outgoingConnections="//@node.3/@nodeData/@connections.2" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto"/>
+                    <children name="ax2594:numDocumento" outgoingConnections="//@node.3/@nodeData/@connections.9" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento"/>
+                    <children name="ax2594:paisId" outgoingConnections="//@node.3/@nodeData/@connections.10" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId"/>
+                    <children name="ax2594:sexo" outgoingConnections="//@node.3/@nodeData/@connections.11" type="id_Character" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo"/>
                   </children>
                 </children>
               </children>
@@ -1128,35 +270,35 @@
         </nodes>
       </inputTrees>
       <outputTrees name="copyOfsaida">
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc]" incomingConnections="//@node.9/@nodeData/@connections.1" name="dataNasc" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="copyOfsaida/dataNasc"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId]" incomingConnections="//@node.9/@nodeData/@connections.3" name="freguesiaId" type="id_Integer" xpath="copyOfsaida/freguesiaId"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil]" incomingConnections="//@node.9/@nodeData/@connections.4" name="idCivil" type="id_String" xpath="copyOfsaida/idCivil"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc]" incomingConnections="//@node.9/@nodeData/@connections.5" name="idTpDoc" type="id_String" xpath="copyOfsaida/idTpDoc"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId]" incomingConnections="//@node.9/@nodeData/@connections.6" name="localidadeId" type="id_Integer" xpath="copyOfsaida/localidadeId"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif]" incomingConnections="//@node.9/@nodeData/@connections.7" name="nif" type="id_String" xpath="copyOfsaida/nif"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto]" incomingConnections="//@node.9/@nodeData/@connections.0" name="nomeCompleto" type="id_String" xpath="copyOfsaida/nomeCompleto"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto]" incomingConnections="//@node.9/@nodeData/@connections.8" name="nomeMaeCompleto" type="id_String" xpath="copyOfsaida/nomeMaeCompleto"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto]" incomingConnections="//@node.9/@nodeData/@connections.2" name="nomePaiCompleto" type="id_String" xpath="copyOfsaida/nomePaiCompleto"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento]" incomingConnections="//@node.9/@nodeData/@connections.9" name="numDocumento" type="id_String" xpath="copyOfsaida/numDocumento"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId]" incomingConnections="//@node.9/@nodeData/@connections.10" name="paisId" type="id_Integer" xpath="copyOfsaida/paisId"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo]" incomingConnections="//@node.9/@nodeData/@connections.11" name="sexo" type="id_Character" xpath="copyOfsaida/sexo"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc]" incomingConnections="//@node.3/@nodeData/@connections.1" name="dataNasc" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="copyOfsaida/dataNasc"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId]" incomingConnections="//@node.3/@nodeData/@connections.3" name="freguesiaId" type="id_Integer" xpath="copyOfsaida/freguesiaId"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil]" incomingConnections="//@node.3/@nodeData/@connections.4" name="idCivil" type="id_String" xpath="copyOfsaida/idCivil"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc]" incomingConnections="//@node.3/@nodeData/@connections.5" name="idTpDoc" type="id_String" xpath="copyOfsaida/idTpDoc"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId]" incomingConnections="//@node.3/@nodeData/@connections.6" name="localidadeId" type="id_Integer" xpath="copyOfsaida/localidadeId"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif]" incomingConnections="//@node.3/@nodeData/@connections.7" name="nif" type="id_String" xpath="copyOfsaida/nif"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto]" incomingConnections="//@node.3/@nodeData/@connections.0" name="nomeCompleto" type="id_String" xpath="copyOfsaida/nomeCompleto"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto]" incomingConnections="//@node.3/@nodeData/@connections.8" name="nomeMaeCompleto" type="id_String" xpath="copyOfsaida/nomeMaeCompleto"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto]" incomingConnections="//@node.3/@nodeData/@connections.2" name="nomePaiCompleto" type="id_String" xpath="copyOfsaida/nomePaiCompleto"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento]" incomingConnections="//@node.3/@nodeData/@connections.9" name="numDocumento" type="id_String" xpath="copyOfsaida/numDocumento"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId]" incomingConnections="//@node.3/@nodeData/@connections.10" name="paisId" type="id_Integer" xpath="copyOfsaida/paisId"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo]" incomingConnections="//@node.3/@nodeData/@connections.11" name="sexo" type="id_Character" xpath="copyOfsaida/sexo"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.7" target="//@node.9/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.1" target="//@node.9/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.9" target="//@node.9/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.2" target="//@node.9/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.3" target="//@node.9/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.4" target="//@node.9/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.5" target="//@node.9/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.6" target="//@node.9/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.8" target="//@node.9/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.10" target="//@node.9/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.11" target="//@node.9/@nodeData/@outputTrees.0/@nodes.10" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.12" target="//@node.9/@nodeData/@outputTrees.0/@nodes.11" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.7" target="//@node.3/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.1" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.9" target="//@node.3/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.2" target="//@node.3/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.3" target="//@node.3/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.4" target="//@node.3/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.5" target="//@node.3/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.6" target="//@node.3/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.8" target="//@node.3/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.10" target="//@node.3/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.11" target="//@node.3/@nodeData/@outputTrees.0/@nodes.10" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.12" target="//@node.3/@nodeData/@outputTrees.0/@nodes.11" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="288">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -1213,59 +355,6 @@
       <column comment="" defaultValue="" key="false" length="-1" name="sexo" nullable="true" originalLength="-1" precision="-1" sourceType="id_Character" type="id_Character" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="OUTPUT" label="row2" lineStyle="0" metaname="tWebService_2" offsetLabelX="0" offsetLabelY="0" source="tWebService_2" target="tLogRow_1">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="localidadeId"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="numDocumento"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="paisId"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="dataNasc"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="nomeMaeCompleto"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="idTpDoc"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="nif"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="freguesiaId"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="idCivil"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="nomePaiCompleto"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="sexo"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="nomeCompleto"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
-  </connection>
-  <connection connectorName="RESPONSE" label="row4" lineStyle="0" metaname="RESPONSE" offsetLabelX="50" offsetLabelY="26" source="tESBConsumer_2" target="tXMLMap_3">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
-  </connection>
-  <connection connectorName="FLOW" label="saida3" lineStyle="0" metaname="saida3" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_3" target="tLogRow_3">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="saida3"/>
-  </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tXMLMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -1283,32 +372,17 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfsaida"/>
   </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWebService_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWebService_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tESBConsumer_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_696ebc52-a400-46bd-8e25-e747fe4cef96"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>u9XIYH3Q72qJKyKIz1wuJbi32rXlanKEPO8TSamWe6ASBmbqpjXyOQ8wErLiD2gk1ufErx5OHt9O&#13;
-2/m8avqRjw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ed1a7a77-0301-4d88-a9f2-96e7cd957459"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xHinb+VyY9NlzHHTulj4MxEuoUEeWsepUephwhm4/MfR+jEIl/TXINDR0LeTWtzRfCRP/1zEqx5X&#13;
-234D+gJU/g==</DigestValue></Reference></SignedInfo><SignatureValue>j6Bt0xUDWGmVDi9LNvvA8cODOk5Lm+NacKG5vow9IMDUwWiLv2r6gTXESPqe/cRd3T1PbVEmQZm3&#13;
-3gkMRieIU4/002e6aU+SFSjlObcc1XeHMpzPxD0uSuqoJjNtAa4thuRQA8d1296iXwSdk75Cvt1s&#13;
-nZPnDLoYlcCX2g22lwvFgwBJJwzq3ceotC0thY94i7bSfcoW4M6Bt+j/936E5ve75Bg0j/D2wm+I&#13;
-sGOLa43TVpsUH8LcspUlRXtuOa4TrKnBkHJTqA5wzksd+bG9Oj4rHqwMYzb+wACxgPJCCHUAM7hG&#13;
-Q8i8RHdd5M0yqmqjiBQU4ZRWxlABckrO+bakmg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d9b7f2e6-e3e4-4207-9543-529b1b1192d0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4ABWUgp1YIsylkCe1bA81Xky+tTO4WrgqLmdG9WVHj0a8S1GE1s1yCHMiOYL1z5TfIrjwzFioGah&#13;
+47oJvNuxCA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c6c41a33-55bb-41eb-8ae0-9ace1dfd46f4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8lqo9Cnb3ZhPWtZCFjONevozqr6hITFnqF4eDaCISO8w4uNIKGRFVe1B1jb7iO4dUv04x18Dkv3U&#13;
+ZNEyZG3IvQ==</DigestValue></Reference></SignedInfo><SignatureValue>obbNPr6ASfarZuOPrTu9SjplkjrBWsxxZdzUiz7g3eTsrcPfTfhdPdx6a2AxE8GMrs6h9ca5S6+1&#13;
+bhfEXFuuE+rt/C/cs+u5huiAPosR+UoJyO+4OzGkD2phhCz9nl1ZPdK0Z5vfGDQpFnxy8Kil87v0&#13;
+4EoL4NZbr7kKDhQtn8gYjDAkZyNJjMfUL+4sflpkcsnB9YPa5JBfJOaMeXxgq2REX5jxqri2M8fh&#13;
+yAKJWsD4JkLASO7ToFGBRv4c68PQNkjdgiMSVzdHiNkuCyoV7XWz74aeknMIbyUAwH/FGsYb1xQC&#13;
+LA4ty1+KrI69X/IRamyrmhiMQi1foVNoDUQCEA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1330,4 +404,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ed1a7a77-0301-4d88-a9f2-96e7cd957459" Target="#_696ebc52-a400-46bd-8e25-e747fe4cef96"><Timestamp>2022-03-31 12:28:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c6c41a33-55bb-41eb-8ae0-9ace1dfd46f4" Target="#_d9b7f2e6-e3e4-4207-9543-529b1b1192d0"><Timestamp>2022-03-31 18:58:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
