@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:GylOBdsx+91X7GA74FumppqQth4tgLvMCW//La1/"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:QVGmMbHANxyzT/qV6D8pwIniCOzOzQxTvys5H7Yj"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Y3Ek/eX9almEb7CBfDRKkprpV1LHRjBqm47oaO/Y"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:t+FMGWCYmg82kAMzilBGSkTf2lR/qdJg4XlTcVsT"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -115,7 +115,6 @@
   </parameters>
   <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
@@ -142,54 +141,6 @@
       <column comment="" key="false" length="-1" name="token" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_yX9v0HlBEeymA7ReFGNmPQ"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;172.18.242.124&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:oRMdF6hhUeodueLbZEpGtufnPy/uVzEgmU4GNeN2lUcNp0mtSqlIcZVX"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;SV_View_DETALHE_CLIENTES_unico&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  &#13;&#10;BirthData pDataNasc,&#13;&#10;ValueDocs pNIC,&#13;&#10;&#9;NAME pNomeCompleto,&#13;&#10; 'eyJ4NXQiOiJNVE15WW1VeE5XRTBNMlJpWTJaaVlqZzNNREE0T1RBM05UY3laRFZpTURFNU56TTNZamRsT1dNNU1qVm1OR1F3TmpFek5tSTNNakE0TkRRNFpUZGhOdyIsImtpZCI6Ik1UTXlZbVV4TldFME0yUmlZMlppWWpnM01EQTRPVEEzTlRjeVpEVmlNREU1TnpNM1lqZGxPV001TWpWbU5HUXdOakV6Tm1JM01qQTRORFE0WlRkaE53X1JTMjU2IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJ1bml0ZWxzbmlhY0B1bml0ZWx0bWFpcy5jdiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiMVpGQ09JUF9YQ0ZRZElTTHp0UmlnSkJDNjM4YSIsIm5iZiI6MTY0NTExNjAzNywiYXpwIjoiMVpGQ09JUF9YQ0ZRZElTTHp0UmlnSkJDNjM4YSIsInNjb3BlIjoiZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9sb2NhbGhvc3Q6OTQ0M1wvb2F1dGgyXC90b2tlbiIsImV4cCI6OTIyMzM3MjAzNjg1NDc3NSwiaWF0IjoxNjQ1MTE2MDM3LCJqdGkiOiI5ZjJjNzI5Yy1hZjZkLTRmNjctOWYyNy04MjEwNTMyZGIxNGYifQ.dn5qBn8QimrcHf5JSyJYIbnm7R1wLPS3sRsDzHB7cwNUNyaswDiF4ozrGtiSHrVvyLlokkkTlK9T4Mh1Ma1Z4xjqmwdzmFwlqRh02mYLITp8thp7K8ePaXkt_45d9jiL5iMtuEbCYXS64V3oCDpFau1yrwhwc3I7KYwjOyZPeZnwwv0sST9VkqfPuQjaY0ay1EWpuSUwwoi58msYWUYEUh1gPKUAwdmWbSeZHTyQtDFqTOcr6HLz80hICMK_6rOOi4koo64sUTVWNdhJ9rOKsBu1tZmFsHWlnDQfK1Eonp2gA-X_f4Z-Ui5R9iHdlQNlJqQlsP_3UH2IQumZ9uripA' token&#9;&#13;&#10;&#9;from sys_det_clientes WHERE SYS_ID = '80309'&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="pDataNasc"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="pNIc"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="pNomeCompleto"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Token"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
-    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <metadata connector="FLOW" name="tDBInput_1">
-      <column comment="" key="false" length="500" name="pDataNasc" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="250" name="pNIc" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="2000" name="pNomeCompleto" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Token" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_3"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
@@ -201,10 +152,10 @@
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row2">
-        <nodes name="pDataNasc" outgoingConnections="//@node.2/@nodeData/@connections.0" type="id_String" xpath="row2/pDataNasc"/>
-        <nodes name="pNIc" outgoingConnections="//@node.2/@nodeData/@connections.2" type="id_String" xpath="row2/pNIc"/>
-        <nodes name="pNomeCompleto" outgoingConnections="//@node.2/@nodeData/@connections.1" type="id_String" xpath="row2/pNomeCompleto"/>
-        <nodes name="Token" outgoingConnections="//@node.2/@nodeData/@connections.3" type="id_String" xpath="row2/Token"/>
+        <nodes name="pDataNasc" outgoingConnections="//@node.1/@nodeData/@connections.0" type="id_String" xpath="row2/pDataNasc"/>
+        <nodes name="pNIc" outgoingConnections="//@node.1/@nodeData/@connections.2" type="id_String" xpath="row2/pNIc"/>
+        <nodes name="pNomeCompleto" outgoingConnections="//@node.1/@nodeData/@connections.1" type="id_String" xpath="row2/pNomeCompleto"/>
+        <nodes name="Token" outgoingConnections="//@node.1/@nodeData/@connections.3" type="id_String" xpath="row2/Token"/>
       </inputTrees>
       <outputTrees allInOne="true" name="copyOfrequest">
         <nodes expression="" name="Soap" type="id_Document" xpath="copyOfrequest/Soap">
@@ -216,10 +167,10 @@
             <children name="soapenv:Body" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body" xsi:type="TalendXMLMap:OutputTreeNode">
               <children name="ucc2:ConsultaDocIdSniac" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac" xsi:type="TalendXMLMap:OutputTreeNode">
                 <children name="ucc2:sniacInput" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput" xsi:type="TalendXMLMap:OutputTreeNode">
-                  <children expression="row2.pDataNasc" incomingConnections="//@node.2/@nodeData/@connections.0" name="xsd:pDataNasc" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pDataNasc" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                  <children expression=" row2.pNIc" incomingConnections="//@node.2/@nodeData/@connections.2" name="xsd:pNIC" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pNIC" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                  <children expression="row2.pNomeCompleto" incomingConnections="//@node.2/@nodeData/@connections.1" name="xsd:pNomeCompleto" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pNomeCompleto" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                  <children expression=" row2.Token" incomingConnections="//@node.2/@nodeData/@connections.3" name="xsd:token" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:token" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="row2.pDataNasc" incomingConnections="//@node.1/@nodeData/@connections.0" name="xsd:pDataNasc" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pDataNasc" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression=" row2.pNIc" incomingConnections="//@node.1/@nodeData/@connections.2" name="xsd:pNIC" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pNIC" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="row2.pNomeCompleto" incomingConnections="//@node.1/@nodeData/@connections.1" name="xsd:pNomeCompleto" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:pNomeCompleto" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression=" row2.Token" incomingConnections="//@node.1/@nodeData/@connections.3" name="xsd:token" type="id_String" xpath="copyOfrequest.Soap:/soapenv:Envelope/soapenv:Body/ucc2:ConsultaDocIdSniac/ucc2:sniacInput/xsd:token" xsi:type="TalendXMLMap:OutputTreeNode"/>
                 </children>
               </children>
             </children>
@@ -227,10 +178,10 @@
         </nodes>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.2" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.1" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.3" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.2" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.3" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tSOAP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="288">
@@ -239,15 +190,15 @@
     <elementParameter field="TEXT" name="NTLM_DOMAIN" show="false" value="&quot;192.168.0.100&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:r6Bp4z7OWwCsbvGGzKXxAkLZ/2K4TWlzVw0E8M5u5D1KjQHeU5A="/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:xh7jcOGAn2++EqFbpmJr5pkiYvBSCZTYBROwuNVwJQBjN35DpoA="/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:xdOhCWrG6kdWKsEc3WqJw43JbTyQblUKW+mWpgo5"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:o0sok7gLjLQhMfjFARog/Pw/UfpX8rF3en2krxTa"/>
     <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
     <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:QHKiu6qA9nXFv2eOrYxM6gOk/ruo7J4j6X6hvfqoiy8tHVt/9UI="/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:YPpDcHw3xgSqjlxV7c4w16TSTKCFv/8zTKMR01PG3YLfCV+HYHQ="/>
     <elementParameter field="TEXT" name="ENDPOINT" value="&quot;http://172.18.5.18:9765/services/IntegrationCadastroImp?wsdl&quot;"/>
     <elementParameter field="TEXT" name="ACTION" value="&quot;ConsultaDocIdSniac&quot;"/>
     <elementParameter field="CLOSED_LIST" name="SOAP_VERSION" value="Soap11"/>
@@ -299,18 +250,18 @@
                   </children>
                   <children loop="true" main="true" name="ax2594:sniacData" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData">
                     <children name="xsi:type" nodeType="ATTRIBUT" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/@xsi:type"/>
-                    <children name="ax2594:dataNasc" outgoingConnections="//@node.4/@nodeData/@connections.1" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc"/>
-                    <children name="ax2594:freguesiaId" outgoingConnections="//@node.4/@nodeData/@connections.3" type="id_Integer" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId"/>
-                    <children name="ax2594:idCivil" outgoingConnections="//@node.4/@nodeData/@connections.4" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil"/>
-                    <children name="ax2594:idTpDoc" outgoingConnections="//@node.4/@nodeData/@connections.5" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc"/>
-                    <children name="ax2594:localidadeId" outgoingConnections="//@node.4/@nodeData/@connections.6" type="id_Integer" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId"/>
-                    <children name="ax2594:nif" outgoingConnections="//@node.4/@nodeData/@connections.7" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif"/>
-                    <children name="ax2594:nomeCompleto" outgoingConnections="//@node.4/@nodeData/@connections.0" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto"/>
-                    <children name="ax2594:nomeMaeCompleto" outgoingConnections="//@node.4/@nodeData/@connections.8" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto"/>
-                    <children name="ax2594:nomePaiCompleto" outgoingConnections="//@node.4/@nodeData/@connections.2" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto"/>
-                    <children name="ax2594:numDocumento" outgoingConnections="//@node.4/@nodeData/@connections.9" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento"/>
-                    <children name="ax2594:paisId" outgoingConnections="//@node.4/@nodeData/@connections.10" type="id_Integer" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId"/>
-                    <children name="ax2594:sexo" outgoingConnections="//@node.4/@nodeData/@connections.11" type="id_Character" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo"/>
+                    <children name="ax2594:dataNasc" outgoingConnections="//@node.3/@nodeData/@connections.1" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc"/>
+                    <children name="ax2594:freguesiaId" outgoingConnections="//@node.3/@nodeData/@connections.3" type="id_Integer" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId"/>
+                    <children name="ax2594:idCivil" outgoingConnections="//@node.3/@nodeData/@connections.4" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil"/>
+                    <children name="ax2594:idTpDoc" outgoingConnections="//@node.3/@nodeData/@connections.5" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc"/>
+                    <children name="ax2594:localidadeId" outgoingConnections="//@node.3/@nodeData/@connections.6" type="id_Integer" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId"/>
+                    <children name="ax2594:nif" outgoingConnections="//@node.3/@nodeData/@connections.7" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif"/>
+                    <children name="ax2594:nomeCompleto" outgoingConnections="//@node.3/@nodeData/@connections.0" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto"/>
+                    <children name="ax2594:nomeMaeCompleto" outgoingConnections="//@node.3/@nodeData/@connections.8" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto"/>
+                    <children name="ax2594:nomePaiCompleto" outgoingConnections="//@node.3/@nodeData/@connections.2" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto"/>
+                    <children name="ax2594:numDocumento" outgoingConnections="//@node.3/@nodeData/@connections.9" type="id_String" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento"/>
+                    <children name="ax2594:paisId" outgoingConnections="//@node.3/@nodeData/@connections.10" type="id_Integer" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId"/>
+                    <children name="ax2594:sexo" outgoingConnections="//@node.3/@nodeData/@connections.11" type="id_Character" xpath="row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo"/>
                   </children>
                 </children>
               </children>
@@ -319,32 +270,32 @@
         </nodes>
       </inputTrees>
       <outputTrees name="copyOfsaida">
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc]" incomingConnections="//@node.4/@nodeData/@connections.1" name="dataNasc" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="copyOfsaida/dataNasc"/>
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId]" incomingConnections="//@node.4/@nodeData/@connections.3" name="freguesiaId" type="id_Integer" xpath="copyOfsaida/freguesiaId"/>
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil]" incomingConnections="//@node.4/@nodeData/@connections.4" name="idCivil" type="id_String" xpath="copyOfsaida/idCivil"/>
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc]" incomingConnections="//@node.4/@nodeData/@connections.5" name="idTpDoc" type="id_String" xpath="copyOfsaida/idTpDoc"/>
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId]" incomingConnections="//@node.4/@nodeData/@connections.6" name="localidadeId" type="id_Integer" xpath="copyOfsaida/localidadeId"/>
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif]" incomingConnections="//@node.4/@nodeData/@connections.7" name="nif" type="id_String" xpath="copyOfsaida/nif"/>
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto]" incomingConnections="//@node.4/@nodeData/@connections.0" name="nomeCompleto" type="id_String" xpath="copyOfsaida/nomeCompleto"/>
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto]" incomingConnections="//@node.4/@nodeData/@connections.8" name="nomeMaeCompleto" type="id_String" xpath="copyOfsaida/nomeMaeCompleto"/>
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto]" incomingConnections="//@node.4/@nodeData/@connections.2" name="nomePaiCompleto" type="id_String" xpath="copyOfsaida/nomePaiCompleto"/>
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento]" incomingConnections="//@node.4/@nodeData/@connections.9" name="numDocumento" type="id_String" xpath="copyOfsaida/numDocumento"/>
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId]" incomingConnections="//@node.4/@nodeData/@connections.10" name="paisId" type="id_Integer" xpath="copyOfsaida/paisId"/>
-        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo]" incomingConnections="//@node.4/@nodeData/@connections.11" name="sexo" type="id_Character" xpath="copyOfsaida/sexo"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc]" incomingConnections="//@node.3/@nodeData/@connections.1" name="dataNasc" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="copyOfsaida/dataNasc"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId]" incomingConnections="//@node.3/@nodeData/@connections.3" name="freguesiaId" type="id_Integer" xpath="copyOfsaida/freguesiaId"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil]" incomingConnections="//@node.3/@nodeData/@connections.4" name="idCivil" type="id_String" xpath="copyOfsaida/idCivil"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc]" incomingConnections="//@node.3/@nodeData/@connections.5" name="idTpDoc" type="id_String" xpath="copyOfsaida/idTpDoc"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId]" incomingConnections="//@node.3/@nodeData/@connections.6" name="localidadeId" type="id_Integer" xpath="copyOfsaida/localidadeId"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif]" incomingConnections="//@node.3/@nodeData/@connections.7" name="nif" type="id_String" xpath="copyOfsaida/nif"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto]" incomingConnections="//@node.3/@nodeData/@connections.0" name="nomeCompleto" type="id_String" xpath="copyOfsaida/nomeCompleto"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto]" incomingConnections="//@node.3/@nodeData/@connections.8" name="nomeMaeCompleto" type="id_String" xpath="copyOfsaida/nomeMaeCompleto"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto]" incomingConnections="//@node.3/@nodeData/@connections.2" name="nomePaiCompleto" type="id_String" xpath="copyOfsaida/nomePaiCompleto"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento]" incomingConnections="//@node.3/@nodeData/@connections.9" name="numDocumento" type="id_String" xpath="copyOfsaida/numDocumento"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId]" incomingConnections="//@node.3/@nodeData/@connections.10" name="paisId" type="id_Integer" xpath="copyOfsaida/paisId"/>
+        <nodes expression="[row4.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo]" incomingConnections="//@node.3/@nodeData/@connections.11" name="sexo" type="id_Character" xpath="copyOfsaida/sexo"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.7" target="//@node.4/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.1" target="//@node.4/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.9" target="//@node.4/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.2" target="//@node.4/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.3" target="//@node.4/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.4" target="//@node.4/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.5" target="//@node.4/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.6" target="//@node.4/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.8" target="//@node.4/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.10" target="//@node.4/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.11" target="//@node.4/@nodeData/@outputTrees.0/@nodes.10" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.12" target="//@node.4/@nodeData/@outputTrees.0/@nodes.11" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.7" target="//@node.3/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.1" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.9" target="//@node.3/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.2" target="//@node.3/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.3" target="//@node.3/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.4" target="//@node.3/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.5" target="//@node.3/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.6" target="//@node.3/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.8" target="//@node.3/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.10" target="//@node.3/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.11" target="//@node.3/@nodeData/@outputTrees.0/@nodes.10" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.12" target="//@node.3/@nodeData/@outputTrees.0/@nodes.11" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="288">
@@ -445,15 +396,15 @@
     <elementParameter field="TEXT" name="NTLM_DOMAIN" show="false" value="&quot;192.168.0.100&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:F2YXC72yr+P00QizObTa13yhpCa2Y1Er8MKckBT/Yeuioc6erqE="/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:IpJqATL/uP3zMZNOM9AG/EtMsfo+Bi3SODBr0ydwzwqGjRVG1bc="/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:uRFDc5ut1FJ+OcimTv/QnbR1+kX2vJNwmG4AsT6r"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:Lezdb1SLvzZ/4pv/ggjk9eUklFmpFM4S0aT4GmXZ"/>
     <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
     <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:zumDo2C2MjJPq8H0kGJZR9bsh4/89Mv0g/SL2x8lkjpAnRbL2FA="/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:zQbpfXtOkTCPpK9yjajLfQCYsJggsdh0a1vDC5NtRp/oDRfs1RU="/>
     <elementParameter field="TEXT" name="ENDPOINT" value="&quot;http://172.18.5.18:9765/services/IntegrationCadastroImp?wsdl&quot;"/>
     <elementParameter field="TEXT" name="ACTION" value="&quot;ConsultaDocIdSniac&quot;"/>
     <elementParameter field="CLOSED_LIST" name="SOAP_VERSION" value="Soap11"/>
@@ -564,18 +515,18 @@
                   </children>
                   <children loop="true" main="true" name="ax2594:sniacData" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData">
                     <children name="xsi:type" nodeType="ATTRIBUT" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/@xsi:type"/>
-                    <children name="ax2594:dataNasc" outgoingConnections="//@node.9/@nodeData/@connections.1" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc"/>
-                    <children name="ax2594:freguesiaId" outgoingConnections="//@node.9/@nodeData/@connections.3" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId"/>
-                    <children name="ax2594:idCivil" outgoingConnections="//@node.9/@nodeData/@connections.4" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil"/>
-                    <children name="ax2594:idTpDoc" outgoingConnections="//@node.9/@nodeData/@connections.5" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc"/>
-                    <children name="ax2594:localidadeId" outgoingConnections="//@node.9/@nodeData/@connections.6" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId"/>
-                    <children name="ax2594:nif" outgoingConnections="//@node.9/@nodeData/@connections.7" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif"/>
-                    <children name="ax2594:nomeCompleto" outgoingConnections="//@node.9/@nodeData/@connections.0" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto"/>
-                    <children name="ax2594:nomeMaeCompleto" outgoingConnections="//@node.9/@nodeData/@connections.8" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto"/>
-                    <children name="ax2594:nomePaiCompleto" outgoingConnections="//@node.9/@nodeData/@connections.2" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto"/>
-                    <children name="ax2594:numDocumento" outgoingConnections="//@node.9/@nodeData/@connections.9" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento"/>
-                    <children name="ax2594:paisId" outgoingConnections="//@node.9/@nodeData/@connections.10" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId"/>
-                    <children name="ax2594:sexo" outgoingConnections="//@node.9/@nodeData/@connections.11" type="id_Character" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo"/>
+                    <children name="ax2594:dataNasc" outgoingConnections="//@node.8/@nodeData/@connections.1" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc"/>
+                    <children name="ax2594:freguesiaId" outgoingConnections="//@node.8/@nodeData/@connections.3" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId"/>
+                    <children name="ax2594:idCivil" outgoingConnections="//@node.8/@nodeData/@connections.4" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil"/>
+                    <children name="ax2594:idTpDoc" outgoingConnections="//@node.8/@nodeData/@connections.5" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc"/>
+                    <children name="ax2594:localidadeId" outgoingConnections="//@node.8/@nodeData/@connections.6" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId"/>
+                    <children name="ax2594:nif" outgoingConnections="//@node.8/@nodeData/@connections.7" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif"/>
+                    <children name="ax2594:nomeCompleto" outgoingConnections="//@node.8/@nodeData/@connections.0" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto"/>
+                    <children name="ax2594:nomeMaeCompleto" outgoingConnections="//@node.8/@nodeData/@connections.8" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto"/>
+                    <children name="ax2594:nomePaiCompleto" outgoingConnections="//@node.8/@nodeData/@connections.2" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto"/>
+                    <children name="ax2594:numDocumento" outgoingConnections="//@node.8/@nodeData/@connections.9" type="id_String" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento"/>
+                    <children name="ax2594:paisId" outgoingConnections="//@node.8/@nodeData/@connections.10" type="id_Integer" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId"/>
+                    <children name="ax2594:sexo" outgoingConnections="//@node.8/@nodeData/@connections.11" type="id_Character" xpath="row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo"/>
                   </children>
                 </children>
               </children>
@@ -584,35 +535,35 @@
         </nodes>
       </inputTrees>
       <outputTrees name="saida">
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc]" incomingConnections="//@node.9/@nodeData/@connections.1" name="dataNasc" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="saida/dataNasc"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId]" incomingConnections="//@node.9/@nodeData/@connections.3" name="freguesiaId" type="id_Integer" xpath="saida/freguesiaId"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil]" incomingConnections="//@node.9/@nodeData/@connections.4" name="idCivil" type="id_String" xpath="saida/idCivil"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc]" incomingConnections="//@node.9/@nodeData/@connections.5" name="idTpDoc" type="id_String" xpath="saida/idTpDoc"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId]" incomingConnections="//@node.9/@nodeData/@connections.6" name="localidadeId" type="id_Integer" xpath="saida/localidadeId"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif]" incomingConnections="//@node.9/@nodeData/@connections.7" name="nif" type="id_String" xpath="saida/nif"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto]" incomingConnections="//@node.9/@nodeData/@connections.0" name="nomeCompleto" type="id_String" xpath="saida/nomeCompleto"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto]" incomingConnections="//@node.9/@nodeData/@connections.8" name="nomeMaeCompleto" type="id_String" xpath="saida/nomeMaeCompleto"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto]" incomingConnections="//@node.9/@nodeData/@connections.2" name="nomePaiCompleto" type="id_String" xpath="saida/nomePaiCompleto"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento]" incomingConnections="//@node.9/@nodeData/@connections.9" name="numDocumento" type="id_String" xpath="saida/numDocumento"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId]" incomingConnections="//@node.9/@nodeData/@connections.10" name="paisId" type="id_Integer" xpath="saida/paisId"/>
-        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo]" incomingConnections="//@node.9/@nodeData/@connections.11" name="sexo" type="id_Character" xpath="saida/sexo"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:dataNasc]" incomingConnections="//@node.8/@nodeData/@connections.1" name="dataNasc" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="saida/dataNasc"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:freguesiaId]" incomingConnections="//@node.8/@nodeData/@connections.3" name="freguesiaId" type="id_Integer" xpath="saida/freguesiaId"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idCivil]" incomingConnections="//@node.8/@nodeData/@connections.4" name="idCivil" type="id_String" xpath="saida/idCivil"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:idTpDoc]" incomingConnections="//@node.8/@nodeData/@connections.5" name="idTpDoc" type="id_String" xpath="saida/idTpDoc"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:localidadeId]" incomingConnections="//@node.8/@nodeData/@connections.6" name="localidadeId" type="id_Integer" xpath="saida/localidadeId"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nif]" incomingConnections="//@node.8/@nodeData/@connections.7" name="nif" type="id_String" xpath="saida/nif"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeCompleto]" incomingConnections="//@node.8/@nodeData/@connections.0" name="nomeCompleto" type="id_String" xpath="saida/nomeCompleto"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomeMaeCompleto]" incomingConnections="//@node.8/@nodeData/@connections.8" name="nomeMaeCompleto" type="id_String" xpath="saida/nomeMaeCompleto"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:nomePaiCompleto]" incomingConnections="//@node.8/@nodeData/@connections.2" name="nomePaiCompleto" type="id_String" xpath="saida/nomePaiCompleto"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:numDocumento]" incomingConnections="//@node.8/@nodeData/@connections.9" name="numDocumento" type="id_String" xpath="saida/numDocumento"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:paisId]" incomingConnections="//@node.8/@nodeData/@connections.10" name="paisId" type="id_Integer" xpath="saida/paisId"/>
+        <nodes expression="[row3.Soap:/soapenv:Envelope/soapenv:Body/ns:ConsultaDocIdSniacResponse/ns:return/ax2594:sniacData/ax2594:sexo]" incomingConnections="//@node.8/@nodeData/@connections.11" name="sexo" type="id_Character" xpath="saida/sexo"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.7" target="//@node.9/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.1" target="//@node.9/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.9" target="//@node.9/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.2" target="//@node.9/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.3" target="//@node.9/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.4" target="//@node.9/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.5" target="//@node.9/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.6" target="//@node.9/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.8" target="//@node.9/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.10" target="//@node.9/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.11" target="//@node.9/@nodeData/@outputTrees.0/@nodes.10" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.12" target="//@node.9/@nodeData/@outputTrees.0/@nodes.11" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.7" target="//@node.8/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.1" target="//@node.8/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.9" target="//@node.8/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.2" target="//@node.8/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.3" target="//@node.8/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.4" target="//@node.8/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.5" target="//@node.8/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.6" target="//@node.8/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.8" target="//@node.8/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.10" target="//@node.8/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.11" target="//@node.8/@nodeData/@outputTrees.0/@nodes.10" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.8/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.2/@children.12" target="//@node.8/@nodeData/@outputTrees.0/@nodes.11" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tXMLMap_3">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tXMLMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
@@ -649,22 +600,17 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a9eac144-10f2-4b5f-ba8d-ccc7674f7314"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OXIcV6mfPG7owXmjdr6XmOkoIFKE+t1ypmn1XR43OmUJJwWcqed1oQmnb5u6u3Yi7a4sTCwXUHcx&#13;
-k6lED/PHbQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_275424e6-bd4c-4084-919e-6e82b74af990"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cop0qNb0u28nGLf9gra3aTa00iGjojxw61lSuyLvsrVNyZ2/dfbiA19I90/hxlhccuc2jyfZxMt6&#13;
-aGYrcA0R9A==</DigestValue></Reference></SignedInfo><SignatureValue>CL4JJo8fr1ougnAKpTOQduX74JEF/NW/CfIq215uZajkC/gVcPEa7lRi2tnzB/08CsbCVK9F1Hr8&#13;
-rF2P5PO42L2gQi648n4wbQxphbog2cEANkYNCB7GTx9Ew1JlUiCWVjerJoFh6fTR1KrFCTyV9HHB&#13;
-i+iFzABtn/1OHFNiLP+ZlrhBl72V41qGfI+CQCJtdogXL+6EAYyTQt4GWqyRu/cZZXSN69aQadQT&#13;
-bG7F0jTu0IJ9phuacJ0P5Ue4+02yaaCc2MeFox88F9q2bRoCK2wEpuVQfcYn2Rk+AD4acCaQh50F&#13;
-iEnL0swqF9Cg6gDx/wnu2X+SEX2/gWMQC7DSRw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7ac25cd1-3694-4de5-8a00-c568af22c3b4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SlcReCj5IrEGZv07RbZjCKx3gDrQAmsr2RlubIOMj4NZSezvZQvA6iB3Cyrc5Z+Y69C9olh0vb5p&#13;
+0hJ/093xqA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5da90ca5-fdba-43b6-befb-ecdcda2b777b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>quMcFSJVO5ndIEPQxI1GezEpXjVmG+AIWGh4r2pkeTSmC+aFnPLd1xlrw8y7H0+8dbMgjgVselw8&#13;
+QSu0/aFNUg==</DigestValue></Reference></SignedInfo><SignatureValue>IYH3xGtixzMNsTIhjzzysTQzMi2YyU2m1SR2XpYxQtO002B30nfhl4X70O/VM09iEjnQBkUP7eBH&#13;
++3SQZa1LYsMW5LF05avEAdN1PZW7Deog4hr01/dc1kVxgSlmGOZ4s4AfrYDURn9XbFybLRp6V1Sd&#13;
+IoHHV+nIQA0xafojxVZDTXSEYOrn/+vhfkOnRAQ8AjRZnD5asoOvpIU5uxKXBIy7irfg+exD3Uqc&#13;
+gsrJjJxkUKGSTmcajR5E/KBZd56poTeQdO9o7YlE2ttx3Wb2K3schVxYrEy5ty3b7TqG+aSni0Hu&#13;
+6UOCoNtXrm2Ktm7w6IJlLlZ4x3Y1/9Fmp0VTZQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -686,4 +632,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_275424e6-bd4c-4084-919e-6e82b74af990" Target="#_a9eac144-10f2-4b5f-ba8d-ccc7674f7314"><Timestamp>2022-03-31 12:18:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5da90ca5-fdba-43b6-befb-ecdcda2b777b" Target="#_7ac25cd1-3694-4de5-8a00-c568af22c3b4"><Timestamp>2022-03-31 12:27:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
