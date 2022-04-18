@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:w2eRjuEqFst4rob7NtjMJzND19JpyVZb1EkkvlMk"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:XdiWOnmgdrFQ5QqfFFfVtgNOkLsI1LzCitoT8WPg"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:gbJdQxo4SzFNEURBN85/aue5LK6hZHCzIij5F2a8"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:dWygAKWGlwCYHFA/L66Bt/LcAnBV35mxzWOY6krB"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -128,13 +128,13 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:xww9b05xdkR3Hft0rxKA015qYlsMphitl9z3WdhYzeRj6ezbcLzLVrI5"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:83kHkKEO1W8JBp3NqGTDYyNLijxKsVnXlrdKyn/7U96GW4W86Kg4p2DD"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;                  update Cadastro.dbo.SYS_DET_CLIENTES set consult_sniac = GETDATE() where SYS_ID &#13;&#10;IN (&#13;&#10;SELECT MAX(SYS_ID)  &#13;&#10;from sys_det_clientes WHERE TIPO = 'Particular'&#13;&#10;and consult_sniac is  null)&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;                  update Cadastro.dbo.SYS_DET_CLIENTES set consult_sniac = GETDATE() WHERE SYS_ID IN (&#13;&#10;SELECT MAX(SYS_ID)  &#13;&#10;from sys_det_clientes WHERE TIPO = 'Particular'  and tipo_docs = 'Carta Condução'&#13;&#10;and consult_sniac is null )&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -186,7 +186,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:y6BpLlGO9uTdHMvRl5KnrfTF84PtQc1OM45pniRkbCyt5bghPIRBZw/e"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:jo+D/6VVk5zrjlMLswuP0n9N0cqJ8jX+N3c74YfXYG/aNXWxyUNU8xXQ"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -272,15 +272,15 @@
     <elementParameter field="TEXT" name="NTLM_DOMAIN" show="false" value="&quot;192.168.0.100&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:3/gtesnDg6JIyLcY3L/q+uSD5/rMPrmSGpQZBXKEmQG9KM0dR2Y="/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:/7JvYin3V0L/rWePqiMMNtcc0DsYb+dKCpwK4G6zWr2w0t7dthY="/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:rRaFP2aqC9aoln9EA17Kom1Y94wG7Zw+Yi5D2fsG"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:B0p41WD8OTkDGcTG/ygFrEaQMJ6MeOVOlqQZvAMR"/>
     <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
     <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:gOXacZefDH1aCeTKsTLxHBAPKyK7vkxZBRAbb9C4HVerEuNVdfo="/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:7Usk9Bl8TNeM7+Hf1XQYWjYI3v0oOOWrfTfnW+zDQFANQibLSzs="/>
     <elementParameter field="TEXT" name="ENDPOINT" value="&quot;http://172.18.5.18:9765/services/IntegrationCadastroImp?wsdl&quot;"/>
     <elementParameter field="TEXT" name="ACTION" value="&quot;ConsultaDocIdSniac&quot;"/>
     <elementParameter field="CLOSED_LIST" name="SOAP_VERSION" value="Soap11"/>
@@ -390,7 +390,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:we+QNZ/82J/mspKguL2O32BVtPfy9hwMfYzdsTQLttvaEdBBWxQ+58FZ"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:cSXhD2isySvWkQqRT9SPM/pLvxXQyStWYFjLf9kWZc9IxGiW2NCV2SEY"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_RETURN_SNIAC&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -543,13 +543,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f4e24f82-7632-4b2c-83ec-cd471f578998"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>s3W9AxsiQk7pjCQOA9JKnEtcVohJHZY0WJWh6pUWNfCq8Hh5+xa6Ce+dgjQNPUziyDfdDb5zpERf&#13;
-MG/uR7ItlA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2af7a386-f4ba-4835-929e-f2e0d0769e5d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oAjwE9h1qNnHUaB1C5NeXX9ftenju05j2TFv5Jv2L+OyOVakhX4NUv7ZcZd07n4AGCYroFj1JoIq&#13;
-snRrxq1Xeg==</DigestValue></Reference></SignedInfo><SignatureValue>DZ4xTol5g5zSXArP2l9PU8mCLLI/5ip9hq+WWep7yXzZvWPbM/IlLuvU4/hTr4vcJB10Y/i3OFFd&#13;
-58DMLqbQQDcvq5TsgMYL1Ou7TmNiFY65MJD+Qj6RmD9taXGCHEEdkshSIXc8yzIhqbN+NEiFgQCM&#13;
-R8gAOxtGpMTAZL33XUysarBZ4aifm8odKUYIwn5WMTgU42I0kDTPam712qM8pZJF5E+oeUIU63/S&#13;
-N7ORFkBidXtGqfGTS5nwD7reLLdbRjEHtWg1UtuXHb99TeBzXzdKqjezG3cswuNBXID4N6K02SJU&#13;
-e4Mqa5tbxSIlKWPGgt3WavnmMieyuYjNN3uzKQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_772e33d0-1061-4960-b98c-81f81cf496f8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pkS4UDXB77nNpXiD46Be1kChqwQifZ6ar4Pk9baaIo3KSn16H5OJBwRFyVWrWkWZcMmIArWcEQV8&#13;
+iJq+lh9ssg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_98ad4973-3863-4b23-9aba-ca37b0979215"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pnJf0PxeOYfb7MaWLvf0h6zYp534eV2LYPLtYDcqeqijsUrJkXp8Nf24hrgWxdgwxBpfjRRo09aw&#13;
+31Y6VxCGSQ==</DigestValue></Reference></SignedInfo><SignatureValue>IoVaSijXIjffVjcZitMY30QXvHJOmCFnb22Bs7WwJGeB6Zk+HNPZ+LGkaOeYEf9T2FJUYNk4nVcS&#13;
+hs2xzDOhwb25+oXRfbyJqzaoZ5sMPdrI08qSolL5QGApTIrqMeGZCmk9HceCKXHXWwIlqY63qveZ&#13;
+6MC+3m564gM5U16PuuMVmNPZCY90ig+BPr4uaSbGpvSz7bfDn3lPory9Bgk9rpwrhB/bn8i5ESFk&#13;
+CwFxqppnMekJ/HCcd5fVXRbIJlOBVenweJAXRMr+dSyWKgiV4gwudAtsfp24HL95No9K4LLkcPVV&#13;
+Aa2R6lpuQ77HjqCWeFdinI/b4QnmEBZK8UPsHQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -571,4 +571,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2af7a386-f4ba-4835-929e-f2e0d0769e5d" Target="#_f4e24f82-7632-4b2c-83ec-cd471f578998"><Timestamp>2022-04-14 12:31:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_98ad4973-3863-4b23-9aba-ca37b0979215" Target="#_772e33d0-1061-4960-b98c-81f81cf496f8"><Timestamp>2022-04-18 12:38:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
