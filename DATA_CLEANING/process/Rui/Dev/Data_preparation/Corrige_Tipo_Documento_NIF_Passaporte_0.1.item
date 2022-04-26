@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:va8QrBnfFZKtikJ8AuwI776VVXm8Y+o0xduAsx+z"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:7V4dHx7nZrHQwM3niGV6qpGP6WxjnvqmiFCT3E4u"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:kbqOJoovInTxGdoggv/OaVOj4khkTlJbOrHg2RYu"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:m/oFNkZ9CypkVt/zL8SambJaUwsIaTY6SnI6hZNa"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -130,7 +130,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:3w3nx/FMq6b9LAiMoSHz1MhGk5g/q/eRXnpeDzSMY8YrMJKK1Up4viYv"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:IDElgIOv2PSIBKY9LE4neO2wKVZtD+LTGI6AoO9AS9RZ+WYcS0VEL2l/"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -166,7 +166,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_3"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Rui/workspace/talend/Jobs/NumeroDoc_TipoDocDiferente/UNITEL_NumeroPassaporte_TipoDiferente.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:LWNDtzNw+/OdqXycEg1Ar1G5CB9xnubNFj4BSxNj"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:Lh62s6B/TCIKQjPIb0rMLBi0f2hTygJla8rPteVu"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
       <elementValue elementRef="SHEETNAME" value="&quot;NumeroPassaport_TipoDiferente&quot;"/>
@@ -353,11 +353,18 @@
         <mapperTableEntries name="remarks" nullable="true" type="id_String"/>
       </inputTables>
       <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row1.SYS_ID " name="sys_id" nullable="true" operator="=" type="id_Integer"/>
         <mapperTableEntries name="name" nullable="true" type="id_String"/>
-        <mapperTableEntries name="tipo" nullable="true" type="id_String"/>
         <mapperTableEntries name="tipo_docs" nullable="true" type="id_String"/>
         <mapperTableEntries name="valuedocs" nullable="true" type="id_String"/>
+        <mapperTableEntries name="number" nullable="true" type="id_Long"/>
+        <mapperTableEntries name="nominho" nullable="true" type="id_String"/>
+        <mapperTableEntries name="obs" nullable="true" type="id_String"/>
+        <mapperTableEntries name="number_ucc" nullable="true" type="id_Long"/>
+        <mapperTableEntries name="tipo" nullable="true" type="id_String"/>
+        <mapperTableEntries name="id_obj" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="valuetelefone" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ilha" nullable="true" type="id_String"/>
+        <mapperTableEntries name="remarks" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
@@ -374,7 +381,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:kkOmovFeJ5128WG8c9lphzeimEYT1iBPs+8PjEU7c8+Eq+Mc0C7vlp6B"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:DnhWUp6yDpvyyJfUX3VaZE8SCCebQhdvmJXuWAF/HsQIXk9MRgJx8hRl"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sys_det_clientes_motta&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -481,13 +488,13 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:kDYMI+3Jq5yCJuoq/zCI99Vnny8HH535tccqsZJL"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;sys_det_clientes_motta&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:xMLabzlnhDHi31UaX219zG8JHEA9e2bW/HLuzB2V"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;sys_det_clientes&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select sys_id, name, tipo, tipo_docs, valuedocs&#13;&#10;from sys_det_clientes_motta&#13;&#10;where tipo = 'Particular'&#13;&#10;and tipo_docs = 'NIF'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select distinct name, tipo_docs, valuedocs, number, nominho, obs, number_ucc, tipo, id_obj, valuetelefone, ilha, remarks&#13;&#10;from sys_det_clientes&#13;&#10;where len(ltrim(rtrim(valuedocs))) in (7, 8)&#13;&#10;and isnumeric(substring(ltrim(rtrim(valuedocs)), 1, 1)) = 0&#13;&#10;and isnumeric(substring(ltrim(rtrim(valuedocs)), 2, 1)) = 0&#13;&#10;and ((isnumeric(substring(ltrim(rtrim(valuedocs)), 3, 5)) = 1) or &#13;&#10;     (isnumeric(substring(ltrim(rtrim(valuedocs)), 3, 6)) = 1))&#13;&#10;and tipo_docs != 'Passaporte'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -498,27 +505,48 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="sys_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="tipo"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="tipo_docs"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="valuedocs"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="number"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="nominho"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="obs"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="number_ucc"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tipo"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id_obj"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="valuetelefone"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ilha"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="remarks"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="SYS_DET_CLIENTES_MOTTA"/>
+    <elementParameter field="TEXT" name="LABEL" value="SYS_DET_CLIENTES"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
-      <column comment="" defaultValue="" key="false" length="-1" name="sys_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="tipo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="name" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="240" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="number" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="nominho" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="obs" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="number_ucc" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="tipo" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="id_obj" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="valuetelefone" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="ilha" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="100" name="remarks" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="32">
@@ -644,13 +672,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_00c1179d-7048-4c18-bc18-e923b305a330"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fyjRrajpClIu1HxVbX533bpO9sjtsLa/wAqicryvyCoywuzyWZOLNfGnRrhXo/OZQ84AJYrxcDB2&#13;
-xKbPjJXiAQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_403bccd5-d887-46df-b10c-abbcf1bc5418"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>G0EesmktpW429Z/9M+RDns9RHTV7kAdOjmskNKfJE1y7HiDt4ohuGAdG7CQcztgYOliEMs4WTFUT&#13;
-kg/LNCjnDA==</DigestValue></Reference></SignedInfo><SignatureValue>kZuzVLteZ+NpJt9A8VogmyGvs2+dnMP0IhAu4Ma3WTKXAGsFIfteCL2CbvTHuB71pAVV5Qa61rej&#13;
-o6koO4R/iGrLTvQKiIhff5WX/OMMzb3P9E1j8mnDYdXrOzGGtPUegkGU0xdbadrAbeYBJQ3HkxrT&#13;
-qcoNP2LkBsbtoqj6p/fa1ZzcdNZD0aMQc2kRNZDm/GA641QiUQ/c7WK8P56M69PscBPRWDydWLvL&#13;
-0piAQ+MRVUIF5CWKpqKShVBzrsoO72ld9AIq8RKN1IJcPSu4U6SMZSqbUbuVtxk/aAb8X4Pg4jiN&#13;
-L4Vg0PWUF4uGWldFkLy+F9HEYQ+V+UNAdfU33w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ef489c8f-4824-4347-9b43-538e7d59fef5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kEvAPi+vyW0gJGDUe2EftVR4G8AGB/DCH0ck+Z/wUZAVZtAT23qEbJ/VA5dusP/EY2gCQUVGgUWR&#13;
+plikbXqg/g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ca9c781d-95b2-4e11-b916-0c3430a793de"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pcNZm4nilMvT7NvLff6jTOVsTnj14aKK62qi8BqjlhNMjOi/9ZTpjaWJTTTyuTbBTwkDSEFS9Ef2&#13;
+ri4ErOhosA==</DigestValue></Reference></SignedInfo><SignatureValue>BtEb/kW7NcZfOpHRE50XRgeEmX/iMulC+h/PuuOXLTksM1bWhroUJLVZnLu4iNt/GhwAmSf6W0zN&#13;
+JpZNGMmWamo+iWDWQKjz7+O7N5HSJgwAC16UKA8xWRgehFasuZKGJ75Vpx2pKMzZJty5Cx2IQYs3&#13;
+RNaACfhYCo8vII5/FULBf4Q57iThFV7xy91enKkokOPnWmLujVVgvTl5hkrq+oR5/ov5B3BUesxS&#13;
+sQEKVgbfi+Of8BNSCwK38iXRRVWyGG47YBoCfsRGVLM8nleO+7UHIwaIj1P9Yl/TSbeqmcatma6F&#13;
+4+xlKjr2LWhbsgyVp63heeU/AChuX8NRGaDVsA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -672,4 +700,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_403bccd5-d887-46df-b10c-abbcf1bc5418" Target="#_00c1179d-7048-4c18-bc18-e923b305a330"><Timestamp>2022-04-26 16:24:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ca9c781d-95b2-4e11-b916-0c3430a793de" Target="#_ef489c8f-4824-4347-9b43-538e7d59fef5"><Timestamp>2022-04-26 16:27:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
