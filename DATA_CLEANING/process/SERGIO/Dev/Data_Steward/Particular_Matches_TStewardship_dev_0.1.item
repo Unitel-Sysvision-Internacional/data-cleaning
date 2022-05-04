@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:jLnpkPvvRCs9GwCVoT/SkDcZcwkqKGFYaCk9TlSN"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:kDE9BZ+k6Fw4/OHQZDtAf/DqaUAf5K0L0R9/GLHA"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:fZamhdxOVJaxrrkxTVSwzmJ2Qq/NkmCaGVeEQT2K"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:444tscyL7fjPcxmqCI65IM/cxRSOWkgTv+z85QIG"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -126,7 +126,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:9R3ZkLfR2E8KiyQ35eV3Vs7MEI7lE41KhH7dSXN5NSIgfDeEqghJAlnb"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:PdtL+cmdWmh2Cv3rP/DIVmM3FkKhY0QuG4Mbr/BxMgjl9/iTXqEhjTVH"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;metadata&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -778,7 +778,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:EuOLjm58U1V5yWrOCflw4/gnfdui7xywIEc4CsiE"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:BpMEgmxc76ZmOvOQD9THEof2Cj6HJ2xFfWeoryTy"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Unique_particular&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -1239,12 +1239,12 @@
       <column comment="" key="false" length="50" name="DataFile" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="20" name="Envio_data_stewardship" nullable="true" originalLength="20" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="20" name="SYS_ID" nullable="true" originalLength="20" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column key="false" length="0" name="GID" nullable="true" originalLength="20" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" originalLength="20" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" originalLength="20" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="255" name="MATCHING_DISTANCES" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="0" name="GID" nullable="true" originalLength="20" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" originalLength="20" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" originalLength="20" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" originalLength="-1" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" originalLength="-1" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="255" name="MATCHING_DISTANCES" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="metadata" name="REJECT">
       <column comment="" key="false" length="20" name="NUMBER" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
@@ -1313,12 +1313,12 @@
       <column comment="" key="false" length="50" name="DataFile" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="20" name="Envio_data_stewardship" nullable="true" originalLength="20" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="20" name="SYS_ID" nullable="true" originalLength="20" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column key="false" length="0" name="GID" nullable="true" originalLength="20" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" originalLength="20" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" originalLength="20" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column key="false" length="255" name="MATCHING_DISTANCES" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="0" name="GID" nullable="true" originalLength="20" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" originalLength="20" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" originalLength="20" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" originalLength="-1" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" originalLength="-1" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="255" name="MATCHING_DISTANCES" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -1339,7 +1339,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:9SsCe+B/Z4sGkNpscNBO4B8sv5B3a7EqYQ1LDcVEIGRME9sEmp6VXI7R"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:sHFqDgoDN3Kvl6uaPyM2kWmAjasD2XzWdY9wmf/YEG7j84fBXct6vSG4"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -1406,13 +1406,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_26390dc2-af30-43f2-81ff-6c78e4d7417b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XEMgXSpqrcyPqnRzQO6NUb8UCj1RCskiXlZO3qcBUwx5bypdiCEkWTc5LedoS79Tx13W7rnseH+6&#13;
-L7U0ipxKBg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_24c29597-3967-41ea-b5bc-c47d94ac4915"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KlArxiK0nzMYnpfzDbzc57+B5LoyvTh19FWm7OUEgoCUO588UiW5tZEXjfw14+SJzrtfwdsLz3CD&#13;
-CUJLqc48Bg==</DigestValue></Reference></SignedInfo><SignatureValue>VeMtBxR3FEDG/Rkyaad42zUFImKjvPHQhfrmI6FD/oKQPOHlrXZLxYrlbLjDXhmqs6RJ/DaqZu7M&#13;
-OoPmTf7zUvFXzuid2RPqlVP9+Odfc16LsoK3UiBgS6MD9wkXOUdqG4Mu+tORfWLh3C8exrdrBGKE&#13;
-LYNj3FAZxpdcLCxt0u87iMMLE/pkuOusP0uO7GHYNOGNfl45dCxU5ixVdCFGeHSoWp4rYGPCKeJw&#13;
-1T34lI2EHasDA6UFM8gzYglTQOt9CF+37dQow17RVDbtVs2P6oFQrrrk3gL/phr3DddB2SNHKlKG&#13;
-6LduUJyKyN6smUDw+0XQpwmy2cszp0ghlNRsiw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_339e391f-0182-46e8-ae67-e3bfb4294e8d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fHyvNAUrnkLVkymXL0A5WsroU2zmIQHdfDP54eEhWGQI2a1B8p8z9HXLy5Pkot/ymBgAiixGz+wN&#13;
+Vf3Ps6U7Ew==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cc83f2e1-edf5-4288-be9f-b1f421aef992"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1g22a+50Xgbl8Ft5TGz8e7BEOUnASw4FWfbucRgK0JFBcUCNQfWlbJ4DXCR1eC26Hi2lGsBC6Z1I&#13;
+To+yONnalw==</DigestValue></Reference></SignedInfo><SignatureValue>piDfQGxi4hINi8V5DYeW21w8hSv/cZs01zIs0bxhvxK+C/Hy/zHaQGNW7pOSj831nNTgS6GLGYlK&#13;
+AvUP7PXCCJqZPzCnnFTltJ/YHgirhoPbxpuM1uh6vVXcD0oE/h0ZLnaLcHS+BeWCwwLKiqLWVp4m&#13;
+hy5OyKmq8cxtVTAQYerBDbw7ESmmiJ4fIZSdfEhaJHoJsgHtllvu5i0sDu91mp+sogw5nab9W8WV&#13;
+a9VVc5vz93hNN0nUWT65+IpH0/zLwrTCwiRLc4sbdbVKcfVNZLhQ3lvuKO5YXK2rCXwuwZWQJOYM&#13;
+bH8YMChPudICtGw8U3LIn2g0G/dGaf1vaPo9RQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1434,4 +1434,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_24c29597-3967-41ea-b5bc-c47d94ac4915" Target="#_26390dc2-af30-43f2-81ff-6c78e4d7417b"><Timestamp>2022-05-04 14:39:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cc83f2e1-edf5-4288-be9f-b1f421aef992" Target="#_339e391f-0182-46e8-ae67-e3bfb4294e8d"><Timestamp>2022-05-04 14:41:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
