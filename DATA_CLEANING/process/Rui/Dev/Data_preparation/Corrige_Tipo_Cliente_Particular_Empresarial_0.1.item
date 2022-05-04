@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:4rj1cQOZsZodyawUHgE56wGQkNxWHWmh7GPF4Bc9"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:GmyhJiAC/rwz54KDJpdz89VdY5H1cyXDbjpofS71"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:XXrd67DeEM6eO7GhudgoTY44E3pkLR64uFa47/Tt"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:IAcpQTnmPF7WlKekP1ldgIV878XmdtPEZqkhZVb4"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -130,7 +130,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:m1zlsPknbfaFIRtILgOby5hbIl7RjUDwFH4A8UfScQZMjgrTOp+gLHn6"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:r1R+N7M5jReSt5+mYdtqVJfTnwOqnP2qHZZ6TwfuhCqvgF2j2FZ6cPX/"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -159,7 +159,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_3"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Rui/workspace/talend/Jobs/Corrige_Tipo_Cliente_Particular_Empresarial/UNITEL_Tipo_Empresarial_NIF_Particular.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:oM+K1Qa+CUvgsZMNoTCj5b3DDKg0gO3HIYypuZd+"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:ds3SiGw78MbVsm4hUs0xGocURvF3vgTM8AGsPbdW"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
       <elementValue elementRef="SHEETNAME" value="&quot;Tipo_Empresarial_NIF_Particular&quot;"/>
@@ -264,39 +264,37 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Actualiza" name="Actualiza">
-      <column comment="" key="false" length="-1" name="sys_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id_obj" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="Listagem" name="Listagem">
-      <column comment="" key="false" length="-1" name="sys_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valuedocs_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valuedocs_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="porton_nos_ilha" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="Actualiza" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="sys_id" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="" name="name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="valuedocs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.name " name="name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.tipo_correcto " name="tipo" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.tipo_docs " name="tipo_docs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.valuedocs " name="valuedocs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.id_obj " name="id_obj" nullable="true" type="id_Integer"/>
       </outputTables>
       <outputTables name="Listagem" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="sys_id" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="" name="name_old" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="name_new" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo_old" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo_new" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo_docs" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="valuedocs_old" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="valuedocs_new" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.name " name="name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.tipo " name="tipo_old" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.tipo_correcto " name="tipo_new" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.tipo_docs " name="tipo_docs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.valuedocs " name="valuedocs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.porton_nos_ilha " name="porton_nos_ilha" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="name" nullable="true" type="id_String"/>
@@ -307,12 +305,12 @@
         <mapperTableEntries name="ID_OBJ" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="porton_nos_ilha" nullable="true" type="id_String"/>
       </inputTables>
-      <inputTables innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo_docs" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="valuedocs" nullable="true" type="id_String"/>
-        <mapperTableEntries name="id_obj" nullable="true" type="id_Integer"/>
+      <inputTables innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row1.name " name="name" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries expression="row1.tipo " name="tipo" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries expression="row1.tipo_docs " name="tipo_docs" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries expression="row1.valuedocs " name="valuedocs" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries expression="row1.ID_OBJ " name="id_obj" nullable="true" operator="=" type="id_Integer"/>
       </inputTables>
     </nodeData>
   </node>
@@ -327,7 +325,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:/igoXsbtNhO05vLUrSQKfyMobcIWOng05KJBOL0z"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:SZMH6ef1VRDql3dzyfnmmJljiDvRMZ8j+UWBVAj0"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sys_det_clientes&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -380,7 +378,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:q7oiV/tczwMARPh8tCijbZFbF8WNastYy4GC6LtF"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:C4iosVCRq161NWo66apmtG+i5GD3N7p0A8RjFn8M"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sys_det_clientes&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -405,25 +403,30 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="true"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS">
-      <elementValue elementRef="SCHEMA_COLUMN" value="sys_id"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
       <elementValue elementRef="UPDATE_KEY" value="true"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="false"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="tipo"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="valuedocs"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tipo_docs"/>
+      <elementValue elementRef="UPDATE_KEY" value="true"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="valuedocs"/>
+      <elementValue elementRef="UPDATE_KEY" value="true"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id_obj"/>
+      <elementValue elementRef="UPDATE_KEY" value="true"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
@@ -438,16 +441,18 @@
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Actualiza a informação na BD, com base no Excel lido de início"/>
     <metadata connector="FLOW" label="Actualiza" name="tDBOutput_1">
-      <column comment="" key="false" length="-1" name="sys_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="tipo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tipo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id_obj" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="Actualiza" name="REJECT">
-      <column comment="" key="false" length="-1" name="sys_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="tipo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tipo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id_obj" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -486,14 +491,12 @@
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Lista as correcções efectuadas&#13;&#10;"/>
     <metadata connector="FLOW" label="Listagem" name="tFileOutputDelimited_2">
-      <column comment="" key="false" length="-1" name="sys_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valuedocs_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valuedocs_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="porton_nos_ilha" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="32">
@@ -507,7 +510,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Rui/workspace/talend/Jobs/Corrige_Tipo_Cliente_Particular_Empresarial/UNITEL_Tipo_Particular_NIF_Empresarial.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:N2OdQyJlSlEm96GKgYSLjfqUntgvQXcutC1K9xAg"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:3Atdt7wkqbgiAQN0iEZJinaIeWZT8OBGboYgQphG"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
       <elementValue elementRef="SHEETNAME" value="&quot;Tipo_Particular_NIF_Empresarial&quot;"/>
@@ -537,7 +540,7 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ID_OBJ"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="porton_nos_olha"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="porton_nos_ilha"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="false"/>
@@ -560,7 +563,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="ID_OBJ"/>
       <elementValue elementRef="CONVERTDATE" value="false"/>
       <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="porton_nos_olha"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="porton_nos_ilha"/>
       <elementValue elementRef="CONVERTDATE" value="false"/>
       <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
     </elementParameter>
@@ -583,7 +586,7 @@
       <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ID_OBJ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="porton_nos_olha" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="porton_nos_ilha" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -592,7 +595,7 @@
       <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ID_OBJ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="porton_nos_olha" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="porton_nos_ilha" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -608,7 +611,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:WgNP6qiy+JnTpM/c6JgXoxFFr6urAU+nIlO7oASS"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:TjKprw5WrHmnmvw3X+05UPpzeYU/RK/5S6tUUVJO"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sys_det_clientes&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -665,39 +668,37 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Actualiza" name="ActualizaNIF">
-      <column comment="" key="false" length="-1" name="sys_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id_obj" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="Listagem" name="ListagemNIF">
-      <column comment="" key="false" length="-1" name="sys_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valuedocs_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valuedocs_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="porton_nos_ilha" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ActualizaNIF" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="sys_id" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="" name="name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="valuedocs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.name " name="name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.tipo_correcto " name="tipo" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.tipo_docs " name="tipo_docs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.valuedocs " name="valuedocs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.id_obj " name="id_obj" nullable="true" type="id_Integer"/>
       </outputTables>
       <outputTables name="ListagemNIF" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="sys_id" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="" name="name_old" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="name_new" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo_old" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo_new" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo_docs" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="valuedocs_old" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="valuedocs_new" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.name " name="name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.tipo " name="tipo_old" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.tipo_correcto " name="tipo_new" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.tipo_docs " name="tipo_docs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.valuedocs " name="valuedocs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.porton_nos_ilha " name="porton_nos_ilha" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
         <mapperTableEntries name="name" nullable="true" type="id_String"/>
@@ -706,14 +707,14 @@
         <mapperTableEntries name="tipo_docs" nullable="true" type="id_String"/>
         <mapperTableEntries name="valuedocs" nullable="true" type="id_String"/>
         <mapperTableEntries name="ID_OBJ" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="porton_nos_olha" nullable="true" type="id_String"/>
+        <mapperTableEntries name="porton_nos_ilha" nullable="true" type="id_String"/>
       </inputTables>
-      <inputTables innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row4" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="tipo_docs" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="valuedocs" nullable="true" type="id_String"/>
-        <mapperTableEntries name="id_obj" nullable="true" type="id_Integer"/>
+      <inputTables innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row3.name " name="name" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries expression="row3.tipo " name="tipo" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries expression="row3.tipo_docs " name="tipo_docs" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries expression="row3.valuedocs " name="valuedocs" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries expression="row3.ID_OBJ " name="id_obj" nullable="true" operator="=" type="id_Integer"/>
       </inputTables>
     </nodeData>
   </node>
@@ -728,7 +729,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:M0UpbXwq4Xfx5ZzM2dIYm1EsUaNgD+SDaHLm6u/A"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:0HucZRyTWPjmc0Z3mYSQOxrKknvQ/1ivwFRZMi7H"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sys_det_clientes&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -753,11 +754,6 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="true"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS">
-      <elementValue elementRef="SCHEMA_COLUMN" value="sys_id"/>
-      <elementValue elementRef="UPDATE_KEY" value="true"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="false"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -768,7 +764,17 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tipo_docs"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="valuedocs"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id_obj"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -786,16 +792,18 @@
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Actualiza a informação na BD, com base no Excel lido de início"/>
     <metadata connector="FLOW" label="Actualiza" name="tDBOutput_2">
-      <column comment="" key="false" length="-1" name="sys_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id_obj" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="Actualiza" name="REJECT">
-      <column comment="" key="false" length="-1" name="sys_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id_obj" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -834,14 +842,12 @@
     <elementParameter field="CHECK" name="INFORMATION" value="true"/>
     <elementParameter field="MEMO" name="COMMENT" value="Lista as correcções efectuadas"/>
     <metadata connector="FLOW" label="Listagem" name="tFileOutputDelimited_1">
-      <column comment="" key="false" length="-1" name="sys_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="tipo_docs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valuedocs_old" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valuedocs_new" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="valuedocs" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="porton_nos_ilha" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="160">
@@ -929,6 +935,12 @@
       <elementValue elementRef="TRACE_COLUMN" value="sys_id"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="id_obj"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="tipo_docs"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Actualiza"/>
@@ -959,7 +971,13 @@
       <elementValue elementRef="TRACE_COLUMN" value="tipo_docs"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="valuedocs_old"/>
+      <elementValue elementRef="TRACE_COLUMN" value="valuedocs"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="porton_nos_ilha"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -1020,7 +1038,7 @@
       <elementValue elementRef="TRACE_COLUMN" value="tipo_correcto"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="porton_nos_olha"/>
+      <elementValue elementRef="TRACE_COLUMN" value="porton_nos_ilha"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="ID_OBJ"/>
@@ -1039,6 +1057,12 @@
       <elementValue elementRef="TRACE_COLUMN" value="sys_id"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="tipo_docs"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="id_obj"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ActualizaNIF"/>
@@ -1054,7 +1078,7 @@
       <elementValue elementRef="TRACE_COLUMN" value="name_new"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="valuedocs_new"/>
+      <elementValue elementRef="TRACE_COLUMN" value="porton_nos_ilha"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="name_old"/>
@@ -1067,6 +1091,12 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="valuedocs_old"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="valuedocs"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -1123,13 +1153,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_421a2fa8-1d99-4281-bacd-0a36595d28b3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>u81prpWNvt9aGGx0r4ARu+ZGtfDveWeNsUt4/ROaEiOt2+208EbPgq0a2v6+sxSHTJMOJpgHz3sH&#13;
-ncEE8SCsVA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f5958437-4ec8-46d1-b0db-04d59abfd643"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HgN2WiyC7XNpWV8j50dQLtLgJPzkdyuARD9u1Sf9D48vsg0XOoLoJZ3jzt+Y0tq1NIyPmO2AsqnB&#13;
-aPELDVEZEA==</DigestValue></Reference></SignedInfo><SignatureValue>PDt2po/1GHWOzjvhwQWpqQRuQSwlPbx1zQwJ2G7uAA25rSWMaigzkplD1S9zeFbseM1hKQd5P1U0&#13;
-6XISQTu3oyH7JujSwVqGoUvRPKJ6n2BdE0wiLvHUKWhqH2Ru2s3KgwKG3HS7LPAQRMqcB6/ux8ep&#13;
-Pnz2t3TxRWsD1pcianJIFf5DbOBSfCZ1mKTIGwlAImbothTvCOb+fBTPXjJHF3vOEMmXH6GItLQT&#13;
-mNZZtW02Qexd6cHN2CwN/rI9JuShYeGi+Lh/U7Twj/aogLFYTRKcozQf4acqMN5v8bHBFelnIH8L&#13;
-FpwxqZbErDarn8Lp4opcj09CooS4S2B6REo80A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d926b7fb-9b3c-4519-b037-5e7646bce000"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GjOL+yuFrtCzpuiyVSfnc62VNDONj7vSsc6/KuixgoKJMJGE0Zc/0DOAAQhdzs017KEJE38a7PlC&#13;
+t3pfFbAG+w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6a1a81c7-2d6a-4e2d-a735-51c9ccdc6fdc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+kQoIh63fJ4HOGbZX3+FEym9jhEfn7GFSrEJII1HgieqQlpkK6LT8I9wMm3lUmHZIyLeDU2EyQ1l&#13;
+KiRvjqk/3g==</DigestValue></Reference></SignedInfo><SignatureValue>KErTrhvSFpY6IfrRBhGx9G8DwhB49vie2kJh2nVIACCkXkjpBk9wWsr7XNJ+jk+Hy6ImAvz0G8Xf&#13;
+ZVn9JniAsYVquZriUf5sCuLdEt3FROIYgyYiW/Wel8eZ2Fy4qNKervUpzIWfCUnIsojgh4FmMTxv&#13;
+XdteNc2yO0qTyXwxArbL6DDdvioLjOyd4vMXO4uzs4pIPawnVq3mtO0Icgk8L2bIcnizi76HRpOk&#13;
+GG+3dbFM8Py2EUGTFg8Pk75N4J4prn9efde8FshQ+ZIVZrv2kM969t56X9vQn43XrQmXDgio3Cru&#13;
+srlXqUvGtk04hugLVtjtDuE7U6KZjwZDCbExdw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1151,4 +1181,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f5958437-4ec8-46d1-b0db-04d59abfd643" Target="#_421a2fa8-1d99-4281-bacd-0a36595d28b3"><Timestamp>2022-05-04 17:29:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6a1a81c7-2d6a-4e2d-a735-51c9ccdc6fdc" Target="#_d926b7fb-9b3c-4519-b037-5e7646bce000"><Timestamp>2022-05-04 18:29:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
