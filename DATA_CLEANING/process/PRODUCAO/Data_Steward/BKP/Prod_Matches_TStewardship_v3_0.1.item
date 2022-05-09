@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:IrPIfpHf/wwnpbTFng99IfrCAM00VMLkCJVYCiby"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:WSLB0ofJCShlbxBhzTtq6F/IRxBnkWPTQfSWkvuO"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:u7rlv/ALRIB3QpMcbGS8VULbnZzRVfB2HPN6mncx"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Y3SAcUWRALQKyVBMK7Vt2ailL8B13V8TUqbMc/m3"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -126,7 +126,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:pBAOkoZXvF/Eg8tEOgO333TkBbnV/h9mu2Qq1rDjxAtN9XLTVin6lnRF"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:unBZn4FUdLMkx0MF6LHlRasL2zJo+u0OmPBBJQxZ57kCpmyKHHekk2aB"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;metadata&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -864,8 +864,83 @@
       <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column key="false" length="255" name="MATCHING_DISTANCES" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
+    <metadata connector="FLOW" label="arquivo" name="arquivo">
+      <column comment="" key="false" length="-1" name="NUMBER" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="NAME" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="NOMINHO" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="CONTEXT_SEARCH" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="OBS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="STATUS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="CREATEBY" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CREATEDATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="TIPO" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ESTADO" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ID_OBJ" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NUMBER_UCC" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="BirthData" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Industry" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="NumberOfEmployees" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="CustomerCategory" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="MainContactInformation" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="PaymentTerms" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="ReasonStatusChange" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TP_DETAIL_ID" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="CodCertComercial" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="ValueDocs" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="DomaianValueDocs" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="NameDocs" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="CustomerManagerID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TYPE_ID" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="DomainValueTelefone" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="ValueTelefone" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="DomainValueEmail" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="ValueEmail" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="DomainValueSite" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="ValueSite" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="ImageUploadLink" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="ponctiation" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="NIB" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Entidade" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="NameGestor" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="ILHA" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="Remarks" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="240" name="CUSTUMER_CATEGORY" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="IntegrationOrigin" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="NameUserUpdate" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="DATE_UPDATE" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="classification" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="USER_UPDATE_ID" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Gender" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Nationality" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="MaritalStatus" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Job_title" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Academic_degree" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="240" name="Tipo_Docs" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="AdressID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Legal_form" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="240" name="JobDesciption" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="240" name="GenderDesciption" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="240" name="EstadoCivil" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Segmentation" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="LocalNascimento" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="DataDoc_Emissao" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="LocalEmissao" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Assinatura" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="NomeRepresentanteFamilia" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Relacao_Agregado" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="DataFile" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Envio_data_stewardship" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SYS_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TDS_GID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column key="false" length="0" name="GID" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="255" name="MATCHING_DISTANCES" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfSaida_Steward" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row3.NUMBER" name="NUMBER" nullable="true" type="id_Long"/>
@@ -941,6 +1016,81 @@
         <mapperTableEntries expression="row3.SCORE" name="SCORE" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="row3.GRP_QUALITY" name="GRP_QUALITY" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="row3.MATCHING_DISTANCES" name="MATCHING_DISTANCES" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables name="arquivo" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row3.NUMBER " name="NUMBER" nullable="true" type="id_Long"/>
+        <mapperTableEntries expression="row3.NAME " name="NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.NOMINHO " name="NOMINHO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.CONTEXT_SEARCH " name="CONTEXT_SEARCH" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.OBS " name="OBS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.STATUS " name="STATUS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.CREATEBY " name="CREATEBY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.CREATEDATE " name="CREATEDATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row3.TIPO " name="TIPO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.ESTADO " name="ESTADO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.ID_OBJ " name="ID_OBJ" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row3.NUMBER_UCC " name="NUMBER_UCC" nullable="true" type="id_Long"/>
+        <mapperTableEntries expression="row3.BirthData " name="BirthData" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Industry " name="Industry" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.NumberOfEmployees " name="NumberOfEmployees" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.CustomerCategory " name="CustomerCategory" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.MainContactInformation " name="MainContactInformation" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.PaymentTerms " name="PaymentTerms" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.ReasonStatusChange " name="ReasonStatusChange" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.TP_DETAIL_ID " name="TP_DETAIL_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row3.CodCertComercial " name="CodCertComercial" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.ValueDocs " name="ValueDocs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.DomaianValueDocs " name="DomaianValueDocs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.NameDocs " name="NameDocs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.CustomerManagerID " name="CustomerManagerID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.TYPE_ID " name="TYPE_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row3.DomainValueTelefone " name="DomainValueTelefone" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.ValueTelefone " name="ValueTelefone" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.DomainValueEmail " name="DomainValueEmail" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.ValueEmail " name="ValueEmail" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.DomainValueSite " name="DomainValueSite" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.ValueSite " name="ValueSite" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.ImageUploadLink " name="ImageUploadLink" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.ponctiation " name="ponctiation" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.NIB " name="NIB" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Entidade " name="Entidade" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.NameGestor " name="NameGestor" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.ILHA " name="ILHA" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Remarks " name="Remarks" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.CUSTUMER_CATEGORY " name="CUSTUMER_CATEGORY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.IntegrationOrigin " name="IntegrationOrigin" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.NameUserUpdate " name="NameUserUpdate" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.DATE_UPDATE " name="DATE_UPDATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.classification " name="classification" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.USER_UPDATE_ID " name="USER_UPDATE_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row3.Gender " name="Gender" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Nationality " name="Nationality" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.MaritalStatus " name="MaritalStatus" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Job_title " name="Job_title" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Academic_degree " name="Academic_degree" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Tipo_Docs " name="Tipo_Docs" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.AdressID " name="AdressID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Legal_form " name="Legal_form" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.JobDesciption " name="JobDesciption" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.GenderDesciption " name="GenderDesciption" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.EstadoCivil " name="EstadoCivil" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Segmentation " name="Segmentation" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.LocalNascimento " name="LocalNascimento" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.DataDoc_Emissao " name="DataDoc_Emissao" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.LocalEmissao " name="LocalEmissao" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Assinatura " name="Assinatura" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.NomeRepresentanteFamilia " name="NomeRepresentanteFamilia" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Relacao_Agregado " name="Relacao_Agregado" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.DataFile " name="DataFile" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Envio_data_stewardship " name="Envio_data_stewardship" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row3.SYS_ID " name="SYS_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row3.TDS_GID " name="TDS_GID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row3.GID " name="GID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.GRP_SIZE " name="GRP_SIZE" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row3.MASTER " name="MASTER" nullable="true" type="id_Boolean"/>
+        <mapperTableEntries expression="row3.SCORE " name="SCORE" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row3.GRP_QUALITY " name="GRP_QUALITY" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row3.MATCHING_DISTANCES " name="MATCHING_DISTANCES" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
         <mapperTableEntries name="NUMBER" nullable="true" type="id_Long"/>
@@ -1030,9 +1180,9 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:NxTjvefSfNBTTCNUQYpLg7L81FW/TeGWeJitKwFn"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:9Fs6sG24RTto2u29Y6c4AiaNdID/48JfHFp+4AWL"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Unique_empresarial&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
@@ -1582,6 +1732,112 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/sergi/WORKSPACE_UNITEL_8.0/unique_empresarial.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="arquivo" name="tFileOutputDelimited_1">
+      <column comment="" key="false" length="-1" name="NUMBER" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="NAME" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="NOMINHO" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="CONTEXT_SEARCH" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="OBS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="STATUS" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="CREATEBY" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CREATEDATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="TIPO" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ESTADO" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ID_OBJ" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NUMBER_UCC" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="BirthData" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Industry" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="NumberOfEmployees" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="CustomerCategory" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="MainContactInformation" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="PaymentTerms" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="ReasonStatusChange" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TP_DETAIL_ID" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="CodCertComercial" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="ValueDocs" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="DomaianValueDocs" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="NameDocs" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="CustomerManagerID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TYPE_ID" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="DomainValueTelefone" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="ValueTelefone" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="DomainValueEmail" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="ValueEmail" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="DomainValueSite" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="ValueSite" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="ImageUploadLink" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="ponctiation" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="NIB" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Entidade" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="NameGestor" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="ILHA" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="Remarks" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="240" name="CUSTUMER_CATEGORY" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="IntegrationOrigin" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="NameUserUpdate" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="DATE_UPDATE" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="classification" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="USER_UPDATE_ID" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Gender" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Nationality" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="MaritalStatus" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Job_title" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Academic_degree" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="240" name="Tipo_Docs" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="AdressID" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="Legal_form" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="240" name="JobDesciption" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="240" name="GenderDesciption" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="240" name="EstadoCivil" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Segmentation" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="LocalNascimento" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="DataDoc_Emissao" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="LocalEmissao" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Assinatura" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="NomeRepresentanteFamilia" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Relacao_Agregado" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="DataFile" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Envio_data_stewardship" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SYS_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TDS_GID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column key="false" length="0" name="GID" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column key="false" length="255" name="MATCHING_DISTANCES" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="-32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
     <elementParameter field="TEXT" name="LABEL" value="inicio"/>
@@ -1598,7 +1854,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ULRbKXAX1Xnqe+b0wc1aQ2T2lIomeNFB5HpGznwZLMkF9gzvwGuhFoXN"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:A2gBjYZZMPN6CsUyUIEUOa4+4VNGjRiIWr6Kdu8jq8U3gBdKNXEevx16"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -1640,7 +1896,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfSaida_Steward" lineStyle="0" metaname="copyOfSaida_Steward" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
+  <connection connectorName="FLOW" label="copyOfSaida_Steward" lineStyle="0" metaname="copyOfSaida_Steward" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tDBOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="GID"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1654,6 +1910,10 @@
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfSaida_Steward"/>
+  </connection>
+  <connection connectorName="FLOW" label="arquivo" lineStyle="0" metaname="arquivo" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tFileOutputDelimited_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="arquivo"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDBConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
@@ -1688,13 +1948,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_59bb14c6-6724-4dda-9421-ba92c6db93f0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xJFmPj1CS974bFwm0l6JfayvoYysLIemfmJSTqsGwtol0u1ia8g7N9vzPfEQ9V5/djLqeOgeyl3H&#13;
-4eNyfi5+og==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9f258003-725b-4b45-b355-983c8570ccbc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OBz9h85zxYBb65bRznPvc9p3+oex4rWNluXsLW9m5JwaSf5swAnI2nz9uGy8GCOhS75Y1jKKzYJV&#13;
-VtUaPY3Phw==</DigestValue></Reference></SignedInfo><SignatureValue>ktst/gGLPjVOxkANLsXYkUnXo/meuCyRxnjjmmkoptwb7iXqvxJTMbtccYHLJFDXvzy5iHf+dLHB&#13;
-3uOsMBl/kmupE+3m5sgpYUCG1zain0Uh/f8puxA3530VmqPDnookXiMe+Yls8rxOgCk90c7QPGJk&#13;
-24yDat/9OxqDW9ZslUpR95i0KIgl/11T4JLE8tQwoRyWs0e3UOv8uTqnqLKzCigm7Ndtp+kkDzab&#13;
-oYqISZqao+gBidqJvzlek2tFXhV/uSYMxzC5sePnH4K+7DSdfpaQKdFJK8e2M1XWVgYXJfWy8Qxg&#13;
-bR2SrHZBaYF7cdDaCIpyFrIUi9b17ZgK5Ku26g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_623501e1-8f3a-4e0d-823b-87f70a8bd488"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nGOA1amig0TWUFvUd5HrPMSvMnBapOG9k2gRgCtTeS3zOn+S8VprYoWoliPCiKK0niTG3kDpQ8bV&#13;
+gWdt5fz0Hw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_92c30fde-855e-4c47-a0aa-3772a1425ac1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Z2A2DgZX6myy18KKSG45FSzX4Kp7uxjVVKMonXZNyc9ksk1Nf6MDrmLTugYliqnKJauSdqAD+jbw&#13;
+ESq76LndHQ==</DigestValue></Reference></SignedInfo><SignatureValue>XaSXRQcQwbLu6D7GPqtK0cU7SssY6jeKe1VIcgN0hXioi75m7LnfiVD+mzj0svx4HeS2JzLiu6/R&#13;
+Kj9RqMw34qgsRXHu1S1IPGKjgFdva0yHPV83Y08EQhSyqIs/OzTQPX8h0QgGY0l9v/5Vpd2R3W8Z&#13;
+8u5UNTpcxOablxp2XmysPI2oLMCnF8BDhJuVjHtcckVR+9enOOnMcXMm8wcJ1Qngpc5Yw7F8/Mzk&#13;
+hSYVD8MBXMgCKlSJFQ8Bknr04IF2b1jd5PZZp8TvtXzRD+GpnJV/7fnhNdY1L9r33NV3FnN3DvWP&#13;
+chKbFGdi0P9LLIQ6yNymNQHskIcaxZpiAEYbWQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1716,4 +1976,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9f258003-725b-4b45-b355-983c8570ccbc" Target="#_59bb14c6-6724-4dda-9421-ba92c6db93f0"><Timestamp>2022-05-09 13:23:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_92c30fde-855e-4c47-a0aa-3772a1425ac1" Target="#_623501e1-8f3a-4e0d-823b-87f70a8bd488"><Timestamp>2022-05-09 13:35:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
