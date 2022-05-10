@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" internalId="_8hdjENCbEey9GPdmPGiYGg" name="data" prompt="data?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   </context>
@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:dfnDr+Rr1brvw1fP7Mq0h5V7K7GlUdntM0K8gGRh"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:+JazSfG83bYa2uKmfFSKlsauPEcj6sZRxvlzM5vw"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Dx7N/n1nTrvofgcug43Md2IWJYGTio+iklc/dv6x"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:HQFLdzQGWHYWXdu9nV+4SQup2T7lDzZ3H2BsAKwt"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -130,7 +130,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:KeTTiPe/YAiz+yCX6kvHvDgvIEAPaIPLTgtYLS0F7HVFsgeGzncQfNSf"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:PIZZNCisYl/ZPJiXzlsXvl8LgeN7ElOIO7ZTiOraQtkZbFltOPoM66LE"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -154,7 +154,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Rui/workspace/talend/Jobs/Corrige_Clientes_Empresariais_sem_NIF/Clientes_Empresariais_sem_NIF_RETORNO.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:7HlW8qMIVHy1BwHbNm6rtqS+g2YV9t4WQXv7YLpu"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:N009vrWHEYEXJY5QlefWZnAXqodDiVd5316tfjtJ"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST"/>
     <elementParameter field="TEXT" name="HEADER" value="1"/>
@@ -186,6 +186,97 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_3GxG4NCZEey9GPdmPGiYGg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE"/>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="NUMBER" nullable="true" type="id_Long"/>
+        <mapperTableEntries name="NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="NOMINHO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CONTEXT_SEARCH" nullable="true" type="id_String"/>
+        <mapperTableEntries name="OBS" nullable="true" type="id_String"/>
+        <mapperTableEntries name="STATUS" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CREATEBY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CREATEDATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="TIPO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ESTADO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ID_OBJ" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="NUMBER_UCC" nullable="true" type="id_Long"/>
+        <mapperTableEntries name="BirthData" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Industry" nullable="true" type="id_String"/>
+        <mapperTableEntries name="NumberOfEmployees" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CustomerCategory" nullable="true" type="id_String"/>
+        <mapperTableEntries name="MainContactInformation" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PaymentTerms" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ReasonStatusChange" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TP_DETAIL_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="CodCertComercial" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ValueDocs" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DomaianValueDocs" nullable="true" type="id_String"/>
+        <mapperTableEntries name="NameDocs" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CustomerManagerID" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TYPE_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="DomainValueTelefone" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ValueTelefone" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DomainValueEmail" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ValueEmail" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DomainValueSite" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ValueSite" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ImageUploadLink" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ponctiation" nullable="true" type="id_String"/>
+        <mapperTableEntries name="NIB" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Entidade" nullable="true" type="id_String"/>
+        <mapperTableEntries name="NameGestor" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ILHA" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Remarks" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CUSTUMER_CATEGORY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="IntegrationOrigin" nullable="true" type="id_String"/>
+        <mapperTableEntries name="NameUserUpdate" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DATE_UPDATE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="classification" nullable="true" type="id_String"/>
+        <mapperTableEntries name="USER_UPDATE_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="Gender" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Nationality" nullable="true" type="id_String"/>
+        <mapperTableEntries name="MaritalStatus" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Job_title" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Academic_degree" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Tipo_Docs" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AdressID" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Legal_form" nullable="true" type="id_String"/>
+        <mapperTableEntries name="JobDesciption" nullable="true" type="id_String"/>
+        <mapperTableEntries name="GenderDesciption" nullable="true" type="id_String"/>
+        <mapperTableEntries name="EstadoCivil" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Segmentation" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LocalNascimento" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DataDoc_Emissao" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LocalEmissao" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Assinatura" nullable="true" type="id_String"/>
+        <mapperTableEntries name="NomeRepresentanteFamilia" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Relacao_Agregado" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DataFile" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Envio_data_stewardship" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="Retorno_data_stewardship" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="SYS_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="consult_sniac" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="NomeResponsavelAgente" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
@@ -197,7 +288,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:6eiakWo7gqj/urXwhWCXa1j5B9tkUS7gkH7OEYSi"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:El6eYB2R9sfUZ3+QgzB21Y/BZcqP5YESyBh5r/vw"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sv_duplicados_empresarial&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -433,6 +524,14 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="8" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
@@ -454,18 +553,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ffe39bec-7165-416a-ac27-b60815b91b5f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PYA8pPdowFdquNIG0w44D9HH/PLbzUbvAPxuAC9l0ifLOYLKo7FkxAApwrq2ku9uIAnr2DaTVYqz&#13;
-OXNPYk3OJQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_62215a19-7220-453a-828b-f6ce0912def7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wcTZviOQpmjPm6wqCu/pZRnLmfZwMu5dyhBzBq2rRfjmbe2DVpNny1QK+EIwCJA5piQxytm4KGM3&#13;
-8jkFvD/c8g==</DigestValue></Reference></SignedInfo><SignatureValue>PWMAJTWNDyUuvwA7QVzlfv/gIjq+igwHqtYbAZEG5ZwndusQBi8nOrOV+UFGFkTAS/u2kW7RJFpM&#13;
-raZArnWgeK1IMA2aknHULtB0FYLfY2RX2+DRjEnj/o9Xmo/TNLSubkUEailweVSPxtEkcGd2AC4o&#13;
-YbCGtfd8J5W4cAI45tF19pV2twypOVOLjdUTIloktKQvWtqznk3eunGNnHkT7AJSz6aIOfPeDMIt&#13;
-jqLbeZt4v40TsK0EhrdcyXeuVIGn0ZpITlSKifDHPvG3rWOsanroKxQpDp6na810IXhTgGAYVb+K&#13;
-ZhmbYTMIT8mrqcpmQlhUVkaXPu/UGT5PL7mubA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_81aa66da-5f78-401e-9a5f-73de151ab592"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5uJN1f6z13bRFIXXDvO8LLn0vYH7+hREKygPEMyekD08GIvU61ArxkME7iw7JDK7xLsSsy/+0tZe&#13;
+3262hv1y0A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4834e045-0588-40a8-a5f7-92ff4e7fe688"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7euL1fORJ6v2sM3kYxwhKxjK25agMcdTby0nT0s80WSJQfyMdpNPKyKDuItXuRcxDBgyS2dlVW+H&#13;
+yB4o4T3ddQ==</DigestValue></Reference></SignedInfo><SignatureValue>UsJOMzBrb/Z4vScf5iRWV8JeE6YnGZPgUNpisS4sMVt0C8HX8v3wQH9fHU4TBL2nJe/2M8HWbaPk&#13;
+gFdS+pEb9PGMibZ2Z4OJfhDcfWmQbVUAQA3388aIadd7YoZo+Z6W6gG/aQFaTAn31k3ADlBjJHvo&#13;
+bj2V3XTZvjzdvPnXYCj+uwDM1Xlc/ux8NdYnqVA05lmQjEyNVlj50I2L5Vek0MxRkutTuDD/R+fC&#13;
+Jy/ypf0Z2iYdFuq9UnLkBnpTgYO5rsg75xE60vqHcFv8ZO1C3AcABgVQ2EVntev0Rca7SasIgZN2&#13;
+n3OsfnnOjhnxKHk7yGDuK2Ijslgi+ALZ82bfKw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -487,4 +581,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_62215a19-7220-453a-828b-f6ce0912def7" Target="#_ffe39bec-7165-416a-ac27-b60815b91b5f"><Timestamp>2022-05-10 21:01:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4834e045-0588-40a8-a5f7-92ff4e7fe688" Target="#_81aa66da-5f78-401e-9a5f-73de151ab592"><Timestamp>2022-05-10 21:02:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
