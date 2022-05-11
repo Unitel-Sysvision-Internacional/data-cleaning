@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:sThG6QE6rEMnkbgUsSgm5UKT/9dT3xUFBn6oO7Em"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:1XasLXELOWfi4ocBgNSFd4cewQ/9EKg8gSrjBjyB"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:1XNQy0lE/sKlETCIAPvRGm8f+zSS96FZxMgaBLvS"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:OK71cKQuxU7x4KlfUZ7QIR+5p+o/aRiuCIf+mLJ4"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -130,7 +130,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:DHpw5KLqY/SG0uHhfgyXPX25AL0u8GiM1lMQaMl6kMUOPRd436wJWiYo"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XXD21Jw13wNOKD+vxsA0OW1H/jiiT5aIyABOO2649vC7xyjJJoJNqBCi"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -155,7 +155,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Rui/workspace/talend/Jobs/Corrige_Clientes_Empresariais_sem_NIF/Clientes_Empresariais_sem_NIF_TipoDeCliente.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:5WtpoAoQo60gNd5wrU42eJhY70GioyStGalL/vPr"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:wcVQiVo1qW5Dcc40OQlhpokU+wTMuydp33iHK4wj"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
       <elementValue elementRef="SHEETNAME" value="&quot;Clientes_Empresariais_sem_NIF&quot;"/>
@@ -349,13 +349,13 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:W+AAhHERXEvb2O/6irkjVoX+VxXudoS7TSrsht+9"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;sv_duplicados_empresarial&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Q5suv8jCMACZtv8rItyoog0dmIVlgEE9NgfsR15R"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;sys_det_clientes&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select s.*&#13;&#10;from sv_duplicados_empresarial s&#13;&#10;where s.name not in (select s2.name from sv_duplicados_empresarial s2&#13;&#10;                       where s2.name = s.name&#13;&#10;                         and s2.tipo_docs = 'NIF')&#13;&#10;and s.name is not null and s.name != ''&#13;&#10;order by s.name&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.sys_det_clientes.NUMBER,&#10;&#9;&#9;dbo.sys_det_clientes.NAME,&#10;&#9;&#9;dbo.sys_det_clientes.NOMINHO,&#10;&#9;&#9;dbo.sys_det_clientes.CONTEXT_SEARCH,&#10;&#9;&#9;dbo.sys_det_clientes.OBS,&#10;&#9;&#9;dbo.sys_det_clientes.STATUS,&#10;&#9;&#9;dbo.sys_det_clientes.CREATEBY,&#10;&#9;&#9;dbo.sys_det_clientes.CREATEDATE,&#10;&#9;&#9;dbo.sys_det_clientes.TIPO,&#10;&#9;&#9;dbo.sys_det_clientes.ESTADO,&#10;&#9;&#9;dbo.sys_det_clientes.ID_OBJ,&#10;&#9;&#9;dbo.sys_det_clientes.NUMBER_UCC,&#10;&#9;&#9;dbo.sys_det_clientes.BirthData,&#10;&#9;&#9;dbo.sys_det_clientes.Industry,&#10;&#9;&#9;dbo.sys_det_clientes.NumberOfEmployees,&#10;&#9;&#9;dbo.sys_det_clientes.CustomerCategory,&#10;&#9;&#9;dbo.sys_det_clientes.MainContactInformation,&#10;&#9;&#9;dbo.sys_det_clientes.PaymentTerms,&#10;&#9;&#9;dbo.sys_det_clientes.ReasonStatusChange,&#10;&#9;&#9;dbo.sys_det_clientes.TP_DETAIL_ID,&#10;&#9;&#9;dbo.sys_det_clientes.CodCertComercial,&#10;&#9;&#9;dbo.sys_det_clientes.ValueDocs,&#10;&#9;&#9;dbo.sys_det_clientes.DomaianValueDocs,&#10;&#9;&#9;dbo.sys_det_clientes.NameDocs,&#10;&#9;&#9;dbo.sys_det_clientes.CustomerManagerID,&#10;&#9;&#9;dbo.sys_det_clientes.TYPE_ID,&#10;&#9;&#9;dbo.sys_det_clientes.DomainValueTelefone,&#10;&#9;&#9;dbo.sys_det_clientes.ValueTelefone,&#10;&#9;&#9;dbo.sys_det_clientes.DomainValueEmail,&#10;&#9;&#9;dbo.sys_det_clientes.ValueEmail,&#10;&#9;&#9;dbo.sys_det_clientes.DomainValueSite,&#10;&#9;&#9;dbo.sys_det_clientes.ValueSite,&#10;&#9;&#9;dbo.sys_det_clientes.ImageUploadLink,&#10;&#9;&#9;dbo.sys_det_clientes.ponctiation,&#10;&#9;&#9;dbo.sys_det_clientes.NIB,&#10;&#9;&#9;dbo.sys_det_clientes.Entidade,&#10;&#9;&#9;dbo.sys_det_clientes.NameGestor,&#10;&#9;&#9;dbo.sys_det_clientes.ILHA,&#10;&#9;&#9;dbo.sys_det_clientes.Remarks,&#10;&#9;&#9;dbo.sys_det_clientes.CUSTUMER_CATEGORY,&#10;&#9;&#9;dbo.sys_det_clientes.IntegrationOrigin,&#10;&#9;&#9;dbo.sys_det_clientes.NameUserUpdate,&#10;&#9;&#9;dbo.sys_det_clientes.DATE_UPDATE,&#10;&#9;&#9;dbo.sys_det_clientes.classification,&#10;&#9;&#9;dbo.sys_det_clientes.USER_UPDATE_ID,&#10;&#9;&#9;dbo.sys_det_clientes.Gender,&#10;&#9;&#9;dbo.sys_det_clientes.Nationality,&#10;&#9;&#9;dbo.sys_det_clientes.MaritalStatus,&#10;&#9;&#9;dbo.sys_det_clientes.Job_title,&#10;&#9;&#9;dbo.sys_det_clientes.Academic_degree,&#10;&#9;&#9;dbo.sys_det_clientes.Tipo_Docs,&#10;&#9;&#9;dbo.sys_det_clientes.AdressID,&#10;&#9;&#9;dbo.sys_det_clientes.Legal_form,&#10;&#9;&#9;dbo.sys_det_clientes.JobDesciption,&#10;&#9;&#9;dbo.sys_det_clientes.GenderDesciption,&#10;&#9;&#9;dbo.sys_det_clientes.EstadoCivil,&#10;&#9;&#9;dbo.sys_det_clientes.Segmentation,&#10;&#9;&#9;dbo.sys_det_clientes.LocalNascimento,&#10;&#9;&#9;dbo.sys_det_clientes.DataDoc_Emissao,&#10;&#9;&#9;dbo.sys_det_clientes.LocalEmissao,&#10;&#9;&#9;dbo.sys_det_clientes.Assinatura,&#10;&#9;&#9;dbo.sys_det_clientes.NomeRepresentanteFamilia,&#10;&#9;&#9;dbo.sys_det_clientes.Relacao_Agregado,&#10;&#9;&#9;dbo.sys_det_clientes.DataFile,&#10;&#9;&#9;dbo.sys_det_clientes.Envio_data_stewardship,&#10;&#9;&#9;dbo.sys_det_clientes.Retorno_data_stewardship,&#10;&#9;&#9;dbo.sys_det_clientes.SYS_ID,&#10;&#9;&#9;dbo.sys_det_clientes.consult_sniac,&#10;&#9;&#9;dbo.sys_det_clientes.NomeResponsavelAgente&#10;FROM&#9;dbo.sys_det_clientes&#13;&#10;where tipo = 'Empresarial'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -507,7 +507,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="sv_duplicados_empresarial"/>
+    <elementParameter field="TEXT" name="LABEL" value="sys_det_clientes"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
       <column comment="" defaultValue="" key="false" length="19" name="NUMBER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
@@ -592,7 +592,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:gRnxz9UndzwnwFefjR5VGcG9BMdvRLhsm2VNyoQy"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:U2BURWgdSK2huStmY2a1mqtsKyL03Wg12NWlmeu0"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sys_det_clientes&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -688,7 +688,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_2"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Rui/workspace/talend/Jobs/Corrige_Clientes_Empresariais_sem_NIF/Clientes_Empresariais_sem_NIF_TipoDeDocumento.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:iWWHAlzVMz/pqgJB/G9W4IUighQdQlKL5nCMa6Du"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:HIijfg+X7m4YzgYo5HtSDlaqGJlPMALikWjPf0jg"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
       <elementValue elementRef="SHEETNAME" value="&quot;Clientes_Empresariais_sem_NIF&quot;"/>
@@ -886,13 +886,13 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Y2XUBi14RdZM+crxwqIDrFLyhDJEP/glaDYZyYob"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;sv_duplicados_empresarial&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:o8itn+wzwoQZ+9bRR5jnoXhgrQvkwhF4prOdnh6R"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;sys_det_clientes&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select s.*&#13;&#10;from sv_duplicados_empresarial s&#13;&#10;where s.name not in (select s2.name from sv_duplicados_empresarial s2&#13;&#10;                       where s2.name = s.name&#13;&#10;                         and s2.tipo_docs = 'NIF')&#13;&#10;and s.name is not null and s.name != ''&#13;&#10;order by s.name&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.sys_det_clientes.NUMBER,&#10;&#9;&#9;dbo.sys_det_clientes.NAME,&#10;&#9;&#9;dbo.sys_det_clientes.NOMINHO,&#10;&#9;&#9;dbo.sys_det_clientes.CONTEXT_SEARCH,&#10;&#9;&#9;dbo.sys_det_clientes.OBS,&#10;&#9;&#9;dbo.sys_det_clientes.STATUS,&#10;&#9;&#9;dbo.sys_det_clientes.CREATEBY,&#10;&#9;&#9;dbo.sys_det_clientes.CREATEDATE,&#10;&#9;&#9;dbo.sys_det_clientes.TIPO,&#10;&#9;&#9;dbo.sys_det_clientes.ESTADO,&#10;&#9;&#9;dbo.sys_det_clientes.ID_OBJ,&#10;&#9;&#9;dbo.sys_det_clientes.NUMBER_UCC,&#10;&#9;&#9;dbo.sys_det_clientes.BirthData,&#10;&#9;&#9;dbo.sys_det_clientes.Industry,&#10;&#9;&#9;dbo.sys_det_clientes.NumberOfEmployees,&#10;&#9;&#9;dbo.sys_det_clientes.CustomerCategory,&#10;&#9;&#9;dbo.sys_det_clientes.MainContactInformation,&#10;&#9;&#9;dbo.sys_det_clientes.PaymentTerms,&#10;&#9;&#9;dbo.sys_det_clientes.ReasonStatusChange,&#10;&#9;&#9;dbo.sys_det_clientes.TP_DETAIL_ID,&#10;&#9;&#9;dbo.sys_det_clientes.CodCertComercial,&#10;&#9;&#9;dbo.sys_det_clientes.ValueDocs,&#10;&#9;&#9;dbo.sys_det_clientes.DomaianValueDocs,&#10;&#9;&#9;dbo.sys_det_clientes.NameDocs,&#10;&#9;&#9;dbo.sys_det_clientes.CustomerManagerID,&#10;&#9;&#9;dbo.sys_det_clientes.TYPE_ID,&#10;&#9;&#9;dbo.sys_det_clientes.DomainValueTelefone,&#10;&#9;&#9;dbo.sys_det_clientes.ValueTelefone,&#10;&#9;&#9;dbo.sys_det_clientes.DomainValueEmail,&#10;&#9;&#9;dbo.sys_det_clientes.ValueEmail,&#10;&#9;&#9;dbo.sys_det_clientes.DomainValueSite,&#10;&#9;&#9;dbo.sys_det_clientes.ValueSite,&#10;&#9;&#9;dbo.sys_det_clientes.ImageUploadLink,&#10;&#9;&#9;dbo.sys_det_clientes.ponctiation,&#10;&#9;&#9;dbo.sys_det_clientes.NIB,&#10;&#9;&#9;dbo.sys_det_clientes.Entidade,&#10;&#9;&#9;dbo.sys_det_clientes.NameGestor,&#10;&#9;&#9;dbo.sys_det_clientes.ILHA,&#10;&#9;&#9;dbo.sys_det_clientes.Remarks,&#10;&#9;&#9;dbo.sys_det_clientes.CUSTUMER_CATEGORY,&#10;&#9;&#9;dbo.sys_det_clientes.IntegrationOrigin,&#10;&#9;&#9;dbo.sys_det_clientes.NameUserUpdate,&#10;&#9;&#9;dbo.sys_det_clientes.DATE_UPDATE,&#10;&#9;&#9;dbo.sys_det_clientes.classification,&#10;&#9;&#9;dbo.sys_det_clientes.USER_UPDATE_ID,&#10;&#9;&#9;dbo.sys_det_clientes.Gender,&#10;&#9;&#9;dbo.sys_det_clientes.Nationality,&#10;&#9;&#9;dbo.sys_det_clientes.MaritalStatus,&#10;&#9;&#9;dbo.sys_det_clientes.Job_title,&#10;&#9;&#9;dbo.sys_det_clientes.Academic_degree,&#10;&#9;&#9;dbo.sys_det_clientes.Tipo_Docs,&#10;&#9;&#9;dbo.sys_det_clientes.AdressID,&#10;&#9;&#9;dbo.sys_det_clientes.Legal_form,&#10;&#9;&#9;dbo.sys_det_clientes.JobDesciption,&#10;&#9;&#9;dbo.sys_det_clientes.GenderDesciption,&#10;&#9;&#9;dbo.sys_det_clientes.EstadoCivil,&#10;&#9;&#9;dbo.sys_det_clientes.Segmentation,&#10;&#9;&#9;dbo.sys_det_clientes.LocalNascimento,&#10;&#9;&#9;dbo.sys_det_clientes.DataDoc_Emissao,&#10;&#9;&#9;dbo.sys_det_clientes.LocalEmissao,&#10;&#9;&#9;dbo.sys_det_clientes.Assinatura,&#10;&#9;&#9;dbo.sys_det_clientes.NomeRepresentanteFamilia,&#10;&#9;&#9;dbo.sys_det_clientes.Relacao_Agregado,&#10;&#9;&#9;dbo.sys_det_clientes.DataFile,&#10;&#9;&#9;dbo.sys_det_clientes.Envio_data_stewardship,&#10;&#9;&#9;dbo.sys_det_clientes.Retorno_data_stewardship,&#10;&#9;&#9;dbo.sys_det_clientes.SYS_ID,&#10;&#9;&#9;dbo.sys_det_clientes.consult_sniac,&#10;&#9;&#9;dbo.sys_det_clientes.NomeResponsavelAgente&#10;FROM&#9;dbo.sys_det_clientes&#13;&#10;where tipo = 'Empresarial'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1044,7 +1044,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="sv_duplicados_empresarial_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="sys_det_clientes"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_2">
       <column comment="" defaultValue="" key="false" length="19" name="NUMBER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
@@ -1129,7 +1129,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:u758xTWcuRPz5B3ScPsy4NmO6oIFDhgI5OPLIGnJ"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Q+UFf2OGCeG/CL2DnYUesolMh+g39o4WeTxMWxJh"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;sys_det_clientes&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -1378,13 +1378,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_05965935-e16a-44ea-b185-495248e7f624"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1Sjr4iyoY0dBSqToI1dZFO55osYtKTGxoL/HUAKZGKu1p1HZ4bpfGXTsi3Qud0T5dqYI4IbX7CYS&#13;
-YGzoucEp9A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c21f7d7f-1eb4-495c-824f-4502b846a4d5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>H0XPARMprABUj+KTTs8L7/csr62MfzXDIBXSk2u0eql9c2KRrElTXr8MAHHU271ZhHuSdkncqagw&#13;
-aCtZ0GNvJA==</DigestValue></Reference></SignedInfo><SignatureValue>SHhc1YuKtS9/8N/GYtB+pAYjTgzvAhWakpicRo2fe8f54OZP33sEwU1bSSVNFreBcSvNdXvoWDhy&#13;
-GVD5nEtc0iw3rqgqKyxVk3F/zQPfF+JNpNQA5TcnGMh22qE+2PC1t0s3oe7BDn4kkQeS+VTgBVF6&#13;
-HfuLZE+KxwI6eBqXKxhRDSOP1oBQG847BAkmG1a7a+t1pjFrRnZLxH0VpyWFNDo9BT+tw+oDIvFP&#13;
-tm2nWpaz3NbxwikK5+pMWgVEcJdLjEhwp01SSPgW2PvV3C/a9PGFuhKJ2GkXSJhleJpUCU6ytDAh&#13;
-7Xn6RxDzcMWXh3ijCW4v1WzWcHpjM4KU5NH7Dw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f708a4f1-eaf0-4e89-9865-d185d925485d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qZykGfVGTVRpE6zjpSpt53o28ucYL3NnzmfDRWFyjdqTBuh3hxHP3EFlbP7h3NRmrqSIvxP2hFi2&#13;
+2ZpBOzAwmg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dd0a4680-b6da-406f-8812-f515121b3f6a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FiEqqlwH81eeLi6XrOQGTYv8XpfCAK60sLtFlLPL0DfBWW2x1La0dLnRPSo5Ygqs6vYMKT1geDEs&#13;
+hWuZ7JuTqA==</DigestValue></Reference></SignedInfo><SignatureValue>ov6PUIe0sOMdF56s7dHTbA2Q2CdBh6s3TZVzcZSZ3OcJ2VQ/8HVDIpXkkGcxJYqrTWGSMjsKdllR&#13;
+iMafJAX/mx5c4XV0w6inQPALHs5IynLtjE8WXjYpxFaZ4pMd8lr8xG+Ni8adIcsyBTXPm2x1DKLu&#13;
+a/0rCCTEPHRHW2QsNQLZg9lA+YDn/XuHxn9W87exjuh2puQPZeIufudv/gwEShCMs5/1+xmBQ1Td&#13;
+ZExUWW0BP6rj/35Fke24UNZV5YtLKngBzGRdmdxxxJ9SdFUQfXlvRl+xApSlbDvdG4VZW6TmCorm&#13;
+LAxWIRXJ35cLPNuBfonXHNSkhfHjnoF6AsGwUA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1406,4 +1406,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c21f7d7f-1eb4-495c-824f-4502b846a4d5" Target="#_05965935-e16a-44ea-b185-495248e7f624"><Timestamp>2022-05-11 11:35:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dd0a4680-b6da-406f-8812-f515121b3f6a" Target="#_f708a4f1-eaf0-4e89-9865-d185d925485d"><Timestamp>2022-05-11 11:43:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
