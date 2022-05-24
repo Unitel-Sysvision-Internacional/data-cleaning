@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:3+CqJnxphPA/Gqfrlhmcn0RjjvrvKFhigOTqFBed"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:2LLBd0+E/mh8pFf5Xvn/ZI+ZW3SqMdo2/NTUdEkD"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:zy427kuVBkbidZyq2BKy1WuZ0PGfY/ZUo2/dkht4"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:LGa+cU6If8AsMXbE3fCWe+CIC+SohbnGgejZAw4X"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -126,13 +126,13 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:fyT2TvsfwzNXF5lXZhww3h/mzTU8uPU8w22t/O+snFA8OLxlvQkz1TJy"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:hiIIPTLtY4JiIAH53lcePBtEeeyvH6ETqxXhZ6jKQnCW7adw69qv3mJ5"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT  &#13;&#10;&#9;  NAME,&#13;&#10;ValueDocs,&#13;&#10;ID_OBJ,&#13;&#10;SYS_ID&#13;&#10;FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;--where  SYS_ID in (select SYS_ID from Cadastro.dbo.TDQ_Suspects_Particular_Desduplication where GID = '00450274-8b6a-4d55-b71b-a2e476f0fb55')&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT  &#13;&#10;&#9;  NAME,&#13;&#10;ValueDocs,&#13;&#10;ID_OBJ,&#13;&#10;SYS_ID&#13;&#10;FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;where consult_sniac is null&#13;&#10;&#9;and name like    'a%' or name like 'b%' or name like 'c%' or name like 'd%'&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -285,8 +285,8 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:h7i7CyzoSqWDRjRK3IXhdSfv/fy/JYJf3HXum2IDCJu+ikhuDiDkH96O"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Unique_Particular_Desduplication_v3&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ZUghplRh0DzoaoeJr4Se/c+az7lpzwHPvB2HZqTwQpU9X4wFkMzXeHph"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Unique_Particular&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -368,7 +368,7 @@
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="TDQ_Unique_Particular_Desduplication"/>
+    <elementParameter field="TEXT" name="LABEL" value="TDQ_Unique_Particular"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
       <column comment="" key="false" length="100" name="NAME" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -410,8 +410,8 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:W5acaHnXdblJ1n6v/T0nPqcNs6OynxCh3j9A/+T385ap1HDjd4WQ1zuN"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Matches_Particular_Desduplication_v3&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:QtM9VlWUqGIwa8nqObFiBF2yzMPIUCVV29TKmabTsmr6wE0Rf1fbktGP"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Matches_Particular&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -493,7 +493,7 @@
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="TDQ_Matches_Particular_Desduplication"/>
+    <elementParameter field="TEXT" name="LABEL" value="TDQ_Matches_Particular"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_2">
       <column comment="" key="false" length="100" name="NAME" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -535,8 +535,8 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:cfcjLd7F3WH1xiDWyjMR0DqEHVXE52NOQgEpx9RxwGMrW6SkNp/8ZKk9"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Suspects_Particular_Desduplication_v3&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:p8Ucp+BvJ/oriLIOPAVqwHmubMzDdcT77nK1BO2b71WkU2qSV2iPx0R4"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Suspects_Particular&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -618,7 +618,7 @@
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="TDQ_Suspects_Particular_Desduplication"/>
+    <elementParameter field="TEXT" name="LABEL" value="TDQ_Suspects_Particular"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_3">
       <column comment="" key="false" length="100" name="NAME" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -688,13 +688,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9673ffc8-1e72-4fb7-aecd-6e1e75b5e080"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RQrdZ24MdEtNLIKyDDWCWcteTO2B11Vtoqh3lkuAGabf4/7wfGY94V7D8zPajsPqDrs9CLEk0x6X&#13;
-8To6jOOoPQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e85b26a8-f9d8-4a79-a7ba-da38b4f9cbd4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tblYzGFJ3ztuzqCmclUvXTwDzHQjYW0OIoFzTzYHpwdCf4uvC930+LUWuI9m4D9EY3KbaKunEyA3&#13;
-ZAu9UjvvoA==</DigestValue></Reference></SignedInfo><SignatureValue>jbgqkK2SHdCM9pnGJRNHqlm3/zolSiOfk94Ktnb846lkEI6+p9cnq1C7liW8tx040JeSa3CGXOp4&#13;
-laVBT8bfAt6SXEUlTgkVQh+fmKh3zx+5yF4mXbAtVm0zC/sj4AbVivzZpvFI6uHoXknVrAPb7OB8&#13;
-UlFNQ7njgwGwuwIz0+V3q3zkLX1MxKOdMFst4maEKqn96KccyLVZs2EXPNUMItvMrCcAVhHXEtU7&#13;
-PkyhGS+SctAB0e/1SzKKjtZfM0Sbq3O02Xtde7wtoCy0FW9jEQAADy9WKGKoKhBWauoWdUMU+Pv4&#13;
-5p/fdnwQ1wc8STVmlYX4Zus3966LU9hHXCeKyg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_756f430e-1178-4fb1-afb8-1ac0c28f2891"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fClsziGFX7KdlNoiHIrql7lKi6Ddqqy6p8DXFE9zYWGKDVlA/wn1IfXDWOw9mtN7KbzYnPLmURot&#13;
+CRsVxdyPpQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e262683b-7fb6-445e-b488-792afa946cee"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WAciI8F2VBUd8cw1DG2pYdOkID1oUC8opRn/enZAigTd/uE/PeQeso5HMUrvJzQx/2WHJnOqbhHz&#13;
+tglKaZc2ZQ==</DigestValue></Reference></SignedInfo><SignatureValue>ok9bqX3culKciTBDorOrqqwVKHrEVafSM1zDOhF41uOwjBz+GVXcSx9krE0eofEXFxSW5dkyTgi5&#13;
+5DJH84OnyZHu9KNzQZLctj9N28Zp2y95hVe7qBYzOvUJSNSvLxl029FYEyGaD+wZ5z7yKHU+Juh5&#13;
+sXX4kO0C36YLcHRO6xfhU9LswDIjgqDppGbzvc8WRcMlp0+arDAwWK4ixpncYkRQZvNFl3jS1SZJ&#13;
+BgGR1MnPZb/b8UR3Hv4kgmukA/0syh7OHL12Ba5glmLf4/bPApBlHcDCSnc3hWRlT7Cb9kjanuVF&#13;
+ImoG20BuXEGSKOWwmNKVvgGZm2V8c+KtKgJAFQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -716,4 +716,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e85b26a8-f9d8-4a79-a7ba-da38b4f9cbd4" Target="#_9673ffc8-1e72-4fb7-aecd-6e1e75b5e080"><Timestamp>2022-05-22 19:21:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e262683b-7fb6-445e-b488-792afa946cee" Target="#_756f430e-1178-4fb1-afb8-1ac0c28f2891"><Timestamp>2022-05-24 12:41:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
