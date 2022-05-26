@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:0QlyyG/1BEQ+ZPwjMp6C9TS4PEgLVS5hZWw60mmk"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:xxDaunNUrIds2fSa7hQ5pmancfYVgf66iF0+qnKw"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:SXxobaKQXYsfbPn30ziuym6hHYvPpUy3zfwQIGdu"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:42qqrw3KVOuUCJZaI9Vp9EqQLpa0xwi02tgnQcNu"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -126,13 +126,13 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:O5UGDLDs2r+NernzmgESIxKjEC0U1H95RzqpYf5MlQECAOyfILHzFWKp"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:KGi+RySM8x+MvzgrfpffcK1eHeWQ65+YCAtN1BmrSMcUDWg0iF8taZU9"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT  &#13;&#10;NAME,&#13;&#10;ValueDocs,&#13;&#10;BirthData ,&#13;&#10;ID_OBJ,&#13;&#10;SYS_ID&#13;&#10;FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;--where sys_id in (select sys_id from Cadastro.dbo.TDQ_Suspects_Particular_Desduplication where GID = '00450274-8b6a-4d55-b71b-a2e476f0fb55')&#13;&#10;where consult_sniac is null &#13;&#10;and sys_id not in (&#13;&#10;-----&#13;&#10;&#9;SELECT sys_id FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;--where sys_id in (select sys_id from Cadastro.dbo.TDQ_Suspects_Particular_Desduplication where GID = '00450274-8b6a-4d55-b71b-a2e476f0fb55')&#13;&#10;where consult_sniac is null -- 99562  -- 92954&#13;&#10;&#9;&#9;and (name like    'a%' or name like    'á%' or name like    'â%'  or name like    'ã%' or name like    'à%'&#13;&#10;&#9;&#9;or name like 'b%' or name like 'c%' or name like 'd%')&#13;&#10;&#9;&#9;union&#13;&#10;&#9;SELECT sys_id&#13;&#10;FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;--where sys_id in (select sys_id from Cadastro.dbo.TDQ_Suspects_Particular_Desduplication where GID = '00450274-8b6a-4d55-b71b-a2e476f0fb55')&#13;&#10;where consult_sniac is null &#13;&#10;&#9;&#9;and (name like    'e%' or name like    'é%'  or name like    'ê%' or name like    'è%' or name like 'f%' or name like 'g%' or name like 'h%'&#9;&#13;&#10;&#9;or name like 'i%' or name like 'í%'&#9;or name like 'j%') &#13;&#10;union&#13;&#10;&#9;SELECT sys_id&#13;&#10;FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;--where sys_id in (select sys_id from Cadastro.dbo.TDQ_Suspects_Particular_Desduplication where GID = '00450274-8b6a-4d55-b71b-a2e476f0fb55')&#13;&#10;where consult_sniac is null&#13;&#10;&#9;AND (name like    'k%'  or name like 'm%' &#13;&#10;&#9;or name like 'o%' or name like 'ó%'or name like 'ô%'or name like 'ö%') &#13;&#10;union&#13;&#10;&#9;SELECT sys_id&#13;&#10;FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;--where sys_id in (select sys_id from Cadastro.dbo.TDQ_Suspects_Particular_Desduplication where GID = '00450274-8b6a-4d55-b71b-a2e476f0fb55')&#13;&#10;where consult_sniac is null&#13;&#10;&#9;AND (name like    'l%'  or name like 'n%' or name like 'ñ%'&#13;&#10;&#9;or name like 'p%' or name like 'q%' or name like 'r%' or name like 's%'&#13;&#10;&#9;or name like 't%'or name like 'u%' or name like 'ú%' or name like 'ü%'  or name like 'v%' or name like 'w%' or name like 'x%' or name like 'y%'&#13;&#10;&#9;or name like 'z%')&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT  &#13;&#10;NAME,&#13;&#10;ValueDocs,&#13;&#10;BirthData ,&#13;&#10;ID_OBJ,&#13;&#10;SYS_ID&#13;&#10;FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;where consult_sniac is null &#13;&#10;and sys_id not in (&#13;&#10;-----&#13;&#10;&#9;SELECT sys_id FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;where consult_sniac is null &#13;&#10;&#9;&#9;and (name like    'a%' or name like    'á%' or name like    'â%'  or name like    'ã%' or name like    'à%'&#13;&#10;&#9;&#9;or name like 'b%' or name like 'c%' or name like 'd%')&#13;&#10;&#9;&#9;union&#13;&#10;&#9;SELECT sys_id&#13;&#10;FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;where consult_sniac is null &#13;&#10;&#9;&#9;and (name like    'e%' or name like    'é%'  or name like    'ê%' or name like    'è%' or name like 'f%' or name like 'g%' or name like 'h%'&#9;&#13;&#10;&#9;or name like 'i%' or name like 'í%'&#9;or name like 'j%') &#13;&#10;union&#13;&#10;&#9;SELECT sys_id&#13;&#10;FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;where consult_sniac is null&#13;&#10;&#9;AND (name like    'k%'  or name like 'm%' &#13;&#10;&#9;or name like 'o%' or name like 'ó%'or name like 'ô%'or name like 'ö%')&#13;&#10;union&#13;&#10;&#9;SELECT sys_id&#13;&#10;FROM&#13;&#10;&#9;SV_DESDUPLICADOS_PARTICULAR&#13;&#10;where consult_sniac is null&#13;&#10;&#9;AND (name like    'l%'  or name like 'n%' or name like 'ñ%'&#13;&#10;&#9;or name like 'p%' or name like 'q%' or name like 'r%' or name like 's%'&#13;&#10;&#9;or name like 't%'or name like 'u%' or name like 'ú%' or name like 'ü%'  or name like 'v%' or name like 'w%' or name like 'x%' or name like 'y%'&#13;&#10;&#9;or name like 'z%') &#13;&#10;)&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -313,7 +313,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:dL0sSwSdJ6NRsRCAYZzL7Ja2B9aTMeeSLBopjQMEcvSvBiAyS5yg4OW1"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ggY/kv8K7uCyjnhGQPz9RsOQRX+9l9P6JFPDLdvhVLBw5EX/OwSKByG+"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Unique_Particular_v1&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -445,7 +445,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:fiQ1rLJ/fpNM9XRRKlFwCIutRwNfRWuUNud3/Gyz670dnw37WYXbr9Mp"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:0yESlpTAMebkrEEz1ZB/OFf7YeYiU445xKqTh4SwuOzzGGYQKKgudcmb"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Matches_Particular_v1&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -577,7 +577,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:9bvNA7brcBio2AgHMHCQtg0VGlH/WrfPzBqSVtrs9X6k9ze1hPe+gdF3"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:1KIi/4n7dWG6s42E0wPswuMKyIvdn9Qqo/nHX/EvY6d1CRzXOGgHdYBV"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Suspects_Particular_v1&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -743,13 +743,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7864c809-0f25-4a77-9d09-79800a9f9c07"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>W6J86sgidj2TyzM41X3ZrouHSeNdQtdEt9Zo/dfXEElVFd6EK0eURrdjuRmgGrXaqbGIIchh7wk7&#13;
-lYjvb48EYA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ba668517-154b-4598-9e68-742653b87742"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>o6LBU4pvuPHnzL2mqiK/D1xf7jaDk+0W+bE0lQ+F0+F2aCoHoAdt8VdjO2d59tr1WqvWOxcDRqrx&#13;
-DBf+nv/xlQ==</DigestValue></Reference></SignedInfo><SignatureValue>kItR6ZFm13arjnFkKXRH0WxKBA0HdFyvXVfe5ckYKnYoqNg+ocLE9x+Ik+OSZFATkOi3PiwekAOZ&#13;
-uNxkMhTNgERcpxVRucA0wETYzp+OOBC8YEsIWoG5br5o7TaV4x85ex3LcouoxC9mLCGu1s/zfgtp&#13;
-SYFpK2XsNchFBZHOoeRkw58FScHR0ao2lqcfA18qqJ3VfvFUOjzYulhJ3fNQ+kwoxkK5if9k7GW0&#13;
-lZEVhRNsP0K3Sc7M4/t1dY2KCa/I5CbC1yxdzWLqbO7iYUYnu6/OpZaLchNyZG2sEaBwye7kHkNB&#13;
-qBwzbrP++iuyAy9Mz2H4aFMT7OmPxVG1JDWynw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4365848c-be7b-403e-89e2-5b364a44f33a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vfpNeqi92iNgr3quzIqacfHAdkvkzx2ZG4TpyiVp6b76Izm6QLoBeTA7YDRvFG9t8skdGY6mJBRK&#13;
+FZV8XLRbTQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_feaae814-af25-40be-b928-ac1c120b527d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iaDTxSDfHCntCyD48aBgSWOlZ02IeWk/xyXzWZgWoSQW5Z87jrEGK0fJi8PuF6pyk04/m9Oar8q6&#13;
+g2t8pdIX6g==</DigestValue></Reference></SignedInfo><SignatureValue>IOv3uQevYlLEuhk8aBCITECVDX8n/ZhwlY7F/i/M2vsijmLDL4TsY51JnnkdoatYt3pqdKiTAFJq&#13;
+PXz2Nx8ZpPPy4sqLVz5uniL9z+Xffe2O0CaTw9vHm7Hz1LSBVWh/6NYVyI+jHh45RAd9yC5e0VEB&#13;
+4jYPBVIP9e83P8/40lzsi+T98Ba4fuj2YwdSgJXBTCGKtQQZ5jSWWeSPjg9PyjlkScRP8zdq11Tv&#13;
+v4UGWa2FMcLG1MXjqwt6CC9b+NN56cdYJanLazITb1ioGixYZ0ILP8uWiq1KkOeieaja6C8gWY9D&#13;
+ROEIdmfXEXpZiA8FhS8KINzAZorI+F2DCujElg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -771,4 +771,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ba668517-154b-4598-9e68-742653b87742" Target="#_7864c809-0f25-4a77-9d09-79800a9f9c07"><Timestamp>2022-05-26 21:58:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_feaae814-af25-40be-b928-ac1c120b527d" Target="#_4365848c-be7b-403e-89e2-5b364a44f33a"><Timestamp>2022-05-26 22:01:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
