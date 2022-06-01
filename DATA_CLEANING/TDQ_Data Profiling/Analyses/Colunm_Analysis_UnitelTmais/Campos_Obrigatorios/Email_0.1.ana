@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_yK6toNwuEeyzeLT6yC9qXw" name="Email" creationDate="2022-05-25T10:30:03.463-0300" defaultContext="Default">
+    <clientDependency href="../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <clientDependency href="../../../../TDQ_Libraries/Patterns/Regex/internet/Email_Address_0.1.pattern#_I3rZcNwvEeyzeLT6yC9qXw"/>
+    <taggedValue xmi:id="_yK7UsNwuEeyzeLT6yC9qXw" tag="Status" value="development"/>
+    <taggedValue xmi:id="_yK7UsdwuEeyzeLT6yC9qXw" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_yK7UstwuEeyzeLT6yC9qXw" tag="Purpose" value="Email fora padrão"/>
+    <taggedValue xmi:id="_yK7Us9wuEeyzeLT6yC9qXw" tag="Description" value="Identificar emails fora do padrão"/>
+    <taggedValue xmi:id="_yK7UtNwuEeyzeLT6yC9qXw" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_I3YegdwvEeyzeLT6yC9qXw" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_I3YegtwvEeyzeLT6yC9qXw" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_I3ZFkNwvEeyzeLT6yC9qXw" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_I3fMMNwvEeyzeLT6yC9qXw" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_yK7UtdwuEeyzeLT6yC9qXw">
+      <connection href="../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6KHlIEeymA7ReFGNmPQ"/>
+    </context>
+    <results xmi:id="_yK7UttwuEeyzeLT6yC9qXw">
+      <resultMetadata xmi:id="_yK7Ut9wuEeyzeLT6yC9qXw" executionDate="2022-05-25T10:44:32.088-0300" executionDuration="9023" message="Unsupported use of regular expressions on this database. Remove all Pattern indicators from this analysis, please." executionNumber="11" lastExecutionNumberOk="2"/>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_yljwUNwwEeyzeLT6yC9qXw" name="Email Address">
+        <parameters xmi:id="_yljwUdwwEeyzeLT6yC9qXw">
+          <dataValidDomain xmi:id="_yljwUtwwEeyzeLT6yC9qXw">
+            <patterns href="../../../../TDQ_Libraries/Patterns/Regex/internet/Email_Address_0.1.pattern#_rC5TcD4XEd24WPpU35gV1A"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6KHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+      </indicators>
+    </results>
+    <parameters xmi:id="_yK7UuNwuEeyzeLT6yC9qXw" dataFilter="_I3zVQNwvEeyzeLT6yC9qXw" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_I3YegNwvEeyzeLT6yC9qXw" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_I3zVQNwvEeyzeLT6yC9qXw" name="Email">
+    <ranges xmi:id="_I3zVQdwvEeyzeLT6yC9qXw">
+      <expressions xmi:id="_I3zVQtwvEeyzeLT6yC9qXw">
+        <expression xsi:type="relational:TdExpression" xmi:id="_I3zVQ9wvEeyzeLT6yC9qXw" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
