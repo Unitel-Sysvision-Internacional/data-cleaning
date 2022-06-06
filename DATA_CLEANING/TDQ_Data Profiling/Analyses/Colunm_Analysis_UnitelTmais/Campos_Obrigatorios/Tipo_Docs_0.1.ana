@@ -16,8 +16,8 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
     </context>
     <results xmi:id="_auGcF3rBEeymA7ReFGNmPQ">
-      <resultMetadata xmi:id="_auGcGHrBEeymA7ReFGNmPQ" executionDate="2022-04-22T10:26:47.845-0300" executionDuration="12299" message="" executionNumber="7" lastRunOk="true" lastExecutionNumberOk="7"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_0BH_gHrBEeymA7ReFGNmPQ" count="548832" computed="true">
+      <resultMetadata xmi:id="_auGcGHrBEeymA7ReFGNmPQ" executionDate="2022-06-06T18:05:00.106-0300" executionDuration="19575" message="" executionNumber="8" lastRunOk="true" lastExecutionNumberOk="8"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_0BH_gHrBEeymA7ReFGNmPQ" count="554433" computed="true">
         <parameters xmi:id="_0BH_gXrBEeymA7ReFGNmPQ"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -28,7 +28,7 @@
           <sqlGenericExpression xmi:id="_0TI8k3rBEeymA7ReFGNmPQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_0BH_gnrBEeymA7ReFGNmPQ" count="548832" nullCount="187735" computed="true">
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_0BH_gnrBEeymA7ReFGNmPQ" count="554433" nullCount="191799" computed="true">
         <parameters xmi:id="_0BH_g3rBEeymA7ReFGNmPQ"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
@@ -39,7 +39,7 @@
           <sqlGenericExpression xmi:id="_0TOcI3rBEeymA7ReFGNmPQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_0BH_hHrBEeymA7ReFGNmPQ" count="548832" nullCount="187735" computed="true" distinctValueCount="7">
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_0BH_hHrBEeymA7ReFGNmPQ" count="554433" nullCount="191799" computed="true" distinctValueCount="7">
         <parameters xmi:id="_0BH_hXrBEeymA7ReFGNmPQ"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
@@ -50,7 +50,7 @@
           <sqlGenericExpression xmi:id="_0TY0M3rBEeymA7ReFGNmPQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_0BH_hnrBEeymA7ReFGNmPQ" count="548832" nullCount="187735" computed="true" uniqueValueCount="0">
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_0BH_hnrBEeymA7ReFGNmPQ" count="554433" nullCount="191799" computed="true" uniqueValueCount="0">
         <parameters xmi:id="_0BH_h3rBEeymA7ReFGNmPQ"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
@@ -67,7 +67,7 @@
           <sqlGenericExpression xmi:id="_0TjzWXrBEeymA7ReFGNmPQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_0BH_iHrBEeymA7ReFGNmPQ" count="548832" nullCount="187735" computed="true" duplicateValueCount="7">
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_0BH_iHrBEeymA7ReFGNmPQ" count="554433" nullCount="191799" computed="true" duplicateValueCount="7">
         <parameters xmi:id="_0BH_iXrBEeymA7ReFGNmPQ"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
@@ -84,7 +84,7 @@
           <sqlGenericExpression xmi:id="_0Ts9SXrBEeymA7ReFGNmPQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_0BH_inrBEeymA7ReFGNmPQ" count="548832" nullCount="187735" computed="true">
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_0BH_inrBEeymA7ReFGNmPQ" count="554433" nullCount="191799" computed="true">
         <parameters xmi:id="_0BH_i3rBEeymA7ReFGNmPQ"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
@@ -103,7 +103,7 @@
         <parameters xmi:id="_0BH_jXrBEeymA7ReFGNmPQ"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
-        <averageLengthIndicator xmi:id="_0BImkHrBEeymA7ReFGNmPQ" count="361097" nullCount="187735" computed="true" sumLength="804810.0">
+        <averageLengthIndicator xmi:id="_0BImkHrBEeymA7ReFGNmPQ" count="362634" nullCount="191799" computed="true" sumLength="812443.0">
           <parameters xmi:id="_0BImkXrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImknrBEeymA7ReFGNmPQ" useBlank="false"/>
           </parameters>
@@ -128,7 +128,7 @@
             <sqlGenericExpression xmi:id="_0T_4P3rBEeymA7ReFGNmPQ" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="HDB"/>
           </builtInIndicatorDefinition>
         </averageLengthIndicator>
-        <maxLengthIndicator xmi:id="_0BImk3rBEeymA7ReFGNmPQ" nullCount="187735" computed="true" length="17">
+        <maxLengthIndicator xmi:id="_0BImk3rBEeymA7ReFGNmPQ" nullCount="191799" computed="true" length="17">
           <parameters xmi:id="_0BImlHrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImlXrBEeymA7ReFGNmPQ" useBlank="false"/>
           </parameters>
@@ -153,7 +153,7 @@
             <sqlGenericExpression xmi:id="_0UKQT3rBEeymA7ReFGNmPQ" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="HDB"/>
           </builtInIndicatorDefinition>
         </maxLengthIndicator>
-        <minLengthIndicator xmi:id="_0BImlnrBEeymA7ReFGNmPQ" nullCount="187735" computed="true" length="2">
+        <minLengthIndicator xmi:id="_0BImlnrBEeymA7ReFGNmPQ" nullCount="191799" computed="true" length="2">
           <parameters xmi:id="_0BIml3rBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImmHrBEeymA7ReFGNmPQ" useBlank="false"/>
           </parameters>
@@ -178,7 +178,7 @@
             <sqlGenericExpression xmi:id="_0USMH3rBEeymA7ReFGNmPQ" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="HDB"/>
           </builtInIndicatorDefinition>
         </minLengthIndicator>
-        <minLengthWithBlankIndicator xmi:id="_0BImmXrBEeymA7ReFGNmPQ" nullCount="187735" computed="true" length="2">
+        <minLengthWithBlankIndicator xmi:id="_0BImmXrBEeymA7ReFGNmPQ" nullCount="191799" computed="true" length="2">
           <parameters xmi:id="_0BImmnrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImm3rBEeymA7ReFGNmPQ"/>
           </parameters>
@@ -202,7 +202,7 @@
             <sqlGenericExpression xmi:id="_0Vu9nnrBEeymA7ReFGNmPQ" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="HDB"/>
           </builtInIndicatorDefinition>
         </minLengthWithBlankIndicator>
-        <minLengthWithNullIndicator xmi:id="_0BImnHrBEeymA7ReFGNmPQ" nullCount="187735" computed="true" length="0">
+        <minLengthWithNullIndicator xmi:id="_0BImnHrBEeymA7ReFGNmPQ" nullCount="191799" computed="true" length="0">
           <parameters xmi:id="_0BImnXrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImnnrBEeymA7ReFGNmPQ" useBlank="false" useNulls="true"/>
           </parameters>
@@ -227,7 +227,7 @@
             <sqlGenericExpression xmi:id="_0V0dL3rBEeymA7ReFGNmPQ" body="SELECT MAX(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="HDB"/>
           </builtInIndicatorDefinition>
         </minLengthWithNullIndicator>
-        <minLengthWithBlankNullIndicator xmi:id="_0BImn3rBEeymA7ReFGNmPQ" nullCount="187735" computed="true" length="0">
+        <minLengthWithBlankNullIndicator xmi:id="_0BImn3rBEeymA7ReFGNmPQ" nullCount="191799" computed="true" length="0">
           <parameters xmi:id="_0BImoHrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImoXrBEeymA7ReFGNmPQ" useNulls="true"/>
           </parameters>
@@ -252,7 +252,7 @@
             <sqlGenericExpression xmi:id="_0WBRf3rBEeymA7ReFGNmPQ" body="SELECT MIN(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="HDB"/>
           </builtInIndicatorDefinition>
         </minLengthWithBlankNullIndicator>
-        <maxLengthWithBlankIndicator xmi:id="_0BImonrBEeymA7ReFGNmPQ" nullCount="187735" computed="true" length="17">
+        <maxLengthWithBlankIndicator xmi:id="_0BImonrBEeymA7ReFGNmPQ" nullCount="191799" computed="true" length="17">
           <parameters xmi:id="_0BImo3rBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImpHrBEeymA7ReFGNmPQ"/>
           </parameters>
@@ -276,7 +276,7 @@
             <sqlGenericExpression xmi:id="_0U53LnrBEeymA7ReFGNmPQ" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="HDB"/>
           </builtInIndicatorDefinition>
         </maxLengthWithBlankIndicator>
-        <maxLengthWithNullIndicator xmi:id="_0BImpXrBEeymA7ReFGNmPQ" nullCount="187735" computed="true" length="17">
+        <maxLengthWithNullIndicator xmi:id="_0BImpXrBEeymA7ReFGNmPQ" nullCount="191799" computed="true" length="17">
           <parameters xmi:id="_0BImpnrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImp3rBEeymA7ReFGNmPQ" useBlank="false" useNulls="true"/>
           </parameters>
@@ -301,7 +301,7 @@
             <sqlGenericExpression xmi:id="_0VRqn3rBEeymA7ReFGNmPQ" body="SELECT MAX(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="HDB"/>
           </builtInIndicatorDefinition>
         </maxLengthWithNullIndicator>
-        <maxLengthWithBlankNullIndicator xmi:id="_0BImqHrBEeymA7ReFGNmPQ" nullCount="187735" computed="true" length="17">
+        <maxLengthWithBlankNullIndicator xmi:id="_0BImqHrBEeymA7ReFGNmPQ" nullCount="191799" computed="true" length="17">
           <parameters xmi:id="_0BImqXrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImqnrBEeymA7ReFGNmPQ" useNulls="true"/>
           </parameters>
@@ -326,7 +326,7 @@
             <sqlGenericExpression xmi:id="_0VYYT3rBEeymA7ReFGNmPQ" body="SELECT MAX(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="HDB"/>
           </builtInIndicatorDefinition>
         </maxLengthWithBlankNullIndicator>
-        <avgLengthWithBlankIndicator xmi:id="_0BImq3rBEeymA7ReFGNmPQ" count="361097" nullCount="187735" computed="true" sumLength="804810.0">
+        <avgLengthWithBlankIndicator xmi:id="_0BImq3rBEeymA7ReFGNmPQ" count="362634" nullCount="191799" computed="true" sumLength="812443.0">
           <parameters xmi:id="_0BImrHrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImrXrBEeymA7ReFGNmPQ"/>
           </parameters>
@@ -350,7 +350,7 @@
             <sqlGenericExpression xmi:id="_0Uau_nrBEeymA7ReFGNmPQ" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="HDB"/>
           </builtInIndicatorDefinition>
         </avgLengthWithBlankIndicator>
-        <avgLengthWithNullIndicator xmi:id="_0BImrnrBEeymA7ReFGNmPQ" count="548832" nullCount="187735" computed="true" sumLength="804810.0">
+        <avgLengthWithNullIndicator xmi:id="_0BImrnrBEeymA7ReFGNmPQ" count="554433" nullCount="191799" computed="true" sumLength="812443.0">
           <parameters xmi:id="_0BImr3rBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BImsHrBEeymA7ReFGNmPQ" useBlank="false" useNulls="true"/>
           </parameters>
@@ -375,7 +375,7 @@
             <sqlGenericExpression xmi:id="_0Um8P3rBEeymA7ReFGNmPQ" body="SELECT SUM(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="HDB"/>
           </builtInIndicatorDefinition>
         </avgLengthWithNullIndicator>
-        <avgLengthWithBlankNullIndicator xmi:id="_0BImsXrBEeymA7ReFGNmPQ" count="548832" nullCount="187735" computed="true" sumLength="804810.0">
+        <avgLengthWithBlankNullIndicator xmi:id="_0BImsXrBEeymA7ReFGNmPQ" count="554433" nullCount="191799" computed="true" sumLength="812443.0">
           <parameters xmi:id="_0BImsnrBEeymA7ReFGNmPQ">
             <textParameter xmi:id="_0BIms3rBEeymA7ReFGNmPQ" useNulls="true"/>
           </parameters>
@@ -401,7 +401,7 @@
           </builtInIndicatorDefinition>
         </avgLengthWithBlankNullIndicator>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:FrequencyIndicator" xmi:id="_0BImtHrBEeymA7ReFGNmPQ" count="548832" nullCount="187735" computed="true" distinctValueCount="7" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C77080000001000000007707372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000002DD5774001243617274C3A36F205265736964656E6369617371007E0002000000000000016174000242497371007E0002000000000004F4A87400034E49467371007E00020000000000006B7274000A5061737361706F7274657371007E000200000000000014CB740003434E497371007E00020000000000000ACF740010436172746120436F6E6475C3A7C3A36F7371007E0002000000000000017478">
+      <indicators xsi:type="dataquality.indicators:FrequencyIndicator" xmi:id="_0BImtHrBEeymA7ReFGNmPQ" count="554433" nullCount="191799" computed="true" distinctValueCount="7" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C77080000001000000007707372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000002ED3774001243617274C3A36F205265736964656E6369617371007E0002000000000000017674000242497371007E0002000000000004F22B7400034E49467371007E00020000000000006E5174000A5061737361706F7274657371007E000200000000000015C5740003434E497371007E00020000000000000F40740010436172746120436F6E6475C3A7C3A36F7371007E0002000000000000019378">
         <parameters xmi:id="_0BImtXrBEeymA7ReFGNmPQ"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6hHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Advanced Statistics/Frequency_Table_0.1.definition#_ccIR4hF2Ed2PKb6nEJEvhw"/>
