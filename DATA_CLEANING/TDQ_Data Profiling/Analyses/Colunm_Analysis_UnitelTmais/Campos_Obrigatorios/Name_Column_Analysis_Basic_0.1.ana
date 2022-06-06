@@ -2,7 +2,6 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_USEJkHq9EeymA7ReFGNmPQ" name="Name_Column_Analysis_Basic" supplierDependency="_lyqX05TCEeyrDaC6mFuu4g" creationDate="2022-01-21T09:23:27.012-0300" defaultContext="Default">
     <clientDependency href="../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
-    <clientDependency href="../../../../TDQ_Libraries/Patterns/Regex/DT_NASCTO_AAAA_AA_AA_0.1.pattern#_u7_zAOXQEeydA-cemO9dag"/>
     <taggedValue xmi:id="_USEJkXq9EeymA7ReFGNmPQ" tag="Status" value="development"/>
     <taggedValue xmi:id="_USEJknq9EeymA7ReFGNmPQ" tag="Author" value="sergio.lima@sysvision.com.br"/>
     <taggedValue xmi:id="_USEJk3q9EeymA7ReFGNmPQ" tag="Purpose" value="Análise básica da coluna nome"/>
@@ -17,8 +16,8 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIf0KONEeyzNOsHl1GPmw"/>
     </context>
     <results xmi:id="_USEJl3q9EeymA7ReFGNmPQ">
-      <resultMetadata xmi:id="_USEJmHq9EeymA7ReFGNmPQ" executionDate="2022-06-06T16:42:12.346-0300" executionDuration="22587" message="Unsupported use of regular expressions on this database. Remove all Pattern indicators from this analysis, please." executionNumber="9" lastExecutionNumberOk="8"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_u7h48OXQEeydA-cemO9dag">
+      <resultMetadata xmi:id="_USEJmHq9EeymA7ReFGNmPQ" executionDate="2022-06-06T16:45:11.253-0300" executionDuration="22352" message="" executionNumber="10" lastRunOk="true" lastExecutionNumberOk="9"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_u7h48OXQEeydA-cemO9dag" count="522016" computed="true">
         <parameters xmi:id="_u7h48eXQEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIf0KONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -29,7 +28,7 @@
           <sqlGenericExpression xmi:id="_wqDQQ-XQEeydA-cemO9dag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_u7h48uXQEeydA-cemO9dag">
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_u7h48uXQEeydA-cemO9dag" count="522016" nullCount="1348" computed="true">
         <parameters xmi:id="_u7h48-XQEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIf0KONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
@@ -40,7 +39,7 @@
           <sqlGenericExpression xmi:id="_wqJW4-XQEeydA-cemO9dag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_u7h49OXQEeydA-cemO9dag">
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_u7h49OXQEeydA-cemO9dag" count="522016" nullCount="1348" computed="true" distinctValueCount="26037">
         <parameters xmi:id="_u7h49eXQEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIf0KONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
@@ -51,7 +50,7 @@
           <sqlGenericExpression xmi:id="_wqNBQ-XQEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_u7h49uXQEeydA-cemO9dag">
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_u7h49uXQEeydA-cemO9dag" count="522016" nullCount="1348" computed="true" uniqueValueCount="3605">
         <parameters xmi:id="_u7h49-XQEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIf0KONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
@@ -68,7 +67,7 @@
           <sqlGenericExpression xmi:id="_wqR5yeXQEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_u7h4-OXQEeydA-cemO9dag">
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_u7h4-OXQEeydA-cemO9dag" count="522016" nullCount="1348" computed="true" duplicateValueCount="22432">
         <parameters xmi:id="_u7h4-eXQEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIf0KONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
@@ -85,7 +84,7 @@
           <sqlGenericExpression xmi:id="_wqWLOeXQEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_u7h4-uXQEeydA-cemO9dag">
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_u7h4-uXQEeydA-cemO9dag" count="522016" nullCount="1348" computed="true" blankCount="117673">
         <parameters xmi:id="_u7h4--XQEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIf0KONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
@@ -100,7 +99,7 @@
           <sqlGenericExpression xmi:id="_wqbqx-XQEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_u7h4_OXQEeydA-cemO9dag">
+      <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_u7h4_OXQEeydA-cemO9dag" count="522016" nullCount="1348" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A7400007372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000001CBA9707371007E0003000000000000054474000239397371007E00030000000000000002740009393939392D393939397371007E000300000000000000017400093939392D39392D393971007E000A74000A393939392D39392D39397371007E000300000000000625A874000A3939392E2D39392D393971007E000A74000A39392E39392E3939393971007E000A74000A39392D39392D393939397371007E00030000000000000073740004414141417371007E0003000000000000001278">
         <parameters xmi:id="_u7h4_eXQEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIf0KONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
@@ -132,15 +131,6 @@
           <charactersMapping xmi:id="_wqf8SOXQEeydA-cemO9dag" language="Netezza" charactersToReplace="abcdefghijklmnopqrstuvwxyzçâêîôûéèùïöüABCDEFGHIJKLMNOPQRSTUVWXYZÇÂÊÎÔÛÉÈÙÏÖÜ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
           <charactersMapping xmi:id="_wqf8SeXQEeydA-cemO9dag" name="Characters mapping on Hive" language="Hive" charactersToReplace="0123456789abcdefghijklmnopqrstuvwxyz?aê???éèù??üABCDEFGHIJKLMNOPQRSTUVWXYZ??ê???éèù??ü" replacementCharacters="9999999999aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
         </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_u7h4_uXQEeydA-cemO9dag" name="DT_NASCTO_AAAA_AA_AA">
-        <parameters xmi:id="_u7h4_-XQEeydA-cemO9dag">
-          <dataValidDomain xmi:id="_u7h5AOXQEeydA-cemO9dag">
-            <patterns href="../../../../TDQ_Libraries/Patterns/Regex/DT_NASCTO_AAAA_AA_AA_0.1.pattern#_JRSO8HlYEeymA7ReFGNmPQ"/>
-          </dataValidDomain>
-        </parameters>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIf0KONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
       </indicators>
     </results>
     <parameters xmi:id="_USEJmXq9EeymA7ReFGNmPQ" dataFilter="_aqV6QHq9EeymA7ReFGNmPQ" analysisType="Multiple Column Analysis"/>
