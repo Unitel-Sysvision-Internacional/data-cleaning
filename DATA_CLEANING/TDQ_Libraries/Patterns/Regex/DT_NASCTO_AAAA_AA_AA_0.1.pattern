@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.domain.pattern:Pattern xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.domain.pattern="http://dataquality.domain.pattern" xmi:id="_JRSO8HlYEeymA7ReFGNmPQ" name="DT_NASCTO_AAAA_AA_AA">
-  <taggedValue xmi:id="_JRSO8XlYEeymA7ReFGNmPQ" tag="Status" value="development"/>
-  <taggedValue xmi:id="_JRSO8nlYEeymA7ReFGNmPQ" tag="Author" value="sergio.lima@sysvision.com.br"/>
-  <taggedValue xmi:id="_JRSO83lYEeymA7ReFGNmPQ" tag="Purpose" value="Formato data Nascimento"/>
-  <taggedValue xmi:id="_JRSO9HlYEeymA7ReFGNmPQ" tag="Description" value="Padronizaçao formato data nascimento"/>
-  <taggedValue xmi:id="_JRSO9XlYEeymA7ReFGNmPQ" tag="Version" value="0.1"/>
-  <taggedValue xmi:id="_JRSO9nlYEeymA7ReFGNmPQ" tag="Validation_Status" value="true"/>
-  <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_JRSO93lYEeymA7ReFGNmPQ" expressionType="REGEXP">
-    <expression xmi:id="_JRSO-HlYEeymA7ReFGNmPQ" body="'^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$'" language="SQL" modificationDate="2022-01-19 18:31:18"/>
-  </components>
-</dataquality.domain.pattern:Pattern>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain.pattern="http://dataquality.domain.pattern" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.domain.pattern:Pattern xmi:id="_JRSO8HlYEeymA7ReFGNmPQ" name="DT_NASCTO_AAAA_AA_AA" supplierDependency="_u7_zAOXQEeydA-cemO9dag">
+    <taggedValue xmi:id="_JRSO8XlYEeymA7ReFGNmPQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_JRSO8nlYEeymA7ReFGNmPQ" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_JRSO83lYEeymA7ReFGNmPQ" tag="Purpose" value="Formato data Nascimento"/>
+    <taggedValue xmi:id="_JRSO9HlYEeymA7ReFGNmPQ" tag="Description" value="Padronizaçao formato data nascimento"/>
+    <taggedValue xmi:id="_JRSO9XlYEeymA7ReFGNmPQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_JRSO9nlYEeymA7ReFGNmPQ" tag="Validation_Status" value="true"/>
+    <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_JRSO93lYEeymA7ReFGNmPQ" expressionType="REGEXP">
+      <expression xmi:id="_JRSO-HlYEeymA7ReFGNmPQ" body="'^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$'" language="SQL" modificationDate="2022-01-19 18:31:18"/>
+    </components>
+  </dataquality.domain.pattern:Pattern>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_u7_zAOXQEeydA-cemO9dag" kind="Usage" supplier="_JRSO8HlYEeymA7ReFGNmPQ">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/Colunm_Analysis_UnitelTmais/Campos_Obrigatorios/Name_Column_Analysis_Basic_0.1.ana#_USEJkHq9EeymA7ReFGNmPQ"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>
