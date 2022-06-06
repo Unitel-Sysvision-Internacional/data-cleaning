@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_hHlOoeXVEeydA-cemO9dag" name="CodCertComercial_Column_Analysis_Basic_SYS" creationDate="2022-03-02T15:07:44.096-0300" defaultContext="Default">
+    <clientDependency href="../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <taggedValue xmi:id="_hHlOouXVEeydA-cemO9dag" tag="Status" value="development"/>
+    <taggedValue xmi:id="_hHlOo-XVEeydA-cemO9dag" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_hHlOpOXVEeydA-cemO9dag" tag="Purpose" value="Analise da qualidade dos dados da coluna  CodCertComercial"/>
+    <taggedValue xmi:id="_hHlOpeXVEeydA-cemO9dag" tag="Description" value=""/>
+    <taggedValue xmi:id="_hHlOpuXVEeydA-cemO9dag" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_hHlOp-XVEeydA-cemO9dag" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_hHlOqOXVEeydA-cemO9dag" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_hHlOqeXVEeydA-cemO9dag" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_hHlOquXVEeydA-cemO9dag" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_hHlOq-XVEeydA-cemO9dag">
+      <connection href="../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
+    </context>
+    <results xmi:id="_hHlOrOXVEeydA-cemO9dag">
+      <resultMetadata xmi:id="_hHlOreXVEeydA-cemO9dag" executionDate="2022-06-06T17:14:55.019-0300" executionDuration="17624" message="" executionNumber="4" lastRunOk="true" lastExecutionNumberOk="4"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_hHlOruXVEeydA-cemO9dag" count="22219" computed="true">
+        <parameters xmi:id="_hHlOr-XVEeydA-cemO9dag"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hHlOsOXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (TIPO &lt;> 'Particular')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_hHlOseXVEeydA-cemO9dag" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_hHlOsuXVEeydA-cemO9dag" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_hHlOs-XVEeydA-cemO9dag" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_hHlOtOXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_hHlOteXVEeydA-cemO9dag" count="22219" nullCount="7441" computed="true">
+        <parameters xmi:id="_hHlOtuXVEeydA-cemO9dag"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hHlOt-XVEeydA-cemO9dag" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE &quot;CodCertComercial&quot; IS NULL  AND (TIPO &lt;> 'Particular')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_hHlOuOXVEeydA-cemO9dag" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_hHlOueXVEeydA-cemO9dag" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_hHlOuuXVEeydA-cemO9dag" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_hHlOu-XVEeydA-cemO9dag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_hHlOvOXVEeydA-cemO9dag" count="22219" nullCount="7441" computed="true" distinctValueCount="140">
+        <parameters xmi:id="_hHlOveXVEeydA-cemO9dag"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hHlOvuXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;CodCertComercial&quot; FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (TIPO &lt;> 'Particular')) A" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_hHlOv-XVEeydA-cemO9dag" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_hHlOwOXVEeydA-cemO9dag" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_hHlOweXVEeydA-cemO9dag" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_hHlOwuXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_hHlOw-XVEeydA-cemO9dag" count="22219" nullCount="7441" computed="true" uniqueValueCount="43">
+        <parameters xmi:id="_hHlOxOXVEeydA-cemO9dag"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hHlOxeXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &quot;CodCertComercial&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (TIPO &lt;> 'Particular') GROUP BY &quot;CodCertComercial&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_hHlOxuXVEeydA-cemO9dag" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_hHlOx-XVEeydA-cemO9dag" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_hHlOyOXVEeydA-cemO9dag" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_hHlOyeXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_hHlOyuXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_hHlOy-XVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_hHlOzOXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_hHlOzeXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_hHlOzuXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_hHlOz-XVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_hHlO0OXVEeydA-cemO9dag" count="22219" nullCount="7441" computed="true" duplicateValueCount="97">
+        <parameters xmi:id="_hHlO0eXVEeydA-cemO9dag"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hHlO0uXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &quot;CodCertComercial&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  m  WHERE (TIPO &lt;> 'Particular') GROUP BY &quot;CodCertComercial&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_hHlO0-XVEeydA-cemO9dag" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_hHlO1OXVEeydA-cemO9dag" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_hHlO1eXVEeydA-cemO9dag" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_hHlO1uXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_hHlO1-XVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_hHlO2OXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_hHlO2eXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_hHlO2uXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_hHlO2-XVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_hHlO3OXVEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_hHlO3eXVEeydA-cemO9dag" count="22219" nullCount="7441" computed="true" blankCount="8605">
+        <parameters xmi:id="_hHlO3uXVEeydA-cemO9dag"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hHlO3-XVEeydA-cemO9dag" body="SELECT COUNT(&quot;CodCertComercial&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;CodCertComercial&quot;)) = ''  AND (TIPO &lt;> 'Particular')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_hHlO4OXVEeydA-cemO9dag" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_hHlO4eXVEeydA-cemO9dag" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_hHlO4uXVEeydA-cemO9dag" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_hHlO4-XVEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_hHlO5OXVEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_hHlO5eXVEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_hHlO5uXVEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_hHlO5-XVEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:ModeIndicator" xmi:id="_hHlO6OXVEeydA-cemO9dag" nullCount="7441" computed="true" distinctValueCount="0" mode="ACED0005740000">
+        <parameters xmi:id="_hHlO6eXVEeydA-cemO9dag"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Advanced Statistics/Mode_0.1.definition#_ccIR4RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hHlO6uXVEeydA-cemO9dag" body="SELECT TOP 1   &quot;CodCertComercial&quot;, COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; m  WHERE (TIPO &lt;> 'Particular') GROUP BY &quot;CodCertComercial&quot; ORDER BY COUNT(*) DESC " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_hHlO6-XVEeydA-cemO9dag" name="Mode" label="Mode">
+          <taggedValue xmi:id="_hHlO7OXVEeydA-cemO9dag" tag="Description" value="computes the mode (most probable value). For numerical data or continuous data, bins can be set in the parameters of this indicator. It is different from the average and from the median. Generalization of it is an histogram. It is good for addressing categorical attributes"/>
+          <taggedValue xmi:id="_hHlO7eXVEeydA-cemO9dag" tag="Purpose" value="evaluates the most frequent value"/>
+          <sqlGenericExpression xmi:id="_hHlO7uXVEeydA-cemO9dag" body="SELECT  &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY COUNT(*) DESC " language="SQL"/>
+          <sqlGenericExpression xmi:id="_hHlO7-XVEeydA-cemO9dag" body="SELECT  &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY COUNT(*) DESC " language="Oracle"/>
+          <sqlGenericExpression xmi:id="_hHlO8OXVEeydA-cemO9dag" body="SELECT  &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY COUNT(*) DESC " language="DB2"/>
+          <sqlGenericExpression xmi:id="_hHlO8eXVEeydA-cemO9dag" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_hHlO8uXVEeydA-cemO9dag" body="SELECT  &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="AS/400"/>
+          <sqlGenericExpression xmi:id="_hHlO8-XVEeydA-cemO9dag" body="SELECT  &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC " language="Hive" version=""/>
+          <sqlGenericExpression xmi:id="_hHlO9OXVEeydA-cemO9dag" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="Informix"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:FrequencyIndicator" xmi:id="_hHlO9eXVEeydA-cemO9dag" count="22219" nullCount="7441" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A7400007372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000219D707371007E00030000000000001D1174000837373737373737377371007E000300000000000000167400022D317371007E000300000000000015E67400173236363537303630372F333037383332303136303731317371007E000300000000000000187400032D313071007E000C74000831393935303530357371007E0003000000000000001074000A333931393935303431317371007E0003000000000000001E74000932373535303130303071007E000C7400012E7371007E0003000000000000001478">
+        <parameters xmi:id="_hHlO9uXVEeydA-cemO9dag"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Advanced Statistics/Frequency_Table_0.1.definition#_ccIR4hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hHlO9-XVEeydA-cemO9dag" body="SELECT TOP 10  &quot;CodCertComercial&quot;, COUNT(*) c FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; t  WHERE (TIPO &lt;> 'Particular') GROUP BY &quot;CodCertComercial&quot; ORDER BY c DESC" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_hHlO-OXVEeydA-cemO9dag" name="Frequency Table" label="Frequency Table">
+          <taggedValue xmi:id="_hHlO-eXVEeydA-cemO9dag" tag="Description" value="counts the number of records for each distinct record"/>
+          <taggedValue xmi:id="_hHlO-uXVEeydA-cemO9dag" tag="Purpose" value="evaluates the most frequent records"/>
+          <sqlGenericExpression xmi:id="_hHlO--XVEeydA-cemO9dag" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="SQL"/>
+          <sqlGenericExpression xmi:id="_hHlO_OXVEeydA-cemO9dag" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_hHlO_eXVEeydA-cemO9dag" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_hHlO_uXVEeydA-cemO9dag" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY COUNT(*) DESC" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_hHlO_-XVEeydA-cemO9dag" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="DB2"/>
+          <sqlGenericExpression xmi:id="_hHlPAOXVEeydA-cemO9dag" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_hHlPAeXVEeydA-cemO9dag" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="Informix"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_hHlPAuXVEeydA-cemO9dag" dataFilter="_hHlPBOXVEeydA-cemO9dag" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_hHlPA-XVEeydA-cemO9dag" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_hHlPBOXVEeydA-cemO9dag" name="Analysis Data Filter">
+    <ranges xmi:id="_hHlPBeXVEeydA-cemO9dag">
+      <expressions xmi:id="_hHlPBuXVEeydA-cemO9dag">
+        <expression xsi:type="relational:TdExpression" xmi:id="_hHlPB-XVEeydA-cemO9dag" body="TIPO &lt;> 'Particular'" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
