@@ -16,7 +16,7 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
     </context>
     <results xmi:id="_nQZ37OaiEeydA-cemO9dag">
-      <resultMetadata xmi:id="_nQZ37eaiEeydA-cemO9dag" executionDate="2022-06-07T18:00:58.951-0300" executionDuration="15990" message="" executionNumber="7" lastRunOk="true" lastExecutionNumberOk="7"/>
+      <resultMetadata xmi:id="_nQZ37eaiEeydA-cemO9dag" executionDate="2022-06-07T18:02:30.502-0300" executionDuration="15174" message="" executionNumber="8" lastRunOk="true" lastExecutionNumberOk="8"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_wNRFMOaiEeydA-cemO9dag" count="522016" computed="true">
         <parameters xmi:id="_wNRFMeaiEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
@@ -39,7 +39,7 @@
           <sqlGenericExpression xmi:id="_xlD-l-aiEeydA-cemO9dag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_wNRFNOaiEeydA-cemO9dag" count="522016" computed="true" distinctValueCount="369908">
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_wNRFNOaiEeydA-cemO9dag" count="522016" computed="true" distinctValueCount="369903">
         <parameters xmi:id="_wNRFNeaiEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
@@ -50,7 +50,7 @@
           <sqlGenericExpression xmi:id="_xlNvk-aiEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_wNRFNuaiEeydA-cemO9dag" count="522016" computed="true" uniqueValueCount="341303">
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_wNRFNuaiEeydA-cemO9dag" count="522016" computed="true" uniqueValueCount="341300">
         <parameters xmi:id="_wNRFN-aiEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
@@ -67,7 +67,7 @@
           <sqlGenericExpression xmi:id="_xlNvneaiEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_wNRFOOaiEeydA-cemO9dag" count="522016" computed="true" duplicateValueCount="28605">
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_wNRFOOaiEeydA-cemO9dag" count="522016" computed="true" duplicateValueCount="28603">
         <parameters xmi:id="_wNRFOeaiEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
@@ -84,7 +84,7 @@
           <sqlGenericExpression xmi:id="_xlW5ieaiEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_wNRFOuaiEeydA-cemO9dag" count="522016" computed="true" blankCount="105648">
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_wNRFOuaiEeydA-cemO9dag" count="522016" computed="true" blankCount="105800">
         <parameters xmi:id="_wNRFO-aiEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
@@ -99,7 +99,7 @@
           <sqlGenericExpression xmi:id="_xlgqh-aiEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_wNRFPOaiEeydA-cemO9dag" count="522016" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A7400007372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000019CB07400063939393939397371007E0003000000000000012274000820393939393939397371007E0003000000000000003C7400093939392039392039397371007E0003000000000000001974000F393939393939392F393939393939397371007E0003000000000000003E740008393939393939393971007E000B740001397371007E00030000000000000098740007393939393939397371007E000300000000000656FF74001139393939393939202D20393939393939397371007E0003000000000000004774000A393939393939393939397371007E0003000000000000001278">
+      <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_wNRFPOaiEeydA-cemO9dag" count="522016" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A7400007372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000019D487400063939393939397371007E0003000000000000012274000820393939393939397371007E0003000000000000003C7400093939392039392039397371007E0003000000000000001974000F393939393939392F393939393939397371007E0003000000000000003E740008393939393939393971007E000B74001139393939393939202F20393939393939397371007E0003000000000000000C740007393939393939397371007E000300000000000656FF74001139393939393939202D20393939393939397371007E0003000000000000004774000A393939393939393939397371007E0003000000000000001278">
         <parameters xmi:id="_wNRFPeaiEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
@@ -165,7 +165,7 @@
           <charactersMapping xmi:id="_xlp0ieaiEeydA-cemO9dag" name="Characters mapping on Hive" language="Hive" charactersToReplace="0123456789abcdefghijklmnopqrstuvwxyz?aê???éèù??üABCDEFGHIJKLMNOPQRSTUVWXYZ??ê???éèù??ü" replacementCharacters="9999999999aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_wNRFQOaiEeydA-cemO9dag" computed="true" length="1">
+      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_wNRFQOaiEeydA-cemO9dag" computed="true" length="2">
         <parameters xmi:id="_wNRFQeaiEeydA-cemO9dag">
           <textParameter xmi:id="_wNRFQuaiEeydA-cemO9dag" useBlank="false"/>
         </parameters>
