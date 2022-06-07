@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:tahleuPwD8WWsWtLSlGwXM2yPm2nqFcqRPZzrs/I"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:V6s61DgJItCYV+oDNLIHQmmpJoch40y2b5hZ+VaJ"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:iSljG2riB+6O4gtDQvLbSSA3h7j+JwkQDPx080xq"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:8Q9fGL1zIoStBV36EWxBNWneeH8x4rojl2t6EEg/"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -126,7 +126,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:WiR1ax5WyFmsgGrvdzPEQw9wArpMfnnjOs5yAAkx3067ws1Pbvqnn3bU"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:QZ54n38Pgdw3/BE5BDnjkO53u1tuP6gqvC9ul8W0f2wZ9ak6IkW3CH0E"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -265,16 +265,6 @@
     <nodeData xsi:type="tdqmatching:MatchingData">
       <ruleMatchers>
         <joinkeys>
-          <columnMap key="MATCHING_TYPE" value="Jaro"/>
-          <columnMap key="SURVIVORSHIP_FUNCTION" value="Concatenate"/>
-          <columnMap key="HANDLE_NULL" value="nullMatchNull"/>
-          <columnMap key="ATTRIBUTE_THRESHOLD" value="1.0"/>
-          <columnMap key="CONFIDENCE_WEIGHT" value="2"/>
-          <columnMap key="INPUT_COLUMN" value="BirthData"/>
-          <columnMap key="CUSTOM_MATCHER" value="&quot;&quot;"/>
-          <columnMap key="TOKENIZATION_TYPE" value="No"/>
-        </joinkeys>
-        <joinkeys>
           <columnMap key="MATCHING_TYPE" value="Fingerprintkey"/>
           <columnMap key="REFERENCE_COLUMN" value=""/>
           <columnMap key="SURVIVORSHIP_FUNCTION" value="MostCommon"/>
@@ -285,18 +275,8 @@
           <columnMap key="CUSTOM_MATCHER" value="&quot;&quot;"/>
           <columnMap key="TOKENIZATION_TYPE" value="No"/>
         </joinkeys>
-        <joinkeys>
-          <columnMap key="MATCHING_TYPE" value="Jaro"/>
-          <columnMap key="SURVIVORSHIP_FUNCTION" value="Concatenate"/>
-          <columnMap key="HANDLE_NULL" value="nullMatchNull"/>
-          <columnMap key="ATTRIBUTE_THRESHOLD" value="1.0"/>
-          <columnMap key="CONFIDENCE_WEIGHT" value="1"/>
-          <columnMap key="INPUT_COLUMN" value="ValueDocs"/>
-          <columnMap key="CUSTOM_MATCHER" value="&quot;&quot;"/>
-          <columnMap key="TOKENIZATION_TYPE" value="No"/>
-        </joinkeys>
         <matchParamMap key="INTERVAL_RULE" value="0.80"/>
-        <matchParamMap key="MATCHING_ALGORITHM" value="Simple VSR Matcher"/>
+        <matchParamMap key="MATCHING_ALGORITHM" value="TSWOOSH_MATCHER"/>
       </ruleMatchers>
     </nodeData>
   </node>
@@ -313,8 +293,8 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:1jh7+NcqsPmmMT+Mk4Lg0v/pZW4l4zbwm2k87dBHU+rVDog3v67slDjR"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Unique_Particular&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:m9Lk3nRixRihVWFZV1sB7cYpM0C18+vf2XFORmMV6zDgDp2UFA3hdi9z"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Unique_Particular_v1&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -401,7 +381,7 @@
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="TDQ_Unique_Particular"/>
+    <elementParameter field="TEXT" name="LABEL" value="TDQ_Unique_Particular_v1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
       <column comment="" key="false" length="100" name="NAME" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -445,8 +425,8 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:BojMUl8jYBRXjzEzCbVtOkkr/l07GTh8x1y4AEk0IVITE6M870DngjlB"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Matches_Particular&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:cgt8fcasnBPnIwqnL3mPHCaEV4yeoElVcts3hIqsh9xKzF/Qx4NhOJJ7"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Matches_Particular_v1&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -533,7 +513,7 @@
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="TDQ_Matches_Particular"/>
+    <elementParameter field="TEXT" name="LABEL" value="TDQ_Matches_Particular_v1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_2">
       <column comment="" key="false" length="100" name="NAME" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -577,8 +557,8 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:m44HHitNgUOndV/sKn6iaiqfy6AJWaJ81U8DlKVdz3JlaIHPhglLWwK9"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Suspects_Particular&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:tMorrGGxe3zmi7Nnlw++POC2pzHYXhKQviyFkEcJFGKBTQl6eS/ikYHS"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_Suspects_Particular_v1&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -665,7 +645,7 @@
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
-    <elementParameter field="TEXT" name="LABEL" value="TDQ_Suspects_Particular"/>
+    <elementParameter field="TEXT" name="LABEL" value="TDQ_Suspects_Particular_v1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_3">
       <column comment="" key="false" length="100" name="NAME" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -743,13 +723,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_dbc2333d-c4cb-4e5e-8ba7-1639fd380402"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WzDCNs7FH5J8E/Vs60trAsOkQK9qjGy4MLLDga2CYniTjUU+tOUnQeuueXJSofG9zWU+tGtUE02N&#13;
-tf05tAOUOg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ab3e68b3-e2ac-4ef8-b804-e13b8b8b46a8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>n26oIequ1ZIOTr9tvwZpRGAEZxPovt5bsZjQ0F+JQAD8KI1Tw1Ee3knhPDUj9jQdMxMjk6Znu3KY&#13;
-3Uh4ST9Q/w==</DigestValue></Reference></SignedInfo><SignatureValue>Jr3P417rdz5A9ks10Qcj956DIxXjlzv/fflLFBzEM6+M+OXdS6VYAQ1/OOAkzpbxZSM8VrENv8ov&#13;
-hV8VpClygyZmO6RGbCWxu+AZrwF96cAdFNWe5gJkiooq+IaDMGk5Ya+aZCf5r+qvgfPIFNn0J4Bk&#13;
-WeYU7i7Pxk5zCDzcUPNTbbJlCDLRCbXaY/dFrLFXuv/59mV9tnwsBf+kr3s+RI0Z3jl691GDExmj&#13;
-s1/PtZSv+9HafTKwCvjzz+B2SFyz+BE21uifUpoOLIzg0YK2GiSoC2/gtDGTYgruA1RHLOcaJkVp&#13;
-jCoxzUmC9evQCavrwsJcGj8F8oVbizSuSAE9GA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9633175e-88af-401e-b179-9e71a4971233"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QrIws5jpBK+rPW2d9wWRikUdpJGCloqQsAlxcJSLK5e8cWCcyKwaGSLDvdzjHN685zBK/R8yIuOf&#13;
+zI3nen7Oig==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_14366bbb-95fa-4a33-b167-730ff68e8eaa"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eqsO0TA9hUIRMoNelXU5bo/5S/XWzhJy1icHfFBMJg9u/K/V82RlvLip01NAY/kuMW2L1eQ6Bd/Y&#13;
+l57Z+wSRog==</DigestValue></Reference></SignedInfo><SignatureValue>LiG8VUU3m6xK82Se/GyXQ1akGrEcbnqX9Y8UwJOdi57ahClQNKidiByxkxT6U5ehSxvH/eODsf8e&#13;
+eIZDLJq5NYDQE3ymNve1NKk1jo3nlXnAPV9n3fMMYVnlHEK1f+DXXPPEEpfS0BzF3F9zZ0kRdCJA&#13;
+r+NTbZkBavw1or1fEOwHb7Iw9ZlqQTK3X0EdNCRNh1Owxv7BxICttdMCmcFq2W6qJnSlJX60Dzz0&#13;
+hc0nZLLBfh/hoFsOHuL5oyqbs0aqFgsRIst5x9EXPmtMhYHUpwcqxAiSYgaAu4pz3TCPHLW7u0le&#13;
+sWNXVJtfNBsGE2ezGXth/v1I6zi3CibZw1OpnA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -771,4 +751,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ab3e68b3-e2ac-4ef8-b804-e13b8b8b46a8" Target="#_dbc2333d-c4cb-4e5e-8ba7-1639fd380402"><Timestamp>2022-06-07 15:13:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_14366bbb-95fa-4a33-b167-730ff68e8eaa" Target="#_9633175e-88af-401e-b179-9e71a4971233"><Timestamp>2022-06-07 15:21:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
