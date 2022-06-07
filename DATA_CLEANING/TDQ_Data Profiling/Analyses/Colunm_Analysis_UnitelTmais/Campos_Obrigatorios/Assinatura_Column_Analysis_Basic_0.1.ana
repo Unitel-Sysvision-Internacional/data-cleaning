@@ -16,8 +16,8 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
     </context>
     <results xmi:id="_cvznmJW8EeyrDaC6mFuu4g">
-      <resultMetadata xmi:id="_cvznmZW8EeyrDaC6mFuu4g" executionDate="2022-04-22T10:19:25.776-0300" executionDuration="7221" message="" executionNumber="4" lastRunOk="true" lastExecutionNumberOk="4"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_hS0fxJW8EeyrDaC6mFuu4g" count="548832" computed="true">
+      <resultMetadata xmi:id="_cvznmZW8EeyrDaC6mFuu4g" executionDate="2022-06-07T16:47:14.086-0300" executionDuration="8895" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="5"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_hS0fxJW8EeyrDaC6mFuu4g" count="554433" computed="true">
         <parameters xmi:id="_hS0fxZW8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -28,7 +28,7 @@
           <sqlGenericExpression xmi:id="_hpLKQ5W8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_hS0fxpW8EeyrDaC6mFuu4g" count="548832" computed="true">
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_hS0fxpW8EeyrDaC6mFuu4g" count="554433" computed="true">
         <parameters xmi:id="_hS0fx5W8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
@@ -39,7 +39,7 @@
           <sqlGenericExpression xmi:id="_hpU7Q5W8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_hS0fyJW8EeyrDaC6mFuu4g" count="548832" computed="true" distinctValueCount="1">
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_hS0fyJW8EeyrDaC6mFuu4g" count="554433" computed="true" distinctValueCount="1">
         <parameters xmi:id="_hS0fyZW8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
@@ -50,7 +50,7 @@
           <sqlGenericExpression xmi:id="_hpeFM5W8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_hS0fypW8EeyrDaC6mFuu4g" count="548832" computed="true" uniqueValueCount="0">
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_hS0fypW8EeyrDaC6mFuu4g" count="554433" computed="true" uniqueValueCount="0">
         <parameters xmi:id="_hS0fy5W8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
@@ -67,7 +67,7 @@
           <sqlGenericExpression xmi:id="_hpn2OZW8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_hS0fzJW8EeyrDaC6mFuu4g" count="548832" computed="true" duplicateValueCount="1">
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_hS0fzJW8EeyrDaC6mFuu4g" count="554433" computed="true" duplicateValueCount="1">
         <parameters xmi:id="_hS0fzZW8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
@@ -84,7 +84,7 @@
           <sqlGenericExpression xmi:id="_hpxAKZW8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_hS0fzpW8EeyrDaC6mFuu4g" count="548832" computed="true" blankCount="548832">
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_hS0fzpW8EeyrDaC6mFuu4g" count="554433" computed="true" blankCount="554433">
         <parameters xmi:id="_hS0fz5W8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
