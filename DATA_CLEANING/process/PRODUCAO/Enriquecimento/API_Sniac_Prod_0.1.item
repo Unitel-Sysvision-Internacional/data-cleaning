@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:rvj7iZ95/EZcTyf0ShfsNbh4+EnZ+2Fl1NxEFVY/"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:fuvHeFFeExFzOQSLk00CKNXsLvSfVfklgbAM6Kjf"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:8aTDNT23ZLGRLjURPbuIA+wU4HW4Mc9DfCniUDMB"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:pP6QY7S5S+dUgTTgZSB2oo6ku576GujmZRB/y7F0"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -128,13 +128,13 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:08r1YB+QhvuT347JxiXKD3iY1rE1Yn4Huu9BEeueSCjG5x9aoTHjXj5r"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nR+1jLmjwLafSVoSDW2czD8do2nfFCpP2eSOqP9mnfSK3+7/bH5Mcv6N"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;UPDATE&#13;&#10;&#9;CADASTRO.DBO.SYS_DET_CLIENTES&#13;&#10;SET&#13;&#10;&#9;CONSULT_SNIAC = GETDATE()&#13;&#10;WHERE&#13;&#10;&#9;SYS_ID &#13;&#10;IN (&#13;&#10;&#9;SELECT&#13;&#10;&#9;&#9;MAX(SYS_ID)&#13;&#10;&#9;FROM&#13;&#10;&#9;&#9;SYS_DET_CLIENTES&#13;&#10;&#9;WHERE&#13;&#10;&#9;&#9;TIPO = 'PARTICULAR'&#13;&#10;&#9;&#9;AND CONSULT_SNIAC IS NULL)&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;UPDATE&#13;&#10;&#9;CADASTRO.DBO.SYS_DET_CLIENTES&#13;&#10;SET&#13;&#10;&#9;CONSULT_SNIAC = GETDATE()&#13;&#10;WHERE&#13;&#10;&#9;SYS_ID &#13;&#10;IN (&#13;&#10;&#9;SELECT&#13;&#10;&#9;&#9;MAX(SYS_ID)&#13;&#10;&#9;FROM&#13;&#10;&#9;&#9;SYS_DET_CLIENTES&#13;&#10;&#9;WHERE&#13;&#10;&#9;&#9;TIPO &lt;&gt;  'EMPRESARIAL'&#13;&#10;&#9;&#9;AND CONSULT_SNIAC IS NULL&#13;&#10;&#9;&#9;AND DataFile = (SELECT MAX(DataFile) FROM SYS_DET_CLIENTES ) &#13;&#10;&#9;&#9;&#9;&#9;)&#13;&#10;&#9;&#9;&#9;&#9;and (NAME+VALUEDOCS ) not in (&#9;&#9;&#9;&#13;&#10;&#9;&#9;select (nomeCompleto+NumDoc)   from &#9;SV_TDQ_RETURN_SNIAC_1&#9;)&#13;&#10;&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -152,6 +152,8 @@
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
     <elementParameter field="TEXT" name="LABEL" value="UPDATE_SYS_DET_CLIENTES"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Grava getdate no campo CONSULT_SNIAC  da tabela SYS_DET_CLIENTES."/>
     <metadata connector="FLOW" label="metadata" name="tDBRow_1">
       <column comment="" key="false" length="-1" name="Envio_data_stewardship" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
     </metadata>
@@ -188,13 +190,13 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:boHorJO+TxDvf+kLa+bbyshjPY4rlATdiWyom2a/sI/UVnZ5T1X4Aaff"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:06pAmRZJohheVCO7fanJ5XXnkpRVRksFGmGbmcighjLhBrfQqMBVbQgw"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT&#13;&#10;&#9;'' PDATANASC,&#13;&#10;&#9;VALUEDOCS PNIC,&#13;&#10;&#9;NAME AS PNOMECOMPLETO,&#13;&#10;&#9;'EYJ4NXQIOIJNVE15WW1VEE5XRTBNMLJPWTJAAVLQZZNNREE0T1RBM05UY3LARFZPTURFNU56TTNZAMRST1DNNU1QVM1OR1F3TMPFEK5TSTNNAKE0TKRRNFPUZGHODYISIMTPZCI6IK1UTXLZBVV4TLDFME0YUMLZMLPPWWPNM01EQTRPVEEZTLRJEVPEVMLNREU1TNPNM1LQZGXPV001TWPWBU5HUXDOAKV6TM1JM01QQTRORFE0WLRKAE53X1JTMJU2IIWIYWXNIJOIULMYNTYIFQ.EYJZDWIIOIJ1BML0ZWXZBMLHY0B1BML0ZWX0BWFPCY5JDIISIMF1DCI6IKFQUEXJQ0FUSU9OIIWIYXVKIJOIMVPGQ09JUF9YQ0ZRZELTTHP0UMLNSKJDNJM4YSISIM5IZII6MTY0NTEXNJAZNYWIYXPWIJOIMVPGQ09JUF9YQ0ZRZELTTHP0UMLNSKJDNJM4YSISINNJB3BLIJOIZGVMYXVSDCISIMLZCYI6IMH0DHBZOLWVXC9SB2NHBGHVC3Q6OTQ0M1WVB2F1DGGYXC90B2TLBIISIMV4CCI6OTIYMZM3MJAZNJG1NDC3NSWIAWF0IJOXNJQ1MTE2MDM3LCJQDGKIOII5ZJJJNZI5YY1HZJZKLTRMNJCTOWYYNY04MJEWNTMYZGIXNGYIFQ.DN5QBN8QIMRCHF5JSYJYIBNM7R1WLPS3SRSDZHB7CWNUNYASWDIF4OZRGTISHRVVYLLOKKKTLK9T4MH1MA1Z4XJQMWDZMFWLQRH02MYLITP8THP7K8EPAXKT_45D9JIL5IMTUEBCYXS64V3OCDPFAU1YRWHWC3I7KYWJOYZPEZNWWV0SST9VKQFPUQJAY0AY1EWPUSUWWOI58MSYWUYEUH1GPKUAWDMWBSEZHTYQTDFQTOCR6HLZ80HICMK_6ROOI4KOO64SUTVWNDHJ9ROKSBU1TZMFSHWLNDQFK1EONP2GA-X_F4Z-UI5R9IHDLQNLJQQLSP_3UH2IQUMZ9URIPA' TOKEN&#13;&#10;FROM&#13;&#10;&#9;SYS_DET_CLIENTES&#13;&#10;WHERE&#13;&#10;&#9;SYS_ID IN (&#13;&#10;&#9;SELECT&#13;&#10;&#9;&#9;MAX(SYS_ID)&#13;&#10;&#9;FROM&#13;&#10;&#9;&#9;SYS_DET_CLIENTES&#13;&#10;&#9;WHERE&#13;&#10;&#9;&#9;TIPO = 'PARTICULAR'&#13;&#10;&#9;&#9;AND CONSULT_SNIAC IS NULL )&#13;&#10;&#9;&#9;)&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT&#13;&#10;&#9;'' PDATANASC,&#13;&#10;&#9;VALUEDOCS PNIC,&#13;&#10;&#9;NAME AS PNOMECOMPLETO,&#13;&#10;&#9;'EYJ4NXQIOIJNVE15WW1VEE5XRTBNMLJPWTJAAVLQZZNNREE0T1RBM05UY3LARFZPTURFNU56TTNZAMRST1DNNU1QVM1OR1F3TMPFEK5TSTNNAKE0TKRRNFPUZGHODYISIMTPZCI6IK1UTXLZBVV4TLDFME0YUMLZMLPPWWPNM01EQTRPVEEZTLRJEVPEVMLNREU1TNPNM1LQZGXPV001TWPWBU5HUXDOAKV6TM1JM01QQTRORFE0WLRKAE53X1JTMJU2IIWIYWXNIJOIULMYNTYIFQ.EYJZDWIIOIJ1BML0ZWXZBMLHY0B1BML0ZWX0BWFPCY5JDIISIMF1DCI6IKFQUEXJQ0FUSU9OIIWIYXVKIJOIMVPGQ09JUF9YQ0ZRZELTTHP0UMLNSKJDNJM4YSISIM5IZII6MTY0NTEXNJAZNYWIYXPWIJOIMVPGQ09JUF9YQ0ZRZELTTHP0UMLNSKJDNJM4YSISINNJB3BLIJOIZGVMYXVSDCISIMLZCYI6IMH0DHBZOLWVXC9SB2NHBGHVC3Q6OTQ0M1WVB2F1DGGYXC90B2TLBIISIMV4CCI6OTIYMZM3MJAZNJG1NDC3NSWIAWF0IJOXNJQ1MTE2MDM3LCJQDGKIOII5ZJJJNZI5YY1HZJZKLTRMNJCTOWYYNY04MJEWNTMYZGIXNGYIFQ.DN5QBN8QIMRCHF5JSYJYIBNM7R1WLPS3SRSDZHB7CWNUNYASWDIF4OZRGTISHRVVYLLOKKKTLK9T4MH1MA1Z4XJQMWDZMFWLQRH02MYLITP8THP7K8EPAXKT_45D9JIL5IMTUEBCYXS64V3OCDPFAU1YRWHWC3I7KYWJOYZPEZNWWV0SST9VKQFPUQJAY0AY1EWPUSUWWOI58MSYWUYEUH1GPKUAWDMWBSEZHTYQTDFQTOCR6HLZ80HICMK_6ROOI4KOO64SUTVWNDHJ9ROKSBU1TZMFSHWLNDQFK1EONP2GA-X_F4Z-UI5R9IHDLQNLJQQLSP_3UH2IQUMZ9URIPA' TOKEN&#13;&#10;FROM&#13;&#10;&#9;SYS_DET_CLIENTES&#13;&#10;WHERE&#13;&#10;&#9;SYS_ID IN (&#13;&#10;&#9;SELECT&#13;&#10;&#9;&#9;MAX(SYS_ID)&#13;&#10;&#9;FROM&#13;&#10;&#9;&#9;SYS_DET_CLIENTES&#13;&#10;&#9;WHERE&#13;&#10;&#9;&#9;TIPO &lt;&gt;  'EMPRESARIAL'&#13;&#10;&#9;&#9;AND CONSULT_SNIAC IS NULL&#13;&#10;&#9;&#9;AND DataFile = (SELECT MAX(DataFile) FROM SYS_DET_CLIENTES ) &#13;&#10;&#9;&#9;&#9;&#9;)&#13;&#10;&#9;&#9;&#9;&#9;and (NAME+VALUEDOCS ) not in (&#9;&#9;&#9;&#13;&#10;&#9;&#9;select (nomeCompleto+NumDoc)   from &#9;SV_TDQ_RETURN_SNIAC_1&#9;)&#13;&#10;&#9;&#9;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -218,6 +220,8 @@
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
     <elementParameter field="TEXT" name="LABEL" value="SYS_DET_CLIENTES"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Seleciona registros para busca no Sniac sóos registros que não estão na tabela do Sniac."/>
     <metadata connector="FLOW" name="tDBInput_1">
       <column comment="" key="false" length="1" name="pDataNasc" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="250" name="pNIC" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -231,6 +235,8 @@
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
     <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Mapeia envio dos parametros."/>
     <metadata connector="FLOW" name="copyOfrequest">
       <column defaultValue="" key="false" length="0" name="Soap" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
@@ -274,15 +280,15 @@
     <elementParameter field="TEXT" name="NTLM_DOMAIN" show="false" value="&quot;192.168.0.100&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:lDcli7B2AV6Q4zW9TO/WHE8ZtAkywWENg8znurtyorxCY5rdTmg="/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:C+ubNw/iJXF7XpIpxxnwTaIUWu6gLjGTTJFzBYHY2j1KOTt/cxY="/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:OLwCVG7DABxw8PbiU3EMP9V8QJ+azG7oUG2Ghuh/"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:Es+m11q5lbo1ryvIOt1F73qJPI/03+aC9pY0krfl"/>
     <elementParameter field="CHECK" name="NEED_SSL_TO_TRUSTSERVER" value="false"/>
     <elementParameter field="TEXT" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;C:/clientTrustStore.trustStore&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:QdlmZmW0sVpv1NJw/X7+nOdEgZFhN9xAZJRGL08qVRlnj/XJr94="/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:9DN0rdpG8l4siR6hIPvXvLEzU9rM64BjWLh1H+Nd/EMmU5CGeik="/>
     <elementParameter field="TEXT" name="ENDPOINT" value="&quot;http://172.18.5.18:9765/services/IntegrationCadastroImp?wsdl&quot;"/>
     <elementParameter field="TEXT" name="ACTION" value="&quot;ConsultaDocIdSniac&quot;"/>
     <elementParameter field="CLOSED_LIST" name="SOAP_VERSION" value="Soap11"/>
@@ -294,6 +300,8 @@
     <elementParameter field="COMPONENT_LIST" name="KERBEROS_CONFIGURATION" show="false" value=""/>
     <elementParameter field="CHECK" name="ENFORCE_NTLM" show="false" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Consulta se o cliente existe na base do Sniac."/>
     <metadata connector="FLOW" name="tSOAP_1">
       <column defaultValue="" key="false" length="0" name="Soap" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
@@ -304,6 +312,8 @@
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
     <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Mapeia campos para gravar na tabela TDQ_RETURN_SNIAC."/>
     <metadata connector="FLOW" name="copyOfsaida">
       <column comment="" key="false" length="-1" name="dataNasc" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="id_Date" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="idCivil" nullable="true" originalLength="200" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -395,7 +405,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:MnFYX2mJzfp/EmeQybuJwBit8u/0d2X+Dx92Rtf/Lmaav355a33gpUTl"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:wZZr/ycbqGZZRzAy6RJkkbEB5mgfq3JoLCFkn2nWn5tZEbCwMWPV89Wz"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;TDQ_RETURN_SNIAC&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -490,6 +500,8 @@
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
     <elementParameter field="TEXT" name="LABEL" value="TDQ_RETURN_SNIAC"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Grava registro na tabela TDQ_RETURN_SNIAC."/>
     <metadata connector="FLOW" name="tDBOutput_1">
       <column comment="" key="true" length="-1" name="dataNasc" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="id_Date" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="idCivil" nullable="true" originalLength="200" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -551,17 +563,19 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLoop_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Consulta a API do Sniac de registros que não estão na tabela TDQ_RETURN_SNIAC para enriquecimento de registros do tipo Particulares."/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4eda5545-e618-4645-8e8d-cb9fb375ba3c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6eGRO6jeATa4lUzrrndTJWVrdK3uzC7Wkd3EbBt5MYEOP+9DBOp84GsTfg/7C1xmNfTxmqZvYUj5&#13;
-4tMTKFiQ1A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e8731ee0-3277-4987-9a90-3332534039d5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UtH/Kna2VUl/SllyoAITHSPL2n8alQdEo2OYEv36NXHEHRZ7lq/iPMdqFyxN+zA8umb28PBhPJ7B&#13;
-d9xy8/P9Qg==</DigestValue></Reference></SignedInfo><SignatureValue>ZDFjKWIaLxqfNS5MA42VMbQOcU1VA+VWa1UBdRtzi7zUJlAdaNvFZ4iANfuqsqRvg2C3fOrQtuG3&#13;
-EDV+qB+FvDb3HNfZHAhSu5bNyyCzMDqET/rbaDMso5WdN0GcIhFunGNOE7fZ9NxMOZ4fzFkJkKwl&#13;
-3OgKMmLxkaD7ZdvyE+drujygxOJ0VYrSYo09hsILmbmdTNmNlg/qJ798yv/UuZb9yagThfXiyTuM&#13;
-Z5sna7vVplDrlzQTE6ErTWDKz7hRrYAyBOyoAQlkPiCVW0rmzUCFGpItW69e5Ym42ZiKuShnNzA0&#13;
-aa899lk5qgqOF7DoK8lICZSx4V5QcsHenl1+9g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c1fa985c-fd2d-42f1-8657-24b87f26d093"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+JnRPWWRicy9ph3diE4yRdqsNUaeLKPScjnjtlr6PObCf/FZUZG0r9S8XRpkx+0Kb2CrNGsE7PTf&#13;
+NJYljiNKcw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fee411a8-aec9-4860-bcad-17e14193743e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aRBqT1rS3VNXgrEC27qxQZybbZbs7+Ku9sZkGW0c7LcGRDVQ5VKkWSxEBxW3AsQtC/lVTqJuV8e5&#13;
+xCg5HLlYYQ==</DigestValue></Reference></SignedInfo><SignatureValue>fZrxfMpzAqTyBQynD0sv7ujUaYjeCEwgnu0w72G5dyWwhvP+s7CqntigfDA+TeWnhM7GGaQRZbFs&#13;
+pFadbiugO9O5yljmC0xjRcE3nPkobXTyi8oTvon2zJYFM3w6Onx2AsGpZeGTm4fSHJHfx6G2cfTO&#13;
+g63DlrQJ2buoxkgf8P9AjKKznAa5MmfP3DMMwV+6pSHxUbvIg7TU08IqDW1qBSgSWBbMgbpHQm0a&#13;
+p8E7OGPhd1ufCvCNRP3g+AuDFv0oWWyoTI/M/SILStGH0e/xP/e0AOvbhkXU7F9axez/S8wljwSp&#13;
+TQXhl2yG+Y3JRcNvO2SWFa+QulbQZfIyqhxO+A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -583,4 +597,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e8731ee0-3277-4987-9a90-3332534039d5" Target="#_4eda5545-e618-4645-8e8d-cb9fb375ba3c"><Timestamp>2022-06-07 15:03:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fee411a8-aec9-4860-bcad-17e14193743e" Target="#_c1fa985c-fd2d-42f1-8657-24b87f26d093"><Timestamp>2022-06-08 19:52:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
