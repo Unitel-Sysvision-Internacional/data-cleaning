@@ -16,12 +16,12 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
     </context>
     <results xmi:id="_cvznmJW8EeyrDaC6mFuu4g">
-      <resultMetadata xmi:id="_cvznmZW8EeyrDaC6mFuu4g" executionDate="2022-06-08T15:09:01.421-0300" executionDuration="10160" message="" executionNumber="7" lastRunOk="true" lastExecutionNumberOk="7"/>
+      <resultMetadata xmi:id="_cvznmZW8EeyrDaC6mFuu4g" executionDate="2022-06-10T15:23:47.473-0300" executionDuration="7651" message="" executionNumber="8" lastRunOk="true" lastExecutionNumberOk="8"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_hS0fxJW8EeyrDaC6mFuu4g" count="554433" computed="true">
         <parameters xmi:id="_hS0fxZW8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xKJW8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; " language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xKJW8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (DataFile = (SELECT MAX(DataFile)  FROM UCC_T_DETALHE_CLIENTES ))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_hpLKQJW8EeyrDaC6mFuu4g" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_hpLKQZW8EeyrDaC6mFuu4g" tag="Description" value="counts the number of rows"/>
           <taggedValue xmi:id="_hpLKQpW8EeyrDaC6mFuu4g" tag="Purpose" value="evaluates the number of records"/>
@@ -32,7 +32,7 @@
         <parameters xmi:id="_hS0fx5W8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xKZW8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE &quot;Assinatura&quot; IS NULL " language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xKZW8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE &quot;Assinatura&quot; IS NULL  AND (DataFile = (SELECT MAX(DataFile)  FROM UCC_T_DETALHE_CLIENTES ))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_hpU7QJW8EeyrDaC6mFuu4g" name="Null Count" label="Null Count">
           <taggedValue xmi:id="_hpU7QZW8EeyrDaC6mFuu4g" tag="Purpose" value="evaluate the number of missing data (null records)"/>
           <taggedValue xmi:id="_hpU7QpW8EeyrDaC6mFuu4g" tag="Description" value="counts the number of null rows"/>
@@ -43,7 +43,7 @@
         <parameters xmi:id="_hS0fyZW8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xKpW8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Assinatura&quot; FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) A" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xKpW8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Assinatura&quot; FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (DataFile = (SELECT MAX(DataFile)  FROM UCC_T_DETALHE_CLIENTES ))) A" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_hpeFMJW8EeyrDaC6mFuu4g" name="Distinct Count" label="Distinct Count">
           <taggedValue xmi:id="_hpeFMZW8EeyrDaC6mFuu4g" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
           <taggedValue xmi:id="_hpeFMpW8EeyrDaC6mFuu4g" tag="Purpose" value="evaluates the number of distinct records"/>
@@ -54,7 +54,7 @@
         <parameters xmi:id="_hS0fy5W8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xK5W8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &quot;Assinatura&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  GROUP BY &quot;Assinatura&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xK5W8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &quot;Assinatura&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (DataFile = (SELECT MAX(DataFile)  FROM UCC_T_DETALHE_CLIENTES )) GROUP BY &quot;Assinatura&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_hpn2MJW8EeyrDaC6mFuu4g" name="Unique Count" label="Unique Count">
           <taggedValue xmi:id="_hpn2MZW8EeyrDaC6mFuu4g" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
           <taggedValue xmi:id="_hpn2MpW8EeyrDaC6mFuu4g" tag="Purpose" value="evaluates the number of unique records"/>
@@ -71,7 +71,7 @@
         <parameters xmi:id="_hS0fzZW8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xLJW8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &quot;Assinatura&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  m  GROUP BY &quot;Assinatura&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xLJW8EeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &quot;Assinatura&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  m  WHERE (DataFile = (SELECT MAX(DataFile)  FROM UCC_T_DETALHE_CLIENTES )) GROUP BY &quot;Assinatura&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_hpxAIJW8EeyrDaC6mFuu4g" name="Duplicate Count" label="Duplicate Count">
           <taggedValue xmi:id="_hpxAIZW8EeyrDaC6mFuu4g" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
           <taggedValue xmi:id="_hpxAIpW8EeyrDaC6mFuu4g" tag="Purpose" value="evaluates the number of duplicated records"/>
@@ -88,7 +88,7 @@
         <parameters xmi:id="_hS0fz5W8EeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_13fju4UyEey_8Z7FFdyZ1w"/>
         <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xLZW8EeyrDaC6mFuu4g" body="SELECT COUNT(&quot;Assinatura&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;Assinatura&quot;)) = '' " language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_hp6xLZW8EeyrDaC6mFuu4g" body="SELECT COUNT(&quot;Assinatura&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;Assinatura&quot;)) = ''  AND (DataFile = (SELECT MAX(DataFile)  FROM UCC_T_DETALHE_CLIENTES ))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_hp6xIJW8EeyrDaC6mFuu4g" name="Blank Count" label="Blank Count">
           <taggedValue xmi:id="_hp6xIZW8EeyrDaC6mFuu4g" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
           <taggedValue xmi:id="_hp6xIpW8EeyrDaC6mFuu4g" tag="Purpose" value="evaluates the number of blank records"/>
@@ -109,7 +109,7 @@
   <dataquality.domain:Domain xmi:id="_hS0f0ZW8EeyrDaC6mFuu4g" name="Assinatura_Column_Analysis_Basic">
     <ranges xmi:id="_hS0f0pW8EeyrDaC6mFuu4g">
       <expressions xmi:id="_hS0f05W8EeyrDaC6mFuu4g">
-        <expression xsi:type="relational:TdExpression" xmi:id="_hS0f1JW8EeyrDaC6mFuu4g" body="  Data_Ins = (SELECT MAX(Data_Ins) FROM SYS_DET_CLIENTES) " language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_hS0f1JW8EeyrDaC6mFuu4g" body=" DataFile = (SELECT MAX(DataFile)  FROM UCC_T_DETALHE_CLIENTES )" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
