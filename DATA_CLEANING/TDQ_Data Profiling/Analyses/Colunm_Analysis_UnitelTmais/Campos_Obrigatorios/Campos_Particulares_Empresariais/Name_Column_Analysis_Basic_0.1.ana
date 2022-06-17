@@ -13,90 +13,90 @@
     <taggedValue xmi:id="_aqVTMXq9EeymA7ReFGNmPQ" tag="Is Use Sample Data" value="false"/>
     <context xmi:id="_USEJlnq9EeymA7ReFGNmPQ">
       <connection href="../../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIfpKONEeyzNOsHl1GPmw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
     </context>
     <results xmi:id="_USEJl3q9EeymA7ReFGNmPQ">
-      <resultMetadata xmi:id="_USEJmHq9EeymA7ReFGNmPQ" executionDate="2022-06-17T10:15:58.931-0300" executionDuration="14028" message="" executionNumber="18" lastRunOk="true" lastExecutionNumberOk="17"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_SHMK0OaUEeydA-cemO9dag" count="522013" computed="true">
-        <parameters xmi:id="_SHMK0eaUEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIfpKONEeyzNOsHl1GPmw"/>
+      <resultMetadata xmi:id="_USEJmHq9EeymA7ReFGNmPQ" executionDate="2022-06-17T10:16:55.313-0300" executionDuration="10232" message="" executionNumber="19" lastRunOk="true" lastExecutionNumberOk="18"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_umNoMO4_EeypZdT0nP310Q" count="554433" computed="true">
+        <parameters xmi:id="_umNoMe4_EeypZdT0nP310Q"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_S12nqOaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_S1e0MOaUEeydA-cemO9dag" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_S1e0MeaUEeydA-cemO9dag" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_S1e0MuaUEeydA-cemO9dag" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_S1e0M-aUEeydA-cemO9dag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_wmEAEO4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_wleKMO4_EeypZdT0nP310Q" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_wleKMe4_EeypZdT0nP310Q" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_wleKMu4_EeypZdT0nP310Q" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_wleKM-4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_SHMK0uaUEeydA-cemO9dag" count="522013" nullCount="3" computed="true">
-        <parameters xmi:id="_SHMK0-aUEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIfpKONEeyzNOsHl1GPmw"/>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_umNoMu4_EeypZdT0nP310Q" count="554433" computed="true">
+        <parameters xmi:id="_umNoM-4_EeypZdT0nP310Q"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_S12nqeaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot; WHERE &quot;NAME&quot; IS NULL  AND (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_S1jssOaUEeydA-cemO9dag" name="Null Count" label="Null Count">
-          <taggedValue xmi:id="_S1jsseaUEeydA-cemO9dag" tag="Purpose" value="evaluate the number of missing data (null records)"/>
-          <taggedValue xmi:id="_S1jssuaUEeydA-cemO9dag" tag="Description" value="counts the number of null rows"/>
-          <sqlGenericExpression xmi:id="_S1jss-aUEeydA-cemO9dag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_wmEAEe4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE &quot;NAME&quot; IS NULL  AND (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_wlnUIO4_EeypZdT0nP310Q" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_wlnUIe4_EeypZdT0nP310Q" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_wlnUIu4_EeypZdT0nP310Q" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_wlnUI-4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_SHMK1OaUEeydA-cemO9dag" count="522013" nullCount="3" computed="true" distinctValueCount="334460">
-        <parameters xmi:id="_SHMK1eaUEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIfpKONEeyzNOsHl1GPmw"/>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_umNoNO4_EeypZdT0nP310Q" count="554433" computed="true" distinctValueCount="334723">
+        <parameters xmi:id="_umNoNe4_EeypZdT0nP310Q"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_S12nquaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;NAME&quot; FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))) A" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_S1jstOaUEeydA-cemO9dag" name="Distinct Count" label="Distinct Count">
-          <taggedValue xmi:id="_S1jsteaUEeydA-cemO9dag" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
-          <taggedValue xmi:id="_S1jstuaUEeydA-cemO9dag" tag="Purpose" value="evaluates the number of distinct records"/>
-          <sqlGenericExpression xmi:id="_S1jst-aUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_wmEAEu4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;NAME&quot; FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))) A" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_wlnUJO4_EeypZdT0nP310Q" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_wlnUJe4_EeypZdT0nP310Q" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_wlnUJu4_EeypZdT0nP310Q" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_wlnUJ-4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_SHMK1uaUEeydA-cemO9dag" count="522013" nullCount="3" computed="true" uniqueValueCount="279865">
-        <parameters xmi:id="_SHMK1-aUEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIfpKONEeyzNOsHl1GPmw"/>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_umNoNu4_EeypZdT0nP310Q" count="554433" computed="true" uniqueValueCount="279073">
+        <parameters xmi:id="_umNoN-4_EeypZdT0nP310Q"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_S12nq-aUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &quot;NAME&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;NAME&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_S1s2oOaUEeydA-cemO9dag" name="Unique Count" label="Unique Count">
-          <taggedValue xmi:id="_S1s2oeaUEeydA-cemO9dag" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
-          <taggedValue xmi:id="_S1s2ouaUEeydA-cemO9dag" tag="Purpose" value="evaluates the number of unique records"/>
-          <sqlGenericExpression xmi:id="_S1s2o-aUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_S1s2pOaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_S1s2peaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_S1s2puaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_S1s2p-aUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_S1s2qOaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_S1s2qeaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_wmEAE-4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &quot;NAME&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;NAME&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_wlxFIO4_EeypZdT0nP310Q" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_wlxFIe4_EeypZdT0nP310Q" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_wlxFIu4_EeypZdT0nP310Q" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_wlxFI-4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_wlxFJO4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_wlxFJe4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_wlxFJu4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_wlxFJ-4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_wlxFKO4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_wlxFKe4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_SHMK2OaUEeydA-cemO9dag" count="522013" nullCount="3" computed="true" duplicateValueCount="54595">
-        <parameters xmi:id="_SHMK2eaUEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIfpKONEeyzNOsHl1GPmw"/>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_umNoOO4_EeypZdT0nP310Q" count="554433" computed="true" duplicateValueCount="55650">
+        <parameters xmi:id="_umNoOe4_EeypZdT0nP310Q"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_S12nrOaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &quot;NAME&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  m  WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;NAME&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_S1s2quaUEeydA-cemO9dag" name="Duplicate Count" label="Duplicate Count">
-          <taggedValue xmi:id="_S1s2q-aUEeydA-cemO9dag" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
-          <taggedValue xmi:id="_S1s2rOaUEeydA-cemO9dag" tag="Purpose" value="evaluates the number of duplicated records"/>
-          <sqlGenericExpression xmi:id="_S1s2reaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_S1s2ruaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_S1s2r-aUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_S1s2sOaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_S1s2seaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_S1s2suaUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_S1s2s-aUEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_wmEAFO4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &quot;NAME&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  m  WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;NAME&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_wlxFKu4_EeypZdT0nP310Q" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_wlxFK-4_EeypZdT0nP310Q" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_wlxFLO4_EeypZdT0nP310Q" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_wlxFLe4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_wlxFLu4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_wlxFL-4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_wlxFMO4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_wlxFMe4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_wlxFMu4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_wlxFM-4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_SHMK2uaUEeydA-cemO9dag" count="522013" nullCount="3" computed="true" blankCount="61">
-        <parameters xmi:id="_SHMK2-aUEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIfpKONEeyzNOsHl1GPmw"/>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_umNoOu4_EeypZdT0nP310Q" count="554433" computed="true" blankCount="5">
+        <parameters xmi:id="_umNoO-4_EeypZdT0nP310Q"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_S12nreaUEeydA-cemO9dag" body="SELECT COUNT(&quot;NAME&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;NAME&quot;)) = ''  AND (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_S12noOaUEeydA-cemO9dag" name="Blank Count" label="Blank Count">
-          <taggedValue xmi:id="_S12noeaUEeydA-cemO9dag" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
-          <taggedValue xmi:id="_S12nouaUEeydA-cemO9dag" tag="Purpose" value="evaluates the number of blank records"/>
-          <sqlGenericExpression xmi:id="_S12no-aUEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
-          <sqlGenericExpression xmi:id="_S12npOaUEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_S12npeaUEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
-          <sqlGenericExpression xmi:id="_S12npuaUEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_S12np-aUEeydA-cemO9dag" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_wmEAFe4_EeypZdT0nP310Q" body="SELECT COUNT(&quot;NAME&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;NAME&quot;)) = ''  AND (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_wl62IO4_EeypZdT0nP310Q" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_wl62Ie4_EeypZdT0nP310Q" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_wl62Iu4_EeypZdT0nP310Q" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_wl62I-4_EeypZdT0nP310Q" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_wl62JO4_EeypZdT0nP310Q" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_wl62Je4_EeypZdT0nP310Q" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_wl62Ju4_EeypZdT0nP310Q" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_wl62J-4_EeypZdT0nP310Q" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
@@ -109,7 +109,7 @@
   <dataquality.domain:Domain xmi:id="_aqV6QHq9EeymA7ReFGNmPQ" name="Name_Column_Analysis_Basic">
     <ranges xmi:id="_aqV6QXq9EeymA7ReFGNmPQ">
       <expressions xmi:id="_aqV6Qnq9EeymA7ReFGNmPQ">
-        <expression xsi:type="relational:TdExpression" xmi:id="_aqV6Q3q9EeymA7ReFGNmPQ" body="  CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_aqV6Q3q9EeymA7ReFGNmPQ" body="CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
