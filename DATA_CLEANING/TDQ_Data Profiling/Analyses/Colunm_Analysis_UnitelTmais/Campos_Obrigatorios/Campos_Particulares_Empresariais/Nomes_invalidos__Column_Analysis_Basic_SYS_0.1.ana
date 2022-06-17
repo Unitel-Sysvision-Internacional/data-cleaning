@@ -16,12 +16,12 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_2wouJe5OEeypZdT0nP310Q"/>
     </context>
     <results xmi:id="_kKgdXO5KEeypZdT0nP310Q">
-      <resultMetadata xmi:id="_kKgdXe5KEeypZdT0nP310Q" executionDate="2022-06-17T12:37:02.593-0300" executionDuration="3657" message="" executionNumber="22" lastRunOk="true" lastExecutionNumberOk="9"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_OYWCcO5TEeypZdT0nP310Q" count="200" computed="true">
+      <resultMetadata xmi:id="_kKgdXe5KEeypZdT0nP310Q" executionDate="2022-06-17T12:37:52.010-0300" executionDuration="16241" message="" executionNumber="23" lastRunOk="true" lastExecutionNumberOk="10"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_OYWCcO5TEeypZdT0nP310Q" count="274" computed="true">
         <parameters xmi:id="_OYWCce5TEeypZdT0nP310Q"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_2wouJe5OEeypZdT0nP310Q"/>
         <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_SAE-IO5TEeypZdT0nP310Q" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;TDQ_GOLDEN_RECORD_FULL&quot;  WHERE ((DATALENGTH(NAME) &lt;= 3 OR NAME = ''))" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_SAE-IO5TEeypZdT0nP310Q" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;TDQ_GOLDEN_RECORD_FULL&quot;  WHERE ((DATALENGTH(NAME) &lt;= 3 OR NAME = '') or&#xD;&#xA; SYS_ID in (&#xD;&#xA;(select b.sys_id from &#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 3,1) NA, NAME , sys_id  FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;TDQ_GOLDEN_RECORD_FULL&quot;) b,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 2,1) NA,  sys_id FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;TDQ_GOLDEN_RECORD_FULL&quot;) c,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 1,1) NA, sys_id FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;TDQ_GOLDEN_RECORD_FULL&quot;) d&#xD;&#xA;where d.NA = c.NA &#xD;&#xA;and c.na = b.na&#xD;&#xA;and d.SYS_ID = c.SYS_ID and c.SYS_ID = b.SYS_ID    )))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_R_27sO5TEeypZdT0nP310Q" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_R_27se5TEeypZdT0nP310Q" tag="Description" value="counts the number of rows"/>
           <taggedValue xmi:id="_R_27su5TEeypZdT0nP310Q" tag="Purpose" value="evaluates the number of records"/>
@@ -35,7 +35,7 @@
   <dataquality.domain:Domain xmi:id="_kKgdhO5KEeypZdT0nP310Q" name="Nomes_invalidos__Column_Analysis_Basic_SYS">
     <ranges xmi:id="_kKgdhe5KEeypZdT0nP310Q">
       <expressions xmi:id="_kKgdhu5KEeypZdT0nP310Q">
-        <expression xsi:type="relational:TdExpression" xmi:id="_kKgdh-5KEeypZdT0nP310Q" body="(DATALENGTH(NAME) &lt;= 3 OR NAME = '')" language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_kKgdh-5KEeypZdT0nP310Q" body="(DATALENGTH(NAME) &lt;= 3 OR NAME = '') or&#xD;&#xA; SYS_ID in (&#xD;&#xA;(select b.sys_id from &#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 3,1) NA, NAME , sys_id  FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;TDQ_GOLDEN_RECORD_FULL&quot;) b,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 2,1) NA,  sys_id FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;TDQ_GOLDEN_RECORD_FULL&quot;) c,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 1,1) NA, sys_id FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;TDQ_GOLDEN_RECORD_FULL&quot;) d&#xD;&#xA;where d.NA = c.NA &#xD;&#xA;and c.na = b.na&#xD;&#xA;and d.SYS_ID = c.SYS_ID and c.SYS_ID = b.SYS_ID    ))" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
