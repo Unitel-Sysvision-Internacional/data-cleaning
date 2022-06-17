@@ -109,7 +109,7 @@
   <dataquality.domain:Domain xmi:id="_aqV6QHq9EeymA7ReFGNmPQ" name="Name_Column_Analysis_Basic">
     <ranges xmi:id="_aqV6QXq9EeymA7ReFGNmPQ">
       <expressions xmi:id="_aqV6Qnq9EeymA7ReFGNmPQ">
-        <expression xsi:type="relational:TdExpression" xmi:id="_aqV6Q3q9EeymA7ReFGNmPQ" body="CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_aqV6Q3q9EeymA7ReFGNmPQ" body="(DATALENGTH(NAME) &lt;= 3 OR NAME = '') or&#xD;&#xA; ID_OBJ  in (&#xD;&#xA;(select b.ID_OBJ  from &#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 3,1) NA, NAME , ID_OBJ   FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) b,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 2,1) NA,  ID_OBJ  FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) c,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 1,1) NA, ID_OBJ  FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) d&#xD;&#xA;where d.NA = c.NA &#xD;&#xA;and c.na = b.na&#xD;&#xA;and d.ID_OBJ  = c.ID_OBJ  and c.ID_OBJ  = b.ID_OBJ     )) and CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
