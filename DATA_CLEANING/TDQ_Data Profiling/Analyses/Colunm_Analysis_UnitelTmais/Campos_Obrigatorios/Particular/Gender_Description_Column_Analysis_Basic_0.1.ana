@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_4ePQgIU0Eey_8Z7FFdyZ1w" name="Gender_Description_Column_Analysis_Basic" creationDate="2022-02-03T17:04:31.611-0300" defaultContext="Default">
-    <clientDependency href="../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <clientDependency href="../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
     <taggedValue xmi:id="_4eP3kIU0Eey_8Z7FFdyZ1w" tag="Status" value="development"/>
     <taggedValue xmi:id="_4eP3kYU0Eey_8Z7FFdyZ1w" tag="Author" value="sergio.lima@sysvision.com.br"/>
     <taggedValue xmi:id="_4eP3koU0Eey_8Z7FFdyZ1w" tag="Purpose" value="Identificar padrao e campos nulos"/>
@@ -12,15 +12,15 @@
     <taggedValue xmi:id="_GjIHk4U1Eey_8Z7FFdyZ1w" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <taggedValue xmi:id="_GjJVsIU1Eey_8Z7FFdyZ1w" tag="Is Use Sample Data" value="false"/>
     <context xmi:id="_4eP3lYU0Eey_8Z7FFdyZ1w">
-      <connection href="../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
+      <connection href="../../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
     </context>
     <results xmi:id="_4eP3loU0Eey_8Z7FFdyZ1w">
       <resultMetadata xmi:id="_4eP3l4U0Eey_8Z7FFdyZ1w" executionDate="2022-03-16T13:56:47.051-0300" executionDuration="10800" message="" executionNumber="4" lastRunOk="true" lastExecutionNumberOk="4"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_C51bEKOREeyzNOsHl1GPmw" count="502341" computed="true">
         <parameters xmi:id="_C51bEaOREeyzNOsHl1GPmw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GVx9gKOREeyzNOsHl1GPmw" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE (tipo = 'Particular')" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_GUzGEKOREeyzNOsHl1GPmw" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_GUzGEaOREeyzNOsHl1GPmw" tag="Description" value="counts the number of rows"/>
@@ -30,8 +30,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_C51bEqOREeyzNOsHl1GPmw" count="502341" computed="true">
         <parameters xmi:id="_C51bE6OREeyzNOsHl1GPmw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GVx9gaOREeyzNOsHl1GPmw" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot; WHERE &quot;GenderDesciption&quot; IS NULL  AND (tipo = 'Particular')" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_GU7B4KOREeyzNOsHl1GPmw" name="Null Count" label="Null Count">
           <taggedValue xmi:id="_GU7B4aOREeyzNOsHl1GPmw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
@@ -41,8 +41,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_C51bFKOREeyzNOsHl1GPmw" count="502341" computed="true" distinctValueCount="3">
         <parameters xmi:id="_C51bFaOREeyzNOsHl1GPmw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GVykkKOREeyzNOsHl1GPmw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;GenderDesciption&quot; FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE (tipo = 'Particular')) A" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_GVEL0KOREeyzNOsHl1GPmw" name="Distinct Count" label="Distinct Count">
           <taggedValue xmi:id="_GVEL0aOREeyzNOsHl1GPmw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
@@ -52,8 +52,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_C51bFqOREeyzNOsHl1GPmw" count="502341" computed="true" uniqueValueCount="0">
         <parameters xmi:id="_C51bF6OREeyzNOsHl1GPmw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GVykkaOREeyzNOsHl1GPmw" body="SELECT COUNT(*) FROM (SELECT &quot;GenderDesciption&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE (tipo = 'Particular') GROUP BY &quot;GenderDesciption&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_GVMHoKOREeyzNOsHl1GPmw" name="Unique Count" label="Unique Count">
           <taggedValue xmi:id="_GVMHoaOREeyzNOsHl1GPmw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
@@ -69,8 +69,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_C51bGKOREeyzNOsHl1GPmw" count="502341" computed="true" duplicateValueCount="3">
         <parameters xmi:id="_C51bGaOREeyzNOsHl1GPmw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GVykkqOREeyzNOsHl1GPmw" body="SELECT COUNT(*) FROM (SELECT &quot;GenderDesciption&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  m  WHERE (tipo = 'Particular') GROUP BY &quot;GenderDesciption&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_GVV4oKOREeyzNOsHl1GPmw" name="Duplicate Count" label="Duplicate Count">
           <taggedValue xmi:id="_GVV4oaOREeyzNOsHl1GPmw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
@@ -86,8 +86,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_C51bGqOREeyzNOsHl1GPmw" count="502341" computed="true" blankCount="238443">
         <parameters xmi:id="_C51bG6OREeyzNOsHl1GPmw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GVykk6OREeyzNOsHl1GPmw" body="SELECT COUNT(&quot;GenderDesciption&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;GenderDesciption&quot;)) = ''  AND (tipo = 'Particular')" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_GVdNYKOREeyzNOsHl1GPmw" name="Blank Count" label="Blank Count">
           <taggedValue xmi:id="_GVdNYaOREeyzNOsHl1GPmw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
@@ -101,8 +101,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_C51bHKOREeyzNOsHl1GPmw" count="502341" computed="true" distinctValueCount="3" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C770800000010000000037400007372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000003A36B7400094141414141414141417371007E0003000000000002721A74000841414141414141417371007E000300000000000194C078">
         <parameters xmi:id="_C51bHaOREeyzNOsHl1GPmw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgeKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GVyklKOREeyzNOsHl1GPmw" body="SELECT TOP 10  REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(&quot;GenderDesciption&quot;,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9') , COUNT(*) c FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot; t  WHERE (tipo = 'Particular') GROUP BY REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(&quot;GenderDesciption&quot;,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9') ORDER BY c DESC" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_GVlwQKOREeyzNOsHl1GPmw" name="Pattern Frequency Table" label="Pattern Frequency Table">
           <taggedValue xmi:id="_GVlwQaOREeyzNOsHl1GPmw" tag="Description" value="counts the number of records for each distinct pattern"/>
