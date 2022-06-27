@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:UBmRwNlVOrgotZUO9UsgAoZ74vZeA4TWuUkXITeJ"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:5Cva9Mj3SOImsNHjJk2OC86MdqMm9VqI538Vt2Cc"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:euSRgWmDfL+Xud8ToUygoMdoCib3p/s8UfURuehD"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:IB+V5UUKpFHFnxCGjmYGcIZFq5uXmSKfOeu3GtmQ"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -126,7 +126,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cadastro&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CadSQL&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:jhEqXQKAnsoWL32T+b3H4skwwFK30wBsx6jldV8ukrO/17WwWA5wBc9P"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:xcmvd8t5YLyfao1AsQD16NBmCOzbc/I7TcQfc46ZCTaqP5yk7UHVweRF"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -151,7 +151,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="192">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
@@ -162,13 +162,13 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:XMITemfh/dY8fv6ojB3gn82T5mE6bDthiV1ZXvGB"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:02QF8fDku60Kxc0flI/ALckSMHn59rSHjMPgQI2o"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select sys_id, id_obj, name, tipo_docs, valuedocs, industry, codcertcomercial, valuetelefone, ilha, remarks, adressid&#13;&#10;-- LegalRepresentativeName&#13;&#10;-- LegalRepresentativePhone&#13;&#10;-- LegalRepresentativeTypeDoc&#13;&#10;-- LegalRepresentativeNumDoc&#13;&#10;-- LegalRepresentativeEmail&#13;&#10;  from sv_golden_record_empresarial&#13;&#10; where len(ltrim(rtrim(name))) &lt; 5&#13;&#10;    or (SUBSTRING(upper(ltrim(rtrim(name))), 3,1) = SUBSTRING(upper(ltrim(rtrim(name))), 2,1) and&#13;&#10;        SUBSTRING(upper(ltrim(rtrim(name))), 2,1) = SUBSTRING(upper(ltrim(rtrim(name))), 1,1))&#13;&#10;&#9;or (tipo_docs IS NULL or tipo_docs = '')&#13;&#10;    or (tipo_docs = 'NIF'&#13;&#10;and len(ltrim(rtrim(valuedocs))) = 9&#13;&#10;and substring(ltrim(rtrim(valuedocs)), 1, 1) not in ('2','3','4','5'))&#13;&#10;    or (tipo_docs = 'NIF'&#13;&#10;and len(ltrim(rtrim(valuedocs))) != 9)&#13;&#10;    or (industry not in (select value from ucc_t_domain where domain = 'SETOR_ATIV'))&#13;&#10;&#9;or (CodCertComercial is null or CodCertComercial = '')&#13;&#10;&#9;or (valuetelefone is null &#13;&#10;   or valuetelefone = '' &#13;&#10;   or isnumeric(replace(valuetelefone, ' ', '')) = 0)&#13;&#10;    or (Ilha is null or Ilha = '')&#13;&#10;&#9;or (Remarks is null or Remarks = '')&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select name, sys_id, id_obj, tipo_docs, valuedocs, industry, codcertcomercial, valuetelefone, ilha, remarks, adressid&#13;&#10;-- LegalRepresentativeName&#13;&#10;-- LegalRepresentativePhone&#13;&#10;-- LegalRepresentativeTypeDoc&#13;&#10;-- LegalRepresentativeNumDoc&#13;&#10;-- LegalRepresentativeEmail&#13;&#10;  from sv_golden_record_empresarial&#13;&#10; where len(ltrim(rtrim(name))) &lt; 5&#13;&#10;    or (SUBSTRING(upper(ltrim(rtrim(name))), 3,1) = SUBSTRING(upper(ltrim(rtrim(name))), 2,1) and&#13;&#10;        SUBSTRING(upper(ltrim(rtrim(name))), 2,1) = SUBSTRING(upper(ltrim(rtrim(name))), 1,1))&#13;&#10;&#9;or (tipo_docs IS NULL or tipo_docs = '')&#13;&#10;    or (tipo_docs = 'NIF'&#13;&#10;and len(ltrim(rtrim(valuedocs))) = 9&#13;&#10;and substring(ltrim(rtrim(valuedocs)), 1, 1) not in ('2','3','4','5'))&#13;&#10;    or (tipo_docs = 'NIF'&#13;&#10;and len(ltrim(rtrim(valuedocs))) != 9)&#13;&#10;    or (industry not in (select value from ucc_t_domain where domain = 'SETOR_ATIV'))&#13;&#10;&#9;or (CodCertComercial is null or CodCertComercial = '')&#13;&#10;&#9;or (valuetelefone is null &#13;&#10;   or valuetelefone = '' &#13;&#10;   or isnumeric(replace(valuetelefone, ' ', '')) = 0)&#13;&#10;    or (Ilha is null or Ilha = '')&#13;&#10;&#9;or (Remarks is null or Remarks = '')&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -181,13 +181,14 @@
     <elementParameter field="TABLE" name="TRIM_COLUMN"/>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="SV_GOLDEN_RECORD_EMPRESARIAL"/>
     <metadata connector="FLOW" name="tDBInput_1"/>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Rui/workspace/talend/Jobs/DadosObrigatorios_Queries/CamposEmpresariais_out&quot;+contect.data+&quot;.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Rui/workspace/talend/Jobs/DadosObrigatorios_Queries/CamposEmpresariais_out&quot;+context.data+&quot;.csv&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -212,17 +213,207 @@
     <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
     <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="LABEL" value="Empresariais"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_1"/>
   </node>
-  <node componentName="tDBInput" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:/7TDzEPw1pv/nW1BA27Mt/4pjUG0Yjuf78OaGfTy"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select name, sys_id, id_obj, birthdata, tipo_docs, valuedocs, genderdesciption, valuetelefone, ilha, remarks, adressid, &#13;&#10;       datanasc as DataNascSniac, tipodocs as TipoDocSniac, numdoc as NumDocSniac&#13;&#10;-- LocalNascimento&#13;&#10;-- DataDoc_Emissao&#13;&#10;-- LocalEmissao&#13;&#10;-- Assinatura&#13;&#10;-- NomeRepresentanteFamilia&#13;&#10;-- Relacao_Agregado&#13;&#10;-- mais campos associados ao tutor&#13;&#10;  from SV_GOLDEN_RECORD_PARTICULAR&#13;&#10; where ((len(ltrim(rtrim(name))) &lt; 4&#13;&#10;    or (SUBSTRING(upper(ltrim(rtrim(name))), 3,1) = SUBSTRING(upper(ltrim(rtrim(name))), 2,1) and&#13;&#10;        SUBSTRING(upper(ltrim(rtrim(name))), 2,1) = SUBSTRING(upper(ltrim(rtrim(name))), 1,1)))&#13;&#10;&#9;or ((birthdata is null or birthdata = '')&#13;&#10;and (datanasc is null or datanasc = ''))&#13;&#10;    or ((birthdata is null or birthdata = '')&#13;&#10;and (datanasc is not null AND datanasc != ''))&#13;&#10;    or (birthdata is not null and birthdata != '' &#13;&#10;and (birthdata &lt; '1900-01-01' or birthdata &gt; '2022-06-01'))&#13;&#10;    or ((tipo_docs IS NULL or tipo_docs = '')&#13;&#10;and (tipodocs is null or tipodocs = ''))&#13;&#10;    or ((tipo_docs IS NULL or tipo_docs = '')&#13;&#10;and (tipodocs is not null and tipodocs != ''))&#13;&#10;    or (tipo_docs is not null and tipo_docs != ''&#13;&#10;and (valuedocs is null or valuedocs = '')&#13;&#10;and (tipodocs is null or tipodocs = ''))&#13;&#10;    or (tipo_docs is not null and tipo_docs != ''&#13;&#10;and (valuedocs is null or valuedocs = '')&#13;&#10;and (tipodocs is not null and tipodocs != ''))&#13;&#10;    or (tipo_docs = 'NIF'&#13;&#10;and len(ltrim(rtrim(valuedocs))) = 9&#13;&#10;and substring(ltrim(rtrim(valuedocs)), 1, 1) != '1')&#13;&#10;    or (tipo_docs = 'NIF'&#13;&#10;and len(ltrim(rtrim(valuedocs))) != 9)&#13;&#10;    or (tipo_docs = 'CNI'&#13;&#10;and len(ltrim(rtrim(valuedocs))) != 13)&#13;&#10;    or (tipo_docs = 'CNI'&#13;&#10;and len(ltrim(rtrim(valuedocs))) = 13&#13;&#10;and (substring(ltrim(rtrim(valuedocs)), 9, 1) not in ('M','m','F','f') or&#13;&#10;     substring(ltrim(rtrim(valuedocs)), 5, 2) &gt; 12 or&#13;&#10;     substring(ltrim(rtrim(valuedocs)), 7, 2) &gt; 31 or&#13;&#10;     substring(ltrim(rtrim(valuedocs)), 10, 3) NOT LIKE '%[0-9]%' or&#13;&#10;     substring(ltrim(rtrim(valuedocs)), 13, 1) LIKE '%[0-9]%'))&#13;&#10;&#9;or (tipo_docs = 'Passaporte'&#13;&#10;and nationality = 'CV'&#13;&#10;and len(ltrim(rtrim(valuedocs))) != 7 and len(ltrim(rtrim(valuedocs))) != 8)&#13;&#10;    or (tipo_docs = 'Passaporte'&#13;&#10;and nationality = 'CV'&#13;&#10;and (len(ltrim(rtrim(valuedocs))) = 7 or len(ltrim(rtrim(valuedocs))) = 8)&#13;&#10;and (substring(ltrim(rtrim(valuedocs)), 1, 1) LIKE '%[0-9]%' or&#13;&#10;     substring(ltrim(rtrim(valuedocs)), 2, 1) LIKE '%[0-9]%' or &#13;&#10;     (len(ltrim(rtrim(valuedocs))) = 7 and substring(ltrim(rtrim(valuedocs)), 3, 5) NOT LIKE '%[0-9]%') or&#13;&#10;     (len(ltrim(rtrim(valuedocs))) = 8 and substring(ltrim(rtrim(valuedocs)), 3, 6) NOT LIKE '%[0-9]%')))&#13;&#10;&#9;or ((valuetelefone is null &#13;&#10;   or valuetelefone = '' &#13;&#10;   or isnumeric(replace(valuetelefone, ' ', '')) = 0))&#13;&#10;    or (GenderDesciption NOT IN (select description from ucc_t_domain where domain = 'GENDER'))&#13;&#10;&#9;or (Ilha is null or Ilha = '')&#13;&#10;&#9;or (Remarks is null or Remarks = ''))&#13;&#10;   and (consult_sniac IS NULL OR consult_sniac = '' OR consult_sniac != '1900-01-01 00:00:00')&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN"/>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="SV_GOLDEN_RECORD_PARTICULAR"/>
+    <metadata connector="FLOW" name="tDBInput_2"/>
   </node>
-  <node componentName="tDBInput" offsetLabelX="0" offsetLabelY="0" posX="64" posY="448">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_2"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Rui/workspace/talend/Jobs/DadosObrigatorios_Queries/CamposParticulares_out&quot;+context.data+&quot;.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="LABEL" value="Particulares"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_2"/>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Bxqzfew2HhDN0W+JoT6V9Y3Vls1RbnwADoz6RA/T"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select sys_id, id_obj, name, tipo_docs, valuedocs, industry, codcertcomercial, valuetelefone, ilha, remarks, adressid&#13;&#10;  from SV_GOLDEN_RECORD_AGENTE_EMPRESARIAL&#13;&#10; where (len(ltrim(rtrim(name))) &lt; 4&#13;&#10;    or (SUBSTRING(upper(ltrim(rtrim(name))), 3,1) = SUBSTRING(upper(ltrim(rtrim(name))), 2,1) and&#13;&#10;        SUBSTRING(upper(ltrim(rtrim(name))), 2,1) = SUBSTRING(upper(ltrim(rtrim(name))), 1,1)))&#13;&#10;&#9;or (industry not in (select value from ucc_t_domain where domain = 'SETOR_ATIV'))&#13;&#10;&#9;or (CodCertComercial is null or CodCertComercial = '')&#13;&#10;&#9;or (valuetelefone is null &#13;&#10;   or valuetelefone = '' &#13;&#10;   or isnumeric(replace(valuetelefone, ' ', '')) = 0)&#13;&#10;    or (Ilha is null or Ilha = '')&#13;&#10;&#9;or (Remarks is null or Remarks = '')&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN"/>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="SV_GOLDEN_RECORD_AGENTE_EMPRESARIAL"/>
+    <metadata connector="FLOW" name="tDBInput_3"/>
   </node>
-  <node componentName="tDBInput" offsetLabelX="0" offsetLabelY="0" posX="64" posY="576">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_4"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Rui/workspace/talend/Jobs/DadosObrigatorios_Queries/CamposAgentesEmpresariais_out&quot;+context.data+&quot;.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="LABEL" value="Agentes Empresariais"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_4"/>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:VAHINbSr/5AKsr09Pt3hKPfCWLQQfOOMfzod70T5"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select sys_id, id_obj, name, birthdata, tipo_docs, valuedocs, genderdesciption, valuetelefone, ilha, remarks, adressid, &#13;&#10;       datanasc as DataNascSniac, tipodocs as TipoDocSniac, numdoc as NumDocSniac&#13;&#10;  from SV_GOLDEN_RECORD_AGENTE_PARTICULAR&#13;&#10; where ((len(ltrim(rtrim(name))) &lt; 4&#13;&#10;    or (SUBSTRING(upper(ltrim(rtrim(name))), 3,1) = SUBSTRING(upper(ltrim(rtrim(name))), 2,1) and&#13;&#10;        SUBSTRING(upper(ltrim(rtrim(name))), 2,1) = SUBSTRING(upper(ltrim(rtrim(name))), 1,1)))&#13;&#10;&#9;or ((birthdata is null or birthdata = '')&#13;&#10;and (datanasc is null or datanasc = ''))&#13;&#10;    or ((birthdata is null or birthdata = '')&#13;&#10;and (datanasc is not null AND datanasc != ''))&#13;&#10;    or (birthdata is not null and birthdata != '' &#13;&#10;and (birthdata &lt; '1900-01-01' or birthdata &gt; '2022-06-01'))&#13;&#10;    or ((valuetelefone is null &#13;&#10;   or valuetelefone = '' &#13;&#10;   or isnumeric(replace(valuetelefone, ' ', '')) = 0))&#13;&#10;    or (GenderDesciption NOT IN (select description from ucc_t_domain where domain = 'GENDER'))&#13;&#10;&#9;or (Ilha is null or Ilha = '')&#13;&#10;&#9;or (Remarks is null or Remarks = ''))&#13;&#10;   and (consult_sniac IS NULL OR consult_sniac = '' OR consult_sniac != '1900-01-01 00:00:00')&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN"/>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="SV_GOLDEN_RECORD_AGENTE_PARTICULAR"/>
+    <metadata connector="FLOW" name="tDBInput_4"/>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="576">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_5"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Rui/workspace/talend/Jobs/DadosObrigatorios_Queries/CamposAgentesParticulares_out&quot;+context.data+&quot;.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="LABEL" value="Agentes Particulares"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_5"/>
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
@@ -243,6 +434,18 @@
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tFileOutputDelimited_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tFileOutputDelimited_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tFileOutputDelimited_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
@@ -291,13 +494,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ed5f68eb-fc52-421f-8ed0-ae33f78bd742"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Z8LiqnUN4yRIx9gxsbs1VQ09jQdx+WJHH8t4K4DBibo7yQRJbp5jnuLS07T66eTTvIIt4mVbRAY0&#13;
-juQYfqVvkw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7abec8c6-ce15-4087-a24c-f916d4bc3666"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7POGEJrNAGsYSoM+kteBxMYH+iLZ8ovsJoAjwXc0ZvH8r5Xgxw9LBVV7GVpIBQ+bpwtZRDy3JmPn&#13;
-zMfl5bMOQA==</DigestValue></Reference></SignedInfo><SignatureValue>RwCBHkxluVxdBKwStRLu72i2DMwWNw5hh7gjF41kNusp4TBPZw4N3EnDqfK0rDgLX/O6ojduxCOh&#13;
-R7dZR92Iyf8DcF4l3WiTaQGfLhUOpQ2bQq7nZuzvYcP0vNmKMOeJs9CkUEJSAuC+pWPA+3ua0hAz&#13;
-RK37VIBDFZEeqiwIHhUyWGMIARW6zY4MxppArwwEInBGB5Sr3ITvcmPgoHFjJYgzeHYhHp8jZkmu&#13;
-LMlvfm9kYwO6sMA5W2C1tRvDnmiICfgeK4jqQJ5InyQRG5cHGBdAclg5lCJ6UNZojOeSj4/on3Gp&#13;
-u40i9TcOu6bY0WdZ/2+ee+kJSVf9EfPMT+cR8w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_34cc4dbd-935c-4349-82e3-632bf5df0f05"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EtfT+4u5Uu015xMZwX5comvNj3b+rdGnU3dDcRGaRljmPLbHhqR4M6rMuxTzYFzg+VS7i97VyOQ/&#13;
+TKBFhFeyAg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ad266c4c-8aee-4d96-b75b-c1cb1fff2e91"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qN23BT64nenFwiTA+gQhSNkb0ZU9tugn9p5C4wOoLuzFyqK+28fNPWjPSEP6ijWw+18CyEJ1w/y/&#13;
+yEuUzH1esQ==</DigestValue></Reference></SignedInfo><SignatureValue>W1jk+leO2pM0LR4PFdH5t2bGNQue+V94zM6Cf7F5Z1gkMpRcU8C7oMS7cd8BiS1E9pSjL16FIGLY&#13;
+0XDZWZGAFi+qTLDJ/q853Si1tiKm1LcjVquDqz7JgBqGIKOomB9HP4hY8yiyuLCLPia/7fQPxE9E&#13;
+YTtwTvNwEZisJ2SoyQeuu9KfK7ORYTp5WuLmgLXwM+Qb9ikDwiHjAYpRiEBF13qgJxJyWDAHKRtL&#13;
+eT2/AqtlJ160ubqIO3Q/CB0Eanbcx7G4FOxxrlfbDFHgw0i+AcN2WsFFn2FeOceUiC8gvv/nRDdj&#13;
+plJ46D5pYfRv8QavPMdGIa2AtqGsRi7IH332Sw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -319,4 +522,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7abec8c6-ce15-4087-a24c-f916d4bc3666" Target="#_ed5f68eb-fc52-421f-8ed0-ae33f78bd742"><Timestamp>2022-06-27 15:55:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ad266c4c-8aee-4d96-b75b-c1cb1fff2e91" Target="#_34cc4dbd-935c-4349-82e3-632bf5df0f05"><Timestamp>2022-06-27 16:06:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
