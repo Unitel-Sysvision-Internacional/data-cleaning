@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_USEJkHq9EeymA7ReFGNmPQ" name="Name_Column_Analysis_Basic" supplierDependency="_lyqX05TCEeyrDaC6mFuu4g" creationDate="2022-01-21T09:23:27.012-0300" defaultContext="Default">
-    <clientDependency href="../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <clientDependency href="../../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
     <taggedValue xmi:id="_USEJkXq9EeymA7ReFGNmPQ" tag="Status" value="development"/>
     <taggedValue xmi:id="_USEJknq9EeymA7ReFGNmPQ" tag="Author" value="sergio.lima@sysvision.com.br"/>
     <taggedValue xmi:id="_USEJk3q9EeymA7ReFGNmPQ" tag="Purpose" value="Análise básica da coluna nome"/>
@@ -12,15 +12,15 @@
     <taggedValue xmi:id="_aqUFE3q9EeymA7ReFGNmPQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <taggedValue xmi:id="_aqVTMXq9EeymA7ReFGNmPQ" tag="Is Use Sample Data" value="false"/>
     <context xmi:id="_USEJlnq9EeymA7ReFGNmPQ">
-      <connection href="../../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
+      <connection href="../../../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
     </context>
     <results xmi:id="_USEJl3q9EeymA7ReFGNmPQ">
       <resultMetadata xmi:id="_USEJmHq9EeymA7ReFGNmPQ" executionDate="2022-06-17T15:13:38.125-0300" executionDuration="12768406" message="For more information please refer to the Error Log view." executionNumber="21" lastExecutionNumberOk="18"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_umNoMO4_EeypZdT0nP310Q" count="274" computed="true">
         <parameters xmi:id="_umNoMe4_EeypZdT0nP310Q"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_wmEAEO4_EeypZdT0nP310Q" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE ((DATALENGTH(NAME) &lt;= 3 OR NAME = '') or&#xD;&#xA; ID_OBJ  in (&#xD;&#xA;(select b.ID_OBJ  from &#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 3,1) NA, NAME , ID_OBJ   FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) b,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 2,1) NA,  ID_OBJ  FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) c,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 1,1) NA, ID_OBJ  FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) d&#xD;&#xA;where d.NA = c.NA &#xD;&#xA;and c.na = b.na&#xD;&#xA;and d.ID_OBJ  = c.ID_OBJ  and c.ID_OBJ  = b.ID_OBJ     )) and CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_wleKMO4_EeypZdT0nP310Q" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_wleKMe4_EeypZdT0nP310Q" tag="Description" value="counts the number of rows"/>
@@ -30,8 +30,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_MXp7EO5pEeyUDuQrKVR7dw" count="274">
         <parameters xmi:id="_MXp7Ee5pEeyUDuQrKVR7dw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Na6H0O5pEeyUDuQrKVR7dw" body="SELECT TOP 10  REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(&quot;NAME&quot;,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9') , COUNT(*) c FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; t  WHERE ((DATALENGTH(NAME) &lt;= 3 OR NAME = '') or&#xD;&#xA; ID_OBJ  in (&#xD;&#xA;(select b.ID_OBJ  from &#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 3,1) NA, NAME , ID_OBJ   FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) b,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 2,1) NA,  ID_OBJ  FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) c,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 1,1) NA, ID_OBJ  FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) d&#xD;&#xA;where d.NA = c.NA &#xD;&#xA;and c.na = b.na&#xD;&#xA;and d.ID_OBJ  = c.ID_OBJ  and c.ID_OBJ  = b.ID_OBJ     )) and CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(&quot;NAME&quot;,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9') ORDER BY c DESC" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_Na0BMO5pEeyUDuQrKVR7dw" name="Pattern Frequency Table" label="Pattern Frequency Table">
           <taggedValue xmi:id="_Na0BMe5pEeyUDuQrKVR7dw" tag="Description" value="counts the number of records for each distinct pattern"/>
@@ -66,7 +66,7 @@
     <contextType xmi:id="_aqUFEHq9EeymA7ReFGNmPQ" confirmationNeeded="false" name="Default"/>
   </dataquality.analysis:Analysis>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_lyqX05TCEeyrDaC6mFuu4g" kind="Usage" supplier="_USEJkHq9EeymA7ReFGNmPQ">
-    <client xsi:type="dataquality.reports:TdReport" href="../../../../Reports/Campos_obrigatorios/Name_Column_Analysis_Basic_0.1.rep#_lyqXwZTCEeyrDaC6mFuu4g"/>
+    <client xsi:type="dataquality.reports:TdReport" href="../../../../../Reports/Campos_obrigatorios/Name_Column_Analysis_Basic_0.1.rep#_lyqXwZTCEeyrDaC6mFuu4g"/>
   </orgomg.cwm.objectmodel.core:Dependency>
   <dataquality.domain:Domain xmi:id="_aqV6QHq9EeymA7ReFGNmPQ" name="Name_Column_Analysis_Basic">
     <ranges xmi:id="_aqV6QXq9EeymA7ReFGNmPQ">

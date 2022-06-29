@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_nQZ34eaiEeydA-cemO9dag" name="valuetelefone_Column_Analysis_Basic_SYS" creationDate="2022-02-24T17:42:38.517-0300" defaultContext="Default">
-    <clientDependency href="../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <clientDependency href="../../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
     <taggedValue xmi:id="_nQZ34uaiEeydA-cemO9dag" tag="Status" value="development"/>
     <taggedValue xmi:id="_nQZ34-aiEeydA-cemO9dag" tag="Author" value="sergio.lima@sysvision.com.br"/>
     <taggedValue xmi:id="_nQZ35OaiEeydA-cemO9dag" tag="Purpose" value="Analise da qualidade dos dados da coluna "/>
@@ -12,15 +12,15 @@
     <taggedValue xmi:id="_nQZ36eaiEeydA-cemO9dag" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <taggedValue xmi:id="_nQZ36uaiEeydA-cemO9dag" tag="Is Use Sample Data" value="false"/>
     <context xmi:id="_nQZ36-aiEeydA-cemO9dag">
-      <connection href="../../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
+      <connection href="../../../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
     </context>
     <results xmi:id="_nQZ37OaiEeydA-cemO9dag">
       <resultMetadata xmi:id="_nQZ37eaiEeydA-cemO9dag" executionDate="2022-06-10T16:06:29.896-0300" executionDuration="14710" message="" executionNumber="9" lastRunOk="true" lastExecutionNumberOk="9"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_wNRFMOaiEeydA-cemO9dag" count="522013" computed="true">
         <parameters xmi:id="_wNRFMeaiEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xl328OaiEeydA-cemO9dag" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE (Data_Ins = (SELECT MAX(Data_Ins) FROM SYS_DET_CLIENTES))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_xlD-kOaiEeydA-cemO9dag" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_xlD-keaiEeydA-cemO9dag" tag="Description" value="counts the number of rows"/>
@@ -30,8 +30,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_wNRFMuaiEeydA-cemO9dag" count="522013" computed="true">
         <parameters xmi:id="_wNRFM-aiEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xl328eaiEeydA-cemO9dag" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot; WHERE &quot;ValueTelefone&quot; IS NULL  AND (Data_Ins = (SELECT MAX(Data_Ins) FROM SYS_DET_CLIENTES))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_xlD-lOaiEeydA-cemO9dag" name="Null Count" label="Null Count">
           <taggedValue xmi:id="_xlD-leaiEeydA-cemO9dag" tag="Purpose" value="evaluate the number of missing data (null records)"/>
@@ -41,8 +41,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_wNRFNOaiEeydA-cemO9dag" count="522013" computed="true" distinctValueCount="369903">
         <parameters xmi:id="_wNRFNeaiEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xl328uaiEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;ValueTelefone&quot; FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE (Data_Ins = (SELECT MAX(Data_Ins) FROM SYS_DET_CLIENTES))) A" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_xlNvkOaiEeydA-cemO9dag" name="Distinct Count" label="Distinct Count">
           <taggedValue xmi:id="_xlNvkeaiEeydA-cemO9dag" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
@@ -52,8 +52,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_wNRFNuaiEeydA-cemO9dag" count="522013" computed="true" uniqueValueCount="341303">
         <parameters xmi:id="_wNRFN-aiEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xl328-aiEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &quot;ValueTelefone&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE (Data_Ins = (SELECT MAX(Data_Ins) FROM SYS_DET_CLIENTES)) GROUP BY &quot;ValueTelefone&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_xlNvlOaiEeydA-cemO9dag" name="Unique Count" label="Unique Count">
           <taggedValue xmi:id="_xlNvleaiEeydA-cemO9dag" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
@@ -69,8 +69,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_wNRFOOaiEeydA-cemO9dag" count="522013" computed="true" duplicateValueCount="28600">
         <parameters xmi:id="_wNRFOeaiEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xl329OaiEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &quot;ValueTelefone&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  m  WHERE (Data_Ins = (SELECT MAX(Data_Ins) FROM SYS_DET_CLIENTES)) GROUP BY &quot;ValueTelefone&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_xlW5gOaiEeydA-cemO9dag" name="Duplicate Count" label="Duplicate Count">
           <taggedValue xmi:id="_xlW5geaiEeydA-cemO9dag" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
@@ -86,8 +86,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_wNRFOuaiEeydA-cemO9dag" count="522013" computed="true" blankCount="105800">
         <parameters xmi:id="_wNRFO-aiEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xl329eaiEeydA-cemO9dag" body="SELECT COUNT(&quot;ValueTelefone&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;ValueTelefone&quot;)) = ''  AND (Data_Ins = (SELECT MAX(Data_Ins) FROM SYS_DET_CLIENTES))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_xlgqgOaiEeydA-cemO9dag" name="Blank Count" label="Blank Count">
           <taggedValue xmi:id="_xlgqgeaiEeydA-cemO9dag" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
@@ -101,8 +101,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_wNRFPOaiEeydA-cemO9dag" count="522013" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A7400007372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000019D487400063939393939397371007E0003000000000000012274000820393939393939397371007E0003000000000000003C7400093939392039392039397371007E0003000000000000001974000F393939393939392F393939393939397371007E0003000000000000003E740008393939393939393971007E000B74001139393939393939202F20393939393939397371007E0003000000000000000C740007393939393939397371007E000300000000000656FC74001139393939393939202D20393939393939397371007E0003000000000000004774000A393939393939393939397371007E0003000000000000001278">
         <parameters xmi:id="_wNRFPeaiEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xl329uaiEeydA-cemO9dag" body="SELECT TOP 10  REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(&quot;ValueTelefone&quot;,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9') , COUNT(*) c FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot; t  WHERE (Data_Ins = (SELECT MAX(Data_Ins) FROM SYS_DET_CLIENTES)) GROUP BY REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(&quot;ValueTelefone&quot;,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9') ORDER BY c DESC" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_xlgqiOaiEeydA-cemO9dag" name="Pattern Frequency Table" label="Pattern Frequency Table">
           <taggedValue xmi:id="_xlgqieaiEeydA-cemO9dag" tag="Description" value="counts the number of records for each distinct pattern"/>
@@ -134,8 +134,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:PatternLowFreqIndicator" xmi:id="_wNRFPuaiEeydA-cemO9dag" count="522013" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A74000D39393939393939202D204141417372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000000174000B2B3939393939393939393971007E0005740012393939393939393939392F3939393939393971007E000574000B393939393939392041414171007E000574001039393920393939392F3939393939393971007E000574000C20202039393939393939202071007E000574000F39393939392039393939393939393971007E000574000BC2A039393939393939C2A071007E00057400242D2039393939393939202D39393939393939202D39393939393939202D3939393939393971007E0005740014393939393939392020202F20203939393939393971007E000578">
         <parameters xmi:id="_wNRFP-aiEeydA-cemO9dag"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Low_Frequency_Table_0.1.definition#_OCTbwJR_Ed2XO-JvLwVAwg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Low_Frequency_Table_0.1.definition#_OCTbwJR_Ed2XO-JvLwVAwg"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xl329-aiEeydA-cemO9dag" body="SELECT TOP 10  REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(&quot;ValueTelefone&quot;,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9'), COUNT(*) c FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot; t  WHERE (Data_Ins = (SELECT MAX(Data_Ins) FROM SYS_DET_CLIENTES)) GROUP BY REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(&quot;ValueTelefone&quot;,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9') ORDER BY c ASC" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_xlp0cOaiEeydA-cemO9dag" name="Pattern Low Frequency Table" label="Pattern Low Frequency Table">
           <taggedValue xmi:id="_xlp0ceaiEeydA-cemO9dag" tag="Description" value="counts the number of patterns for each distinct pattern"/>
@@ -169,8 +169,8 @@
         <parameters xmi:id="_wNRFQeaiEeydA-cemO9dag">
           <textParameter xmi:id="_wNRFQuaiEeydA-cemO9dag" useBlank="false"/>
         </parameters>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xl32-OaiEeydA-cemO9dag" body="SELECT MIN(LEN(&quot;ValueTelefone&quot;)) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot; WHERE (&quot;ValueTelefone&quot; IS NOT NULL ) AND (LTRIM(RTRIM(CASE WHEN &quot;ValueTelefone&quot; IS NULL  THEN 'NULL TALEND' ELSE &quot;ValueTelefone&quot; END)) &lt;> '' )  AND (Data_Ins = (SELECT MAX(Data_Ins) FROM SYS_DET_CLIENTES))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_xluF4OaiEeydA-cemO9dag" name="Minimal Length" label="Minimal Length">
           <taggedValue xmi:id="_xluF4eaiEeydA-cemO9dag" tag="Description" value="computes the minimal length of a text field. Does not take into account the null and blank values when computing the minimal length."/>
@@ -194,8 +194,8 @@
         <parameters xmi:id="_wNRFROaiEeydA-cemO9dag">
           <textParameter xmi:id="_wNRFReaiEeydA-cemO9dag" useBlank="false"/>
         </parameters>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_3LIgDKONEeyzNOsHl1GPmw"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xl32-eaiEeydA-cemO9dag" body="SELECT MAX(LEN(&quot;ValueTelefone&quot;)) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;SYS_DET_CLIENTES&quot; WHERE (&quot;ValueTelefone&quot; IS NOT NULL ) AND (LTRIM(RTRIM(CASE WHEN &quot;ValueTelefone&quot; IS NULL  THEN 'NULL TALEND' ELSE &quot;ValueTelefone&quot; END)) &lt;> '' )  AND (Data_Ins = (SELECT MAX(Data_Ins) FROM SYS_DET_CLIENTES))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_xl324OaiEeydA-cemO9dag" name="Maximal Length" label="Maximal Length">
           <taggedValue xmi:id="_xl324eaiEeydA-cemO9dag" tag="Description" value="computes the maximal length of a text field. Does not take into account the null and blank values when computing the maximal length."/>
