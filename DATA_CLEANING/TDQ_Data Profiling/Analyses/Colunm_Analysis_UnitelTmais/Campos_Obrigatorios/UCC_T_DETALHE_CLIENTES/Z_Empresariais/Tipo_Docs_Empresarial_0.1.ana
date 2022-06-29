@@ -169,10 +169,10 @@
     <parameters xmi:id="_ZhNW8vfZEeysjZujA1j0bQ" dataFilter="_ZhNW9PfZEeysjZujA1j0bQ" analysisType="Multiple Column Analysis"/>
     <contextType xmi:id="_ZhNW8_fZEeysjZujA1j0bQ" confirmationNeeded="false" name="Default"/>
   </dataquality.analysis:Analysis>
-  <dataquality.domain:Domain xmi:id="_ZhNW9PfZEeysjZujA1j0bQ" name="Analysis Data Filter">
+  <dataquality.domain:Domain xmi:id="_ZhNW9PfZEeysjZujA1j0bQ" name="Tipo_Docs_Empresarial">
     <ranges xmi:id="_ZhNW9ffZEeysjZujA1j0bQ">
       <expressions xmi:id="_ZhNW9vfZEeysjZujA1j0bQ">
-        <expression xsi:type="relational:TdExpression" xmi:id="_ZhNW9_fZEeysjZujA1j0bQ" body="CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_ZhNW9_fZEeysjZujA1j0bQ" body="CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) and tipo = 'Empresarial'" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
