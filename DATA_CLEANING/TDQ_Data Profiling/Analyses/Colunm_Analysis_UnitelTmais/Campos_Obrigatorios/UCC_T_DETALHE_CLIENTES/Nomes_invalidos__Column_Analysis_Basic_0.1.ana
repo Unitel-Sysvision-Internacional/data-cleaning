@@ -71,7 +71,7 @@
   <dataquality.domain:Domain xmi:id="_dcdYWe5HEeypZdT0nP310Q" name="Nomes_invalidos__Column_Analysis_Basic">
     <ranges xmi:id="_dcdYWu5HEeypZdT0nP310Q">
       <expressions xmi:id="_dcdYW-5HEeypZdT0nP310Q">
-        <expression xsi:type="relational:TdExpression" xmi:id="_dcdYXO5HEeypZdT0nP310Q" body="len(ltrim(rtrim(name))) &lt; 4&#xD;&#xA;    or (SUBSTRING(upper(ltrim(rtrim(name))), 3,1) = SUBSTRING(upper(ltrim(rtrim(name))), 2,1) and&#xD;&#xA;        SUBSTRING(upper(ltrim(rtrim(name))), 2,1) = SUBSTRING(upper(ltrim(rtrim(name))), 1,1))&#xD;&#xA;" language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_dcdYXO5HEeypZdT0nP310Q" body="len(ltrim(rtrim(name))) &lt; 4&#xD;&#xA;    or (SUBSTRING(upper(ltrim(rtrim(name))), 3,1) = SUBSTRING(upper(ltrim(rtrim(name))), 2,1) and&#xD;&#xA;        SUBSTRING(upper(ltrim(rtrim(name))), 2,1) = SUBSTRING(upper(ltrim(rtrim(name))), 1,1)) &#xD;&#xA;and CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
