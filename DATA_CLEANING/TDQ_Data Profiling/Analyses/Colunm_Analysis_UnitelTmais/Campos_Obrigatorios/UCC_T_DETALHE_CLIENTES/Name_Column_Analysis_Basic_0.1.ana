@@ -61,6 +61,31 @@
           <charactersMapping xmi:id="_Na0BSe5pEeyUDuQrKVR7dw" name="Characters mapping on Hive" language="Hive" charactersToReplace="0123456789abcdefghijklmnopqrstuvwxyz?aê???éèù??üABCDEFGHIJKLMNOPQRSTUVWXYZ??ê???éèù??ü" replacementCharacters="9999999999aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
         </builtInIndicatorDefinition>
       </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_4NMNgPfXEeysjZujA1j0bQ">
+        <parameters xmi:id="_4NMNgffXEeysjZujA1j0bQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_4NMNgvfXEeysjZujA1j0bQ">
+        <parameters xmi:id="_4NMNg_fXEeysjZujA1j0bQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_4NMNhPfXEeysjZujA1j0bQ">
+        <parameters xmi:id="_4NMNhffXEeysjZujA1j0bQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_4NMNhvfXEeysjZujA1j0bQ">
+        <parameters xmi:id="_4NMNh_fXEeysjZujA1j0bQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_4NMNiPfXEeysjZujA1j0bQ">
+        <parameters xmi:id="_4NMNiffXEeysjZujA1j0bQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL5lHlIEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+      </indicators>
     </results>
     <parameters xmi:id="_USEJmXq9EeymA7ReFGNmPQ" dataFilter="_aqV6QHq9EeymA7ReFGNmPQ" analysisType="Multiple Column Analysis"/>
     <contextType xmi:id="_aqUFEHq9EeymA7ReFGNmPQ" confirmationNeeded="false" name="Default"/>
@@ -71,7 +96,7 @@
   <dataquality.domain:Domain xmi:id="_aqV6QHq9EeymA7ReFGNmPQ" name="Name_Column_Analysis_Basic">
     <ranges xmi:id="_aqV6QXq9EeymA7ReFGNmPQ">
       <expressions xmi:id="_aqV6Qnq9EeymA7ReFGNmPQ">
-        <expression xsi:type="relational:TdExpression" xmi:id="_aqV6Q3q9EeymA7ReFGNmPQ" body="(DATALENGTH(NAME) &lt;= 3 OR NAME = '') or&#xD;&#xA; ID_OBJ  in (&#xD;&#xA;(select b.ID_OBJ  from &#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 3,1) NA, NAME , ID_OBJ   FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) b,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 2,1) NA,  ID_OBJ  FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) c,&#xD;&#xA;(SELECT SUBSTRING(upper(NAME), 1,1) NA, ID_OBJ  FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; ) d&#xD;&#xA;where d.NA = c.NA &#xD;&#xA;and c.na = b.na&#xD;&#xA;and d.ID_OBJ  = c.ID_OBJ  and c.ID_OBJ  = b.ID_OBJ     )) and CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_aqV6Q3q9EeymA7ReFGNmPQ" body="CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
