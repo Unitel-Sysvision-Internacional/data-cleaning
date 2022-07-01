@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <dataquality.analysis:Analysis xmi:id="_p5ANgflIEeysjZujA1j0bQ" name="Ilha_UCC_VS_T_GEOGRAFIA" supplierDependency="_k1-GkPlKEeysjZujA1j0bQ" creationDate="2022-07-01T11:18:18.584-0300" defaultContext="Default">
+  <dataquality.analysis:Analysis xmi:id="_p5ANgflIEeysjZujA1j0bQ" name="Ilha_UCC_VS_T_GEOGRAFIA_Redundancy_Analysis" supplierDependency="_k1-GkPlKEeysjZujA1j0bQ" creationDate="2022-07-01T11:18:18.584-0300" defaultContext="Default">
     <clientDependency href="../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
     <taggedValue xmi:id="_p5ANgvlIEeysjZujA1j0bQ" tag="Status" value="development"/>
     <taggedValue xmi:id="_p5ANg_lIEeysjZujA1j0bQ" tag="Author" value="sergio.lima@sysvision.com.br"/>
@@ -50,7 +50,7 @@
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_k1-GkPlKEeysjZujA1j0bQ" kind="Usage" supplier="_p5ANgflIEeysjZujA1j0bQ">
     <client xsi:type="dataquality.reports:TdReport" href="../../../../Reports/BKP/Ilha_UCC_VS_T_GEOGRAFIA_0.1.rep#_k1m6MflKEeysjZujA1j0bQ"/>
   </orgomg.cwm.objectmodel.core:Dependency>
-  <dataquality.domain:Domain xmi:id="_NrcOwPlMEeysjZujA1j0bQ" name="Ilha_UCC_VS_T_GEOGRAFIA">
+  <dataquality.domain:Domain xmi:id="_NrcOwPlMEeysjZujA1j0bQ" name="Ilha_UCC_VS_T_GEOGRAFIA_Redundancy_Analysis">
     <ranges xmi:id="_NrcOwflMEeysjZujA1j0bQ">
       <expressions xmi:id="_NrcOwvlMEeysjZujA1j0bQ">
         <expression xsi:type="relational:TdExpression" xmi:id="_NrcOw_lMEeysjZujA1j0bQ" body="CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
