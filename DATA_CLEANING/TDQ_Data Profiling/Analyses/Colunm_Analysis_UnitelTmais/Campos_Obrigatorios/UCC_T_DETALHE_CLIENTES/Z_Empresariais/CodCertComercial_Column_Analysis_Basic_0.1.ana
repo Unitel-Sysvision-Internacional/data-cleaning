@@ -143,7 +143,7 @@
   <dataquality.domain:Domain xmi:id="_Q6fshZpcEeyrDaC6mFuu4g" name="CodCertComercial_Column_Analysis_Basic">
     <ranges xmi:id="_Q6fshppcEeyrDaC6mFuu4g">
       <expressions xmi:id="_Q6fsh5pcEeyrDaC6mFuu4g">
-        <expression xsi:type="relational:TdExpression" xmi:id="_Q6fsiJpcEeyrDaC6mFuu4g" body="TIPO &lt;> 'Particular' AND   CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_Q6fsiJpcEeyrDaC6mFuu4g" body="TIPO = 'Empresarial' and  CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
