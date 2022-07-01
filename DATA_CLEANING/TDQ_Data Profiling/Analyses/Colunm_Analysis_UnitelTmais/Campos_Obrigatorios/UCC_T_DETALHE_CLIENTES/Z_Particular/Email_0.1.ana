@@ -16,7 +16,7 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6KHlIEeymA7ReFGNmPQ"/>
     </context>
     <results xmi:id="_yK7UttwuEeyzeLT6yC9qXw">
-      <resultMetadata xmi:id="_yK7Ut9wuEeyzeLT6yC9qXw" executionDate="2022-06-10T15:38:34.416-0300" executionDuration="15620" message="" executionNumber="16" lastRunOk="true" lastExecutionNumberOk="4"/>
+      <resultMetadata xmi:id="_yK7Ut9wuEeyzeLT6yC9qXw" executionDate="2022-07-01T16:30:43.718-0300" executionDuration="18606" message="" executionNumber="17" lastRunOk="true" lastExecutionNumberOk="5"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_9VKCMOXWEeydA-cemO9dag" count="554433" computed="true">
         <parameters xmi:id="_9VKCMeXWEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6KHlIEeymA7ReFGNmPQ"/>
@@ -39,7 +39,7 @@
           <sqlGenericExpression xmi:id="__Ail8-XWEeydA-cemO9dag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_9VKCNOXWEeydA-cemO9dag" count="554433" nullCount="9940" computed="true" distinctValueCount="56250">
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_9VKCNOXWEeydA-cemO9dag" count="554433" nullCount="9940" computed="true" distinctValueCount="56251">
         <parameters xmi:id="_9VKCNeXWEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6KHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
@@ -50,7 +50,7 @@
           <sqlGenericExpression xmi:id="__AmQU-XWEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_9VKCNuXWEeydA-cemO9dag" count="554433" nullCount="9940" computed="true" uniqueValueCount="40681">
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_9VKCNuXWEeydA-cemO9dag" count="554433" nullCount="9940" computed="true" uniqueValueCount="40682">
         <parameters xmi:id="_9VKCN-XWEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6KHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
@@ -84,7 +84,7 @@
           <sqlGenericExpression xmi:id="__AwoaeXWEeydA-cemO9dag" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_9VKCOuXWEeydA-cemO9dag" count="554433" nullCount="9940" computed="true">
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_9VKCOuXWEeydA-cemO9dag" count="554433" nullCount="9940" computed="true" blankCount="1">
         <parameters xmi:id="_9VKCO-XWEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6KHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
@@ -124,7 +124,7 @@
           <sqlGenericExpression xmi:id="_EF2S7-XXEeydA-cemO9dag" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="HDB"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_DZqiU-XXEeydA-cemO9dag" count="554433" nullCount="9940" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A707372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000000000026D474000241417371007E00020000000000001B217400164141414141414141414141414041414141412E4141417371007E00020000000000000DE9740007414141204141417371007E00020000000000004F0B740001417371007E0002000000000000375974000D414141414141415F41414141417371007E00020000000000051EC6740015414141412E412E414141414041412E4141412E41417371007E00020000000000001010740007393939393939397371007E00020000000000002BED740007413F41204141417371007E000200000000000028187400012E7371007E0002000000000000221678">
+      <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_DZqiU-XXEeydA-cemO9dag" count="554433" nullCount="9940" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A707372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000000000026D474000241417371007E00020000000000001B217400164141414141414141414141414041414141412E4141417371007E00020000000000000DE9740007414141204141417371007E00020000000000004F0B740001417371007E0002000000000000375974000D414141414141415F41414141417371007E00020000000000051EC5740015414141412E412E414141414041412E4141412E41417371007E00020000000000001010740007393939393939397371007E00020000000000002BED740007413F41204141417371007E000200000000000028187400012E7371007E0002000000000000221678">
         <parameters xmi:id="_DZqiVOXXEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6KHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
@@ -157,7 +157,7 @@
           <charactersMapping xmi:id="_EF7LeeXXEeydA-cemO9dag" name="Characters mapping on Hive" language="Hive" charactersToReplace="0123456789abcdefghijklmnopqrstuvwxyz?aê???éèù??üABCDEFGHIJKLMNOPQRSTUVWXYZ??ê???éèù??ü" replacementCharacters="9999999999aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:PatternLowFreqIndicator" xmi:id="_DZqiVeXXEeydA-cemO9dag" count="554433" nullCount="9940" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A74001B2A204141414141414141414141393940414141414141412E4141417372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000000000000017400172A2041414141414141393940414141414141412E41414171007E000574000325252571007E0005740008242424242424242471007E000574000E2A2041414120414141414141414171007E000574001B20414141414141414141414141414140414141414141412E41414171007E0005740018204141412E4141414141393939394041414141412E41414171007E00057400192A20414141414141414141414140414141414141412E41414171007E000574000625252525252571007E00057400072424242424242471007E000578">
+      <indicators xsi:type="dataquality.indicators:PatternLowFreqIndicator" xmi:id="_DZqiVeXXEeydA-cemO9dag" count="554433" nullCount="9940" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A7400007372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000000000000017400172A2041414141414141393940414141414141412E41414171007E000574000325252571007E0005740008242424242424242471007E000574000E2A2041414120414141414141414171007E000574001B20414141414141414141414141414140414141414141412E41414171007E0005740018204141412E4141414141393939394041414141412E41414171007E00057400192A20414141414141414141414140414141414141412E41414171007E000574000625252525252571007E00057400072424242424242471007E000578">
         <parameters xmi:id="_DZqiVuXXEeydA-cemO9dag"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6KHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Low_Frequency_Table_0.1.definition#_OCTbwJR_Ed2XO-JvLwVAwg"/>
