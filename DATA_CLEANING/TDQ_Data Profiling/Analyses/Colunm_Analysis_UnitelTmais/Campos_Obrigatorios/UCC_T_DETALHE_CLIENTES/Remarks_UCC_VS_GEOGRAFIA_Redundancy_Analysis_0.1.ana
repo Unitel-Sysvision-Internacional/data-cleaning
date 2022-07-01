@@ -50,7 +50,7 @@
   <dataquality.domain:Domain xmi:id="_f_wyVvlaEeysjZujA1j0bQ" name="Remarks_UCC_VS_GEOGRAFIA_Redundancy_Analysis">
     <ranges xmi:id="_f_wyV_laEeysjZujA1j0bQ">
       <expressions xmi:id="_f_wyWPlaEeysjZujA1j0bQ">
-        <expression xsi:type="relational:TdExpression" xmi:id="_f_wyWflaEeysjZujA1j0bQ" body="and CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_f_wyWflaEeysjZujA1j0bQ" body="CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
