@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_UsmowPlqEeysjZujA1j0bQ" name="Industry_UCC_VS_UCC_T_DOMAIN_Redundancy_Analysis " creationDate="2022-07-01T15:19:19.228-0300" defaultContext="Default">
+    <clientDependency href="../../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <taggedValue xmi:id="_UsmowflqEeysjZujA1j0bQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_UsmowvlqEeysjZujA1j0bQ" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_Usmow_lqEeysjZujA1j0bQ" tag="Purpose" value="Valida se o codigo da industria existe no dominio."/>
+    <taggedValue xmi:id="_UsmoxPlqEeysjZujA1j0bQ" tag="Description" value="Valida se o codigo da industria existe no dominio."/>
+    <taggedValue xmi:id="_UsmoxflqEeysjZujA1j0bQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_nJxusflqEeysjZujA1j0bQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_nJyVwvlqEeysjZujA1j0bQ" tag="Ignore Null" value="false"/>
+    <taggedValue xmi:id="_nJyVw_lqEeysjZujA1j0bQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_UsmoxvlqEeysjZujA1j0bQ">
+      <connection href="../../../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL51HlIEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_kt_MpHrBEeymA7ReFGNmPQ"/>
+    </context>
+    <results xmi:id="_Usmox_lqEeysjZujA1j0bQ">
+      <resultMetadata xmi:id="_UsmoyPlqEeysjZujA1j0bQ" executionDate="2022-07-01T15:21:31.018-0300" executionDuration="3818" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators.columnset:RowMatchingIndicator" xmi:id="_nJyVwPlqEeysjZujA1j0bQ" count="554433" computed="true" notMatchingValueCount="554433">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Row Comparison/Row_Comparison_0.1.definition#_jMh4gJE3Ed2HGNmGoaS-_w"/>
+        <instantiatedExpressions xmi:id="_oVcQkPlqEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; A LEFT JOIN (SELECT * FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DOMAIN&quot; WHERE ( domain = 'SETOR_ATIV' )) B ON ( (A.&quot;Industry&quot; = B.&quot;DOMAIN&quot;) ) WHERE (B.&quot;DOMAIN&quot; IS NULL )" language="SQL"/>
+        <builtInIndicatorDefinition xmi:id="_oVJVoPlqEeysjZujA1j0bQ" name="Row Comparison" label="Row Comparison">
+          <taggedValue xmi:id="_oVJVoflqEeysjZujA1j0bQ" tag="Purpose" value="Compare content of two column sets"/>
+          <taggedValue xmi:id="_oVJVovlqEeysjZujA1j0bQ" tag="Description" value="Counts the number of data from a column set A that match data of a column set B"/>
+          <sqlGenericExpression xmi:id="_oVJVo_lqEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> LEFT JOIN &lt;%=__TABLE_NAME_2__%> ON (&lt;%=__JOIN_CLAUSE__%>) WHERE (&lt;%=__WHERE_CLAUSE__%>)" language="SQL"/>
+          <sqlGenericExpression xmi:id="_oVJVpPlqEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> LEFT OUTER JOIN &lt;%=__TABLE_NAME_2__%> ON (&lt;%=__JOIN_CLAUSE__%>) WHERE (&lt;%=__WHERE_CLAUSE__%>)" language="Hive"/>
+        </builtInIndicatorDefinition>
+        <columnSetA href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL51HlIEeymA7ReFGNmPQ"/>
+        <columnSetB href="../../../../../../metadata/connections/Cadastro_0.1.item#_kt_MpHrBEeymA7ReFGNmPQ"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.columnset:RowMatchingIndicator" xmi:id="_nJyVwflqEeysjZujA1j0bQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-Exc3lHEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Row Comparison/Row_Comparison_0.1.definition#_jMh4gJE3Ed2HGNmGoaS-_w"/>
+        <instantiatedExpressions xmi:id="_oVcQkflqEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM (SELECT * FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DOMAIN&quot; WHERE ( domain = 'SETOR_ATIV' )) A LEFT JOIN &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; B ON ( (A.&quot;DOMAIN&quot; = B.&quot;Industry&quot;) ) WHERE (B.&quot;Industry&quot; IS NULL )" language="SQL"/>
+        <builtInIndicatorDefinition xmi:id="_oVTGoPlqEeysjZujA1j0bQ" name="Row Comparison" label="Row Comparison">
+          <taggedValue xmi:id="_oVTGoflqEeysjZujA1j0bQ" tag="Purpose" value="Compare content of two column sets"/>
+          <taggedValue xmi:id="_oVTGovlqEeysjZujA1j0bQ" tag="Description" value="Counts the number of data from a column set A that match data of a column set B"/>
+          <sqlGenericExpression xmi:id="_oVTGo_lqEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> LEFT JOIN &lt;%=__TABLE_NAME_2__%> ON (&lt;%=__JOIN_CLAUSE__%>) WHERE (&lt;%=__WHERE_CLAUSE__%>)" language="SQL"/>
+          <sqlGenericExpression xmi:id="_oVTGpPlqEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> LEFT OUTER JOIN &lt;%=__TABLE_NAME_2__%> ON (&lt;%=__JOIN_CLAUSE__%>) WHERE (&lt;%=__WHERE_CLAUSE__%>)" language="Hive"/>
+        </builtInIndicatorDefinition>
+        <columnSetA href="../../../../../../metadata/connections/Cadastro_0.1.item#_kt_MpHrBEeymA7ReFGNmPQ"/>
+        <columnSetB href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL51HlIEeymA7ReFGNmPQ"/>
+      </indicators>
+    </results>
+    <parameters xmi:id="_UsmoyflqEeysjZujA1j0bQ" dataFilter="_nJyVxPlqEeysjZujA1j0bQ _nJyVyPlqEeysjZujA1j0bQ" analysisType="Columns Comparison Analysis" deactivatedIndicators="_nJyVwflqEeysjZujA1j0bQ"/>
+    <contextType xmi:id="_nJxusPlqEeysjZujA1j0bQ" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_nJyVxPlqEeysjZujA1j0bQ" name="Industry_UCC_VS_UCC_T_DOMAIN_Redundancy_Analysis ">
+    <ranges xmi:id="_nJyVxflqEeysjZujA1j0bQ">
+      <expressions xmi:id="_nJyVxvlqEeysjZujA1j0bQ">
+        <expression xsi:type="relational:TdExpression" xmi:id="_nJyVx_lqEeysjZujA1j0bQ" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+  <dataquality.domain:Domain xmi:id="_nJyVyPlqEeysjZujA1j0bQ" name="Industry_UCC_VS_UCC_T_DOMAIN_Redundancy_Analysis ">
+    <ranges xmi:id="_nJyVyflqEeysjZujA1j0bQ">
+      <expressions xmi:id="_nJyVyvlqEeysjZujA1j0bQ">
+        <expression xsi:type="relational:TdExpression" xmi:id="_nJyVy_lqEeysjZujA1j0bQ" body="domain = 'SETOR_ATIV'" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
