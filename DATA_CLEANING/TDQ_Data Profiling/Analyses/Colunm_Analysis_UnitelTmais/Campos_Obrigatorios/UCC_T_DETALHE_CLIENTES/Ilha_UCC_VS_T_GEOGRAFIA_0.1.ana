@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_p5ANgflIEeysjZujA1j0bQ" name="Ilha_UCC_VS_T_GEOGRAFIA" supplierDependency="_k1-GkPlKEeysjZujA1j0bQ" creationDate="2022-07-01T11:18:18.584-0300" defaultContext="Default">
     <clientDependency href="../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
     <taggedValue xmi:id="_p5ANgvlIEeysjZujA1j0bQ" tag="Status" value="development"/>
@@ -16,11 +16,11 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_2kMGtPlIEeysjZujA1j0bQ"/>
     </context>
     <results xmi:id="_p5ANiPlIEeysjZujA1j0bQ">
-      <resultMetadata xmi:id="_p5ANiflIEeysjZujA1j0bQ" executionDate="2022-07-01T11:37:06.182-0300" executionDuration="4546" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="5"/>
+      <resultMetadata xmi:id="_p5ANiflIEeysjZujA1j0bQ" executionDate="2022-07-01T11:43:52.872-0300" executionDuration="4771" message="" executionNumber="6" lastRunOk="true" lastExecutionNumberOk="6"/>
       <indicators xsi:type="dataquality.indicators.columnset:RowMatchingIndicator" xmi:id="_8gvksPlIEeysjZujA1j0bQ" count="554433" computed="true" matchingValueCount="295152" notMatchingValueCount="259281">
         <analyzedElement xsi:type="relational:TdTable" href="../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Row Comparison/Row_Comparison_0.1.definition#_jMh4gJE3Ed2HGNmGoaS-_w"/>
-        <instantiatedExpressions xmi:id="_BLAUZflJEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; A LEFT JOIN &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_GEOGRAFIA&quot; B ON ( (A.&quot;ILHA&quot; = B.&quot;NOME&quot;) ) WHERE (B.&quot;NOME&quot; IS NULL )" language="SQL"/>
+        <instantiatedExpressions xmi:id="_BLAUZflJEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM (SELECT * FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE ( CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) )) A LEFT JOIN &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_GEOGRAFIA&quot; B ON ( (A.&quot;ILHA&quot; = B.&quot;NOME&quot;) ) WHERE (B.&quot;NOME&quot; IS NULL )" language="SQL"/>
         <builtInIndicatorDefinition xmi:id="_BK2jYPlJEeysjZujA1j0bQ" name="Row Comparison" label="Row Comparison">
           <taggedValue xmi:id="_BK2jYflJEeysjZujA1j0bQ" tag="Purpose" value="Compare content of two column sets"/>
           <taggedValue xmi:id="_BK2jYvlJEeysjZujA1j0bQ" tag="Description" value="Counts the number of data from a column set A that match data of a column set B"/>
@@ -33,7 +33,7 @@
       <indicators xsi:type="dataquality.indicators.columnset:RowMatchingIndicator" xmi:id="_8gvksflIEeysjZujA1j0bQ" count="554433" computed="true" matchingValueCount="295152" notMatchingValueCount="259281">
         <analyzedElement xsi:type="relational:TdTable" href="../../../../../metadata/connections/Cadastro_0.1.item#_0oXA4KONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Row Comparison/Row_Comparison_0.1.definition#_jMh4gJE3Ed2HGNmGoaS-_w"/>
-        <instantiatedExpressions xmi:id="_BLAUZvlJEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_GEOGRAFIA&quot; A LEFT JOIN &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; B ON ( (A.&quot;NOME&quot; = B.&quot;ILHA&quot;) ) WHERE (B.&quot;ILHA&quot; IS NULL )" language="SQL"/>
+        <instantiatedExpressions xmi:id="_BLAUZvlJEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_GEOGRAFIA&quot; A LEFT JOIN (SELECT * FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE ( CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) )) B ON ( (A.&quot;NOME&quot; = B.&quot;ILHA&quot;) ) WHERE (B.&quot;ILHA&quot; IS NULL )" language="SQL"/>
         <builtInIndicatorDefinition xmi:id="_BLAUYPlJEeysjZujA1j0bQ" name="Row Comparison" label="Row Comparison">
           <taggedValue xmi:id="_BLAUYflJEeysjZujA1j0bQ" tag="Purpose" value="Compare content of two column sets"/>
           <taggedValue xmi:id="_BLAUYvlJEeysjZujA1j0bQ" tag="Description" value="Counts the number of data from a column set A that match data of a column set B"/>
@@ -44,10 +44,17 @@
         <columnSetB href="../../../../../metadata/connections/Cadastro_0.1.item#_BQL6SHlIEeymA7ReFGNmPQ"/>
       </indicators>
     </results>
-    <parameters xmi:id="_p5ANivlIEeysjZujA1j0bQ" analysisType="Columns Comparison Analysis" deactivatedIndicators="_8gvksflIEeysjZujA1j0bQ"/>
+    <parameters xmi:id="_p5ANivlIEeysjZujA1j0bQ" dataFilter="_NrcOwPlMEeysjZujA1j0bQ" analysisType="Columns Comparison Analysis" deactivatedIndicators="_8gvksflIEeysjZujA1j0bQ"/>
     <contextType xmi:id="_8gu9oPlIEeysjZujA1j0bQ" confirmationNeeded="false" name="Default"/>
   </dataquality.analysis:Analysis>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_k1-GkPlKEeysjZujA1j0bQ" kind="Usage" supplier="_p5ANgflIEeysjZujA1j0bQ">
     <client xsi:type="dataquality.reports:TdReport" href="../../../../Reports/Ilha_UCC_VS_T_GEOGRAFIA_0.1.rep#_k1m6MflKEeysjZujA1j0bQ"/>
   </orgomg.cwm.objectmodel.core:Dependency>
+  <dataquality.domain:Domain xmi:id="_NrcOwPlMEeysjZujA1j0bQ" name="Ilha_UCC_VS_T_GEOGRAFIA">
+    <ranges xmi:id="_NrcOwflMEeysjZujA1j0bQ">
+      <expressions xmi:id="_NrcOwvlMEeysjZujA1j0bQ">
+        <expression xsi:type="relational:TdExpression" xmi:id="_NrcOw_lMEeysjZujA1j0bQ" body="CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
 </xmi:XMI>
