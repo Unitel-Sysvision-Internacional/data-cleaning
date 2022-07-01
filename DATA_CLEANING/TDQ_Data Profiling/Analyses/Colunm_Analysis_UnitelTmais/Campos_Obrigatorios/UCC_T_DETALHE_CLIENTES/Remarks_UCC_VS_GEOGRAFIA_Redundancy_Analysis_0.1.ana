@@ -16,11 +16,11 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../../../metadata/connections/Cadastro_0.1.item#_9sbE8PlZEeysjZujA1j0bQ"/>
     </context>
     <results xmi:id="_1C5DWPlZEeysjZujA1j0bQ">
-      <resultMetadata xmi:id="_1C5DWflZEeysjZujA1j0bQ" executionDate="2022-07-01T13:26:16.289-0300" executionDuration="1740" message="Incorrect syntax near the keyword 'and'." executionNumber="1"/>
-      <indicators xsi:type="dataquality.indicators.columnset:RowMatchingIndicator" xmi:id="_f_wyUvlaEeysjZujA1j0bQ">
+      <resultMetadata xmi:id="_1C5DWflZEeysjZujA1j0bQ" executionDate="2022-07-01T13:27:08.959-0300" executionDuration="5327" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators.columnset:RowMatchingIndicator" xmi:id="_f_wyUvlaEeysjZujA1j0bQ" count="554433" computed="true" notMatchingValueCount="554433">
         <analyzedElement xsi:type="relational:TdTable" href="../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Row Comparison/Row_Comparison_0.1.definition#_jMh4gJE3Ed2HGNmGoaS-_w"/>
-        <instantiatedExpressions xmi:id="_h9TdFflaEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM (SELECT * FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE ( and CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) )) A LEFT JOIN &quot;cadastro&quot;.&quot;dbo&quot;.&quot;Geografia&quot; B ON ( (A.&quot;Remarks&quot; = B.&quot;Nome&quot;) ) WHERE (B.&quot;Nome&quot; IS NULL )" language="SQL"/>
+        <instantiatedExpressions xmi:id="_h9TdFflaEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM (SELECT * FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE ( CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) )) A LEFT JOIN &quot;cadastro&quot;.&quot;dbo&quot;.&quot;Geografia&quot; B ON ( (A.&quot;Remarks&quot; = B.&quot;Nome&quot;) ) WHERE (B.&quot;Nome&quot; IS NULL )" language="SQL"/>
         <builtInIndicatorDefinition xmi:id="_h9KTIPlaEeysjZujA1j0bQ" name="Row Comparison" label="Row Comparison">
           <taggedValue xmi:id="_h9KTIflaEeysjZujA1j0bQ" tag="Purpose" value="Compare content of two column sets"/>
           <taggedValue xmi:id="_h9KTIvlaEeysjZujA1j0bQ" tag="Description" value="Counts the number of data from a column set A that match data of a column set B"/>
@@ -33,7 +33,7 @@
       <indicators xsi:type="dataquality.indicators.columnset:RowMatchingIndicator" xmi:id="_f_wyU_laEeysjZujA1j0bQ">
         <analyzedElement xsi:type="relational:TdTable" href="../../../../../metadata/connections/Cadastro_0.1.item#_0oWZ0KONEeyzNOsHl1GPmw"/>
         <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Row Comparison/Row_Comparison_0.1.definition#_jMh4gJE3Ed2HGNmGoaS-_w"/>
-        <instantiatedExpressions xmi:id="_h9TdFvlaEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;Geografia&quot; A LEFT JOIN (SELECT * FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE ( and CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) )) B ON ( (A.&quot;Nome&quot; = B.&quot;Remarks&quot;) ) WHERE (B.&quot;Remarks&quot; IS NULL )" language="SQL"/>
+        <instantiatedExpressions xmi:id="_h9TdFvlaEeysjZujA1j0bQ" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;Geografia&quot; A LEFT JOIN (SELECT * FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE ( CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) )) B ON ( (A.&quot;Nome&quot; = B.&quot;Remarks&quot;) ) WHERE (B.&quot;Remarks&quot; IS NULL )" language="SQL"/>
         <builtInIndicatorDefinition xmi:id="_h9TdEPlaEeysjZujA1j0bQ" name="Row Comparison" label="Row Comparison">
           <taggedValue xmi:id="_h9TdEflaEeysjZujA1j0bQ" tag="Purpose" value="Compare content of two column sets"/>
           <taggedValue xmi:id="_h9TdEvlaEeysjZujA1j0bQ" tag="Description" value="Counts the number of data from a column set A that match data of a column set B"/>
