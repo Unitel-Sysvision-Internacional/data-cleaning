@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <dataquality.analysis:Analysis xmi:id="_8CSdIfx0EeycL4cXcmcB6A" name="NIF_Particular_Invalido_Business_Rule" creationDate="2022-07-05T11:59:08.225-0300" defaultContext="Default">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.reports="http://dataquality.reports" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_8CSdIfx0EeycL4cXcmcB6A" name="NIF_Particular_Invalido_Business_Rule" supplierDependency="_yByMEPx1EeycL4cXcmcB6A" creationDate="2022-07-05T11:59:08.225-0300" defaultContext="Default">
     <clientDependency href="../../../../../../TDQ_Libraries/Rules/SQL/NIF_Empresarial_Invalido_0.1.rules#_JlM6cPxzEeycL4cXcmcB6A"/>
     <clientDependency href="../../../../../../TDQ_Libraries/Rules/SQL/NIF_Particular_Invalido_0.1.rules#_Cfbfs_x1EeycL4cXcmcB6A"/>
     <clientDependency href="../../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
@@ -28,6 +28,7 @@
         </builtInIndicatorDefinition>
       </indicators>
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_DpdC0Px1EeycL4cXcmcB6A" count="532214" computed="true" userCount="18339">
+        <parameters xmi:id="_p-u7oPx1EeycL4cXcmcB6A"/>
         <analyzedElement xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Rules/SQL/NIF_Particular_Invalido_0.1.rules#_byYrUfxtEeycL4cXcmcB6A"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_HeIOUPx1EeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;   WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) and TIPO = 'Particular') AND (tipo_docs = 'NIF'&#xD;&#xA;and len(ltrim(rtrim(valuedocs))) = 9&#xD;&#xA;and substring(ltrim(rtrim(valuedocs)), 1, 1) not in ('2','3','4','5')&#xD;&#xA;and tipo = 'Particular')" language="Microsoft SQL Server"/>
@@ -52,4 +53,7 @@
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_yByMEPx1EeycL4cXcmcB6A" kind="Usage" supplier="_8CSdIfx0EeycL4cXcmcB6A">
+    <client xsi:type="dataquality.reports:TdReport" href="../../../../../Reports/NIF_Particular_Invalido_Business_Rule_0.1.rep#_yBf4MPx1EeycL4cXcmcB6A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
