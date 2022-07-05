@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.reports="http://dataquality.reports" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <dataquality.analysis:Analysis xmi:id="_eWC0gfxlEeycL4cXcmcB6A" name="tamanho_NIF_invalido" supplierDependency="_rKC2APxmEeycL4cXcmcB6A" creationDate="2022-07-05T10:22:09.992-0300" defaultContext="Default">
+  <dataquality.analysis:Analysis xmi:id="_eWC0gfxlEeycL4cXcmcB6A" name="tamanho_NIF_invalido_Table_Analysis" supplierDependency="_rKC2APxmEeycL4cXcmcB6A" creationDate="2022-07-05T10:22:09.992-0300" defaultContext="Default">
     <clientDependency href="../../../../../TDQ_Libraries/Rules/SQL/Tamanho_NIF_0.1.rules#_-qTmEPxlEeycL4cXcmcB6A"/>
-    <clientDependency href="../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
     <clientDependency href="../../../../../TDQ_Libraries/Rules/SQL/Tamanho_NIF_0.1.rules#_VrV4w_xmEeycL4cXcmcB6A"/>
+    <clientDependency href="../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
     <taggedValue xmi:id="_eWC0gvxlEeycL4cXcmcB6A" tag="Status" value="development"/>
     <taggedValue xmi:id="_eWC0g_xlEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
     <taggedValue xmi:id="_eWC0hPxlEeycL4cXcmcB6A" tag="Purpose" value="Quantidade de carcteres do documento NIF."/>
@@ -48,7 +48,7 @@
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_rKC2APxmEeycL4cXcmcB6A" kind="Usage" supplier="_eWC0gfxlEeycL4cXcmcB6A">
     <client xsi:type="dataquality.reports:TdReport" href="../../../../Reports/tamanho_NIF_invalido_0.1.rep#_rJYusfxmEeycL4cXcmcB6A"/>
   </orgomg.cwm.objectmodel.core:Dependency>
-  <dataquality.domain:Domain xmi:id="__I6NoPxlEeycL4cXcmcB6A" name="tamanho_NIF_invalido">
+  <dataquality.domain:Domain xmi:id="__I6NoPxlEeycL4cXcmcB6A" name="tamanho_NIF_invalido_Table_Analysis">
     <ranges xmi:id="__I6NofxlEeycL4cXcmcB6A">
       <expressions xmi:id="__I6NovxlEeycL4cXcmcB6A">
         <expression xsi:type="relational:TdExpression" xmi:id="__I6No_xlEeycL4cXcmcB6A" body="(CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))  and tipo_docs = 'NIF'" language="SQL"/>
