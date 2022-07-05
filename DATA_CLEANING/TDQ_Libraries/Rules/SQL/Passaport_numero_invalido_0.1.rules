@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_6UCsQPxsEeycL4cXcmcB6A" name="Passaport_numero_invalido" criticalityLevel="1" whereExpression="tipo_docs = 'Passaporte'&#xD;&#xA;and nationality = 'CV'&#xD;&#xA;and (len(ltrim(rtrim(valuedocs))) = 7 or len(ltrim(rtrim(valuedocs))) = 8)&#xD;&#xA;and (substring(ltrim(rtrim(valuedocs)), 1, 1) LIKE '%[0-9]%' or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 2, 1) LIKE '%[0-9]%' or &#xD;&#xA;     (len(ltrim(rtrim(valuedocs))) = 7 and substring(ltrim(rtrim(valuedocs)), 3, 5) NOT LIKE '%[0-9]%') or&#xD;&#xA;     (len(ltrim(rtrim(valuedocs))) = 8 and substring(ltrim(rtrim(valuedocs)), 3, 6) NOT LIKE '%[0-9]%')) and tipo = 'Passaporte'&#xD;&#xA;">
-  <taggedValue xmi:id="_6UCsQfxsEeycL4cXcmcB6A" tag="Status" value="development"/>
-  <taggedValue xmi:id="_6UCsQvxsEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
-  <taggedValue xmi:id="_6UCsQ_xsEeycL4cXcmcB6A" tag="Purpose" value="Identifica numero de passaporte invalido"/>
-  <taggedValue xmi:id="_6UCsRPxsEeycL4cXcmcB6A" tag="Description" value="Identifica numero de passaporte de cabo verde invalido conforme as regras definidas junto a area de negocio da Unitel+."/>
-  <taggedValue xmi:id="_6UCsRfxsEeycL4cXcmcB6A" tag="Version" value="0.1"/>
-  <taggedValue xmi:id="_6UCsRvxsEeycL4cXcmcB6A" tag="Validation_Status" value="true"/>
-  <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
-  <sqlGenericExpression xmi:id="_6UCsR_xsEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-</dataquality.rules:WhereRule>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_6UCsQPxsEeycL4cXcmcB6A" name="Passaport_numero_invalido" supplierDependency="_foTL8Px4EeycL4cXcmcB6A" criticalityLevel="1" whereExpression="tipo_docs = 'Passaporte'&#xD;&#xA;and nationality = 'CV'&#xD;&#xA;and (len(ltrim(rtrim(valuedocs))) = 7 or len(ltrim(rtrim(valuedocs))) = 8)&#xD;&#xA;and (substring(ltrim(rtrim(valuedocs)), 1, 1) LIKE '%[0-9]%' or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 2, 1) LIKE '%[0-9]%' or &#xD;&#xA;     (len(ltrim(rtrim(valuedocs))) = 7 and substring(ltrim(rtrim(valuedocs)), 3, 5) NOT LIKE '%[0-9]%') or&#xD;&#xA;     (len(ltrim(rtrim(valuedocs))) = 8 and substring(ltrim(rtrim(valuedocs)), 3, 6) NOT LIKE '%[0-9]%')) and tipo = 'Passaporte'&#xD;&#xA;">
+    <taggedValue xmi:id="_6UCsQfxsEeycL4cXcmcB6A" tag="Status" value="development"/>
+    <taggedValue xmi:id="_6UCsQvxsEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_6UCsQ_xsEeycL4cXcmcB6A" tag="Purpose" value="Identifica numero de passaporte invalido"/>
+    <taggedValue xmi:id="_6UCsRPxsEeycL4cXcmcB6A" tag="Description" value="Identifica numero de passaporte de cabo verde invalido conforme as regras definidas junto a area de negocio da Unitel+."/>
+    <taggedValue xmi:id="_6UCsRfxsEeycL4cXcmcB6A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_6UCsRvxsEeycL4cXcmcB6A" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_6UCsR_xsEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_foTL8Px4EeycL4cXcmcB6A" kind="Usage" supplier="_6UCsQPxsEeycL4cXcmcB6A">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/Colunm_Analysis_UnitelTmais/Campos_Obrigatorios/UCC_T_DETALHE_CLIENTES/Z_Particular/Passaport_numero_invalido_0.1.ana#__l18Efx3EeycL4cXcmcB6A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_KMfTAPxqEeycL4cXcmcB6A" name="CNI_tamanho_invalido" criticalityLevel="1" whereExpression="len(ltrim(rtrim(valuedocs))) != 13&#xD;&#xA;and tipo = 'Particular'">
-  <taggedValue xmi:id="_KMfTAfxqEeycL4cXcmcB6A" tag="Status" value="development"/>
-  <taggedValue xmi:id="_KMfTAvxqEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
-  <taggedValue xmi:id="_KMfTA_xqEeycL4cXcmcB6A" tag="Purpose" value="Identificar documentos do Tipo CNI com Tamanhos invalidos Particulares"/>
-  <taggedValue xmi:id="_KMfTBPxqEeycL4cXcmcB6A" tag="Description" value="Identificar documentos do Tipo CNI com Tamanhos invalidos Particulares conforme as regras definidas junto a area de negocio da Unitel+."/>
-  <taggedValue xmi:id="_KMfTBfxqEeycL4cXcmcB6A" tag="Version" value="0.1"/>
-  <taggedValue xmi:id="_KMfTBvxqEeycL4cXcmcB6A" tag="Validation_Status" value="true"/>
-  <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
-  <sqlGenericExpression xmi:id="_KMfTB_xqEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-</dataquality.rules:WhereRule>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_KMfTAPxqEeycL4cXcmcB6A" name="CNI_tamanho_invalido" supplierDependency="_ceilsPx4EeycL4cXcmcB6A" criticalityLevel="1" whereExpression="len(ltrim(rtrim(valuedocs))) != 13&#xD;&#xA;and tipo = 'Particular'">
+    <taggedValue xmi:id="_KMfTAfxqEeycL4cXcmcB6A" tag="Status" value="development"/>
+    <taggedValue xmi:id="_KMfTAvxqEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_KMfTA_xqEeycL4cXcmcB6A" tag="Purpose" value="Identificar documentos do Tipo CNI com Tamanhos invalidos Particulares"/>
+    <taggedValue xmi:id="_KMfTBPxqEeycL4cXcmcB6A" tag="Description" value="Identificar documentos do Tipo CNI com Tamanhos invalidos Particulares conforme as regras definidas junto a area de negocio da Unitel+."/>
+    <taggedValue xmi:id="_KMfTBfxqEeycL4cXcmcB6A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_KMfTBvxqEeycL4cXcmcB6A" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_KMfTB_xqEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_ceilsPx4EeycL4cXcmcB6A" kind="Usage" supplier="_KMfTAPxqEeycL4cXcmcB6A">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/Colunm_Analysis_UnitelTmais/Campos_Obrigatorios/UCC_T_DETALHE_CLIENTES/Z_Particular/CNI_tamanho_invalido_0.1.ana#_FAnisfx4EeycL4cXcmcB6A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>
