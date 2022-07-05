@@ -3,6 +3,7 @@
   <dataquality.analysis:Analysis xmi:id="_BVCbEfxzEeycL4cXcmcB6A" name="NIF_Empresarial_Invalido_Business_Rule" supplierDependency="_fXFSYPxzEeycL4cXcmcB6A" creationDate="2022-07-05T11:59:08.225-0300" defaultContext="Default">
     <clientDependency href="../../../../../../TDQ_Libraries/Rules/SQL/NIF_Empresarial_Invalido_0.1.rules#_JlM6cPxzEeycL4cXcmcB6A"/>
     <clientDependency href="../../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <clientDependency href="../../../../../../TDQ_Libraries/Rules/SQL/NIF_Empresarial_Invalido_0.1.rules#_x7UpoPxzEeycL4cXcmcB6A"/>
     <taggedValue xmi:id="_BVCbEvxzEeycL4cXcmcB6A" tag="Status" value="development"/>
     <taggedValue xmi:id="_BVCbE_xzEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
     <taggedValue xmi:id="_BVCbFPxzEeycL4cXcmcB6A" tag="Purpose" value="Identificar numero inicial de NIF empresarial invalido"/>
@@ -15,7 +16,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
     </context>
     <results xmi:id="_BVCbGPxzEeycL4cXcmcB6A">
-      <resultMetadata xmi:id="_BVCbGfxzEeycL4cXcmcB6A" executionDate="2022-07-05T12:01:44.615-0300" executionDuration="2695" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <resultMetadata xmi:id="_BVCbGfxzEeycL4cXcmcB6A" executionDate="2022-07-05T12:04:29.959-0300" executionDuration="4400" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_VWc68vxzEeycL4cXcmcB6A" count="9860" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -44,6 +45,9 @@
     <parameters xmi:id="_BVCbGvxzEeycL4cXcmcB6A" dataFilter="_VWmr8_xzEeycL4cXcmcB6A" analysisType="Table Analysis"/>
     <contextType xmi:id="_VWc68PxzEeycL4cXcmcB6A" confirmationNeeded="false" name="Default"/>
   </dataquality.analysis:Analysis>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_fXFSYPxzEeycL4cXcmcB6A" kind="Usage" supplier="_BVCbEfxzEeycL4cXcmcB6A">
+    <client xsi:type="dataquality.reports:TdReport" href="../../../../../Reports/NIF_Empresarial_Invalido_Business_Rule_0.1.rep#_fW6TQfxzEeycL4cXcmcB6A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
   <dataquality.domain:Domain xmi:id="_VWmr8_xzEeycL4cXcmcB6A" name="NIF_Empresarial_Invalido_Business_Rule">
     <ranges xmi:id="_VWmr9PxzEeycL4cXcmcB6A">
       <expressions xmi:id="_VWmr9fxzEeycL4cXcmcB6A">
@@ -51,7 +55,4 @@
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_fXFSYPxzEeycL4cXcmcB6A" kind="Usage" supplier="_BVCbEfxzEeycL4cXcmcB6A">
-    <client xsi:type="dataquality.reports:TdReport" href="../../../../../Reports/NIF_Empresarial_Invalido_Business_Rule_0.1.rep#_fW6TQfxzEeycL4cXcmcB6A"/>
-  </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
