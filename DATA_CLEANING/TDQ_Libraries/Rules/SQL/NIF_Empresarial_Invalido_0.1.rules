@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_VlDmYPxtEeycL4cXcmcB6A" name="NIF_Empresarial_Invalido" supplierDependency="_JlM6cPxzEeycL4cXcmcB6A" criticalityLevel="1" whereExpression="tipo_docs = 'NIF'&#xD;&#xA;and len(ltrim(rtrim(valuedocs))) = 9&#xD;&#xA;and substring(ltrim(rtrim(valuedocs)), 1, 1) not in ('2','3','4','5')&#xD;&#xA;and tipo = 'Empresarial'">
+  <dataquality.rules:WhereRule xmi:id="_VlDmYPxtEeycL4cXcmcB6A" name="NIF_Empresarial_Invalido" supplierDependency="_x7UpoPxzEeycL4cXcmcB6A" criticalityLevel="1" whereExpression="tipo_docs = 'NIF'&#xD;&#xA;and len(ltrim(rtrim(valuedocs))) = 9&#xD;&#xA;and substring(ltrim(rtrim(valuedocs)), 1, 1) not in ('2','3','4','5')&#xD;&#xA;and tipo = 'Empresarial'">
     <taggedValue xmi:id="_VlDmYfxtEeycL4cXcmcB6A" tag="Status" value="development"/>
     <taggedValue xmi:id="_VlDmYvxtEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
     <taggedValue xmi:id="_VlDmY_xtEeycL4cXcmcB6A" tag="Purpose" value="Identificar numero inicial de NIF empresarial invalido"/>
@@ -10,7 +10,10 @@
     <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_VlDmZ_xtEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_JlM6cPxzEeycL4cXcmcB6A" kind="Usage" supplier="_VlDmYPxtEeycL4cXcmcB6A">
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_JlM6cPxzEeycL4cXcmcB6A" kind="Usage">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/Colunm_Analysis_UnitelTmais/Campos_Obrigatorios/UCC_T_DETALHE_CLIENTES/Z_Empresariais/NIF_Empresarial_Invalido_Business_Rule_0.1.ana#_BVCbEfxzEeycL4cXcmcB6A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_x7UpoPxzEeycL4cXcmcB6A" kind="Usage" supplier="_VlDmYPxtEeycL4cXcmcB6A">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/Colunm_Analysis_UnitelTmais/Campos_Obrigatorios/UCC_T_DETALHE_CLIENTES/Z_Empresariais/NIF_Empresarial_Invalido_Business_Rule_0.1.ana#_BVCbEfxzEeycL4cXcmcB6A"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
