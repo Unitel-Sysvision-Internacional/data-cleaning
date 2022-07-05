@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_Fn27se48EeypZdT0nP310Q" name="LegalRepresentativeEmail_Column_Analysis_Basic" supplierDependency="_6vYbEPyFEeycL4cXcmcB6A" creationDate="2022-06-17T09:50:38.443-0300" defaultContext="Default">
     <clientDependency href="../../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
     <taggedValue xmi:id="_Fn27su48EeypZdT0nP310Q" tag="Status" value="development"/>
@@ -13,10 +13,45 @@
     <taggedValue xmi:id="_1RpnEPyFEeycL4cXcmcB6A" tag="Is Use Sample Data" value="false"/>
     <context xmi:id="_Fn27t-48EeypZdT0nP310Q">
       <connection href="../../../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_vMnihPyFEeycL4cXcmcB6A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_IM9SMPyfEeycL4cXcmcB6A"/>
     </context>
     <results xmi:id="_Fn27uO48EeypZdT0nP310Q">
       <resultMetadata xmi:id="_Fn27ue48EeypZdT0nP310Q" executionDate="2022-07-05T14:20:46.013-0300" executionDuration="9040" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_zlYTsPyfEeycL4cXcmcB6A">
+        <parameters xmi:id="_zlYTsfyfEeycL4cXcmcB6A"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_IM9SMPyfEeycL4cXcmcB6A"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <builtInIndicatorDefinition xmi:id="_5Q99gPyfEeycL4cXcmcB6A" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_5Q99gfyfEeycL4cXcmcB6A" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_5Q99gvyfEeycL4cXcmcB6A" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_5Q99g_yfEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_zlYTsvyfEeycL4cXcmcB6A">
+        <parameters xmi:id="_zlYTs_yfEeycL4cXcmcB6A"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_IM9SMPyfEeycL4cXcmcB6A"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_zlYTtPyfEeycL4cXcmcB6A">
+        <parameters xmi:id="_zlYTtfyfEeycL4cXcmcB6A"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_IM9SMPyfEeycL4cXcmcB6A"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_zlYTtvyfEeycL4cXcmcB6A">
+        <parameters xmi:id="_zlYTt_yfEeycL4cXcmcB6A"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_IM9SMPyfEeycL4cXcmcB6A"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_zlYTuPyfEeycL4cXcmcB6A">
+        <parameters xmi:id="_zlYTufyfEeycL4cXcmcB6A"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_IM9SMPyfEeycL4cXcmcB6A"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_zlYTuvyfEeycL4cXcmcB6A">
+        <parameters xmi:id="_zlYTu_yfEeycL4cXcmcB6A"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_IM9SMPyfEeycL4cXcmcB6A"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+      </indicators>
     </results>
     <parameters xmi:id="_Fn27uu48EeypZdT0nP310Q" dataFilter="_1RpnEfyFEeycL4cXcmcB6A" analysisType="Multiple Column Analysis"/>
     <contextType xmi:id="_1RpAAPyFEeycL4cXcmcB6A" confirmationNeeded="false" name="Default"/>
