@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_KMfTAPxqEeycL4cXcmcB6A" name="CNI_tamanho_invalido" supplierDependency="_ceilsPx4EeycL4cXcmcB6A" criticalityLevel="1" whereExpression="len(ltrim(rtrim(valuedocs))) != 13&#xD;&#xA;and tipo = 'Particular'">
+  <dataquality.rules:WhereRule xmi:id="_KMfTAPxqEeycL4cXcmcB6A" name="CNI_tamanho_invalido" supplierDependency="_58TOw_x5EeycL4cXcmcB6A" criticalityLevel="1" whereExpression="len(ltrim(rtrim(valuedocs))) != 13&#xD;&#xA;and tipo = 'Particular'">
     <taggedValue xmi:id="_KMfTAfxqEeycL4cXcmcB6A" tag="Status" value="development"/>
     <taggedValue xmi:id="_KMfTAvxqEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
     <taggedValue xmi:id="_KMfTA_xqEeycL4cXcmcB6A" tag="Purpose" value="Identificar documentos do Tipo CNI com Tamanhos invalidos Particulares"/>
@@ -10,7 +10,10 @@
     <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_KMfTB_xqEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_ceilsPx4EeycL4cXcmcB6A" kind="Usage" supplier="_KMfTAPxqEeycL4cXcmcB6A">
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_ceilsPx4EeycL4cXcmcB6A" kind="Usage">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/Colunm_Analysis_UnitelTmais/Campos_Obrigatorios/UCC_T_DETALHE_CLIENTES/Z_Particular/CNI_tamanho_invalido_0.1.ana#_FAnisfx4EeycL4cXcmcB6A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_58TOw_x5EeycL4cXcmcB6A" kind="Usage" supplier="_KMfTAPxqEeycL4cXcmcB6A">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/Colunm_Analysis_UnitelTmais/Campos_Obrigatorios/UCC_T_DETALHE_CLIENTES/Z_Particular/CNI_tamanho_invalido_0.1.ana#_FAnisfx4EeycL4cXcmcB6A"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
