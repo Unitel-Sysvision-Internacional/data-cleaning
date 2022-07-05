@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_VlDmYPxtEeycL4cXcmcB6A" name="NIF_Empresarial_Invalido" criticalityLevel="1" whereExpression="tipo_docs = 'NIF'&#xD;&#xA;and len(ltrim(rtrim(valuedocs))) = 9&#xD;&#xA;and substring(ltrim(rtrim(valuedocs)), 1, 1) not in ('2','3','4','5')&#xD;&#xA;and tipo = Empresarial">
+<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_VlDmYPxtEeycL4cXcmcB6A" name="NIF_Empresarial_Invalido" criticalityLevel="1" whereExpression="tipo_docs = 'NIF'&#xD;&#xA;and len(ltrim(rtrim(valuedocs))) = 9&#xD;&#xA;and substring(ltrim(rtrim(valuedocs)), 1, 1) not in ('2','3','4','5')&#xD;&#xA;and tipo = 'Empresarial'">
   <taggedValue xmi:id="_VlDmYfxtEeycL4cXcmcB6A" tag="Status" value="development"/>
   <taggedValue xmi:id="_VlDmYvxtEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
   <taggedValue xmi:id="_VlDmY_xtEeycL4cXcmcB6A" tag="Purpose" value="Identificar numero inicial de NIF empresarial invalido"/>
