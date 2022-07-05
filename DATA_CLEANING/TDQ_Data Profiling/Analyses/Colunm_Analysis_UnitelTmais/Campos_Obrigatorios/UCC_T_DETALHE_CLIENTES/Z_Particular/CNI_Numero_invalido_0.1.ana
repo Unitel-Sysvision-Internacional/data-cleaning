@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_3lPisfx3EeycL4cXcmcB6A" name="CNI_Numero_invalido" creationDate="2022-07-05T12:33:50.299-0300" defaultContext="Default">
     <clientDependency href="../../../../../../TDQ_Libraries/Rules/SQL/CNI_Numero_invalido_0.1.rules#_jZF9APx4EeycL4cXcmcB6A"/>
     <clientDependency href="../../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
@@ -15,14 +15,30 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
     </context>
     <results xmi:id="_3lPiuPx3EeycL4cXcmcB6A">
-      <resultMetadata xmi:id="_3lPiufx3EeycL4cXcmcB6A"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_0MOjAvx4EeycL4cXcmcB6A">
+      <resultMetadata xmi:id="_3lPiufx3EeycL4cXcmcB6A" executionDate="2022-07-05T12:40:40.600-0300" executionDuration="3595" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_0MOjAvx4EeycL4cXcmcB6A" count="532214" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0uLZgPx4EeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) and TIPO = 'Particular')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_0uC2oPx4EeycL4cXcmcB6A" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_0uC2ofx4EeycL4cXcmcB6A" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_0uC2ovx4EeycL4cXcmcB6A" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_0uC2o_x4EeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_0MOjA_x4EeycL4cXcmcB6A">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_0MOjA_x4EeycL4cXcmcB6A" count="532214" computed="true" userCount="101">
         <analyzedElement xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Rules/SQL/CNI_Numero_invalido_0.1.rules#_dYWZAPxsEeycL4cXcmcB6A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_0uLZgfx4EeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;   WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) and TIPO = 'Particular') AND (tipo_docs = 'CNI'&#xD;&#xA;and len(ltrim(rtrim(valuedocs))) = 13&#xD;&#xA;and (substring(ltrim(rtrim(valuedocs)), 9, 1) not in ('M','m','F','f') or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 5, 2) > 12 or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 7, 2) > 31 or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 10, 3) NOT LIKE '%[0-9]%' or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 13, 1) LIKE '%[0-9]%') and tipo = 'Particular'&#xD;&#xA;)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_0uIWMPx4EeycL4cXcmcB6A" name="CNI_Numero_invalido" criticalityLevel="1" whereExpression="tipo_docs = 'CNI'&#xD;&#xA;and len(ltrim(rtrim(valuedocs))) = 13&#xD;&#xA;and (substring(ltrim(rtrim(valuedocs)), 9, 1) not in ('M','m','F','f') or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 5, 2) > 12 or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 7, 2) > 31 or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 10, 3) NOT LIKE '%[0-9]%' or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 13, 1) LIKE '%[0-9]%') and tipo = 'Particular'&#xD;&#xA;">
+          <taggedValue xmi:id="_0uIWMfx4EeycL4cXcmcB6A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_0uIWMvx4EeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
+          <taggedValue xmi:id="_0uIWM_x4EeycL4cXcmcB6A" tag="Purpose" value="Identificar documentos do Tipo CNI com numeros invalidos Particulares"/>
+          <taggedValue xmi:id="_0uIWNPx4EeycL4cXcmcB6A" tag="Description" value="Identificar documentos do Tipo CNI com numeros invalidos Particulares conforme as regras definidas junto a area de negocio da Unitel+."/>
+          <taggedValue xmi:id="_0uIWNfx4EeycL4cXcmcB6A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_0uIWNvx4EeycL4cXcmcB6A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_0uIWN_x4EeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
     </results>
     <parameters xmi:id="_3lPiuvx3EeycL4cXcmcB6A" dataFilter="_0Z0TEPx4EeycL4cXcmcB6A" analysisType="Table Analysis"/>
