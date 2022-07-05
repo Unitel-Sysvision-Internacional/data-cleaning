@@ -106,7 +106,7 @@
   <dataquality.domain:Domain xmi:id="_D1lL0vygEeycL4cXcmcB6A" name="LegalRepresentativeName_Column_Analysis_Basic">
     <ranges xmi:id="_D1lL0_ygEeycL4cXcmcB6A">
       <expressions xmi:id="_D1lL1PygEeycL4cXcmcB6A">
-        <expression xsi:type="relational:TdExpression" xmi:id="_D1lL1fygEeycL4cXcmcB6A" body="" language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_D1lL1fygEeycL4cXcmcB6A" body="(CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) and TIPO = 'Empresarial')" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
