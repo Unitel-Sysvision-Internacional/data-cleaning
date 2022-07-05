@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_6paUwPxrEeycL4cXcmcB6A" name="Passaport_tamanho_invalido" criticalityLevel="1" whereExpression="tipo_docs = 'Passaporte'&#xD;&#xA;and nationality = 'CV'&#xD;&#xA;and len(ltrim(rtrim(valuedocs))) != 7 and len(ltrim(rtrim(valuedocs))) != 8&#xD;&#xA;and  tipo = 'Particular'&#xD;&#xA;">
+  <taggedValue xmi:id="_6paUwfxrEeycL4cXcmcB6A" tag="Status" value="development"/>
+  <taggedValue xmi:id="_6paUwvxrEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
+  <taggedValue xmi:id="_6paUw_xrEeycL4cXcmcB6A" tag="Purpose" value="Identificar caracteres do documento tipo Passaport de CV"/>
+  <taggedValue xmi:id="_6paUxPxrEeycL4cXcmcB6A" tag="Description" value="Identificar caracteres do documento tipo Passaport de CV Particulares conforme as regras definidas junto a area de negocio da Unitel+.&#xD;&#xA;"/>
+  <taggedValue xmi:id="_6paUxfxrEeycL4cXcmcB6A" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_6paUxvxrEeycL4cXcmcB6A" tag="Validation_Status" value="true"/>
+  <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+  <sqlGenericExpression xmi:id="_6paUx_xrEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+</dataquality.rules:WhereRule>
