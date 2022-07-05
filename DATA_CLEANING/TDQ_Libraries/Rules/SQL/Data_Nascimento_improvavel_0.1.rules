@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_ntCgcfxiEeycL4cXcmcB6A" name="Data_Nascimento_improvavel" criticalityLevel="1" whereExpression="birthdata is not null and birthdata != '' &#xD;&#xA;and (birthdata &lt; '1900-01-01' or birthdata > '2022-06-01')">
+  <taggedValue xmi:id="_ntCgcvxiEeycL4cXcmcB6A" tag="Status" value="development"/>
+  <taggedValue xmi:id="_ntCgc_xiEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
+  <taggedValue xmi:id="_ntCgdPxiEeycL4cXcmcB6A" tag="Purpose" value="Identificar datas improvaveis ou incorretas"/>
+  <taggedValue xmi:id="_ntCgdfxiEeycL4cXcmcB6A" tag="Description" value="(birthdata &lt; '1900-01-01' or birthdata > '2022-06-01')"/>
+  <taggedValue xmi:id="_ntCgdvxiEeycL4cXcmcB6A" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_ntCgd_xiEeycL4cXcmcB6A" tag="Validation_Status" value="true"/>
+  <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+  <sqlGenericExpression xmi:id="_ntCgePxiEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+</dataquality.rules:WhereRule>
