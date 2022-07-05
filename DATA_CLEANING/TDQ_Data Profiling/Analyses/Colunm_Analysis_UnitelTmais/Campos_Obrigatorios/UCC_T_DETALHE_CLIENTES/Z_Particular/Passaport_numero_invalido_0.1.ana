@@ -15,19 +15,21 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
     </context>
     <results xmi:id="__l18GPx3EeycL4cXcmcB6A">
-      <resultMetadata xmi:id="__l18Gfx3EeycL4cXcmcB6A"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_vKfugvx4EeycL4cXcmcB6A">
+      <resultMetadata xmi:id="__l18Gfx3EeycL4cXcmcB6A" executionDate="2022-07-05T12:40:26.461-0300" executionDuration="3561" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_vKfugvx4EeycL4cXcmcB6A" count="532214" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_ynVo3Px4EeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) and TIPO = 'Particular')" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_ynVo0Px4EeycL4cXcmcB6A" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_ynVo0fx4EeycL4cXcmcB6A" tag="Description" value="counts the number of rows"/>
           <taggedValue xmi:id="_ynVo0vx4EeycL4cXcmcB6A" tag="Purpose" value="evaluates the number of records"/>
           <sqlGenericExpression xmi:id="_ynVo0_x4EeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_vKfug_x4EeycL4cXcmcB6A">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_vKfug_x4EeycL4cXcmcB6A" count="532214" computed="true" userCount="0">
         <analyzedElement xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Rules/SQL/Passaport_numero_invalido_0.1.rules#_6UCsQPxsEeycL4cXcmcB6A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_ynVo3fx4EeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;   WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) and TIPO = 'Particular') AND (tipo_docs = 'Passaporte'&#xD;&#xA;and nationality = 'CV'&#xD;&#xA;and (len(ltrim(rtrim(valuedocs))) = 7 or len(ltrim(rtrim(valuedocs))) = 8)&#xD;&#xA;and (substring(ltrim(rtrim(valuedocs)), 1, 1) LIKE '%[0-9]%' or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 2, 1) LIKE '%[0-9]%' or &#xD;&#xA;     (len(ltrim(rtrim(valuedocs))) = 7 and substring(ltrim(rtrim(valuedocs)), 3, 5) NOT LIKE '%[0-9]%') or&#xD;&#xA;     (len(ltrim(rtrim(valuedocs))) = 8 and substring(ltrim(rtrim(valuedocs)), 3, 6) NOT LIKE '%[0-9]%')) and tipo = 'Passaporte'&#xD;&#xA;)" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_ynVo1Px4EeycL4cXcmcB6A" name="Passaport_numero_invalido" criticalityLevel="1" whereExpression="tipo_docs = 'Passaporte'&#xD;&#xA;and nationality = 'CV'&#xD;&#xA;and (len(ltrim(rtrim(valuedocs))) = 7 or len(ltrim(rtrim(valuedocs))) = 8)&#xD;&#xA;and (substring(ltrim(rtrim(valuedocs)), 1, 1) LIKE '%[0-9]%' or&#xD;&#xA;     substring(ltrim(rtrim(valuedocs)), 2, 1) LIKE '%[0-9]%' or &#xD;&#xA;     (len(ltrim(rtrim(valuedocs))) = 7 and substring(ltrim(rtrim(valuedocs)), 3, 5) NOT LIKE '%[0-9]%') or&#xD;&#xA;     (len(ltrim(rtrim(valuedocs))) = 8 and substring(ltrim(rtrim(valuedocs)), 3, 6) NOT LIKE '%[0-9]%')) and tipo = 'Passaporte'&#xD;&#xA;">
           <taggedValue xmi:id="_ynVo1fx4EeycL4cXcmcB6A" tag="Status" value="development"/>
           <taggedValue xmi:id="_ynVo1vx4EeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
