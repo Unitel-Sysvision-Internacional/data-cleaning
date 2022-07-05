@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.reports="http://dataquality.reports" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_9gO8cPxhEeycL4cXcmcB6A" name="Data_Nascimento_invalida_improvavel_Table_Analysis" supplierDependency="_rPuHkPxjEeycL4cXcmcB6A" creationDate="2022-07-05T09:57:01.096-0300" defaultContext="Default">
-    <clientDependency href="../../../../../TDQ_Libraries/Rules/SQL/Data_Nascimento_improvavel_0.1.rules#_sKlCwPxiEeycL4cXcmcB6A"/>
+    <clientDependency href="../../../../../TDQ_Libraries/Rules/SQL/Data_Nascimento_improvavel_Particular_0.1.rules#_sKlCwPxiEeycL4cXcmcB6A"/>
     <clientDependency href="../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
-    <clientDependency href="../../../../../TDQ_Libraries/Rules/SQL/Data_Nascimento_improvavel_0.1.rules#_86QsI_xiEeycL4cXcmcB6A"/>
+    <clientDependency href="../../../../../TDQ_Libraries/Rules/SQL/Data_Nascimento_improvavel_Particular_0.1.rules#_86QsI_xiEeycL4cXcmcB6A"/>
     <taggedValue xmi:id="_9gO8cfxhEeycL4cXcmcB6A" tag="Status" value="development"/>
     <taggedValue xmi:id="_9gO8cvxhEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
     <taggedValue xmi:id="_9gO8c_xhEeycL4cXcmcB6A" tag="Purpose" value="Valida data de nascimento"/>
@@ -30,7 +30,7 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_v7beM_xiEeycL4cXcmcB6A" count="554433" computed="true" userCount="112779">
         <analyzedElement xsi:type="relational:TdTable" href="../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
-        <indicatorDefinition href="../../../../../TDQ_Libraries/Rules/SQL/Data_Nascimento_improvavel_0.1.rules#_ntCgcfxiEeycL4cXcmcB6A"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Rules/SQL/Data_Nascimento_improvavel_Particular_0.1.rules#_ntCgcfxiEeycL4cXcmcB6A"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_wjhY-fxiEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;   WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) AND (birthdata is not null and birthdata != '' &#xD;&#xA;and (birthdata &lt; '1900-01-01' or birthdata > '2022-06-01'))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_wjhY8PxiEeycL4cXcmcB6A" name="Data_Nascimento_improvavel" criticalityLevel="1" whereExpression="birthdata is not null and birthdata != '' &#xD;&#xA;and (birthdata &lt; '1900-01-01' or birthdata > '2022-06-01')">
           <taggedValue xmi:id="_wjhY8fxiEeycL4cXcmcB6A" tag="Status" value="development"/>

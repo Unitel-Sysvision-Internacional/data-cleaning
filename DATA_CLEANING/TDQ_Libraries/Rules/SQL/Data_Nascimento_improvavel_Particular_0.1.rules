@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_ntCgcfxiEeycL4cXcmcB6A" name="Data_Nascimento_improvavel" supplierDependency="_86QsI_xiEeycL4cXcmcB6A" criticalityLevel="1" whereExpression="birthdata is not null and birthdata != '' &#xD;&#xA;and (birthdata &lt; '1900-01-01' or birthdata > '2022-06-01')">
+  <dataquality.rules:WhereRule xmi:id="_ntCgcfxiEeycL4cXcmcB6A" name="Data_Nascimento_improvavel_Particular" supplierDependency="_86QsI_xiEeycL4cXcmcB6A" criticalityLevel="1" whereExpression="birthdata is not null and birthdata != '' &#xD;&#xA;and (birthdata &lt; '1900-01-01' or birthdata > '2022-06-01')&#xD;&#xA;and tipo = 'Particular'">
     <taggedValue xmi:id="_ntCgcvxiEeycL4cXcmcB6A" tag="Status" value="development"/>
     <taggedValue xmi:id="_ntCgc_xiEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
     <taggedValue xmi:id="_ntCgdPxiEeycL4cXcmcB6A" tag="Purpose" value="Identificar datas improvaveis ou incorretas"/>
