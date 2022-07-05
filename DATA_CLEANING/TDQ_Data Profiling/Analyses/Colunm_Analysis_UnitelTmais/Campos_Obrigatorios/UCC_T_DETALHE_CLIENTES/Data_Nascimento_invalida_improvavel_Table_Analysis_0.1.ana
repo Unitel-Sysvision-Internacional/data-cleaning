@@ -52,7 +52,7 @@
   <dataquality.domain:Domain xmi:id="_v7o5kPxiEeycL4cXcmcB6A" name="Data_Nascimento_invalida_improvavel_Table_Analysis">
     <ranges xmi:id="_v7o5kfxiEeycL4cXcmcB6A">
       <expressions xmi:id="_v7o5kvxiEeycL4cXcmcB6A">
-        <expression xsi:type="relational:TdExpression" xmi:id="_v7o5k_xiEeycL4cXcmcB6A" body="CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )" language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_v7o5k_xiEeycL4cXcmcB6A" body="CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) and tipo = 'Particular'" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
