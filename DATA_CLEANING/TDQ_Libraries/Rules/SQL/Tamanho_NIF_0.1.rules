@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_1LN1cfxlEeycL4cXcmcB6A" name="Tamanho_NIF" criticalityLevel="1" whereExpression="len(ltrim(rtrim(valuedocs))) != 9">
-  <taggedValue xmi:id="_1LN1cvxlEeycL4cXcmcB6A" tag="Status" value="development"/>
-  <taggedValue xmi:id="_1LN1c_xlEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
-  <taggedValue xmi:id="_1LN1dPxlEeycL4cXcmcB6A" tag="Purpose" value="Identificar registros com tamanha de NIF invalidos"/>
-  <taggedValue xmi:id="_1LN1dfxlEeycL4cXcmcB6A" tag="Description" value="Identificar registros com tamanha de NIF invalidos len(ltrim(rtrim(valuedocs))) != 9"/>
-  <taggedValue xmi:id="_1LN1dvxlEeycL4cXcmcB6A" tag="Version" value="0.1"/>
-  <taggedValue xmi:id="_1LN1d_xlEeycL4cXcmcB6A" tag="Validation_Status" value="true"/>
-  <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
-  <sqlGenericExpression xmi:id="_1LN1ePxlEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-</dataquality.rules:WhereRule>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_1LN1cfxlEeycL4cXcmcB6A" name="Tamanho_NIF" supplierDependency="_-qTmEPxlEeycL4cXcmcB6A" criticalityLevel="1" whereExpression="len(ltrim(rtrim(valuedocs))) != 9">
+    <taggedValue xmi:id="_1LN1cvxlEeycL4cXcmcB6A" tag="Status" value="development"/>
+    <taggedValue xmi:id="_1LN1c_xlEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_1LN1dPxlEeycL4cXcmcB6A" tag="Purpose" value="Identificar registros com tamanha de NIF invalidos"/>
+    <taggedValue xmi:id="_1LN1dfxlEeycL4cXcmcB6A" tag="Description" value="Identificar registros com tamanha de NIF invalidos len(ltrim(rtrim(valuedocs))) != 9"/>
+    <taggedValue xmi:id="_1LN1dvxlEeycL4cXcmcB6A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_1LN1d_xlEeycL4cXcmcB6A" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_1LN1ePxlEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_-qTmEPxlEeycL4cXcmcB6A" kind="Usage" supplier="_1LN1cfxlEeycL4cXcmcB6A">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/Colunm_Analysis_UnitelTmais/Campos_Obrigatorios/UCC_T_DETALHE_CLIENTES/tamanho_NIF_invalido_0.1.ana#_eWC0gfxlEeycL4cXcmcB6A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>

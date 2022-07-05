@@ -1,13 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_eWC0gfxlEeycL4cXcmcB6A" name="tamanho_NIF_invalido" creationDate="2022-07-05T10:22:09.992-0300">
-  <taggedValue xmi:id="_eWC0gvxlEeycL4cXcmcB6A" tag="Status" value="development"/>
-  <taggedValue xmi:id="_eWC0g_xlEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
-  <taggedValue xmi:id="_eWC0hPxlEeycL4cXcmcB6A" tag="Purpose" value="Quantidade de carcteres do documento NIF."/>
-  <taggedValue xmi:id="_eWC0hfxlEeycL4cXcmcB6A" tag="Description" value="Quantidade de carcteres do documento NIF diferente de 9."/>
-  <taggedValue xmi:id="_eWC0hvxlEeycL4cXcmcB6A" tag="Version" value="0.1"/>
-  <context xmi:id="_eWC0h_xlEeycL4cXcmcB6A"/>
-  <results xmi:id="_eWC0iPxlEeycL4cXcmcB6A">
-    <resultMetadata xmi:id="_eWC0ifxlEeycL4cXcmcB6A"/>
-  </results>
-  <parameters xmi:id="_eWC0ivxlEeycL4cXcmcB6A" analysisType="Table Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_eWC0gfxlEeycL4cXcmcB6A" name="tamanho_NIF_invalido" creationDate="2022-07-05T10:22:09.992-0300" defaultContext="Default">
+    <clientDependency href="../../../../../TDQ_Libraries/Rules/SQL/Tamanho_NIF_0.1.rules#_-qTmEPxlEeycL4cXcmcB6A"/>
+    <clientDependency href="../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <taggedValue xmi:id="_eWC0gvxlEeycL4cXcmcB6A" tag="Status" value="development"/>
+    <taggedValue xmi:id="_eWC0g_xlEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_eWC0hPxlEeycL4cXcmcB6A" tag="Purpose" value="Quantidade de carcteres do documento NIF."/>
+    <taggedValue xmi:id="_eWC0hfxlEeycL4cXcmcB6A" tag="Description" value="Quantidade de carcteres do documento NIF diferente de 9."/>
+    <taggedValue xmi:id="_eWC0hvxlEeycL4cXcmcB6A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="__HFosfxlEeycL4cXcmcB6A" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="__IvOgPxlEeycL4cXcmcB6A" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_eWC0h_xlEeycL4cXcmcB6A">
+      <connection href="../../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
+    </context>
+    <results xmi:id="_eWC0iPxlEeycL4cXcmcB6A">
+      <resultMetadata xmi:id="_eWC0ifxlEeycL4cXcmcB6A" executionDate="2022-07-05T10:25:54.355-0300" executionDuration="3204" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="__HrekPxlEeycL4cXcmcB6A" count="554433" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="__xvIMPxlEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE ((CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="__xlXMPxlEeycL4cXcmcB6A" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="__xlXMfxlEeycL4cXcmcB6A" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="__xlXMvxlEeycL4cXcmcB6A" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="__xlXM_xlEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="__HrekfxlEeycL4cXcmcB6A" count="554433" computed="true" userCount="513628">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../TDQ_Libraries/Rules/SQL/Tamanho_NIF_0.1.rules#_1LN1cfxlEeycL4cXcmcB6A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="__xvIMfxlEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;   WHERE ((CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))) AND (len(ltrim(rtrim(valuedocs))) != 9)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="__xlXNPxlEeycL4cXcmcB6A" name="Tamanho_NIF" criticalityLevel="1" whereExpression="len(ltrim(rtrim(valuedocs))) != 9">
+          <taggedValue xmi:id="__xlXNfxlEeycL4cXcmcB6A" tag="Status" value="development"/>
+          <taggedValue xmi:id="__xlXNvxlEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
+          <taggedValue xmi:id="__xlXN_xlEeycL4cXcmcB6A" tag="Purpose" value="Identificar registros com tamanha de NIF invalidos"/>
+          <taggedValue xmi:id="__xlXOPxlEeycL4cXcmcB6A" tag="Description" value="Identificar registros com tamanha de NIF invalidos len(ltrim(rtrim(valuedocs))) != 9"/>
+          <taggedValue xmi:id="__xlXOfxlEeycL4cXcmcB6A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="__xlXOvxlEeycL4cXcmcB6A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="__xlXO_xlEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_eWC0ivxlEeycL4cXcmcB6A" dataFilter="__I6NoPxlEeycL4cXcmcB6A" analysisType="Table Analysis"/>
+    <contextType xmi:id="__HFosPxlEeycL4cXcmcB6A" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="__I6NoPxlEeycL4cXcmcB6A" name="tamanho_NIF_invalido">
+    <ranges xmi:id="__I6NofxlEeycL4cXcmcB6A">
+      <expressions xmi:id="__I6NovxlEeycL4cXcmcB6A">
+        <expression xsi:type="relational:TdExpression" xmi:id="__I6No_xlEeycL4cXcmcB6A" body="(CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
