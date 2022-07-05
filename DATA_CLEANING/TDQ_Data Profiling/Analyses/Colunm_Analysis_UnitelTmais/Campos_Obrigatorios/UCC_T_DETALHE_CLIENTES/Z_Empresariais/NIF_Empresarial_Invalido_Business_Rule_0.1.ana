@@ -1,13 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_BVCbEfxzEeycL4cXcmcB6A" name="NIF_Empresarial_Invalido_Business_Rule" creationDate="2022-07-05T11:59:08.225-0300">
-  <taggedValue xmi:id="_BVCbEvxzEeycL4cXcmcB6A" tag="Status" value="development"/>
-  <taggedValue xmi:id="_BVCbE_xzEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
-  <taggedValue xmi:id="_BVCbFPxzEeycL4cXcmcB6A" tag="Purpose" value="Identificar numero inicial de NIF empresarial invalido"/>
-  <taggedValue xmi:id="_BVCbFfxzEeycL4cXcmcB6A" tag="Description" value="Identificar numero de NIF empresarial invalido conforme regra deinida pela area de negoco da Uitel+."/>
-  <taggedValue xmi:id="_BVCbFvxzEeycL4cXcmcB6A" tag="Version" value="0.1"/>
-  <context xmi:id="_BVCbF_xzEeycL4cXcmcB6A"/>
-  <results xmi:id="_BVCbGPxzEeycL4cXcmcB6A">
-    <resultMetadata xmi:id="_BVCbGfxzEeycL4cXcmcB6A"/>
-  </results>
-  <parameters xmi:id="_BVCbGvxzEeycL4cXcmcB6A" analysisType="Table Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_BVCbEfxzEeycL4cXcmcB6A" name="NIF_Empresarial_Invalido_Business_Rule" creationDate="2022-07-05T11:59:08.225-0300" defaultContext="Default">
+    <clientDependency href="../../../../../../TDQ_Libraries/Rules/SQL/NIF_Empresarial_Invalido_0.1.rules#_JlM6cPxzEeycL4cXcmcB6A"/>
+    <clientDependency href="../../../../../../metadata/connections/Cadastro_0.1.item#_DNf60HlIEeymA7ReFGNmPQ"/>
+    <taggedValue xmi:id="_BVCbEvxzEeycL4cXcmcB6A" tag="Status" value="development"/>
+    <taggedValue xmi:id="_BVCbE_xzEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
+    <taggedValue xmi:id="_BVCbFPxzEeycL4cXcmcB6A" tag="Purpose" value="Identificar numero inicial de NIF empresarial invalido"/>
+    <taggedValue xmi:id="_BVCbFfxzEeycL4cXcmcB6A" tag="Description" value="Identificar numero de NIF empresarial invalido conforme regra deinida pela area de negoco da Uitel+."/>
+    <taggedValue xmi:id="_BVCbFvxzEeycL4cXcmcB6A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_VWc68fxzEeycL4cXcmcB6A" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_VWc69PxzEeycL4cXcmcB6A" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_BVCbF_xzEeycL4cXcmcB6A">
+      <connection href="../../../../../../metadata/connections/Cadastro_0.1.item#_E9ZkcHlDEeymA7ReFGNmPQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
+    </context>
+    <results xmi:id="_BVCbGPxzEeycL4cXcmcB6A">
+      <resultMetadata xmi:id="_BVCbGfxzEeycL4cXcmcB6A" executionDate="2022-07-05T12:01:44.615-0300" executionDuration="2695" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_VWc68vxzEeycL4cXcmcB6A" count="9860" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_YofTePxzEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) and TIPO = 'Empresarial')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_YobCAPxzEeycL4cXcmcB6A" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_YobCAfxzEeycL4cXcmcB6A" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_YobCAvxzEeycL4cXcmcB6A" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_YobCA_xzEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_VWc68_xzEeycL4cXcmcB6A" count="9860" computed="true" userCount="374">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../../../../metadata/connections/Cadastro_0.1.item#__-ExcnlHEeymA7ReFGNmPQ"/>
+        <indicatorDefinition href="../../../../../../TDQ_Libraries/Rules/SQL/NIF_Empresarial_Invalido_0.1.rules#_VlDmYPxtEeycL4cXcmcB6A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_YofTefxzEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;   WHERE (CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) and TIPO = 'Empresarial') AND (tipo_docs = 'NIF'&#xD;&#xA;and len(ltrim(rtrim(valuedocs))) = 9&#xD;&#xA;and substring(ltrim(rtrim(valuedocs)), 1, 1) not in ('2','3','4','5')&#xD;&#xA;and tipo = 'Empresarial')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_YofTcPxzEeycL4cXcmcB6A" name="NIF_Empresarial_Invalido" criticalityLevel="1" whereExpression="tipo_docs = 'NIF'&#xD;&#xA;and len(ltrim(rtrim(valuedocs))) = 9&#xD;&#xA;and substring(ltrim(rtrim(valuedocs)), 1, 1) not in ('2','3','4','5')&#xD;&#xA;and tipo = 'Empresarial'">
+          <taggedValue xmi:id="_YofTcfxzEeycL4cXcmcB6A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_YofTcvxzEeycL4cXcmcB6A" tag="Author" value="sergio.lima@sysvision.com.br"/>
+          <taggedValue xmi:id="_YofTc_xzEeycL4cXcmcB6A" tag="Purpose" value="Identificar numero inicial de NIF empresarial invalido"/>
+          <taggedValue xmi:id="_YofTdPxzEeycL4cXcmcB6A" tag="Description" value="Identificar numero de NIF empresarial invalido conforme regra deinida pela area de negoco da Uitel+."/>
+          <taggedValue xmi:id="_YofTdfxzEeycL4cXcmcB6A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_YofTdvxzEeycL4cXcmcB6A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_YofTd_xzEeycL4cXcmcB6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_BVCbGvxzEeycL4cXcmcB6A" dataFilter="_VWmr8_xzEeycL4cXcmcB6A" analysisType="Table Analysis"/>
+    <contextType xmi:id="_VWc68PxzEeycL4cXcmcB6A" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_VWmr8_xzEeycL4cXcmcB6A" name="NIF_Empresarial_Invalido_Business_Rule">
+    <ranges xmi:id="_VWmr9PxzEeycL4cXcmcB6A">
+      <expressions xmi:id="_VWmr9fxzEeycL4cXcmcB6A">
+        <expression xsi:type="relational:TdExpression" xmi:id="_VWmr9vxzEeycL4cXcmcB6A" body="CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ) and TIPO = 'Empresarial'" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
