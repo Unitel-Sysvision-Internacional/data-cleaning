@@ -16,45 +16,45 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
     </context>
     <results xmi:id="_CjsmCJpcEeyrDaC6mFuu4g">
-      <resultMetadata xmi:id="_CjsmCZpcEeyrDaC6mFuu4g" executionDate="2022-07-01T15:14:23.014-0300" executionDuration="10655" message="" executionNumber="9" lastRunOk="true" lastExecutionNumberOk="9"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_Q6fsdJpcEeyrDaC6mFuu4g" count="22219" computed="true">
+      <resultMetadata xmi:id="_CjsmCZpcEeyrDaC6mFuu4g" executionDate="2022-07-08T14:46:26.083-0300" executionDuration="15207" message="" executionNumber="10" lastRunOk="true" lastExecutionNumberOk="10"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_Q6fsdJpcEeyrDaC6mFuu4g" count="9860" computed="true">
         <parameters xmi:id="_Q6fsdZpcEeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg58JpcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (TIPO &lt;> 'Particular' AND   CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg58JpcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (TIPO = 'Empresarial' and  CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_RcLdMJpcEeyrDaC6mFuu4g" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_RcLdMZpcEeyrDaC6mFuu4g" tag="Description" value="counts the number of rows"/>
           <taggedValue xmi:id="_RcLdMppcEeyrDaC6mFuu4g" tag="Purpose" value="evaluates the number of records"/>
           <sqlGenericExpression xmi:id="_RcLdM5pcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_Q6fsdppcEeyrDaC6mFuu4g" count="22219" nullCount="7441" computed="true">
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_Q6fsdppcEeyrDaC6mFuu4g" count="9860" nullCount="4" computed="true">
         <parameters xmi:id="_Q6fsd5pcEeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg58ZpcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE &quot;CodCertComercial&quot; IS NULL  AND (TIPO &lt;> 'Particular' AND   CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg58ZpcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; WHERE &quot;CodCertComercial&quot; IS NULL  AND (TIPO = 'Empresarial' and  CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_RcUnIJpcEeyrDaC6mFuu4g" name="Null Count" label="Null Count">
           <taggedValue xmi:id="_RcUnIZpcEeyrDaC6mFuu4g" tag="Purpose" value="evaluate the number of missing data (null records)"/>
           <taggedValue xmi:id="_RcUnIppcEeyrDaC6mFuu4g" tag="Description" value="counts the number of null rows"/>
           <sqlGenericExpression xmi:id="_RcUnI5pcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_Q6fseJpcEeyrDaC6mFuu4g" count="22219" nullCount="7441" computed="true" distinctValueCount="140">
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_Q6fseJpcEeyrDaC6mFuu4g" count="9860" nullCount="4" computed="true" distinctValueCount="140">
         <parameters xmi:id="_Q6fseZpcEeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg58ppcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;CodCertComercial&quot; FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (TIPO &lt;> 'Particular' AND   CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))) A" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg58ppcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;CodCertComercial&quot; FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (TIPO = 'Empresarial' and  CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))) A" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_RceYIJpcEeyrDaC6mFuu4g" name="Distinct Count" label="Distinct Count">
           <taggedValue xmi:id="_RceYIZpcEeyrDaC6mFuu4g" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
           <taggedValue xmi:id="_RceYIppcEeyrDaC6mFuu4g" tag="Purpose" value="evaluates the number of distinct records"/>
           <sqlGenericExpression xmi:id="_RceYI5pcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_Q6fseppcEeyrDaC6mFuu4g" count="22219" nullCount="7441" computed="true" uniqueValueCount="43">
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_Q6fseppcEeyrDaC6mFuu4g" count="9860" nullCount="4" computed="true" uniqueValueCount="43">
         <parameters xmi:id="_Q6fse5pcEeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg585pcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &quot;CodCertComercial&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (TIPO &lt;> 'Particular' AND   CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;CodCertComercial&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg585pcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &quot;CodCertComercial&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE (TIPO = 'Empresarial' and  CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;CodCertComercial&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_RcniEJpcEeyrDaC6mFuu4g" name="Unique Count" label="Unique Count">
           <taggedValue xmi:id="_RcniEZpcEeyrDaC6mFuu4g" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
           <taggedValue xmi:id="_RcniEppcEeyrDaC6mFuu4g" tag="Purpose" value="evaluates the number of unique records"/>
@@ -67,11 +67,11 @@
           <sqlGenericExpression xmi:id="_RcniGZpcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_Q6fsfJpcEeyrDaC6mFuu4g" count="22219" nullCount="7441" computed="true" duplicateValueCount="97">
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_Q6fsfJpcEeyrDaC6mFuu4g" count="9860" nullCount="4" computed="true" duplicateValueCount="97">
         <parameters xmi:id="_Q6fsfZpcEeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg59JpcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &quot;CodCertComercial&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  m  WHERE (TIPO &lt;> 'Particular' AND   CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;CodCertComercial&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg59JpcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &quot;CodCertComercial&quot;, COUNT(*) mycount FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  m  WHERE (TIPO = 'Empresarial' and  CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;CodCertComercial&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_RcxTEJpcEeyrDaC6mFuu4g" name="Duplicate Count" label="Duplicate Count">
           <taggedValue xmi:id="_RcxTEZpcEeyrDaC6mFuu4g" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
           <taggedValue xmi:id="_RcxTEppcEeyrDaC6mFuu4g" tag="Purpose" value="evaluates the number of duplicated records"/>
@@ -84,11 +84,11 @@
           <sqlGenericExpression xmi:id="_RcxTGZpcEeyrDaC6mFuu4g" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_Q6fsfppcEeyrDaC6mFuu4g" count="22219" nullCount="7441" computed="true" blankCount="8605">
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_Q6fsfppcEeyrDaC6mFuu4g" count="9860" nullCount="4" computed="true" blankCount="3683">
         <parameters xmi:id="_Q6fsf5pcEeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg59ZpcEeyrDaC6mFuu4g" body="SELECT COUNT(&quot;CodCertComercial&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;CodCertComercial&quot;)) = ''  AND (TIPO &lt;> 'Particular' AND   CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg59ZpcEeyrDaC6mFuu4g" body="SELECT COUNT(&quot;CodCertComercial&quot;) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot;  WHERE LTRIM(RTRIM(&quot;CodCertComercial&quot;)) = ''  AND (TIPO = 'Empresarial' and  CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   ))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_Rc7EEJpcEeyrDaC6mFuu4g" name="Blank Count" label="Blank Count">
           <taggedValue xmi:id="_Rc7EEZpcEeyrDaC6mFuu4g" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
           <taggedValue xmi:id="_Rc7EEppcEeyrDaC6mFuu4g" tag="Purpose" value="evaluates the number of blank records"/>
@@ -99,11 +99,11 @@
           <sqlGenericExpression xmi:id="_Rc7EF5pcEeyrDaC6mFuu4g" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:ModeIndicator" xmi:id="_Q6fsgJpcEeyrDaC6mFuu4g" nullCount="7441" computed="true" distinctValueCount="0" mode="ACED0005740000">
+      <indicators xsi:type="dataquality.indicators:ModeIndicator" xmi:id="_Q6fsgJpcEeyrDaC6mFuu4g" nullCount="4" computed="true" distinctValueCount="0" mode="ACED00057400022D31">
         <parameters xmi:id="_Q6fsgZpcEeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Advanced Statistics/Mode_0.1.definition#_ccIR4RF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg59ppcEeyrDaC6mFuu4g" body="SELECT TOP 1   &quot;CodCertComercial&quot;, COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; m  WHERE (TIPO &lt;> 'Particular' AND   CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;CodCertComercial&quot; ORDER BY COUNT(*) DESC " language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg59ppcEeyrDaC6mFuu4g" body="SELECT TOP 1   &quot;CodCertComercial&quot;, COUNT(*) FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; m  WHERE (TIPO = 'Empresarial' and  CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;CodCertComercial&quot; ORDER BY COUNT(*) DESC " language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_RdEOAJpcEeyrDaC6mFuu4g" name="Mode" label="Mode">
           <taggedValue xmi:id="_RdEOAZpcEeyrDaC6mFuu4g" tag="Description" value="computes the mode (most probable value). For numerical data or continuous data, bins can be set in the parameters of this indicator. It is different from the average and from the median. Generalization of it is an histogram. It is good for addressing categorical attributes"/>
           <taggedValue xmi:id="_RdEOAppcEeyrDaC6mFuu4g" tag="Purpose" value="evaluates the most frequent value"/>
@@ -116,11 +116,11 @@
           <sqlGenericExpression xmi:id="_RdEOCZpcEeyrDaC6mFuu4g" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="Informix"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:FrequencyIndicator" xmi:id="_Q6fsgppcEeyrDaC6mFuu4g" count="22219" nullCount="7441" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A7400007372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000219D707371007E00030000000000001D1174000837373737373737377371007E000300000000000000167400022D317371007E000300000000000015E67400173236363537303630372F333037383332303136303731317371007E000300000000000000187400032D313071007E000C74000831393935303530357371007E0003000000000000001074000A333931393935303431317371007E0003000000000000001E74000932373535303130303071007E000C7400012E7371007E0003000000000000001478">
+      <indicators xsi:type="dataquality.indicators:FrequencyIndicator" xmi:id="_Q6fsgppcEeyrDaC6mFuu4g" count="9860" nullCount="4" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A7400007372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000000E6374000232337371007E0003000000000000001074000837373737373737377371007E000300000000000000167400022D317371007E000300000000000015E67400173236363537303630372F333037383332303136303731317371007E000300000000000000187400032D313071007E000D740008313939353035303571007E000774000A333931393935303431317371007E0003000000000000001E74000932373535303130303071007E000D7400012E7371007E0003000000000000001478">
         <parameters xmi:id="_Q6fsg5pcEeyrDaC6mFuu4g"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../../../../metadata/connections/Cadastro_0.1.item#_BQL6BHlIEeymA7ReFGNmPQ"/>
         <indicatorDefinition href="../../../../../../TDQ_Libraries/Indicators/System Indicators/Advanced Statistics/Frequency_Table_0.1.definition#_ccIR4hF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg595pcEeyrDaC6mFuu4g" body="SELECT TOP 10  &quot;CodCertComercial&quot;, COUNT(*) c FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; t  WHERE (TIPO &lt;> 'Particular' AND   CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;CodCertComercial&quot; ORDER BY c DESC" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Rdg595pcEeyrDaC6mFuu4g" body="SELECT TOP 10  &quot;CodCertComercial&quot;, COUNT(*) c FROM &quot;cadastro&quot;.&quot;dbo&quot;.&quot;UCC_T_DETALHE_CLIENTES&quot; t  WHERE (TIPO = 'Empresarial' and  CAST(DataFile AS DATE) = ( SELECT MAX(CAST(DataFile AS DATE))  FROM UCC_T_DETALHE_CLIENTES   )) GROUP BY &quot;CodCertComercial&quot; ORDER BY c DESC" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_RdEOCppcEeyrDaC6mFuu4g" name="Frequency Table" label="Frequency Table">
           <taggedValue xmi:id="_RdEOC5pcEeyrDaC6mFuu4g" tag="Description" value="counts the number of records for each distinct record"/>
           <taggedValue xmi:id="_RdEODJpcEeyrDaC6mFuu4g" tag="Purpose" value="evaluates the most frequent records"/>
@@ -139,6 +139,7 @@
   </dataquality.analysis:Analysis>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_U_kEYJpcEeyrDaC6mFuu4g" kind="Usage" supplier="_CjsmAZpcEeyrDaC6mFuu4g">
     <client xsi:type="dataquality.reports:TdReport" href="../../../../../Reports/Campos_obrigatorios/CodCertComercial_Column_Analysis_Basic_0.1.rep#_U_a6cZpcEeyrDaC6mFuu4g"/>
+    <client xsi:type="dataquality.reports:TdReport" href="../../../../../Reports/Teste_unico_0.1.rep#_rYFxwP4WEeyRwJBuu9_beA"/>
   </orgomg.cwm.objectmodel.core:Dependency>
   <dataquality.domain:Domain xmi:id="_Q6fshZpcEeyrDaC6mFuu4g" name="CodCertComercial_Column_Analysis_Basic">
     <ranges xmi:id="_Q6fshppcEeyrDaC6mFuu4g">
